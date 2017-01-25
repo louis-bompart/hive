@@ -27,13 +27,14 @@ public class AsteroidsBehavior : MonoBehaviour {
 	public int minmSpeed = 10;
 	public int maxmSpeed = 200;
 
-	/// <summary>
-	/// mxSpeed : movement speed on x axis.
-	/// mySpeed : movement speed on y axis.
-	/// mzSpeed : movement speed on z axis.
-	/// </summary>
-	private int minmSpeed = 1;
-	private int maxmSpeed = 20;
+    /// <summary>
+    /// mxSpeed : movement speed on x axis.
+    /// mySpeed : movement speed on y axis.
+    /// mzSpeed : movement speed on z axis.
+    /// </summary>
+    private int mxSpeed = 0;
+    private int mySpeed = 0;
+    private int mzSpeed = 0;
 
 	/// <summary>
 	/// Attribute the rotation and movement speed for the asteroid.
