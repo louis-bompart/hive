@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,25 +6,41 @@ public class AsteroidsBehavior : MonoBehaviour {
 
 	private Rigidbody rb;
 
-	private int minrSpeed = 1;
-	private int maxrSpeed = 8;
+	/// <summary>
+	/// The minimum and maximum rotation speed allowed for an asteroid.
+	/// </summary>
+	public int minrSpeed = 1;
+	public int maxrSpeed = 8;
+
+	/// <summary>
+	/// rxSpeed : rotation speed around x axis.
+	/// rySpeed : rotation speed around y axis.
+	/// rzSpeed : rotation speed around z axis.
+	/// </summary>
 	private int rxSpeed;
 	private int rySpeed;
 	private int rzSpeed;
 
+	/// <summary>
+	/// The minimum and maximum movement speed allowed for an asteroid.
+	/// </summary>
+	public int minmSpeed = 10;
+	public int maxmSpeed = 200;
+
+	/// <summary>
+	/// mxSpeed : movement speed on x axis.
+	/// mySpeed : movement speed on y axis.
+	/// mzSpeed : movement speed on z axis.
+	/// </summary>
 	private int minmSpeed = 1;
 	private int maxmSpeed = 20;
-	private int mxSpeed;
-	private int mySpeed;
-	private int mzSpeed;
 
-	// Use this for initialization
+	/// <summary>
+	/// Attribute the rotation and movement speed for the asteroid.
+	/// Apply a force to the asteroid.
+	/// </summary>
 	void Start () {
-
 		rb = GetComponent<Rigidbody>();
-
-		Vector3 movement = new Vector3 (mxSpeed, mySpeed, mzSpeed);
-		rb.AddForce (movement);
 
 		mxSpeed = Random.Range (minmSpeed, maxmSpeed);
 		mySpeed = Random.Range (minmSpeed, maxmSpeed);
@@ -34,12 +50,14 @@ public class AsteroidsBehavior : MonoBehaviour {
 		rySpeed = Random.Range (minrSpeed, maxrSpeed);
 		rzSpeed = Random.Range (minrSpeed, maxrSpeed);
 
-
+		Vector3 movement = new Vector3(mxSpeed, mySpeed, mzSpeed);
+		rb.AddForce(movement);
 	}
 	
-	// Update is called once per frame
+	/// <summary>
+	/// Rotates the asteroid.
+	/// </summary>
 	void FixedUpdate () {
 		transform.Rotate (new Vector3 (rxSpeed, rySpeed, rzSpeed) * Time.deltaTime);
-
 	}
 }

@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,27 +7,33 @@ public class AsteroidsGenerator : MonoBehaviour {
 	public GameObject[] asteroids; 
 	private Vector3 origin = Vector3.zero;
 
-	private float minSize = 0.2f;
-	private float maxSize = 1.5f;
-
-	private int minCount = 500;
-	private int maxCount = 1200;
-
-	private float minDistance = 30.0f;
-	private float maxDistance = 150.0f;
+	/// <summary>
+	/// The minimum and maximum allowed size of an asteroid.
+	/// </summary>
+	public float minSize = 0.2f;
+	public float maxSize = 1.5f;
 
 	/// <summary>
-	/// Start this instance.
+	/// The minimum and maximum amount of asteroids.
 	/// </summary>
+	public int minCount = 500;
+	public int maxCount = 1200;
+
+	/// <summary>
+	/// The minimum and maximum distance between asteroids.
+	/// </summary>
+	public float minDistance = 30.0f;
+	public float maxDistance = 150.0f;
 	 void Start () {
 		origin = transform.position;
 		GenerateAsteroids(Random.Range(minCount, maxCount));
 	}
 
 	/// <summary>
-	/// Generates the asteroids.
+	/// Generates a number (asteroidsCount) of asteroids with a random size between minSize and 
+	/// maxSize and a random distance between them from minDistance to maxDistance.
 	/// </summary>
-	/// <param name="asteroidsCount">Asteroids count.</param>
+	/// <param name="asteroidsCount">Number of Asteroids to Generate</param>
 	public void GenerateAsteroids (int asteroidsCount) {
 		for (int i = 0; i < asteroidsCount; i++) {
 			float size = Random.Range(minSize, maxSize);
