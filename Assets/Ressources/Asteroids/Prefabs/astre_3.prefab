@@ -10,9 +10,11 @@ GameObject:
   - component: {fileID: 493160}
   - component: {fileID: 3357748}
   - component: {fileID: 2364362}
-  - component: {fileID: 114942453379569074}
   - component: {fileID: 54034604279646604}
   - component: {fileID: 64073985811800576}
+  - component: {fileID: 114134444723127618}
+  - component: {fileID: 114378863465850612}
+  - component: {fileID: 114492329841994630}
   m_Layer: 0
   m_Name: astre_3
   m_TagString: Untagged
@@ -108,10 +110,10 @@ MeshCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Convex: 1
-  m_InflateMesh: 0
+  m_InflateMesh: 1
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: dbfb640bcbcdb5e489c95d40666777bb, type: 3}
---- !u!114 &114942453379569074
+--- !u!114 &114134444723127618
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -119,10 +121,45 @@ MonoBehaviour:
   m_GameObject: {fileID: 114474}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e610d77d563534b58ae94aedb9670c2b, type: 3}
+  m_Script: {fileID: 11500000, guid: 3253d411d33b940fabe92e70ccc142da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   minrSpeed: 1
   maxrSpeed: 8
   minmSpeed: 10
   maxmSpeed: 200
+--- !u!114 &114378863465850612
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 114474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b2ad5765587d4a64828a35e8a877bac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mineral: {fileID: 0}
+  mineralCountProbability:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  mineralCount: 0
+--- !u!114 &114492329841994630
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 114474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d300b3cc38092469290b7a656e8c5a6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  particule: {fileID: 1027570773081274, guid: 20f3420a3321f4b26ba42e4cf25517a4, type: 2}
+  particuleSize: 0.1
+  previousTime: 0
+  timeDelay: 0.1

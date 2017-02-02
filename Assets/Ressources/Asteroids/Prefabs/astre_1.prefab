@@ -10,9 +10,11 @@ GameObject:
   - component: {fileID: 410610}
   - component: {fileID: 3319712}
   - component: {fileID: 2325168}
-  - component: {fileID: 114709463532074110}
   - component: {fileID: 54269297732276518}
   - component: {fileID: 64633246337353860}
+  - component: {fileID: 114565941190047562}
+  - component: {fileID: 114209543895256650}
+  - component: {fileID: 114061866422308140}
   m_Layer: 0
   m_Name: astre_1
   m_TagString: Untagged
@@ -108,10 +110,10 @@ MeshCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Convex: 1
-  m_InflateMesh: 0
+  m_InflateMesh: 1
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 4fa0c48814db8b34e9abc63850a5adcd, type: 3}
---- !u!114 &114709463532074110
+--- !u!114 &114061866422308140
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -119,7 +121,42 @@ MonoBehaviour:
   m_GameObject: {fileID: 152982}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e610d77d563534b58ae94aedb9670c2b, type: 3}
+  m_Script: {fileID: 11500000, guid: d300b3cc38092469290b7a656e8c5a6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  particule: {fileID: 1027570773081274, guid: 20f3420a3321f4b26ba42e4cf25517a4, type: 2}
+  particuleSize: 0.1
+  previousTime: 0
+  timeDelay: 0.1
+--- !u!114 &114209543895256650
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 152982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b2ad5765587d4a64828a35e8a877bac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mineral: {fileID: 0}
+  mineralCountProbability:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  mineralCount: 0
+--- !u!114 &114565941190047562
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 152982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3253d411d33b940fabe92e70ccc142da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   minrSpeed: 1

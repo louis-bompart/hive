@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 48a258609e1d69c41a2d9b4c5111d580
-timeCreated: 1485409349
+timeCreated: 1485906586
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
@@ -15,6 +15,7 @@ ModelImporter:
     100014: transform2
     100016: transform3
     100018: transform4
+    100020: top1
     400000: pCube1
     400002: pCube2
     400004: pPipe1
@@ -25,6 +26,7 @@ ModelImporter:
     400014: transform2
     400016: transform3
     400018: transform4
+    400020: top1
     2300000: pPipe3
     3300000: pPipe3
     4300000: pPipe3
