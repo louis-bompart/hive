@@ -1,10 +1,11 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AsteroidsBehavior : MonoBehaviour {
+public class AsteroidsMovement : MonoBehaviour {
 
 	private Rigidbody rb;
+
 
 	/// <summary>
 	/// The minimum and maximum rotation speed allowed for an asteroid.
@@ -27,14 +28,14 @@ public class AsteroidsBehavior : MonoBehaviour {
 	public int minmSpeed = 10;
 	public int maxmSpeed = 200;
 
-    /// <summary>
-    /// mxSpeed : movement speed on x axis.
-    /// mySpeed : movement speed on y axis.
-    /// mzSpeed : movement speed on z axis.
-    /// </summary>
-    private int mxSpeed = 0;
-    private int mySpeed = 0;
-    private int mzSpeed = 0;
+	/// <summary>
+	/// mxSpeed : movement speed on x axis.
+	/// mySpeed : movement speed on y axis.
+	/// mzSpeed : movement speed on z axis.
+	/// </summary>
+	private int mxSpeed = 0;
+	private int mySpeed = 0;
+	private int mzSpeed = 0;
 
 	/// <summary>
 	/// Attribute the rotation and movement speed for the asteroid.
@@ -53,8 +54,11 @@ public class AsteroidsBehavior : MonoBehaviour {
 
 		Vector3 movement = new Vector3(mxSpeed, mySpeed, mzSpeed);
 		rb.AddForce(movement);
+
+
+
 	}
-	
+
 	/// <summary>
 	/// Rotates the asteroid.
 	/// </summary>

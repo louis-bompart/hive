@@ -10,9 +10,11 @@ GameObject:
   - component: {fileID: 463656}
   - component: {fileID: 3301092}
   - component: {fileID: 2388140}
-  - component: {fileID: 114148762637579906}
   - component: {fileID: 54935960628306174}
   - component: {fileID: 64761462104004434}
+  - component: {fileID: 114687025652087536}
+  - component: {fileID: 114702305743986416}
+  - component: {fileID: 114109906525230116}
   m_Layer: 0
   m_Name: astre_17
   m_TagString: Untagged
@@ -108,10 +110,10 @@ MeshCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Convex: 1
-  m_InflateMesh: 0
+  m_InflateMesh: 1
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 886b4eb72aa7dc94ca02bcd80f2a9436, type: 3}
---- !u!114 &114148762637579906
+--- !u!114 &114109906525230116
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -119,10 +121,45 @@ MonoBehaviour:
   m_GameObject: {fileID: 184638}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e610d77d563534b58ae94aedb9670c2b, type: 3}
+  m_Script: {fileID: 11500000, guid: d300b3cc38092469290b7a656e8c5a6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  particule: {fileID: 1027570773081274, guid: 20f3420a3321f4b26ba42e4cf25517a4, type: 2}
+  particuleSize: 0.1
+  previousTime: 0
+  timeDelay: 0.1
+--- !u!114 &114687025652087536
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 184638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3253d411d33b940fabe92e70ccc142da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   minrSpeed: 1
   maxrSpeed: 8
   minmSpeed: 10
   maxmSpeed: 200
+--- !u!114 &114702305743986416
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 184638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b2ad5765587d4a64828a35e8a877bac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mineral: {fileID: 0}
+  mineralCountProbability:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  mineralCount: 0

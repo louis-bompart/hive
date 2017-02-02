@@ -51,4 +51,6 @@ public class AsteroidsGenerator : MonoBehaviour {
 			go.transform.localScale = new Vector3(size, size, size);
 		}
 	}
+
+
 }
