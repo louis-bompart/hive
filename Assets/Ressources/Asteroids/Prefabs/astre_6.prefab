@@ -142,8 +142,6 @@ MonoBehaviour:
   health: 100
   particule: {fileID: 1027570773081274, guid: 20f3420a3321f4b26ba42e4cf25517a4, type: 2}
   particuleSize: 0.1
-  previousTime: 0
-  timeDelay: 0.1
 --- !u!114 &114816906377945718
 MonoBehaviour:
   m_ObjectHideFlags: 1
