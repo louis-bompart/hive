@@ -9,6 +9,8 @@ public class MiningLaserScript : MonoBehaviour {
     ParticleSystem particle;
     ParticleSystem.EmissionModule em;
 
+    public int Range = 10;
+
     void Start ()
     {
         line = gameObject.GetComponent<LineRenderer>();
@@ -41,7 +43,7 @@ public class MiningLaserScript : MonoBehaviour {
             RaycastHit hit;
             line.SetPosition(0, miningray.origin);
 
-            if (Physics.Raycast(miningray, out hit, 8))
+            if (Physics.Raycast(miningray, out hit, Range))
             {
                 line.SetPosition(1, hit.point);
                 AsteroidsDesintegration asscript = hit.transform.gameObject.GetComponent<AsteroidsDesintegration>();
@@ -55,7 +57,7 @@ public class MiningLaserScript : MonoBehaviour {
             }                
             else
             {
-                line.SetPosition(1, miningray.GetPoint(8));
+                line.SetPosition(1, miningray.GetPoint(Range));
                 em.enabled = false;
             }
 
