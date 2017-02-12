@@ -22,7 +22,7 @@ public class AsteroidsDesintegration : MonoBehaviour {
 	void Update(){
 		if (health <= 0f) {
 			desintegrate ();
-		}
+        }
 	}
 
 	/// <summary>
@@ -32,11 +32,10 @@ public class AsteroidsDesintegration : MonoBehaviour {
 	public void desintegrate(){
 		AsteroidsMineral asm = this.gameObject.GetComponent <AsteroidsMineral>();
 		Debug.Log ("You collected " + asm.mineralCount + " minerals");
-
-		Instantiate(particule, transform.position, Random.rotation);
-
-		Destroy (this.gameObject);
-		}
+        Vector3 position = transform.position;
+        Instantiate(particule, position, Random.rotation);
+        Destroy(this.gameObject);
+    }
 
 
 }

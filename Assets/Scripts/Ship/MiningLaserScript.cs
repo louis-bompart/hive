@@ -44,6 +44,12 @@ public class MiningLaserScript : MonoBehaviour {
             if (Physics.Raycast(miningray, out hit, 8))
             {
                 line.SetPosition(1, hit.point);
+                AsteroidsDesintegration asscript = hit.transform.gameObject.GetComponent<AsteroidsDesintegration>();
+                if (asscript != null)
+                {
+                    asscript.health -= 1f;
+                    Debug.Log(asscript.health);
+                }
                 particleObject.transform.position = hit.point;
                 em.enabled = true;
             }                
