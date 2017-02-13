@@ -27,17 +27,18 @@ public class SpeedPanelManager : MonoBehaviour
         {
             _currentSpeed = value;
             slider.value = currentSpeed;
+            int arrondi = Mathf.FloorToInt(currentSpeed);
 
             //Update mark if current speed break speed limits
-            if (_currentSpeed > maxSpeed)
+            if (arrondi > maxSpeed)
             {
-                slider.maxValue = _currentSpeed;
-                mark100.transform.Find("Text").GetComponent<Text>().text = (_currentSpeed).ToString();
+                slider.maxValue = arrondi;
+                mark100.transform.Find("Text").GetComponent<Text>().text = (arrondi).ToString();
             }
-            else if (_currentSpeed < -(maxSpeed * 1 / 3))
+            else if (arrondi < -(maxSpeed * 1 / 3))
             {
-                slider.minValue = _currentSpeed;
-                markNega.transform.Find("Text").GetComponent<Text>().text = (_currentSpeed).ToString(); ;
+                slider.minValue = arrondi;
+                markNega.transform.Find("Text").GetComponent<Text>().text = (arrondi).ToString(); ;
             }
             else
             {
@@ -45,6 +46,7 @@ public class SpeedPanelManager : MonoBehaviour
                 slider.maxValue = maxSpeed;
                 slider.minValue = -(maxSpeed / 3);
                 mark100.transform.Find("Text").GetComponent<Text>().text = (maxSpeed).ToString();
+                markNega.transform.Find("Text").GetComponent<Text>().text = (-maxSpeed * 1 / 3).ToString();
             }
         }
     }
@@ -91,7 +93,17 @@ public class SpeedPanelManager : MonoBehaviour
     private void FixedUpdate()
     {
         //Project the ship velocity on his heading vector to get heading velocity.
-        currentSpeed = Vector3.Project(shipRigibody.velocity, shipRigibody.gameObject.transform.forward).sqrMagnitude;
+        float speed = Vector3.Project(shipRigibody.velocity, shipRigibody.gameObject.transform.forward).sqrMagnitude; 
 
+        //Test if ship is moving forward or backward, ajust the sign of the speed.
+        float angle = Vector3.Angle(shipRigibody.velocity, shipRigibody.gameObject.transform.forward);
+        if (angle >= 90 || angle<=-90)
+        {
+            currentSpeed = -speed;
+        }
+        else
+        {
+            currentSpeed = speed;
+        }
     }
 }

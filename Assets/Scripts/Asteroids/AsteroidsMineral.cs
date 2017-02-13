@@ -10,7 +10,7 @@ public class AsteroidsMineral : MonoBehaviour {
 	/// eg : [0,10,30,90] : 10% 1, 20% 2, 60% 3, 10% 4 itemCount.
 	/// mineralCount : the amount of minerals it contains.
 	/// </summary>
-	public GameObject mineral;
+	public int id;
 	public float[] mineralCountProbability = new float[5];
 	public int mineralCount;
 

@@ -125,7 +125,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
-  particule: {fileID: 1027570773081274, guid: 20f3420a3321f4b26ba42e4cf25517a4, type: 2}
+  particule: {fileID: 1027570773081274, guid: 04bb8664713f2684586743dd327fc1c7, type: 2}
   particuleSize: 0.1
 --- !u!114 &114687025652087536
 MonoBehaviour:
@@ -153,7 +153,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b2ad5765587d4a64828a35e8a877bac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mineral: {fileID: 0}
+  id: 0
   mineralCountProbability:
   - 0
   - 0
