@@ -9,6 +9,8 @@ public class AsteroidsDesintegration : MonoBehaviour {
 	/// </summary>
 	public float health = 100f;
 
+	private GameObject inv;
+
 	/// <summary>
 	/// The asteroids particules explosion prefab.
 	/// particuleSize : size of the particules
@@ -16,22 +18,30 @@ public class AsteroidsDesintegration : MonoBehaviour {
 	public GameObject particule;
 	public float particuleSize = 0.1f;
 
+	void Start(){
+		inv = GameObject.Find ("Inventory");
+	}
+
 	/// <summary>
 	/// Desintegrates it if its health goes below 0
 	/// </summary>
 	void Update(){
-		if (health <= 0f) {
+		
+		if (health <= 0f ) {
 			desintegrate ();
 		}
 	}
 
 	/// <summary>
-	/// Tells how many minerals you collect, create particules,
+	/// Collect minerals, create particules,
 	/// destroy the asteroid
 	/// </summary>
 	public void desintegrate(){
+
 		AsteroidsMineral asm = this.gameObject.GetComponent <AsteroidsMineral>();
-		Debug.Log ("You collected " + asm.mineralCount + " minerals");
+		for (int i = 0; i < asm.mineralCount; i++) {
+			inv.GetComponent<Inventory>().AddItem(asm.id);
+		}
 
 		Instantiate(particule, transform.position, Random.rotation);
 
