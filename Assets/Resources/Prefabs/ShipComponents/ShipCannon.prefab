@@ -54,6 +54,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da7c67cd18af2334f813c67db6f79f1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Range: 10
 --- !u!120 &120506745819228478
 LineRenderer:
   m_ObjectHideFlags: 1

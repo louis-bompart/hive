@@ -9,7 +9,7 @@ public class OptionMenuClick : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        
+
     }
 
     /// <summary>
@@ -58,7 +58,7 @@ public class OptionMenuClick : MonoBehaviour
     {
         nbPause += 1;
         Debug.Log("Pause" + nbPause);
-        if(nbPause>0)
+        if (nbPause > 0)
         {
             Time.timeScale = 0;
             Cursor.visible = true;
@@ -73,7 +73,7 @@ public class OptionMenuClick : MonoBehaviour
     {
         nbPause -= 1;
         Debug.Log("UnPause" + nbPause);
-        if (nbPause<=0)
+        if (nbPause <= 0)
         {
             Time.timeScale = 1;
             Cursor.visible = false;
@@ -85,9 +85,7 @@ public class OptionMenuClick : MonoBehaviour
     /// </summary>
     public void OnQuitGame()
     {
-      
+
         Application.Quit();
     }
-
-
 }

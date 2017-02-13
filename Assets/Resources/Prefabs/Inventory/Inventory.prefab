@@ -65,9 +65,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae911121091ab4ef4a7462c8ce5bcb75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inventoryPanel: {fileID: 1916131065290330, guid: 1f4c194050a1947d288824da26b0b50f,
-    type: 2}
-  slotPanel: {fileID: 1533979801022598, guid: aa961f37ee2924a948b2d623e5b7066d, type: 2}
+  inventoryPanel: {fileID: 0}
+  slotPanel: {fileID: 0}
   inventorySlot: {fileID: 1418519722251530, guid: 6bc7ceff6f0a94fda99f9d49b6fe54f8,
     type: 2}
   inventoryItem: {fileID: 1231467669643538, guid: b9b3389c27af2491789d4ac1db4d3ea3,
@@ -85,3 +84,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0e6d00941e2745eab048c91edefc72d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemDataBaseJson: {fileID: 4900000, guid: 88ecf4467fc164872932925ad3489235, type: 3}

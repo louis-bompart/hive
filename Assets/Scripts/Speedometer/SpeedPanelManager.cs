@@ -51,8 +51,6 @@ public class SpeedPanelManager : MonoBehaviour
         }
     }
 
-
-
     private GameObject mark100;
     private GameObject mark66;
     private GameObject mark33;
