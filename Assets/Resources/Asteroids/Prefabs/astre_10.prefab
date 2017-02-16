@@ -93,7 +93,7 @@ Rigidbody:
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -111,7 +111,7 @@ MeshCollider:
   serializedVersion: 2
   m_Convex: 1
   m_InflateMesh: 1
-  m_SkinWidth: 0.01
+  m_SkinWidth: 0.1
   m_Mesh: {fileID: 4300000, guid: 256a2ec5fd223db44bfeb953a95d03f0, type: 3}
 --- !u!114 &114225220712234638
 MonoBehaviour:
@@ -125,8 +125,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
-  particule: {fileID: 1027570773081274, guid: 04bb8664713f2684586743dd327fc1c7, type: 2}
-  particuleSize: 0.1
 --- !u!114 &114590221566001756
 MonoBehaviour:
   m_ObjectHideFlags: 1

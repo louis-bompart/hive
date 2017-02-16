@@ -737,7 +737,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!64 &64865220445596648
 MeshCollider:
   m_ObjectHideFlags: 1
@@ -750,7 +750,7 @@ MeshCollider:
   serializedVersion: 2
   m_Convex: 1
   m_InflateMesh: 1
-  m_SkinWidth: 0.01
+  m_SkinWidth: 0.04
   m_Mesh: {fileID: 4300000, guid: 48a258609e1d69c41a2d9b4c5111d580, type: 3}
 --- !u!81 &81454256584164648
 AudioListener:
@@ -877,6 +877,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Particleprefab: {fileID: 1027570773081274, guid: 04bb8664713f2684586743dd327fc1c7,
     type: 2}
+  range: 50
 --- !u!120 &120823569799843804
 LineRenderer:
   m_ObjectHideFlags: 1

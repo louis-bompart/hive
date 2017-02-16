@@ -419,6 +419,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 64865220445596648, guid: 4dd1f6e92aa101648b50d9095f3e598a,
+        type: 2}
+      propertyPath: m_SkinWidth
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 54469973646181428, guid: 4dd1f6e92aa101648b50d9095f3e598a,
+        type: 2}
+      propertyPath: m_CollisionDetection
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4dd1f6e92aa101648b50d9095f3e598a, type: 2}
   m_IsPrefabParent: 0
