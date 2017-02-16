@@ -36,6 +36,11 @@ public class Inventory : MonoBehaviour {
 		
 	public void AddItem(int id){
 		Item itemToAdd = database.FetchItemByID (id);
+        if(itemToAdd == null)
+        {
+            Debug.Log("itemIdNotFound");
+            return;
+        }
 		if (itemToAdd.Stackable && isItemInInventory (itemToAdd)) {
 			for (int i = 0; i < items.Count; i++) {
 				if (items [i].ID == id) {

@@ -50,7 +50,7 @@ public class Item{
 		this.Description = description;
 		this.Stackable = stackable;
 		this.Slug = slug;
-		this.Sprite = Resources.Load<Sprite> ("Image/" + slug);
+		this.Sprite = Resources.Load<Sprite> ("UIImage/" + slug);
 
 	}
 

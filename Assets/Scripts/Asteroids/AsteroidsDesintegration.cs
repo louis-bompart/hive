@@ -9,15 +9,17 @@ public class AsteroidsDesintegration : MonoBehaviour {
 	/// </summary>
 	public float health = 100f;
 
-	/// <summary>
-	/// The asteroids particules explosion prefab.
-	/// particuleSize : size of the particules
-	/// </summary>
+    private GameObject inv;
 
-	/// <summary>
-	/// Desintegrates it if its health goes below 0
-	/// </summary>
-	void Update(){
+    void Start()
+    {
+        inv = GameObject.Find("Inventory");
+    }
+
+    /// <summary>
+    /// Desintegrates it if its health goes below 0
+    /// </summary>
+    void Update(){
 		if (health <= 0f) {
 			desintegrate ();
         }
@@ -29,7 +31,14 @@ public class AsteroidsDesintegration : MonoBehaviour {
 	/// </summary>
 	public void desintegrate(){
 		AsteroidsMineral asm = this.gameObject.GetComponent <AsteroidsMineral>();
-		Debug.Log ("You collected " + asm.mineralCount + " minerals");
+        if(asm != null)
+        {
+            for (int i = 0; i < asm.mineralCount; i++)
+            {
+                inv.GetComponent<Inventory>().AddItem(asm.id);
+            }
+        }
+
         Destroy(this.gameObject);
     }
 
