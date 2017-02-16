@@ -18,7 +18,7 @@ public class PrimaryWeaponScript : MonoBehaviour
         if (Input.GetButtonDown("Fire1"))
         {
             GameObject clone;
-            clone = Instantiate(projectile, Spawnpoint.position, projectile.GetComponent<Rigidbody>().rotation);
+            clone = Instantiate(projectile, Spawnpoint.position, gameObject.transform.rotation);
 
             clone.GetComponent<Rigidbody>().velocity = Spawnpoint.forward * shotspeed;
         }

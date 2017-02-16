@@ -54,6 +54,7 @@ public class MiningLaserScript : MonoBehaviour {
                     if (asscript.health <= 0)
                     {
                         GameObject Particle = Instantiate(Particleprefab, hit.point, Random.rotation);
+                        Particle.transform.localScale = asscript.transform.localScale;
                         Destroy(Particle,2000);
                     }
                 }
