@@ -15,7 +15,7 @@ public class KeyButton : MonoBehaviour
     void Awake()
     {
         button = GetComponent<Button>();
-        button.interactable = false;
+        //button.interactable = false;
         targetGraphic = GetComponent<Graphic>();
 
         ColorBlock cb = button.colors;

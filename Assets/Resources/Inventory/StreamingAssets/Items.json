@@ -1,0 +1,170 @@
+[
+	{
+		"id": 0,
+		"title": "Chrome mineral",
+		"value": 2,
+		"description": "One chrome mineral which can be used for crafting",
+		"stackable": true,
+		"slug": "SpaceshipReticle"
+		},
+	{
+		"id": 1,
+		"title": "Carbon mineral",
+		"value": 4,
+		"description": "One carbon mineral which can be used for crafting",
+		"stackable": true,
+		"slug": "RoueOption"
+		},
+	{
+		"id": 2,
+		"title": "Chrome mineral",
+		"value": 2,
+		"description": "One chrome mineral which can be used for crafting",
+		"stackable": true,
+		"slug": "SpaceshipReticle"
+		},
+	{
+		"id": 3,
+		"title": "Carbon mineral",
+		"value": 4,
+		"description": "One carbon mineral which can be used for crafting",
+		"stackable": true,
+		"slug": "RoueOption"
+		},
+	{
+		"id": 4,
+		"title": "Chrome mineral",
+		"value": 2,
+		"description": "One chrome mineral which can be used for crafting",
+		"stackable": true,
+		"slug": "SpaceshipReticle"
+		},
+	{
+		"id": 5,
+		"title": "Carbon mineral",
+		"value": 4,
+		"description": "One carbon mineral which can be used for crafting",
+		"stackable": true,
+		"slug": "RoueOption"
+		},
+	{
+		"id": 6,
+		"title": "Chrome mineral",
+		"value": 2,
+		"description": "One chrome mineral which can be used for crafting",
+		"stackable": true,
+		"slug": "SpaceshipReticle"
+		},
+	{
+		"id": 7,
+		"title": "Carbon mineral",
+		"value": 4,
+		"description": "One carbon mineral which can be used for crafting",
+		"stackable": true,
+		"slug": "RoueOption"
+		},
+	{
+		"id": 8,
+		"title": "Chrome mineral",
+		"value": 2,
+		"description": "One chrome mineral which can be used for crafting",
+		"stackable": true,
+		"slug": "SpaceshipReticle"
+		},
+	{
+		"id": 9,
+		"title": "Carbon mineral",
+		"value": 4,
+		"description": "One carbon mineral which can be used for crafting",
+		"stackable": true,
+		"slug": "RoueOption"
+		},
+	{
+		"id": 10,
+		"title": "Chrome mineral",
+		"value": 2,
+		"description": "One chrome mineral which can be used for crafting",
+		"stackable": true,
+		"slug": "SpaceshipReticle"
+		},
+	{
+		"id": 11,
+		"title": "Carbon mineral",
+		"value": 4,
+		"description": "One carbon mineral which can be used for crafting",
+		"stackable": true,
+		"slug": "RoueOption"
+		},
+	{
+		"id": 12,
+		"title": "Chrome mineral",
+		"value": 2,
+		"description": "One chrome mineral which can be used for crafting",
+		"stackable": true,
+		"slug": "SpaceshipReticle"
+		},
+	{
+		"id": 13,
+		"title": "Carbon mineral",
+		"value": 4,
+		"description": "One carbon mineral which can be used for crafting",
+		"stackable": true,
+		"slug": "RoueOption"
+		},
+	{
+		"id": 14,
+		"title": "Chrome mineral",
+		"value": 2,
+		"description": "One chrome mineral which can be used for crafting",
+		"stackable": true,
+		"slug": "SpaceshipReticle"
+		},
+	{
+		"id": 15,
+		"title": "Carbon mineral",
+		"value": 4,
+		"description": "One carbon mineral which can be used for crafting",
+		"stackable": true,
+		"slug": "RoueOption"
+		},
+	{
+		"id": 16,
+		"title": "Chrome mineral",
+		"value": 2,
+		"description": "One chrome mineral which can be used for crafting",
+		"stackable": true,
+		"slug": "SpaceshipReticle"
+		},
+	{
+		"id": 17,
+		"title": "Carbon mineral",
+		"value": 4,
+		"description": "One carbon mineral which can be used for crafting",
+		"stackable": true,
+		"slug": "RoueOption"
+		},
+	{
+		"id": 18,
+		"title": "Chrome mineral",
+		"value": 2,
+		"description": "One chrome mineral which can be used for crafting",
+		"stackable": true,
+		"slug": "SpaceshipReticle"
+		},
+	{
+		"id": 19,
+		"title": "Carbon mineral",
+		"value": 4,
+		"description": "One carbon mineral which can be used for crafting",
+		"stackable": true,
+		"slug": "RoueOption"
+		},
+	{
+		"id": 20,
+		"title": "Chrome mineral",
+		"value": 2,
+		"description": "One chrome mineral which can be used for crafting",
+		"stackable": true,
+		"slug": "SpaceshipReticle"
+		}
+]
