@@ -518,6 +518,12 @@ Prefab:
       propertyPath: slotPanel
       value: 
       objectReference: {fileID: 1319067289}
-    m_RemovedComponents: []
+    - target: {fileID: 114724398801604382, guid: 0032e605056294b299dd7d30167ce724,
+        type: 2}
+      propertyPath: itemJSON
+      value: 
+      objectReference: {fileID: 4900000, guid: 88ecf4467fc164872932925ad3489235, type: 3}
+    m_RemovedComponents:
+    - {fileID: 114857571259936932, guid: 0032e605056294b299dd7d30167ce724, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 0032e605056294b299dd7d30167ce724, type: 2}
   m_IsPrefabParent: 0
