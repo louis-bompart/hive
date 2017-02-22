@@ -56,7 +56,7 @@ public class MiningLaserScript : MonoBehaviour {
                 {
                     HealthGauge.enabled = true;
                     HealthGaugeText.enabled = true;
-                    asscript.health -= 1f;
+                    asscript.health -= 1;
                     HealthGauge.value = asscript.health;
                     Debug.Log(asscript.health);
                     if (asscript.health <= 0)
