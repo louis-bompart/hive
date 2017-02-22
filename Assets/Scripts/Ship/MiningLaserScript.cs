@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MiningLaserScript : MonoBehaviour {
 
@@ -10,9 +11,13 @@ public class MiningLaserScript : MonoBehaviour {
     ParticleSystem.EmissionModule em;
     public GameObject Particleprefab;
     public int range = 50;
+    public Slider HealthGauge;
+    public Text HealthGaugeText;
 
     void Start ()
     {
+        HealthGauge.enabled = false;
+        HealthGaugeText.enabled = false;
         line = gameObject.GetComponent<LineRenderer>();
         line.enabled = false;
         particleObject = Instantiate(gameObject);
@@ -49,11 +54,16 @@ public class MiningLaserScript : MonoBehaviour {
                 Asteroid asscript = hit.transform.gameObject.GetComponent<Asteroid>();
                 if (asscript != null)
                 {
-                    if (!asscript.takeDammage(1))
+                    HealthGauge.enabled = true;
+                    HealthGaugeText.enabled = true;
+                    asscript.health -= 1f;
+                    HealthGauge.value = asscript.health;
+                    Debug.Log(asscript.health);
+                    if (asscript.health <= 0)
                     {
                         GameObject Particle = Instantiate(Particleprefab, hit.point, Random.rotation);
                         Particle.transform.localScale = asscript.transform.localScale;
-                        Destroy(Particle,2000);
+                        Destroy(Particle,2);
                     }
                 }
                 

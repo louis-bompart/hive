@@ -975,6 +975,8 @@ MonoBehaviour:
   Particleprefab: {fileID: 1027570773081274, guid: 04bb8664713f2684586743dd327fc1c7,
     type: 2}
   range: 50
+  HealthGauge: {fileID: 0}
+  HealthGaugeText: {fileID: 0}
 --- !u!120 &120823569799843804
 LineRenderer:
   m_ObjectHideFlags: 1
@@ -6343,7 +6345,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 845621976
+  randomSeed: -306877803
   InitialModule:
     serializedVersion: 3
     enabled: 1

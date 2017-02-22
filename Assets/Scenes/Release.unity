@@ -91,6 +91,12 @@ NavMeshSettings:
     cellSize: 0.16666667
     accuratePlacement: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &458396175 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114060210445215424, guid: fdf57665c914b42ae9200952b620095f,
+    type: 2}
+  m_PrefabInternal: {fileID: 1319067288}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1001 &768352051
 Prefab:
   m_ObjectHideFlags: 0
@@ -133,6 +139,12 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ccdb2c99b0eb7ca47845c5471b7e0ede, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &814608027 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114303303921355052, guid: fdf57665c914b42ae9200952b620095f,
+    type: 2}
+  m_PrefabInternal: {fileID: 1319067288}
+  m_Script: {fileID: -113659843, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1001 &845521346
 Prefab:
   m_ObjectHideFlags: 0
@@ -362,6 +374,31 @@ Prefab:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 224444900620494906, guid: fdf57665c914b42ae9200952b620095f,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 0.00990099
+      objectReference: {fileID: 0}
+    - target: {fileID: 224444900620494906, guid: fdf57665c914b42ae9200952b620095f,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224910584523048876, guid: fdf57665c914b42ae9200952b620095f,
+        type: 2}
+      propertyPath: m_AnchorMin.x
+      value: 0.00990099
+      objectReference: {fileID: 0}
+    - target: {fileID: 224910584523048876, guid: fdf57665c914b42ae9200952b620095f,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 0.00990099
+      objectReference: {fileID: 0}
+    - target: {fileID: 224910584523048876, guid: fdf57665c914b42ae9200952b620095f,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fdf57665c914b42ae9200952b620095f, type: 2}
   m_IsPrefabParent: 0
@@ -419,16 +456,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 64865220445596648, guid: 4dd1f6e92aa101648b50d9095f3e598a,
+    - target: {fileID: 114909092566730826, guid: 4dd1f6e92aa101648b50d9095f3e598a,
         type: 2}
-      propertyPath: m_SkinWidth
-      value: 0.04
-      objectReference: {fileID: 0}
-    - target: {fileID: 54469973646181428, guid: 4dd1f6e92aa101648b50d9095f3e598a,
+      propertyPath: HealthGauge
+      value: 
+      objectReference: {fileID: 814608027}
+    - target: {fileID: 114909092566730826, guid: 4dd1f6e92aa101648b50d9095f3e598a,
         type: 2}
-      propertyPath: m_CollisionDetection
-      value: 2
-      objectReference: {fileID: 0}
+      propertyPath: HealthGaugeText
+      value: 
+      objectReference: {fileID: 458396175}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4dd1f6e92aa101648b50d9095f3e598a, type: 2}
   m_IsPrefabParent: 0
