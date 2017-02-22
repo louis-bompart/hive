@@ -26,19 +26,13 @@ public class Inventory : MonoBehaviour {
 			slots [i].GetComponent<Slot> ().id = i;
 			slots [i].transform.SetParent (slotPanel.transform);
 		}
-
-		AddItem (0);
-		AddItem (0);
-		AddItem (1);
-		AddItem (1);
-		AddItem (1);
 	}
 		
 	public void AddItem(int id){
 		Item itemToAdd = database.FetchItemByID (id);
         if(itemToAdd == null)
         {
-            Debug.Log("itemIdNotFound");
+            Debug.Log("itemIdNotFound id : " + id);
             return;
         }
 		if (itemToAdd.Stackable && isItemInInventory (itemToAdd)) {

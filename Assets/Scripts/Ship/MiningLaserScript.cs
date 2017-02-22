@@ -46,12 +46,10 @@ public class MiningLaserScript : MonoBehaviour {
             if (Physics.Raycast(miningray, out hit, range))
             {
                 line.SetPosition(1, hit.point);
-                AsteroidsDesintegration asscript = hit.transform.gameObject.GetComponent<AsteroidsDesintegration>();
+                Asteroid asscript = hit.transform.gameObject.GetComponent<Asteroid>();
                 if (asscript != null)
                 {
-                    asscript.health -= 1f;
-                    Debug.Log(asscript.health);
-                    if (asscript.health <= 0)
+                    if (!asscript.takeDammage(1))
                     {
                         GameObject Particle = Instantiate(Particleprefab, hit.point, Random.rotation);
                         Particle.transform.localScale = asscript.transform.localScale;

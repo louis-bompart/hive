@@ -12,9 +12,7 @@ GameObject:
   - component: {fileID: 2321900}
   - component: {fileID: 54942140284951048}
   - component: {fileID: 64205687609358086}
-  - component: {fileID: 114501364984746818}
-  - component: {fileID: 114542882657062726}
-  - component: {fileID: 114127527493816806}
+  - component: {fileID: 114389181886615482}
   m_Layer: 0
   m_Name: astre_20
   m_TagString: Untagged
@@ -113,7 +111,7 @@ MeshCollider:
   m_InflateMesh: 1
   m_SkinWidth: 0.1
   m_Mesh: {fileID: 4300000, guid: 3817b73cd562f3a4f80112e0916cbadc, type: 3}
---- !u!114 &114127527493816806
+--- !u!114 &114389181886615482
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -121,41 +119,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 193304}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d300b3cc38092469290b7a656e8c5a6b, type: 3}
+  m_Script: {fileID: 11500000, guid: 3c3fc21fb05fc8243bb021698ca286aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
---- !u!114 &114501364984746818
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 193304}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3253d411d33b940fabe92e70ccc142da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  minrSpeed: 1
-  maxrSpeed: 8
-  minmSpeed: 10
-  maxmSpeed: 200
---- !u!114 &114542882657062726
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 193304}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b2ad5765587d4a64828a35e8a877bac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  id: 0
-  mineralCountProbability:
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  mineralCount: 0
+  _health: 100
+  idMineral: 0
+  count: 0

@@ -21,6 +21,7 @@ public class PrimaryWeaponScript : MonoBehaviour
             clone = Instantiate(projectile, Spawnpoint.position, gameObject.transform.rotation);
 
             clone.GetComponent<Rigidbody>().velocity = Spawnpoint.forward * shotspeed;
+            clone.GetComponent<Rigidbody>().velocity += gameObject.GetComponentInParent<Rigidbody>().velocity;
         }
     }
 }

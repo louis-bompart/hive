@@ -166,5 +166,53 @@
 		"description": "One chrome mineral which can be used for crafting",
 		"stackable": true,
 		"slug": "SpaceshipReticle"
+		},
+	{
+		"id": 100,
+		"title": "Titanium",
+		"value": 2,
+		"description": "One chrome mineral which can be used for crafting",
+		"stackable": true,
+		"slug": "SpaceshipReticle"
+		},
+	{
+		"id": 101,
+		"title": "Sulfrite",
+		"value": 2,
+		"description": "One chrome mineral which can be used for crafting",
+		"stackable": true,
+		"slug": "SpaceshipReticle"
+		},
+	{
+		"id": 102,
+		"title": "Carbonite",
+		"value": 2,
+		"description": "One chrome mineral which can be used for crafting",
+		"stackable": true,
+		"slug": "SpaceshipReticle"
+		},
+	{
+		"id": 103,
+		"title": "Monazite",
+		"value": 2,
+		"description": "One chrome mineral which can be used for crafting",
+		"stackable": true,
+		"slug": "SpaceshipReticle"
+		},
+	{
+		"id": 104,
+		"title": "Kirazite",
+		"value": 2,
+		"description": "One chrome mineral which can be used for crafting",
+		"stackable": true,
+		"slug": "SpaceshipReticle"
+		},
+	{
+		"id": 105,
+		"title": "Peanutoide",
+		"value": 2,
+		"description": "One chrome mineral which can be used for crafting",
+		"stackable": true,
+		"slug": "SpaceshipReticle"
 		}
 ]

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ProjectileScript : MonoBehaviour {
 
+
 	// Use this for initialization
 	void Start () {
 		
@@ -16,9 +17,12 @@ public class ProjectileScript : MonoBehaviour {
 
     void OnTriggerEnter(Collider entity)
     {      
-            //entity.gameObject.GetComponent<AsteroidsDesintegration>().health -= 5;
-            Debug.Log("Something hit");
-            //Debug.Log(entity.gameObject.GetComponent<AsteroidsDesintegration>().health);
-            Destroy(gameObject);
+        Entity temp = entity.GetComponentInParent<Entity>();
+        if(temp != null)
+        {
+            temp.takeDammage(10);
+        }
+        
+        Destroy(gameObject);
     }
 }
