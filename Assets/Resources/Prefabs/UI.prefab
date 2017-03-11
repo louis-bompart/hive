@@ -56,7 +56,7 @@ GameObject:
   - component: {fileID: 222217994467730988}
   - component: {fileID: 114240307001321764}
   m_Layer: 5
-  m_Name: Text
+  m_Name: AsteroidHealthGauge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
