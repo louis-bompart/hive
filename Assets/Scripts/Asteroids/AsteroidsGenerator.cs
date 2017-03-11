@@ -90,7 +90,23 @@ public class AsteroidsGenerator : MonoBehaviour {
 
         }
         astToSet.idMineral = idMineral[i];
-
+        switch(astToSet.idMineral)
+        {
+            case 100:
+                break;
+            case 101:
+                break;
+            case 102:
+                break;
+            case 103:
+                break;
+            case 104:
+                break;
+            case 105:
+                break;
+            default:
+                break;
+        }
 
     }
 
