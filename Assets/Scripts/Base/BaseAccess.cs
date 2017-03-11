@@ -10,12 +10,12 @@ public class BaseAccess : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-        Button_Prompt.enabled = true;
+        Button_Prompt.gameObject.SetActive(true);
     }
 
     private void OnTriggerStay(Collider other)
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetAxis("Submit")>0)
         {
             Cursor.visible = true;
             SceneManager.LoadSceneAsync("Bridge", LoadSceneMode.Single);
@@ -24,6 +24,6 @@ public class BaseAccess : MonoBehaviour {
 
     private void OnTriggerExit(Collider other)
     {
-        Button_Prompt.enabled = false;
+         Button_Prompt.gameObject.SetActive(false);
     }
 }

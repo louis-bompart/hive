@@ -12,12 +12,11 @@ public class MiningLaserScript : MonoBehaviour {
     public GameObject Particleprefab;
     public int range = 50;
     public Slider HealthGauge;
-    public Text HealthGaugeText;
+    public GameObject HealthGaugeText;
 
     void Start ()
     {
-        HealthGauge.enabled = false;
-        HealthGaugeText.enabled = false;
+        HealthGaugeText.SetActive(false);
         line = gameObject.GetComponent<LineRenderer>();
         line.enabled = false;
         particleObject = Instantiate(gameObject);
@@ -54,8 +53,8 @@ public class MiningLaserScript : MonoBehaviour {
                 Asteroid asscript = hit.transform.gameObject.GetComponent<Asteroid>();
                 if (asscript != null)
                 {
-                    HealthGauge.enabled = true;
-                    HealthGaugeText.enabled = true;
+                    
+                    HealthGaugeText.SetActive(true);
                     asscript.health -= 1;
                     HealthGauge.value = asscript.health;
                     Debug.Log(asscript.health);
@@ -73,6 +72,7 @@ public class MiningLaserScript : MonoBehaviour {
             else
             {
                 line.SetPosition(1, miningray.GetPoint(range));
+                HealthGaugeText.SetActive(false);
                 em.enabled = false;
             }
 
@@ -80,6 +80,7 @@ public class MiningLaserScript : MonoBehaviour {
             yield return null;
         }
 
+        HealthGaugeText.SetActive(false);
         line.enabled = false;
         em.enabled = false;
     }

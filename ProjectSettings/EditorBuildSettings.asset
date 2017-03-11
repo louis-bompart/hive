@@ -7,9 +7,9 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 1
     path: Assets/Scenes/Release.unity
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/BaseUI/StorageBay.unity
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/BaseUI/Factory.unity
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/BaseUI/Bridge.unity

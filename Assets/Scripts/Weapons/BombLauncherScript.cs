@@ -30,6 +30,7 @@ public class BombLauncherScript : MonoBehaviour {
             clone = Instantiate(projectile, Spawnpoint.position, Spawnpoint.rotation);
 
             clone.GetComponent<Rigidbody>().velocity = Spawnpoint.forward * shotspeed;
+            clone.GetComponent<Rigidbody>().velocity += gameObject.GetComponentInParent<Rigidbody>().velocity;
         }
     }
 }
