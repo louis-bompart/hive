@@ -12,7 +12,7 @@ public class AC3
         while (queue.Count > 0)
         {
             Arc arc = queue.Dequeue();
-            if (RemoveInconsistentValues(arc))
+            if (RemoveInconsistentValues(arc, ref csp))
             {
                 foreach (Arc neighbor in GetNeighbors(csp, arc.roomI[0].position))
                 {
@@ -22,7 +22,7 @@ public class AC3
         }
     }
 
-    private static bool RemoveInconsistentValues(Arc arc)
+    private static bool RemoveInconsistentValues(Arc arc, ref Dictionary<Vector3, List<Room>> csp)
     {
         bool removed = false;
         foreach (Room room in arc.roomI)
@@ -30,6 +30,7 @@ public class AC3
             if (!isConstraintCompliant(room, arc.roomJ))
             {
                 arc.roomI.Remove(room);
+                csp[room.position].Remove(room);
                 removed = true;
             }
         }
@@ -70,7 +71,7 @@ public class AC3
         return arcs;
     }
 
-    private static Queue<Arc> GetNeighbors(Dictionary<Vector3, List<Room>> csp, Vector3 variable)
+    public static Queue<Arc> GetNeighbors(Dictionary<Vector3, List<Room>> csp, Vector3 variable)
     {
         Queue<Arc> output = new Queue<Arc>();
         foreach (Room room in csp[variable])
