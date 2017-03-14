@@ -7,18 +7,23 @@ using UnityEngine.SceneManagement;
 public class BaseAccess : MonoBehaviour {
 
     public Text Button_Prompt;
-
+    private void Start()
+    {
+        Button_Prompt.enabled = false;
+    }
     private void OnTriggerEnter(Collider other)
     {
         Button_Prompt.enabled = true;
+        Debug.Log("Possible de rentrer dans la base.");
     }
 
     private void OnTriggerStay(Collider other)
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetButtonDown("Interact"))
         {
             Cursor.visible = true;
-            SceneManager.LoadSceneAsync("Bridge", LoadSceneMode.Single);
+            Debug.Log("Scene loading...");
+            SceneManager.LoadScene("Hangar", LoadSceneMode.Single);
         }
     }
 
