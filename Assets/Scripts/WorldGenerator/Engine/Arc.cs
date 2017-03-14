@@ -5,10 +5,10 @@ using UnityEngine;
 
 public class Arc
 {
-    public List<Room> roomI;
-    public List<Room> roomJ;
+    public Vector3 roomI;
+    public Vector3 roomJ;
     public Arc() { }
-    public Arc(List<Room> i, List<Room> j) { roomI = i; roomJ = j; }
+    public Arc(Vector3 i, Vector3 j) { roomI = i; roomJ = j; }
     public Arc GetReverseArc()
     {
         return new Arc(roomJ, roomI);

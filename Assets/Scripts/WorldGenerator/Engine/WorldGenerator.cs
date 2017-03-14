@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class WorldGenerator : MonoBehaviour
 {
-
+    public void test(int a, int b = 1) { }
     public int seed;
     public int maxPOI;
     public float xSize;

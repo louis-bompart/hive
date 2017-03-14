@@ -14,7 +14,7 @@ public class AC3
             Arc arc = queue.Dequeue();
             if (RemoveInconsistentValues(arc, ref csp))
             {
-                foreach (Arc neighbor in GetNeighbors(csp, arc.roomI[0].position))
+                foreach (Arc neighbor in GetNeighbors(csp, arc.roomI))
                 {
                     queue.Enqueue(neighbor.GetReverseArc());
                 }
@@ -25,20 +25,31 @@ public class AC3
     private static bool RemoveInconsistentValues(Arc arc, ref Dictionary<Vector3, List<Room>> csp)
     {
         bool removed = false;
-        foreach (Room room in arc.roomI)
+        List<Room> toRemove = new List<Room>();
+        foreach (Room room in csp[arc.roomI])
         {
-            if (!isConstraintCompliant(room, arc.roomJ))
+            if (!isConstraintCompliant(room, csp[arc.roomJ]))
             {
-                arc.roomI.Remove(room);
-                csp[room.position].Remove(room);
+                toRemove.Add(room);
                 removed = true;
             }
+        }
+        if (toRemove.Count >= csp[arc.roomI].Count)
+        {
+            return false;
+        }
+        for (int i = 0; i < toRemove.Count; i++)
+        {
+            //arc.roomI.Remove(toRemove[i]);
+            csp[arc.roomI].Remove(toRemove[i]);
+
         }
         return removed;
     }
 
     private static bool isConstraintCompliant(Room room, List<Room> roomJ)
     {
+        int nbCandidate = roomJ.Count;
         foreach (Room candidate in roomJ)
         {
             foreach (RoomRule rule in room.rules)
@@ -47,12 +58,13 @@ public class AC3
                 {
                     if (!rule.isAdmissible(candidate))
                     {
-                        roomJ.Remove(candidate);
+                        //futureRoomJ.Remove(candidate);
+                        nbCandidate--;
                     }
                 }
             }
         }
-        return roomJ.Count > 0;
+        return nbCandidate > 0;
     }
 
     private static Queue<Arc> GenerateArcsQueue(Dictionary<Vector3, List<Room>> csp)
@@ -80,10 +92,9 @@ public class AC3
             {
                 foreach (Vector3 neigborPosition in rule.GetConstrainedPositions())
                 {
-                    List<Room> neighbor = new List<Room>();
-                    if (csp.TryGetValue(neigborPosition, out neighbor))
+                    if (csp.ContainsKey(neigborPosition + room.position))
                     {
-                        output.Enqueue(new Arc(csp[variable], neighbor));
+                        output.Enqueue(new Arc(room.position, neigborPosition + room.position));
                     }
                 }
             }

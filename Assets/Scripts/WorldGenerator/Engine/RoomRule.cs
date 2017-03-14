@@ -4,17 +4,15 @@ using UnityEngine;
 
 public class RoomRule
 {
-    private Room self;
-    private List<Room> world;
+    protected Room self;
     /// <summary>
     /// Add positions, relative to this room which are constrained by the enforcements of this rule
     /// </summary>
-    private List<Vector3> constainedRooms;
+    protected List<Vector3> constainedRooms;
     public IEnumerable<Vector3> GetConstrainedPositions() { return constainedRooms; }
 
-    public RoomRule(Room self, ICollection<Room> world)
+    public RoomRule(Room self)
     {
-        this.world = new List<Room>(world);
         this.self = self;
         this.constainedRooms = new List<Vector3>();
     }
@@ -23,13 +21,16 @@ public class RoomRule
     /// Check if the current rule is respected.
     /// </summary>
     /// <returns>True if respected, false if not</returns>
-    public bool isAdmissible(Room other)
+    public virtual bool isAdmissible(Room other)
     {
         return true;
     }
 
     public bool isConstrained(Room other)
     {
-        return !constainedRooms.Contains(other.position-self.position);
+        Vector3 positionToCheck = other.position - self.position;
+        return constainedRooms.Contains(positionToCheck);
     }
+
+
 }
