@@ -6,6 +6,13 @@ using UnityEngine;
 
 public class AC3
 {
+    //private void QueueChecker(Queue<Arc> queue)
+    //{
+    //    while (queue.Count>0)
+    //    {
+    //    }
+    //}
+
     public static void Execute(ref Dictionary<Vector3, List<Room>> csp)
     {
         Queue<Arc> queue = GenerateArcsQueue(csp);
@@ -54,12 +61,17 @@ public class AC3
         {
             foreach (RoomRule rule in room.rules)
             {
+                if (!rule.self.Equals(room))
+                    Debug.Log("Mahna Mahna !!");
+                //bool isAdmissible = true;
                 if (rule.isConstrained(candidate))
                 {
                     if (!rule.isAdmissible(candidate))
                     {
                         //futureRoomJ.Remove(candidate);
                         nbCandidate--;
+                        //isAdmissible = false;
+                        break;
                     }
                 }
             }
@@ -94,7 +106,9 @@ public class AC3
                 {
                     if (csp.ContainsKey(neigborPosition + room.position))
                     {
-                        output.Enqueue(new Arc(room.position, neigborPosition + room.position));
+                        Arc toAdd = new Arc(room.position, neigborPosition + room.position);
+                        if (!output.Contains(toAdd))
+                            output.Enqueue(new Arc(room.position, neigborPosition + room.position));
                     }
                 }
             }

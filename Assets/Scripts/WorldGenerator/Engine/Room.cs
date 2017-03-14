@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -24,7 +25,11 @@ public class Room
         this.canBeFirst = room.canBeFirst;
         this.prefab = room.prefab;
         this.distanceFromCenter = Vector3.Distance(Vector3.zero, position);
-        this.rules = room.rules;
+        this.rules = new List<RoomRule>();
+        foreach (RoomRule rule in room.rules)
+        {
+            this.rules.Add(rule.GetCopy(this));
+        }
     }
 
     public virtual Room GetCopy(Vector3 position)

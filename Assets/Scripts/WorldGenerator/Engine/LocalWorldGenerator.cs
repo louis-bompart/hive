@@ -22,14 +22,16 @@ public abstract class LocalWorldGenerator : MonoBehaviour
         Room firstRoom = null;
         newLWG.InitializeRoomList();
         List<Room> copyRooms = new List<Room>(newLWG.rooms);
-        while (firstRoom == null && copyRooms.Count > 0)
+        int i = 1;
+        while (firstRoom == null && i-1< copyRooms.Count)
         {
-            int index = UnityEngine.Random.Range(1, copyRooms.Count) - 1;
+            int index = UnityEngine.Random.Range(i, copyRooms.Count) - 1;
+            i++;
             firstRoom = copyRooms[index].canBeFirst ? copyRooms[index] : null;
         }
         if (firstRoom == null)
         {
-            Debug.LogError("No suitable room for generation begin exists in this generator !");
+            Debug.LogError("No suitable room for generation's start exists in this generator, duh !");
         }
         else
         {
@@ -52,19 +54,16 @@ public abstract class LocalWorldGenerator : MonoBehaviour
 
     private bool BacktrackingSearch()
     {
-        Dictionary<Vector3, List<Room>> result = RecursiveBacktracking(new Dictionary<Vector3, List<Room>>(), csp);
+        Dictionary<Vector3, Room> result = RecursiveBacktracking(new Dictionary<Vector3, Room>(localWorld), csp);
         if (result.Count > 0)
         {
-            foreach (Vector3 key in result.Keys)
-            {
-                localWorld.Add(key, result[key][0]);
-            }
+            localWorld = result;
             return true;
         }
         return false;
     }
 
-    private Dictionary<Vector3, List<Room>> RecursiveBacktracking(Dictionary<Vector3, List<Room>> assignment, Dictionary<Vector3, List<Room>> csp)
+    private Dictionary<Vector3, Room> RecursiveBacktracking(Dictionary<Vector3, Room> assignment, Dictionary<Vector3, List<Room>> csp)
     {
         AC3.Execute(ref csp);
         if (CheckAssignment(assignment))
@@ -73,33 +72,38 @@ public abstract class LocalWorldGenerator : MonoBehaviour
         }
         if (HasNullValue(csp))
         {
-            return new Dictionary<Vector3, List<Room>>();
+            //return new Dictionary<Vector3, List<Room>>();
+            return new Dictionary<Vector3, Room>();
         }
         Vector3 variable = SelectUnassignedVariable();
         if (variable == Vector3.zero)
         {
             Debug.Log("No variable found during the recursivebacktracking");
-            return new Dictionary<Vector3, List<Room>>();
+            //return new Dictionary<Vector3, List<Room>>();
+            return new Dictionary<Vector3, Room>();
+
         }
-        IEnumerable<Room> sortedUnassignedValues = OrderDomainValues(csp[variable]);
+        IEnumerable<Room> sortedUnassignedValues = OrderDomainValues(variable);
         foreach (Room value in sortedUnassignedValues)
         {
             //Consistent thanks to AC3
-            if (!assignment.ContainsKey(variable))
-                assignment.Add(variable, new List<Room>());
-            assignment[variable].Add(value);
+            //if (!assignment.ContainsKey(variable))
+            //    assignment.Add(variable, new List<Room>());
+            //assignment[variable].Add(value);
+            assignment.Add(variable, value);
             List<Room> tmp = new List<Room>(csp[variable]);
             csp[variable].Clear();
             csp[variable].Add(value);
-            Dictionary<Vector3, List<Room>> result = RecursiveBacktracking(assignment, csp);
+            Dictionary<Vector3, Room> result = RecursiveBacktracking(assignment, csp);
             if (result.Count > 0)
             {
                 return result;
             }
-            assignment[variable].Remove(value);
+            assignment.Remove(variable);
             csp[variable] = tmp;
         }
-        return new Dictionary<Vector3, List<Room>>();
+        return new Dictionary<Vector3, Room>();
+        //return new Dictionary<Vector3, List<Room>>();
     }
 
     private bool HasNullValue(Dictionary<Vector3, List<Room>> csp)
@@ -112,24 +116,47 @@ public abstract class LocalWorldGenerator : MonoBehaviour
         return false;
     }
 
-    private IEnumerable<Room> OrderDomainValues(List<Room> list)
+    private IEnumerable<Room> OrderDomainValues(Vector3 position)
     {
-        return list.ToArray().OrderBy(room => AC3.GetNeighbors(csp, room.position).Count);
+        List<CountedRoom> sortedRoom = new List<CountedRoom>();
+        Queue<Arc> arcs = AC3.GetNeighbors(csp, position);
+        List<Room> neighbors = new List<Room>();
+        while (arcs.Count > 0)
+        {
+            neighbors.Concat<Room>(csp[arcs.Dequeue().roomJ]);
+        }
+        foreach (Room room in csp[position])
+        {
+            sortedRoom.Add(new CountedRoom(CountRoom(room.GetType(), neighbors), room));
+        }
+        sortedRoom.Sort();
+        Queue<Room> output = new Queue<Room>();
+        foreach (CountedRoom cr in sortedRoom)
+        {
+            output.Enqueue(cr.room);
+        }
+        return output;
     }
 
-    private bool CheckAssignment(Dictionary<Vector3, List<Room>> assignment)
+    private int CountRoom(Type type, List<Room> neighbors)
     {
+        return neighbors.Count(d => d.GetType() == type);
+    }
+
+    private bool CheckAssignment(Dictionary<Vector3, Room> assignment)
+    {
+        return assignment.Count == csp.Count;
         //Minus 1 due to the center which is already assigned.
-        if (assignment.Count != csp.Count - 1)
-        {
-            return false;
-        }
-        foreach (List<Room> room in assignment.Values)
-        {
-            if (room.Count != 1)
-                return false;
-        }
-        return true;
+        //if (assignment.Count != csp.Count - 1)
+        //{
+        //    return false;
+        //}
+        //foreach (List<Room> room in assignment.Values)
+        //{
+        //    if (room.Count != 1)
+        //        return false;
+        //}
+        //return true;
     }
 
     private Vector3 SelectUnassignedVariable()
@@ -167,16 +194,17 @@ public abstract class LocalWorldGenerator : MonoBehaviour
         List<Room> tmp = new List<Room>();
         tmp.Add(localWorld[Vector3.zero]);
         csp.Add(Vector3.zero, tmp);
-        for (int i = 0; i < radius; i++)
+        for (int i = -radius; i <= radius; i++)
         {
-            for (int j = 0; j < radius; j++)
+            for (int j = -radius; j <= radius; j++)
             {
-                for (int k = 0; k < radius; k++)
+                for (int k = -radius; k <= radius; k++)
                 {
                     Vector3 currentPos = new Vector3(i, j, k);
                     if (Vector3.Distance(Vector3.zero, currentPos) <= radius && (i != 0 || j != 0 || k != 0))
                     {
                         tmp = generateRoomsCopy(currentPos);
+                        //tmp = generateRoomsCopy(-currentPos);
                         csp.Add(currentPos, tmp);
                     }
                 }
@@ -202,4 +230,25 @@ public abstract class LocalWorldGenerator : MonoBehaviour
     public Dictionary<Vector3, List<Room>> csp;
 
     protected abstract void InitializeRoomList();
+
+    private class CountedRoom : IComparable
+    {
+        public Room room;
+        public int count;
+        public CountedRoom(int count, Room room)
+        {
+            this.room = room;
+            this.count = count;
+        }
+
+        public int CompareTo(object obj)
+        {
+            int toReturn = ((obj as CountedRoom).count - this.count);
+            if (toReturn==0)
+            {
+                return UnityEngine.Random.Range(-1, 2);
+            }
+            return -toReturn;
+        }
+    }
 }

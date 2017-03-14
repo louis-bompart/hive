@@ -13,5 +13,18 @@ public class Arc
     {
         return new Arc(roomJ, roomI);
     }
+
+    public override int GetHashCode()
+    {
+        return roomI.GetHashCode() + roomJ.GetHashCode();
+    }
+
+    public override bool Equals(object obj)
+    {
+        if (obj is Arc)
+            if ((obj as Arc).roomI == roomI && (obj as Arc).roomJ == roomJ)
+                return true;
+        return false;
+    }
 }
 

@@ -19,6 +19,6 @@ public class BlueRoom : Room
     {
         base.Initialize();
         rules.Add(new NoSameNeighborRule(this));
-        prefab = Resources.Load<GameObject>("BlueRoom");
+        prefab = Resources.Load<GameObject>("WorldGenerators/Example/Rooms/BlueRoom/Prefab");
     }
 }

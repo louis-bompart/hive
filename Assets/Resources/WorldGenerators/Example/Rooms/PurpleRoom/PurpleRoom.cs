@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RedRoom : Room
+public class PurpleRoom : Room
 {
-    public RedRoom()
+    public PurpleRoom()
     {
     }
 
-    public RedRoom(Room room, Vector3 position) : base(room, position) { }
+    public PurpleRoom(Room room, Vector3 position) : base(room, position) { }
 
     public override Room GetCopy(Vector3 position)
     {
@@ -19,8 +19,7 @@ public class RedRoom : Room
     {
         base.Initialize();
         rules.Add(new NoSameNeighborRule(this));
-        canBeFirst = true;
-        prefab = Resources.Load<GameObject>("WorldGenerators/Example/Rooms/RedRoom/Prefab");
+        prefab = Resources.Load<GameObject>("WorldGenerators/Example/Rooms/PurpleRoom/Prefab");
 
     }
 }
