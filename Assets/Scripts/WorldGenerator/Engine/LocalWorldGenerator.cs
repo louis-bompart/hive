@@ -23,7 +23,7 @@ public abstract class LocalWorldGenerator : MonoBehaviour
         newLWG.InitializeRoomList();
         List<Room> copyRooms = new List<Room>(newLWG.rooms);
         int i = 1;
-        while (firstRoom == null && i-1< copyRooms.Count)
+        while (firstRoom == null && i - 1 < copyRooms.Count)
         {
             int index = UnityEngine.Random.Range(i, copyRooms.Count) - 1;
             i++;
@@ -64,21 +64,32 @@ public abstract class LocalWorldGenerator : MonoBehaviour
     }
 
     private Dictionary<Vector3, Room> RecursiveBacktracking(Dictionary<Vector3, Room> assignment, Dictionary<Vector3, List<Room>> csp)
-    {
+    {  
         AC3.Execute(ref csp);
         if (CheckAssignment(assignment))
         {
             return assignment;
         }
+        bool partialyComplete = false;
+        if (CheckPartialAssignment(assignment))
+        {
+            partialyComplete = true;
+            if (partialCounter > partialMax)
+                return assignment;
+        }
         if (HasNullValue(csp))
         {
             //return new Dictionary<Vector3, List<Room>>();
+            if (partialyComplete)
+                partialCounter++;
             return new Dictionary<Vector3, Room>();
         }
         Vector3 variable = SelectUnassignedVariable();
         if (variable == Vector3.zero)
         {
             Debug.Log("No variable found during the recursivebacktracking");
+            if (partialyComplete)
+                partialCounter++;
             //return new Dictionary<Vector3, List<Room>>();
             return new Dictionary<Vector3, Room>();
 
@@ -104,6 +115,11 @@ public abstract class LocalWorldGenerator : MonoBehaviour
         }
         return new Dictionary<Vector3, Room>();
         //return new Dictionary<Vector3, List<Room>>();
+    }
+
+    private bool CheckPartialAssignment(Dictionary<Vector3, Room> assignment)
+    {
+        return (float)assignment.Count / (float)csp.Count > partialThreshold;
     }
 
     private bool HasNullValue(Dictionary<Vector3, List<Room>> csp)
@@ -228,6 +244,9 @@ public abstract class LocalWorldGenerator : MonoBehaviour
     public List<Room> rooms;
     public Dictionary<Vector3, Room> localWorld;
     public Dictionary<Vector3, List<Room>> csp;
+    public int partialCounter;
+    public int partialMax;
+    public float partialThreshold;
 
     protected abstract void InitializeRoomList();
 
@@ -244,11 +263,11 @@ public abstract class LocalWorldGenerator : MonoBehaviour
         public int CompareTo(object obj)
         {
             int toReturn = ((obj as CountedRoom).count - this.count);
-            if (toReturn==0)
+            if (toReturn == 0)
             {
                 return UnityEngine.Random.Range(-1, 2);
             }
-            return -toReturn;
+            return toReturn;
         }
     }
 }
