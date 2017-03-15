@@ -306,6 +306,8 @@ GameObject:
   - component: {fileID: 4115551660666334}
   - component: {fileID: 95505584603257394}
   - component: {fileID: 64872383466914046}
+  - component: {fileID: 65262102556667764}
+  - component: {fileID: 114629547440699052}
   m_Layer: 0
   m_Name: HiveStation
   m_TagString: Untagged
@@ -1552,7 +1554,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1627784246636624}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2bc9cb61cbd0f4842902806aba87a55c, type: 3}
+  m_Script: {fileID: 11500000, guid: 8f8edf769f218594bb9739783f531dfe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 0
