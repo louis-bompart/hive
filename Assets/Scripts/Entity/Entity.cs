@@ -31,9 +31,33 @@ public class Entity : MonoBehaviour {
         }
     }
 
+
+    IEnumerator hitColor() {
+
+        Material[] mats = GetComponentInChildren<MeshRenderer>().materials;
+        Color[] EmissionsColors = new Color[mats.Length];
+        int i = 0;
+        foreach (Material mat in mats)
+        {
+            EmissionsColors[i] = mat.GetColor("_EmissionColor");
+            i++;
+            mat.SetColor("_EmissionColor", Color.red);
+
+        }
+        yield return new WaitForSeconds(0.05f);
+        int j = 0;
+        foreach (Material mat in mats)
+        {
+            mat.SetColor("_EmissionColor", EmissionsColors[j]);
+            j++;
+        }
+    }
+
     //Inflic domage to the entity, return if the entity is still alive
     public bool takeDammage(int dammageIn)
     {
+        StartCoroutine(hitColor());
+
         health -= dammageIn;
         if(health<=0)
         {
@@ -43,6 +67,7 @@ public class Entity : MonoBehaviour {
         {
             return true;
         }
+       
     }
 
     /// <summary>
