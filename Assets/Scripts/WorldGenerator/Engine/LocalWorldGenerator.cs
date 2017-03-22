@@ -8,6 +8,7 @@ public abstract class LocalWorldGenerator : MonoBehaviour
 {
     //ToDo put to static when worldgenerators'll be read from Resources
     public static List<LocalWorldGenerator> worldGenerators;
+    
     public static LocalWorldGenerator Create(int seed)
     {
         if (worldGenerators == null)
@@ -224,6 +225,7 @@ public abstract class LocalWorldGenerator : MonoBehaviour
 
     public int localMaxRadius;
     public int localMinRadius;
+    public float roomSize;
     public int radius;
     public List<Room> rooms;
     public Dictionary<Vector3, Room> localWorld;
