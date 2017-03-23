@@ -12,8 +12,7 @@ public class WeaponSelector : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        nbWeapons = 2;
-        currentWeapon = 0;
+        
         for (int i = 0; i < nbWeapons; i++) {
             weapons[i].gameObject.SetActive(false);
 

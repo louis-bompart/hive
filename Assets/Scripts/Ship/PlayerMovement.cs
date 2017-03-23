@@ -56,6 +56,16 @@ public class PlayerMovement : MonoBehaviour
 
         rb.AddRelativeForce(acceleration, ForceMode.Acceleration);
         rb.AddRelativeTorque(torque, ForceMode.Acceleration);
+
+        if (Input.GetAxis("Fire1")>0)
+        {
+            WeaponSelector temp = gameObject.GetComponent<WeaponSelector>();
+            if (temp != null)
+            {
+                temp.weapons[temp.currentWeapon].BroadcastMessage("OnFire");
+            }
+           
+        }
     }
 
     /// <summary>

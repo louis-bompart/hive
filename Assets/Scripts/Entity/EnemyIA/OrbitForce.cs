@@ -41,9 +41,6 @@ public class OrbitForce : AbstratForce
             tangeantWeight = 1;
         }
 
-        Debug.Log(shipToTarget.magnitude);
-        Debug.Log(tangeantWeight);
-        Debug.Log(normalWeight);
 
         Vector3 tangeantForce = new Vector3(shipToTarget.y, shipToTarget.z, shipToTarget.x);
 

@@ -6,12 +6,14 @@ public class BombLauncherScript : MonoBehaviour {
 
     public int range;
     public int damage;
-    public int firerate;
+    public float firerate;
     public int ammo;
 
     public GameObject projectile;
     public float shotspeed;
     public Transform Spawnpoint;
+
+    private float lastShot;
 
     // Use this for initialization
     void Start()
@@ -22,15 +24,20 @@ public class BombLauncherScript : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
+        
+    }
 
-
-        if (Input.GetButtonDown("Fire1"))
+    public void OnFire()
+    {
+        if(lastShot + firerate < Time.time)
         {
             GameObject clone;
             clone = Instantiate(projectile, Spawnpoint.position, Spawnpoint.rotation);
 
             clone.GetComponent<Rigidbody>().velocity = Spawnpoint.forward * shotspeed;
-            clone.GetComponent<Rigidbody>().velocity += gameObject.GetComponentInParent<Rigidbody>().velocity;
+            clone.GetComponent<Rigidbody>().velocity += Spawnpoint.GetComponentInParent<Rigidbody>().velocity;
+            lastShot = Time.time;
         }
+       
     }
 }

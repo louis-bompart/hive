@@ -56,7 +56,7 @@ GameObject:
   - component: {fileID: 222217994467730988}
   - component: {fileID: 114240307001321764}
   m_Layer: 5
-  m_Name: AsteroidHealthGauge
+  m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2922,7 +2922,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 79.65, y: -3.5936}
+  m_AnchoredPosition: {x: 79.650024, y: -3.5935974}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224025763507842254

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BasicFlightControl : MonoBehaviour{
 
-    Enemy parent;
+    Entity parent;
     Rigidbody rb;
 
 
@@ -15,7 +15,7 @@ public class BasicFlightControl : MonoBehaviour{
     protected void Start()
     {
        
-        parent = GetComponent<Enemy>();
+        parent = GetComponent<Entity>();
         if(parent == null)
         {
             enabled = false;
@@ -76,7 +76,10 @@ public class BasicFlightControl : MonoBehaviour{
         Vector3 totalForce = new Vector3();
         foreach (AbstratForce actForce in tabForce )
         {
-            totalForce += actForce.CalculateForce().normalized * actForce.Weight;
+            if(actForce.enabled == true)
+            {
+                totalForce += actForce.CalculateForce().normalized * actForce.Weight;
+            }
         }
         return totalForce;
     }
@@ -110,6 +113,18 @@ public class BasicFlightControl : MonoBehaviour{
         temp.wayPoint = waypoint;
         temp.orbitDistance = distance;
         temp.Weight = weight;
+        temp.enabled = true;
+    }
+
+    public void newPursuiteForce(Transform waypoint, float weight = 1, float forward = 0, float right = 0, float up = 0,bool useVelocity = true)
+    {
+        PursuitForce temp = gameObject.AddComponent<PursuitForce>();
+        temp.wayPoint = waypoint;
+        temp.Weight = weight;
+        temp.offSetForward = forward;
+        temp.offSetRight = right;
+        temp.offSetUp = up;
+        temp.useTargeVelocity = useVelocity;
         temp.enabled = true;
     }
 }
