@@ -1,170 +1,99 @@
 {
 	"database": [
 		{
-			"id": 0,
-			"title": "Chrome mineral",
+			"id": 100,
+			"title": "Titanium",
 			"price": 2,
-			"description": "One chrome mineral which can be used for crafting",
+			"description": "A good and solid mineral which is required in many structures.",
 			"stackable": true,
-			"slug": "SpaceshipReticle"
+			"slug": "Titanium"
 			},
 		{
-			"id": 1,
-			"title": "Carbon mineral",
-			"price": 4,
-			"description": "One carbon mineral which can be used for crafting",
-			"stackable": true,
-			"slug": "RoueOption"
-			},
-		{
-			"id": 2,
-			"title": "Chrome mineral",
+			"id": 101,
+			"title": "Sulfrite",
 			"price": 2,
-			"description": "One chrome mineral which can be used for crafting",
+			"description": "A mix of many rare elements which is required in laser manufacturing.",
 			"stackable": true,
-			"slug": "SpaceshipReticle"
+			"slug": "Sulfrite"
 			},
 		{
-			"id": 3,
-			"title": "Carbon mineral",
-			"price": 4,
-			"description": "One carbon mineral which can be used for crafting",
-			"stackable": true,
-			"slug": "RoueOption"
-			},
-		{
-			"id": 4,
-			"title": "Chrome mineral",
+			"id": 102,
+			"title": "Carbonite",
 			"price": 2,
-			"description": "One chrome mineral which can be used for crafting",
+			"description": "Countains a big amount of carbon which is required in fuel manufacturing.",
 			"stackable": true,
-			"slug": "SpaceshipReticle"
+			"slug": "Carbonite"
 			},
 		{
-			"id": 5,
-			"title": "Carbon mineral",
-			"price": 4,
-			"description": "One carbon mineral which can be used for crafting",
-			"stackable": true,
-			"slug": "RoueOption"
-			},
-		{
-			"id": 6,
-			"title": "Chrome mineral",
+			"id": 103,
+			"title": "Monazite",
 			"price": 2,
-			"description": "One chrome mineral which can be used for crafting",
+			"description": "Countains divers popular chemical elements. They are rare on Earth but common on Centaury.",
 			"stackable": true,
-			"slug": "SpaceshipReticle"
+			"slug": "Monazite"
 			},
 		{
-			"id": 7,
-			"title": "Carbon mineral",
-			"price": 4,
-			"description": "One carbon mineral which can be used for crafting",
-			"stackable": true,
-			"slug": "RoueOption"
-			},
-		{
-			"id": 8,
-			"title": "Chrome mineral",
+			"id": 104,
+			"title": "Kirazite",
 			"price": 2,
-			"description": "One chrome mineral which can be used for crafting",
+			"description": "Recently discovered, it is now a fundamental element in supra luminic engines.",
 			"stackable": true,
-			"slug": "SpaceshipReticle"
+			"slug": "Kirazite"
 			},
 		{
-			"id": 9,
-			"title": "Carbon mineral",
-			"price": 4,
-			"description": "One carbon mineral which can be used for crafting",
-			"stackable": true,
-			"slug": "RoueOption"
-			},
-		{
-			"id": 10,
-			"title": "Chrome mineral",
+			"id": 105,
+			"title": "Peanutoïd",
 			"price": 2,
-			"description": "One chrome mineral which can be used for crafting",
+			"description": "A weird peanut butter mineral that has great effects on brain abilities. Many blueprints were discovered since then.",
 			"stackable": true,
-			"slug": "SpaceshipReticle"
+			"slug": "Peanutoide"
 			},
 		{
-			"id": 11,
-			"title": "Carbon mineral",
-			"price": 4,
-			"description": "One carbon mineral which can be used for crafting",
-			"stackable": true,
-			"slug": "RoueOption"
-			},
-		{
-			"id": 12,
-			"title": "Chrome mineral",
+			"id": 200,
+			"title": "Hull hardener",
 			"price": 2,
-			"description": "One chrome mineral which can be used for crafting",
+			"description": "Item required to upgrade ship's defense.",
 			"stackable": true,
-			"slug": "SpaceshipReticle"
+			"slug": "DefenseUpgrade"
 			},
 		{
-			"id": 13,
-			"title": "Carbon mineral",
-			"price": 4,
-			"description": "One carbon mineral which can be used for crafting",
-			"stackable": true,
-			"slug": "RoueOption"
-			},
-		{
-			"id": 14,
-			"title": "Chrome mineral",
+			"id": 201,
+			"title": "Afterburner",
 			"price": 2,
-			"description": "One chrome mineral which can be used for crafting",
+			"description": "Item required to upgrade ship's weapon.",
 			"stackable": true,
-			"slug": "SpaceshipReticle"
+			"slug": "WeaponUpgrade"
 			},
 		{
-			"id": 15,
-			"title": "Carbon mineral",
-			"price": 4,
-			"description": "One carbon mineral which can be used for crafting",
-			"stackable": true,
-			"slug": "RoueOption"
-			},
-		{
-			"id": 16,
-			"title": "Chrome mineral",
+			"id": 202,
+			"title": "Overheated fluid",
 			"price": 2,
-			"description": "One chrome mineral which can be used for crafting",
+			"description": "Item required to upgrade ship's mobility.",
 			"stackable": true,
-			"slug": "SpaceshipReticle"
+			"slug": "MobilityUpgrade"
 			},
 		{
-			"id": 17,
-			"title": "Carbon mineral",
-			"price": 4,
-			"description": "One carbon mineral which can be used for crafting",
-			"stackable": true,
-			"slug": "RoueOption"
-			},
-		{
-			"id": 18,
-			"title": "Chrome mineral",
+			"id": 210,
+			"title": "Shield hardener",
 			"price": 2,
-			"description": "One chrome mineral which can be used for crafting",
+			"description": "Item required to upgrade base's defense.",
 			"stackable": true,
-			"slug": "SpaceshipReticle"
+			"slug": "Peanutoide"
 			},
 		{
-			"id": 19,
-			"title": "Carbon mineral",
-			"price": 4,
-			"description": "One carbon mineral which can be used for crafting",
-			"stackable": true,
-			"slug": "RoueOption"
-			},
-		{
-			"id": 20,
-			"title": "Chrome mineral",
+			"id": 211,
+			"title": "Drone parts",
 			"price": 2,
-			"description": "One chrome mineral which can be used for crafting",
+			"description": "Item required to upgrade base's weapon.",
+			"stackable": true,
+			"slug": "Peanutoide"
+			},
+
+		{
+			"id": 212,
+			"title": "Nexus Core",
+			"price": 2,
+			"description": "Item required to upgrade base's core.",
 			"stackable": true,
 			"slug": "SpaceshipReticle"
 			}
