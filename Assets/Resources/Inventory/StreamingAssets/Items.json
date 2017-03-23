@@ -5,7 +5,7 @@
 			"title": "Titanium",
 			"price": 2,
 			"description": "A good and solid mineral which is required in many structures.",
-			"stackable": true,
+			"stackSize": 10,
 			"slug": "Titanium"
 			},
 		{
@@ -13,7 +13,7 @@
 			"title": "Sulfrite",
 			"price": 2,
 			"description": "A mix of many rare elements which is required in laser manufacturing.",
-			"stackable": true,
+			"stackSize": 10,
 			"slug": "Sulfrite"
 			},
 		{
@@ -21,7 +21,7 @@
 			"title": "Carbonite",
 			"price": 2,
 			"description": "Countains a big amount of carbon which is required in fuel manufacturing.",
-			"stackable": true,
+			"stackSize": 10,
 			"slug": "Carbonite"
 			},
 		{
@@ -29,7 +29,7 @@
 			"title": "Monazite",
 			"price": 2,
 			"description": "Countains divers popular chemical elements. They are rare on Earth but common on Centaury.",
-			"stackable": true,
+			"stackSize": 10,
 			"slug": "Monazite"
 			},
 		{
@@ -37,7 +37,7 @@
 			"title": "Kirazite",
 			"price": 2,
 			"description": "Recently discovered, it is now a fundamental element in supra luminic engines.",
-			"stackable": true,
+			"stackSize": 10,
 			"slug": "Kirazite"
 			},
 		{
@@ -45,7 +45,7 @@
 			"title": "Peanutoïd",
 			"price": 2,
 			"description": "A weird peanut butter mineral that has great effects on brain abilities. Many blueprints were discovered since then.",
-			"stackable": true,
+			"stackSize": 10,
 			"slug": "Peanutoide"
 			},
 		{
@@ -53,7 +53,7 @@
 			"title": "Hull hardener",
 			"price": 2,
 			"description": "Item required to upgrade ship's defense.",
-			"stackable": true,
+			"stackSize": 10,
 			"slug": "DefenseUpgrade"
 			},
 		{
@@ -61,7 +61,7 @@
 			"title": "Afterburner",
 			"price": 2,
 			"description": "Item required to upgrade ship's weapon.",
-			"stackable": true,
+			"stackSize": 10,
 			"slug": "WeaponUpgrade"
 			},
 		{
@@ -69,7 +69,7 @@
 			"title": "Overheated fluid",
 			"price": 2,
 			"description": "Item required to upgrade ship's mobility.",
-			"stackable": true,
+			"stackSize": 10,
 			"slug": "MobilityUpgrade"
 			},
 		{
@@ -77,7 +77,7 @@
 			"title": "Shield hardener",
 			"price": 2,
 			"description": "Item required to upgrade base's defense.",
-			"stackable": true,
+			"stackSize": 10,
 			"slug": "Peanutoide"
 			},
 		{
@@ -85,7 +85,7 @@
 			"title": "Drone parts",
 			"price": 2,
 			"description": "Item required to upgrade base's weapon.",
-			"stackable": true,
+			"stackSize": 10,
 			"slug": "Peanutoide"
 			},
 
@@ -94,7 +94,7 @@
 			"title": "Nexus Core",
 			"price": 2,
 			"description": "Item required to upgrade base's core.",
-			"stackable": true,
+			"stackSize": 10,
 			"slug": "SpaceshipReticle"
 			}
 	]

@@ -1,0 +1,34 @@
+{
+	"database": [
+		{
+			"id": 0,
+			"category": 0,
+			"title": "Chrome Tube Recipe",
+			"price": 20,
+			"nbItems": 2,
+			"itemsID": [2,0],
+			"itemsAmount": [1,4],
+			"slug": "SpaceshipReticle"
+			},
+		{
+			"id": 1,
+			"category": 0,
+			"title": "Carbon Tube Recipe",
+			"price": 20,
+			"nbItems": 2,
+			"itemsID": [3,1],
+			"itemsAmount": [1,4],
+			"slug": "SpaceshipReticle"
+			},
+		{
+			"id": 2,
+			"category": 1,
+			"title": "Carbonitochrome Recipe",
+			"price": 150,
+			"nbItems": 3,
+			"itemsID": [4,0,1],
+			"itemsAmount": [1,5,8],
+			"slug": "SpaceshipReticle"
+			}
+	]
+}

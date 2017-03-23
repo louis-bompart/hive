@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 [System.Serializable]
-public class Item
+public class Craft
 {
 	public int ID
 	{
@@ -12,6 +12,17 @@ public class Item
 		set
 		{
 			id = value;
+		}
+	}
+	public int Category
+	{
+		get
+		{
+			return category;
+		}
+		set
+		{
+			category = value;
 		}
 	}
 	public string Title
@@ -36,31 +47,41 @@ public class Item
 			price = value;
 		}
 	}
-	public string Description
+	public int NbItems
 	{
 		get
 		{
-			return description;
+			return nbItems;
 		}
 		set
 		{
-			description = value;
+			nbItems = value;
 		}
 	}
-    /// <summary>
-    /// -1 if not stackable
-    /// </summary>
-	public int StackSize
+	public int[] ItemsID
 	{
 		get
 		{
-			return stackSize;
+			return itemsID;
 		}
 		set
 		{
-			stackSize = value;
+			itemsID = value;
 		}
 	}
+	public int[] ItemsAmount
+	{
+		get
+		{
+			return itemsAmount;
+		}
+		set
+		{
+			itemsAmount = value;
+		}
+	}
+
+
 	public string Slug
 	{
 		get
@@ -76,37 +97,49 @@ public class Item
 	public Sprite Sprite { get; set; }
 
 	public int id;
+	public int category;
 	public string title;
 	public int price;
-	public string description;
-	public int stackSize;
+	public int nbItems;
+	public int[] itemsID;
+	public int[] itemsAmount;
 	public string slug;
+
 	public void SetSprite()
 	{
 		this.Sprite = Resources.Load<Sprite>("UIImage/" + slug);
 	}
 
-	public Item(int id, string title, int value, string description, int stackSize, string slug)
+	public Craft(int id, int category, string title, int value, int nbItems, int[] itemsID, int[] itemsAmount, string slug)
 	{
 		this.ID = id;
+		this.Category = category;
 		this.Title = title;
 		this.Price = value;
-		this.Description = description;
-		this.StackSize = stackSize;
+		this.nbItems = nbItems;
+		this.itemsID = new int[nbItems];
+		for (int i = 0; i < nbItems; i++) {
+			this.itemsID [i] = itemsID [i];
+		}
+		for (int i = 0; i < nbItems; i++) {
+			this.itemsAmount [i] = itemsAmount [i];
+		}
+
 		this.Slug = slug;
 		SetSprite();
 	}
 
-	public Item(){
+	public Craft(){
 		this.ID = -1;
 	}
 
 	public override bool Equals(object obj)
 	{
-		return (obj as Item).ID == this.ID;
+		return (obj as Craft).ID == this.ID;
 	}
 	public override int GetHashCode()
 	{
 		return ID;
 	}
+		
 }
