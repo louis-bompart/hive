@@ -33,6 +33,7 @@ public class DualBlastersScript : MonoBehaviour {
             GameObject clone;
             clone = Instantiate(projectile, Spawnpoint.position, Spawnpoint.rotation);
             clone.GetComponent<ProjectileScript>().SetParent(parent);
+            clone.GetComponent<ProjectileScript>().dammage = damage;
 
             clone.GetComponent<Rigidbody>().velocity = Spawnpoint.forward * shotspeed;
             clone.GetComponent<Rigidbody>().velocity += Spawnpoint.GetComponentInParent<Rigidbody>().velocity;

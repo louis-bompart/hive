@@ -5,6 +5,8 @@ using UnityEngine;
 public class ProjectileScript : MonoBehaviour {
 
     public GameObject parent;
+    public float dammage;
+
     // Use this for initialization
     void Start () {
 		
@@ -24,7 +26,7 @@ public class ProjectileScript : MonoBehaviour {
         Entity temp = entity.GetComponentInParent<Entity>();
         if(temp != null)
         {
-            temp.takeDammage(10);
+            temp.takeDammage((int)dammage);
             parent.GetComponent<OnHitColorChange>().OnHit();
         }
         
