@@ -7,6 +7,9 @@ public class Shield : Entity
     //In health/seconde
     public float shieldRechargeRate;
 
+    private float lastUpdate;
+    private float deltaPool;
+
 
     // Use this for initialization
     protected override void Start () {
@@ -15,6 +18,16 @@ public class Shield : Entity
 
     // Update is called once per frame
     protected override void Update () {
-        //TODO : recharge of the shield over time
+
+
+        deltaPool += Time.time - lastUpdate;
+        lastUpdate = Time.time;
+
+        if(deltaPool>=1)
+        {
+            health += shieldRechargeRate;
+            deltaPool = 0;
+        }
+
 	}
 }

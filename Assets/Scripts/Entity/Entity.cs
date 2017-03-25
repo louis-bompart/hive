@@ -12,9 +12,10 @@ public class Entity : MonoBehaviour {
     /// <summary>
     /// Only for inspector, use health for get set and operations
     /// </summary>
-    public int _health;
+    public float _health;
+    public float maxHP;
 
-    public int health
+    public float health
     {
         set
         {
@@ -22,6 +23,10 @@ public class Entity : MonoBehaviour {
             if(_health<=0)
             {
                 OnKill();
+            }
+            if(_health>=maxHP)
+            {
+                _health = maxHP;
             }
             
         }
@@ -94,7 +99,10 @@ public class Entity : MonoBehaviour {
     // Use this for initialization
     protected virtual void Start()
     {
-
+        if(maxHP == 0)
+        {
+            maxHP = _health;
+        }
     }
 
     // Update is called once per frame
