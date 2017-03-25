@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class ProjectileScript : MonoBehaviour {
 
-
-	// Use this for initialization
-	void Start () {
+    public GameObject parent;
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
@@ -25,8 +25,16 @@ public class ProjectileScript : MonoBehaviour {
         if(temp != null)
         {
             temp.takeDammage(10);
+            parent.GetComponent<OnHitColorChange>().OnHit();
         }
         
         Destroy(gameObject);
     }
+
+
+    public void SetParent(GameObject _parent)
+    {
+        parent = _parent;
+    }
+
 }
