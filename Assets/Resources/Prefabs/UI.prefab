@@ -2695,7 +2695,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Asteroid Health
+  m_Text: Warp Loading
 --- !u!114 &114389712976278752
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5696,10 +5696,10 @@ RectTransform:
   m_Father: {fileID: 224469971502599374}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.3, y: 0.897}
-  m_AnchorMax: {x: 0.693, y: 1}
-  m_AnchoredPosition: {x: 3.3966, y: -159.96}
-  m_SizeDelta: {x: 0, y: 0.0000076293945}
+  m_AnchorMin: {x: 0.3, y: 0.5643846}
+  m_AnchorMax: {x: 0.693, y: 0.66800004}
+  m_AnchoredPosition: {x: 3.3965988, y: 1.0399933}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!224 &224387602104059132
 RectTransform:
