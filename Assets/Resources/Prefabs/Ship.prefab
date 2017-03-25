@@ -935,6 +935,8 @@ MonoBehaviour:
   deadZoneY: 0.15
   showCursor: 0
   engineAnimation: {fileID: 0}
+  warpTime: 5
+  warpGauge: {fileID: 0}
 --- !u!114 &114887738573207152
 MonoBehaviour:
   m_ObjectHideFlags: 1
