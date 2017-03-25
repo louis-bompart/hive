@@ -37,23 +37,27 @@ public class Entity : MonoBehaviour {
     }
 
 
-    IEnumerator hitColor() {
+    public Material[] mats;
+    public Color[] OriginalEmissionsColors;
 
-        Material[] mats = GetComponentInChildren<MeshRenderer>().materials;
-        Color[] EmissionsColors = new Color[mats.Length];
+
+    public IEnumerator hitColor()
+    {
+
+
         int i = 0;
         foreach (Material mat in mats)
         {
-            EmissionsColors[i] = mat.GetColor("_EmissionColor");
-            i++;
+
             mat.SetColor("_EmissionColor", Color.red);
+            i++;
 
         }
         yield return new WaitForSeconds(0.05f);
         int j = 0;
         foreach (Material mat in mats)
         {
-            mat.SetColor("_EmissionColor", EmissionsColors[j]);
+            mat.SetColor("_EmissionColor", OriginalEmissionsColors[j]);
             j++;
         }
     }
@@ -102,6 +106,14 @@ public class Entity : MonoBehaviour {
         if(maxHP == 0)
         {
             maxHP = _health;
+        }
+        mats = GetComponentInChildren<MeshRenderer>().materials;
+        OriginalEmissionsColors = new Color[mats.Length];
+        int i = 0;
+        foreach (Material mat in mats)
+        {
+            OriginalEmissionsColors[i] = mat.GetColor("_EmissionColor");
+            i++;
         }
     }
 
