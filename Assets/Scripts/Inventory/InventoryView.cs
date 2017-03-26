@@ -20,6 +20,13 @@ public class InventoryView : MonoBehaviour
 
     private int freeSlot;
 
+    public enum Inventory
+    {
+        Ship,
+        Base
+    }
+    public Inventory inventory;
+    private string inventoryName;
     private InventoryModel inventoryModel;
 
     /// <summary>
@@ -48,9 +55,22 @@ public class InventoryView : MonoBehaviour
     /// <summary>
     /// instantiate item and slot list.
     /// </summary>
-    void Start()
+    void Awake()
     {
-        inventoryModel = this.gameObject.GetComponent<InventoryModel>();
+        inventoryName = null;
+        switch (inventory)
+        {
+            case Inventory.Ship:
+                inventoryName = "ShipInventory";
+                break;
+            case Inventory.Base:
+                inventoryName = "BaseInventory";
+                break;
+            default:
+                Debug.LogError("No inventory selected !", this);
+                break;
+        }
+        inventoryModel = GameObject.Find(inventoryName).GetComponent<InventoryModel>();
         // For now the nb of slots is hard-coded, most preferable option : Do some math to fix the size of each slot etc (not worth it 4 now)
         //slotAmount = InventoryModel.slotsAmount;
         freeSlot = slotsAmount;
@@ -59,8 +79,21 @@ public class InventoryView : MonoBehaviour
         //	slots [i] = Instantiate (inventorySlot);
         //	slots [i].transform.SetParent (slotPanel.transform);
         //}
-
     }
+
+    private void Start()
+    {
+        LoadInventory();
+    }
+    private void LoadInventory()
+    {
+        Dictionary<Item, int> inventoryDico = inventoryModel.inventory;
+        foreach (Item item in inventoryDico.Keys)
+        {
+            updateAddNewItemView(item, inventoryDico[item]);
+        }
+    }
+
     /// <summary>
     /// Check if a slot already got the item
     /// </summary>

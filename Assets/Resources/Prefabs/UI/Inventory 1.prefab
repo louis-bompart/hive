@@ -1195,7 +1195,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 787f714214c59423aad85163fb61cede, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isOpenOnStart: 0
+  isOpenOnStart: 1
 --- !u!114 &114081485470869936
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1393,6 +1393,7 @@ MonoBehaviour:
   inventoryItem: {fileID: 1231467669643538, guid: b9b3389c27af2491789d4ac1db4d3ea3,
     type: 2}
   slotsAmount: 48
+  inventory: 1
   slots: []
 --- !u!114 &114134163317011886
 MonoBehaviour:

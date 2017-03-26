@@ -19,10 +19,10 @@ public class InventoryController : MonoBehaviour
         Base
     }
     public Inventory inventory;
+    private string inventoryName;
     private InventoryModel inventoryModel;
     private int freeSlot;
     private InventoryView inventoryView;
-    private string inventoryName;
 
     //public int FreeSlot
     //{
@@ -60,16 +60,7 @@ public class InventoryController : MonoBehaviour
 
     private void Start()
     {
-        LoadInventory();
-    }
 
-    private void LoadInventory()
-    {
-        Dictionary<Item, int> inventoryDico = inventoryModel.inventory;
-        foreach (Item item in inventoryDico.Keys)
-        {
-            inventoryView.updateAddNewItemView(item, inventoryDico[item]);
-        }
     }
 
     private void Update()
