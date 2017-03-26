@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -24,6 +26,12 @@ public class PlayerMovement : MonoBehaviour
 
     private Rigidbody rb;
 
+    public float warpTime;
+    private float actualLoading;
+
+    public GameObject warpGauge;
+    private Slider warpSlider;
+
     // Use this for initialization
     void Start()
     {
@@ -32,20 +40,50 @@ public class PlayerMovement : MonoBehaviour
         Cursor.visible = showCursor;
         drag = rb.drag;
         angDrag = rb.angularDrag;
+
+        if(warpGauge == null)
+        {
+            warpGauge = GameObject.Find("WarpGauge");
+        }
+
+        if(warpGauge != null )
+        {
+            warpSlider = warpGauge.GetComponentInChildren<Slider>();
+            if(warpSlider == null)
+            {
+                
+                Debug.Log("Couldn't find warp slider");
+            }
+            else
+            {
+                Debug.Log("warpGauge gameObject empty");
+            }
+        }
+       
     }
 
     // Update is called once per frame
     void Update()
     {
-        HandleFAInput();
+        HandleWarpDrive();
     }
     
-    void HandleFAInput()
+    void HandleWarpDrive()
     {
-        if(Input.GetAxis("Flight Assist") > 0)
+        if(Input.GetAxis("Jump") > 0)
         {
-            rb.drag = Mathf.Abs(rb.drag - drag);
-            rb.angularDrag = Mathf.Abs(rb.angularDrag - angDrag);
+            warpGauge.SetActive(true);
+            actualLoading += Time.deltaTime;
+            warpSlider.value = (actualLoading / warpTime);
+            if(actualLoading >= warpTime )
+            {
+                SceneManager.LoadSceneAsync("SystemMap", LoadSceneMode.Single);
+            }
+        }
+        else
+        {
+            actualLoading = 0;
+            warpGauge.SetActive(false);
         }
     }
 

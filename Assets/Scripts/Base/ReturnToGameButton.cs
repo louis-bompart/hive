@@ -5,8 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class ReturnToGameButton : MonoBehaviour {
 
-	public void Click()
+	public void Click(string sceneToLoad)
     {
-        SceneManager.LoadScene("UpgradeTest", LoadSceneMode.Single);
+        SceneManager.LoadScene(sceneToLoad, LoadSceneMode.Single);
     }
 }

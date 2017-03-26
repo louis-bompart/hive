@@ -108,6 +108,8 @@ public class AsteroidsGenerator : MonoBehaviour {
                 break;
         }
 
+        setTexture(toSet, astToSet.idMineral);
+
     }
 
     #endregion
@@ -178,5 +180,19 @@ public class AsteroidsGenerator : MonoBehaviour {
     }
     #endregion
 
+    #region textureSetter
+
+    //List of texture
+    public Texture[] texture;
+
+    private void setTexture(GameObject toSet,int id)
+    {
+        int i = id - 100;
+        if(i>=0 && i< texture.Length)
+        {
+            toSet.GetComponent<Renderer>().material.mainTexture = texture[i];
+        }
+    }
+    #endregion
 
 }
