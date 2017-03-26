@@ -59,6 +59,7 @@ public class Entity : MonoBehaviour {
         StartCoroutine(hitColor());
 
         health -= dammageIn;
+        Debug.Log(health);
         if(health<=0)
         {
             return false;

@@ -21,7 +21,7 @@ public class PlayerMovement : MonoBehaviour
     public bool showCursor = false;
 
     public EnginesAnimation engineAnimation;
-
+    private ShipStats stats;
     private Rigidbody rb;
 
     // Use this for initialization
@@ -32,6 +32,7 @@ public class PlayerMovement : MonoBehaviour
         Cursor.visible = showCursor;
         drag = rb.drag;
         angDrag = rb.angularDrag;
+        stats = GameObject.Find("Stats").GetComponent<ShipStats>();
     }
 
     // Update is called once per frame
@@ -109,6 +110,10 @@ public class PlayerMovement : MonoBehaviour
     {
         Vector3 acceleration = Vector3.zero;
         acceleration += Vector3.forward * Input.GetAxis("Thrust") * MainThrust;
+        if(rb.velocity.magnitude >= (stats.TopSpeedStat + 1) *100)
+        {
+            rb.velocity = rb.velocity.normalized * (stats.TopSpeedStat + 1) * 100;
+        }
         acceleration += Vector3.up * Input.GetAxis("Vertical") * AuxThrust;
         acceleration += Vector3.right * Input.GetAxis("Horizontal") * AuxThrust;
         engineAnimation.UpdateThrottle(Vector3.Project(acceleration,Vector3.forward).magnitude / MainThrust +0.11f);

@@ -14,15 +14,16 @@ public class DualBlastersScript : MonoBehaviour {
     public Transform Spawnpoint;
 
     private float lastShot;
+    private ShipStats stats;
 
     // Use this for initialization
     void Start () {
-		
+        stats = GameObject.Find("Stats").GetComponent<ShipStats>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-
+        firerate = 2 - (stats.FireRateStat * 0.35f);
     }
 
     public void OnFire()

@@ -13,6 +13,13 @@ public class UpgradeManagement : MonoBehaviour
     private List<GameObject> TopSpeedGaugeGrads = new List<GameObject>();
     private List<GameObject> HandlingGaugeGrads = new List<GameObject>();
     private ShipStats stats;
+    private static int HealthUp = 0;
+    private static int ArmorUp = 0;
+    private static int DamageUp = 0;
+    private static int FireRateUp = 0;
+    private static int TopSpeedUp = 0;
+    private static int HandlingUp = 0;
+
     #endregion
 
     public void Start()
@@ -135,131 +142,256 @@ public class UpgradeManagement : MonoBehaviour
     #region Button click functions (update the values of the ship's stats)
     public void HealthUpgrade()
     {
-        stats.HealthStat += 1;
+        HealthUp += 1;
         int i = 0;
-        if (stats.HealthStat >= 5)
+        if (stats.HealthStat + HealthUp >= 5)
         {
-            stats.HealthStat = 5;
+            HealthUp = 5 - stats.HealthStat;
         }
         foreach (GameObject grad in HealthGaugeGrads)
         {
-            if (i < stats.HealthStat)
+            if (i < HealthUp + stats.HealthStat)
             {
-                grad.GetComponent<RawImage>().color = Color.green;
-                i++;
-            }
-            else
-            {
-                break;
+                if (grad.GetComponent<RawImage>().color == Color.white)
+                {
+                    grad.GetComponent<RawImage>().color = Color.yellow;
+                    i++;
+                }
+                else
+                {
+                    i++;
+                }
             }
         }
     }
 
     public void ArmorUpgrade()
     {
-        stats.ArmorStat += 1;
+        ArmorUp += 1;
         int i = 0;
-        if (stats.ArmorStat >= 5)
+        if (stats.ArmorStat + ArmorUp >= 5)
         {
-            stats.ArmorStat = 5;
+            ArmorUp = 5 - stats.ArmorStat;
         }
         foreach (GameObject grad in ArmorGaugeGrads)
         {
-            if (i < stats.ArmorStat)
+            if (i < ArmorUp + stats.ArmorStat)
             {
-                grad.GetComponent<RawImage>().color = Color.green;
-                i++;
-            }
-            else
-            {
-                break;
+                if (grad.GetComponent<RawImage>().color == Color.white)
+                {
+                    grad.GetComponent<RawImage>().color = Color.yellow;
+                    i++;
+                }
+                else
+                {
+                    i++;
+                }
             }
         }
     }
     public void DamageUpgrade()
     {
-        stats.DamageStat += 1;
+        DamageUp += 1;
         int i = 0;
-        if (stats.DamageStat >= 5)
+        if (stats.DamageStat + DamageUp >= 5)
         {
-            stats.DamageStat = 5;
+            DamageUp = 5 - stats.DamageStat;
         }
         foreach (GameObject grad in DamageGaugeGrads)
         {
-            if (i < stats.DamageStat)
+            if (i < DamageUp + stats.DamageStat)
             {
-                grad.GetComponent<RawImage>().color = Color.green;
-                i++;
-            }
-            else
-            {
-                break;
+                if (grad.GetComponent<RawImage>().color == Color.white)
+                {
+                    grad.GetComponent<RawImage>().color = Color.yellow;
+                    i++;
+                }
+                else
+                {
+                    i++;
+                }
             }
         }
     }
     public void FireRateUpgrade()
     {
-        stats.FireRateStat += 1;
+        FireRateUp += 1;
         int i = 0;
-        if (stats.FireRateStat >= 5)
+        if (stats.FireRateStat + FireRateUp >= 5)
         {
-            stats.FireRateStat = 5;
+            FireRateUp = 5 - stats.FireRateStat;
         }
         foreach (GameObject grad in FireRateGaugeGrads)
         {
-            if (i < stats.FireRateStat)
+            if (i < FireRateUp + stats.FireRateStat)
             {
-                grad.GetComponent<RawImage>().color = Color.green;
-                i++;
-            }
-            else
-            {
-                break;
+                if (grad.GetComponent<RawImage>().color == Color.white)
+                {
+                    grad.GetComponent<RawImage>().color = Color.yellow;
+                    i++;
+                }
+                else
+                {
+                    i++;
+                }
             }
         }
     }
     public void TopSpeedUpgrade()
     {
-        stats.TopSpeedStat += 1;
+        TopSpeedUp += 1;
         int i = 0;
-        if (stats.TopSpeedStat >= 5)
+        if (stats.TopSpeedStat + TopSpeedUp >= 5)
         {
-            stats.TopSpeedStat = 5;
+            TopSpeedUp = 5 - stats.TopSpeedStat;
         }
         foreach (GameObject grad in TopSpeedGaugeGrads)
         {
-            if (i < stats.TopSpeedStat)
+            if (i < TopSpeedUp + stats.TopSpeedStat)
             {
-                grad.GetComponent<RawImage>().color = Color.green;
-                i++;
-            }
-            else
-            {
-                break;
+                if (grad.GetComponent<RawImage>().color == Color.white)
+                {
+                    grad.GetComponent<RawImage>().color = Color.yellow;
+                    i++;
+                }
+                else
+                {
+                    i++;
+                }
             }
         }
     }
     public void HandlingUpgrade()
     {
-        stats.HandlingStat += 1;
+        HandlingUp += 1;
         int i = 0;
-        if (stats.HandlingStat >= 5)
+        if (stats.HandlingStat + HandlingUp >= 5)
         {
-            stats.HandlingStat = 5;
+            HandlingUp = 5 - stats.HandlingStat;
         }
         foreach (GameObject grad in HandlingGaugeGrads)
         {
-            if (i < stats.HandlingStat)
+            if (i < HandlingUp + stats.HandlingStat)
             {
-                grad.GetComponent<RawImage>().color = Color.green;
-                i++;
-            }
-            else
-            {
-                break;
+                if (grad.GetComponent<RawImage>().color == Color.white)
+                {
+                    grad.GetComponent<RawImage>().color = Color.yellow;
+                    i++;
+                }
+                else
+                {
+                    i++;
+                }
             }
         }
     }
     #endregion
 
+    #region Upgrade Validation/cancelation buttons and functions.
+
+    public void Validate()
+    {
+        stats.HealthStat += HealthUp;
+        stats.ArmorStat += ArmorUp;
+        stats.DamageStat += DamageUp;
+        stats.FireRateStat += FireRateUp;
+        stats.TopSpeedStat += TopSpeedUp;
+        stats.HandlingStat += HandlingUp;
+        foreach (GameObject grad in HealthGaugeGrads)
+        {
+            if (grad.GetComponent<RawImage>().color == Color.yellow)
+            {
+                grad.GetComponent<RawImage>().color = Color.green;
+            }
+        }
+        foreach (GameObject grad in ArmorGaugeGrads)
+        {
+            if (grad.GetComponent<RawImage>().color == Color.yellow)
+            {
+                grad.GetComponent<RawImage>().color = Color.green;
+            }
+        }
+        foreach (GameObject grad in DamageGaugeGrads)
+        {
+            if (grad.GetComponent<RawImage>().color == Color.yellow)
+            {
+                grad.GetComponent<RawImage>().color = Color.green;
+            }
+        }
+        foreach (GameObject grad in FireRateGaugeGrads)
+        {
+            if (grad.GetComponent<RawImage>().color == Color.yellow)
+            {
+                grad.GetComponent<RawImage>().color = Color.green;
+            }
+        }
+        foreach (GameObject grad in TopSpeedGaugeGrads)
+        {
+            if (grad.GetComponent<RawImage>().color == Color.yellow)
+            {
+                grad.GetComponent<RawImage>().color = Color.green;
+            }
+        }
+        foreach (GameObject grad in HandlingGaugeGrads)
+        {
+            if (grad.GetComponent<RawImage>().color == Color.yellow)
+            {
+                grad.GetComponent<RawImage>().color = Color.green;
+            }
+        }
+    }
+
+    public void Cancel()
+    {
+        HealthUp = 0;
+        ArmorUp = 0;
+        DamageUp = 0;
+        FireRateUp = 0;
+        TopSpeedUp = 0;
+        HandlingUp = 0;
+
+        foreach (GameObject grad in HealthGaugeGrads)
+        {
+            if (grad.GetComponent<RawImage>().color == Color.yellow)
+            {
+                grad.GetComponent<RawImage>().color = Color.white;
+            }
+        }
+        foreach (GameObject grad in ArmorGaugeGrads)
+        {
+            if (grad.GetComponent<RawImage>().color == Color.yellow)
+            {
+                grad.GetComponent<RawImage>().color = Color.white;
+            }
+        }
+        foreach (GameObject grad in DamageGaugeGrads)
+        {
+            if (grad.GetComponent<RawImage>().color == Color.yellow)
+            {
+                grad.GetComponent<RawImage>().color = Color.white;
+            }
+        }
+        foreach (GameObject grad in FireRateGaugeGrads)
+        {
+            if (grad.GetComponent<RawImage>().color == Color.yellow)
+            {
+                grad.GetComponent<RawImage>().color = Color.white;
+            }
+        }
+        foreach (GameObject grad in TopSpeedGaugeGrads)
+        {
+            if (grad.GetComponent<RawImage>().color == Color.yellow)
+            {
+                grad.GetComponent<RawImage>().color = Color.white;
+            }
+        }
+        foreach (GameObject grad in HandlingGaugeGrads)
+        {
+            if (grad.GetComponent<RawImage>().color == Color.yellow)
+            {
+                grad.GetComponent<RawImage>().color = Color.white;
+            }
+        }
+    }
+    #endregion
 }
