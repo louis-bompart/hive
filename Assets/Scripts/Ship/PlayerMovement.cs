@@ -6,11 +6,11 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float MainThrust = 5.0f;
+    public float MainThrust;
     public float AuxThrust = 2.5f;
     public float Torque = 2.5f;
 
-    private float drag = 0.0f;
+    private float drag = 15.0f;
     private float angDrag = 0.0f;
 
     public bool isYawInverted = false;
@@ -21,7 +21,7 @@ public class PlayerMovement : MonoBehaviour
     public float deadZoneY = 0.15f;
 
     public bool showCursor = false;
-
+    public float velocity;
     public EnginesAnimation engineAnimation;
 
     private Rigidbody rb;
@@ -37,10 +37,12 @@ public class PlayerMovement : MonoBehaviour
     {
         engineAnimation = GetComponentInChildren<EnginesAnimation>();
         rb = GetComponent<Rigidbody>();
+        stats = GameObject.Find("Stats").GetComponent<ShipStats>();
         Cursor.visible = showCursor;
         drag = rb.drag;
-        angDrag = rb.angularDrag;
-        stats = GameObject.Find("Stats").GetComponent<ShipStats>();
+        MainThrust = 25.0f * (stats.TopSpeedStat + 1);
+        rb.angularDrag = 7 - stats.HandlingStat;
+
 
         if(warpGauge == null)
         {
@@ -67,6 +69,7 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         HandleWarpDrive();
+        velocity = rb.velocity.magnitude;
     }
     
     void HandleWarpDrive()
@@ -88,11 +91,15 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    void FixedUpdate()
-    {
+        void FixedUpdate()
+        {
             Vector3 acceleration = ComputeThrusts();
             Vector3 torque = ComputeTorques();
-
+            //if (rb.velocity.magnitude > (stats.TopSpeedStat +1)* 100)
+            //{
+            //    acceleration = Vector3.zero;
+            //}
+            acceleration = SoftCap(acceleration);
             rb.AddRelativeForce(acceleration, ForceMode.Acceleration);
             rb.AddRelativeTorque(torque, ForceMode.Acceleration);
 
@@ -148,13 +155,19 @@ public class PlayerMovement : MonoBehaviour
         {
             Vector3 acceleration = Vector3.zero;
             acceleration += Vector3.forward * Input.GetAxis("Thrust") * MainThrust;
-            if (rb.velocity.magnitude >= (stats.TopSpeedStat + 1) * 100)
-            {
-                rb.velocity = rb.velocity.normalized * (stats.TopSpeedStat + 1) * 100;
-            }
             acceleration += Vector3.up * Input.GetAxis("Vertical") * AuxThrust;
             acceleration += Vector3.right * Input.GetAxis("Horizontal") * AuxThrust;
             engineAnimation.UpdateThrottle(Vector3.Project(acceleration, Vector3.forward).magnitude / MainThrust + 0.11f);
             return acceleration;
         }
+    private Vector3 SoftCap(Vector3 acceleration)
+    {
+        Vector3 futurSpeed = rb.velocity + Time.fixedDeltaTime * acceleration;
+        float speed = futurSpeed.sqrMagnitude;
+        if (futurSpeed.sqrMagnitude > stats.TopSpeedStat * stats.HandlingStat * 0.007)
+        {
+            acceleration = acceleration * ((speed / stats.TopSpeedStat) * (1 / (stats.HandlingStat * 0.007f - 1)) + (1 / (stats.HandlingStat * 0.007f - 1)));
+        }
+        return acceleration;
     }
+}
