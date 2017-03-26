@@ -108,6 +108,7 @@ public class CraftManager : MonoBehaviour
             compObj.GetComponent<Image>().sprite = componentItem[i].Sprite; // sets the sprite
             compObj.transform.localPosition = Vector2.zero; // sets the position of the item according to the slot
             compObj.name = componentItem[i].Title; // sets the name of the gameObject
+            compSlot.GetComponentInChildren<Text>().text = componentItem[i].stackSize.ToString();
 
         }
 
