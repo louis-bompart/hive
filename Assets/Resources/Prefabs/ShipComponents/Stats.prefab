@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4824515045738112}
   - component: {fileID: 114943797589614746}
+  - component: {fileID: 114293006947423294}
   m_Layer: 0
   m_Name: Stats
   m_TagString: Untagged
@@ -40,6 +41,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114293006947423294
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1721611536445708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 632ed34056c49254e9266e7924cab9b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ScanRangeStat: 0
+  printerStat: 0
+  NumberDroneStat: 0
+  fireDroneStat: 0
+  ShieldStat: 0
+  RechargeStat: 0
 --- !u!114 &114943797589614746
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -51,3 +69,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cddbef62d6f640b4d982f826d522ab51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HealthStat: 0
+  ArmorStat: 0
+  DamageStat: 0
+  FireRateStat: 0
+  TopSpeedStat: 0
+  HandlingStat: 0

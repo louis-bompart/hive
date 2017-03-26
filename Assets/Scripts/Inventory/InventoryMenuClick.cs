@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class InventoryMenuClick : MonoBehaviour
 {
-
+    public bool isOpenOnStart = false;
     // Use this for initialization
     void Start()
     {
-        gameObject.SetActive(false);
+        gameObject.SetActive(isOpenOnStart);
     }
 
     /// <summary>
@@ -19,6 +19,9 @@ public class InventoryMenuClick : MonoBehaviour
         if (gameObject.activeInHierarchy)
         {
             //The inventory is open, so we want to close it
+			GameObject inv = GameObject.Find ("Inventory");
+			Tooltip tooltip = inv.GetComponent<Tooltip> ();
+			tooltip.Deactivate ();
             gameObject.SetActive(false);
             OptionMenuClick.UnPauseGame();
         }

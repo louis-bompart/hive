@@ -3,35 +3,89 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class Slot : MonoBehaviour, IDropHandler {
-	public int id;
-	private Inventory inv;
+public class Slot : MonoBehaviour, IDropHandler
+{
 
-	void Start(){
-		inv = GameObject.Find ("Inventory").GetComponent<Inventory> ();
-	}
+    private InventoryView inventoryView;
+    private ItemData item;
+    private int amount;
 
-	public void OnDrop(PointerEventData eventData){
-		ItemData droppedItem = eventData.pointerDrag.GetComponent<ItemData> ();
-		if (inv.items [id].ID == -1) {
-			//inv.items [droppedItem.slot] = new Item ();
-			inv.items [id] = droppedItem.item;
-			droppedItem.slot = id;
-		} else if(droppedItem.slot != id){
-			Transform item = this.transform.GetChild (0);
-			item.GetComponent<ItemData> ().slot = droppedItem.slot;
-			item.transform.SetParent (inv.slots [droppedItem.slot].transform);
-			item.transform.position = inv.slots [droppedItem.slot].transform.position;
+    public int Amount
+    {
+        get
+        {
+            return amount;
+        }
 
-			droppedItem.slot = id;
-			droppedItem.transform.SetParent (this.transform);
-			droppedItem.transform.position = this.transform.position;
+        set
+        {
+            amount = value;
+        }
+    }
 
-			inv.items [droppedItem.slot] = item.GetComponent<ItemData> ().item;
-			inv.items [id] = droppedItem.item;
+    void Start()
+    {
+        inventoryView = GameObject.Find("Inventory").GetComponent<InventoryView>();
+        item = null;
+        Amount = -1;
+    }
 
-		}
-	}
+    public bool hasItem(Item item)
+    {
+        if (this.item == null)
+            return false;
+        return this.item.item.Equals(item);
+    }
+
+    public bool hasSomeRoom()
+    {
+        return Amount < item.item.stackSize;
+    }
+
+    public bool isEmpty()
+    {
+        return item == null;
+    }
+
+    /// <summary>
+    /// Set the item of the slot -no update on model, beware-
+    /// </summary>
+    /// <param name="item">the item to put in</param>
+    public void SetItem(ItemData item)
+    {
+        this.item = item;
+    }
+    /// <summary>
+    /// Remove the item of the slot -no update on model, beware-
+    /// </summary>
+    public void RemoveItem()
+    {
+        Destroy(item.gameObject);
+        SetItem(null);
+    }
+
+    /// <summary>
+    /// Event called when an element is dropped in a slot.
+    /// </summary>
+    /// <param name="eventData">Mouse Pointer eventData</param>
+    public void OnDrop(PointerEventData eventData)
+    {
+        ItemData dragged = eventData.pointerDrag.GetComponent<ItemData>();
+        if (dragged != null)
+        {
+            //inventoryView.updateMoveItemView(dragged.item, this.gameObject);
+            item = dragged;
+            dragged.currentSlot.item = null;
+            dragged.currentSlot = this;
+            dragged.transform.SetParent(this.transform);
+            RectTransform position = dragged.GetComponent<RectTransform>();
+            position.offsetMin = new Vector2(1, 1);
+            position.offsetMax = new Vector2(1, 1);
+            position.localScale = new Vector3(1, 1, 1);
+        }
+    }
+
+
 
 
 }

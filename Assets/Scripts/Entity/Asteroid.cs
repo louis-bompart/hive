@@ -17,7 +17,7 @@ public class Asteroid : Entity {
         Debug.Log("Loot de :" + count + " item d'id :" + idMineral);
         for (int i = 0; i < count; i++)
         {
-            inv.GetComponent<Inventory>().AddItem(idMineral);
+            inv.GetComponent<InventoryController>().AddItem(idMineral);
         }
     }
 
