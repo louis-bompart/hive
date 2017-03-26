@@ -78,7 +78,7 @@
 			"price": 2,
 			"description": "Item required to upgrade base's defense.",
 			"stackSize": 10,
-			"slug": "Peanutoide"
+			"slug": "MobilityUpgrade"
 			},
 		{
 			"id": 211,
@@ -86,7 +86,7 @@
 			"price": 2,
 			"description": "Item required to upgrade base's weapon.",
 			"stackSize": 10,
-			"slug": "Peanutoide"
+			"slug": "MobilityUpgrade"
 			},
 
 		{
@@ -95,7 +95,7 @@
 			"price": 2,
 			"description": "Item required to upgrade base's core.",
 			"stackSize": 10,
-			"slug": "SpaceshipReticle"
+			"slug": "MobilityUpgrade"
 			}
 	]
 }

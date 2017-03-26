@@ -1,34 +1,69 @@
 {
 	"database": [
 		{
-			"id": 0,
+			"id": 200,
 			"category": 0,
-			"title": "Chrome Tube Recipe",
-			"price": 20,
-			"nbItems": 2,
-			"itemsID": [2,0],
-			"itemsAmount": [1,4],
-			"slug": "SpaceshipReticle"
-			},
-		{
-			"id": 1,
-			"category": 0,
-			"title": "Carbon Tube Recipe",
-			"price": 20,
-			"nbItems": 2,
-			"itemsID": [3,1],
-			"itemsAmount": [1,4],
-			"slug": "SpaceshipReticle"
-			},
-		{
-			"id": 2,
-			"category": 1,
-			"title": "Carbonitochrome Recipe",
+			"title": "Hull hardener Recipe",
 			"price": 150,
 			"nbItems": 3,
-			"itemsID": [4,0,1],
+			"itemsID": [104,100,101],
 			"itemsAmount": [1,5,8],
-			"slug": "SpaceshipReticle"
+			"slug": "DefenseUpgrade"
+			}
+			,
+		{
+			"id": 201,
+			"category": 0,
+			"title": "Afterburner Recipe",
+			"price": 150,
+			"nbItems": 3,
+			"itemsID": [104,100,101],
+			"itemsAmount": [1,5,8],
+			"slug": "WeaponUpgrade"
+			}
+			,
+		{
+			"id": 202,
+			"category": 0,
+			"title": "Overheated fluid Recipe",
+			"price": 150,
+			"nbItems": 3,
+			"itemsID": [104,100,101],
+			"itemsAmount": [1,5,8],
+			"slug": "MobilityUpgrade"
+			}
+			,
+		{
+			"id": 210,
+			"category": 1,
+			"title": "Shield hardener Recipe",
+			"price": 150,
+			"nbItems": 3,
+			"itemsID": [104,100,101],
+			"itemsAmount": [1,5,8],
+			"slug": "MobilityUpgrade"
+			}
+			,
+		{
+			"id": 211,
+			"category": 1,
+			"title": "Drone parts Recipe",
+			"price": 150,
+			"nbItems": 3,
+			"itemsID": [104,100,101],
+			"itemsAmount": [1,5,8],
+			"slug": "MobilityUpgrade"
+			}
+			,
+		{
+			"id": 211,
+			"category": 1,
+			"title": "Nexus Core Recipe",
+			"price": 150,
+			"nbItems": 3,
+			"itemsID": [104,100,101],
+			"itemsAmount": [1,5,8],
+			"slug": "MobilityUpgrade"
 			}
 	]
 }
