@@ -1,67 +1,67 @@
 {
 	"database": [
 		{
-			"id": 200,
+			"id": 1200,
 			"category": 0,
 			"title": "Hull hardener Recipe",
 			"price": 150,
 			"nbItems": 3,
-			"itemsID": [104,100,101],
+			"itemsID": [200,100,101],
 			"itemsAmount": [1,5,8],
-			"slug": "DefenseUpgrade"
+			"slug": "MobilityUpgrade"
 			}
 			,
 		{
-			"id": 201,
+			"id": 1201,
 			"category": 0,
 			"title": "Afterburner Recipe",
 			"price": 150,
 			"nbItems": 3,
-			"itemsID": [104,100,101],
+			"itemsID": [201,100,101],
 			"itemsAmount": [1,5,8],
 			"slug": "WeaponUpgrade"
 			}
 			,
 		{
-			"id": 202,
+			"id": 1202,
 			"category": 0,
 			"title": "Overheated fluid Recipe",
 			"price": 150,
 			"nbItems": 3,
-			"itemsID": [104,100,101],
+			"itemsID": [202,100,101],
 			"itemsAmount": [1,5,8],
 			"slug": "MobilityUpgrade"
 			}
 			,
 		{
-			"id": 210,
+			"id": 1210,
 			"category": 1,
 			"title": "Shield hardener Recipe",
 			"price": 150,
 			"nbItems": 3,
-			"itemsID": [104,100,101],
+			"itemsID": [210,100,101],
 			"itemsAmount": [1,5,8],
 			"slug": "MobilityUpgrade"
 			}
 			,
 		{
-			"id": 211,
+			"id": 1211,
 			"category": 1,
 			"title": "Drone parts Recipe",
 			"price": 150,
 			"nbItems": 3,
-			"itemsID": [104,100,101],
+			"itemsID": [211,100,101],
 			"itemsAmount": [1,5,8],
 			"slug": "MobilityUpgrade"
 			}
 			,
 		{
-			"id": 211,
+			"id": 1212,
 			"category": 1,
 			"title": "Nexus Core Recipe",
 			"price": 150,
 			"nbItems": 3,
-			"itemsID": [104,100,101],
+			"itemsID": [212,100,101],
 			"itemsAmount": [1,5,8],
 			"slug": "MobilityUpgrade"
 			}

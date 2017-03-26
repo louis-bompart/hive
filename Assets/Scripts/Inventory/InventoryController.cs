@@ -208,6 +208,7 @@ public class InventoryController : MonoBehaviour
                 inventoryView.updateRemoveItemView(itemToRemove); // updates the view
             }
         }
+        inventoryView.LoadInventory();
     }
 
 }

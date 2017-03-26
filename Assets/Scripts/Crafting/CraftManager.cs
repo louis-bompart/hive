@@ -87,7 +87,7 @@ public class CraftManager : MonoBehaviour
 
         // Instantiate the componentItems 
 
-        int numberOfComp = craftToAdd.itemsID.Length - 1;
+        int numberOfComp = craftToAdd.itemsID.Length -1;
         int[] componentID = new int[numberOfComp];
         int[] componentAmount = new int[numberOfComp];
 
@@ -102,13 +102,15 @@ public class CraftManager : MonoBehaviour
 
         for (int i = 0; i < numberOfComp; i++)
         {
+            Debug.Log(numberOfComp + " :" + componentID[i] + " : " + componentAmount[i]);
             GameObject compSlot = Instantiate(craftSlot, recipeslt.transform.GetChild(1)); // creates the ComponentSlot of the Component panel of the recipeSlot
             GameObject compObj = Instantiate(craftItem, compSlot.transform); // creates the craftItem gameObject in the ComponentSlot of the component panel of the recipeSlot
-            compObj.GetComponent<ItemData>().item = componentItem[i]; // sets the item
+            compObj.GetComponent<ItemData>().item = componentItem[i]; // sets the 
             compObj.GetComponent<Image>().sprite = componentItem[i].Sprite; // sets the sprite
+            //compSlot.transform.Find("Text").GetComponentInChildren<Text>().text = componentAmount[i].ToString();
             compObj.transform.localPosition = Vector2.zero; // sets the position of the item according to the slot
             compObj.name = componentItem[i].Title; // sets the name of the gameObject
-            compSlot.GetComponentInChildren<Text>().text = componentItem[i].stackSize.ToString();
+            compSlot.GetComponentInChildren<Text>().text = componentAmount[i].ToString();
 
         }
 
@@ -163,6 +165,8 @@ public class CraftManager : MonoBehaviour
             {// looping on the components
                 inventoryController.RemoveItem(componentID[k], componentAmount[k]);
             }
+
+            
         }
         else
         {
