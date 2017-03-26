@@ -21,7 +21,7 @@ public class PlayerMovement : MonoBehaviour
     public bool showCursor = false;
 
     public EnginesAnimation engineAnimation;
-    private ShipStats stats;
+
     private Rigidbody rb;
 
     // Use this for initialization
@@ -32,7 +32,6 @@ public class PlayerMovement : MonoBehaviour
         Cursor.visible = showCursor;
         drag = rb.drag;
         angDrag = rb.angularDrag;
-        stats = GameObject.Find("Stats").GetComponent<ShipStats>();
     }
 
     // Update is called once per frame
@@ -120,3 +119,99 @@ public class PlayerMovement : MonoBehaviour
         return acceleration;
     }
 }
+
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using UnityEngine;
+
+public class PlayerMovement : MonoBehaviour
+{
+    public float MainThrust = 5.0f;
+    public float AuxThrust = 2.5f;
+    public float Torque = 2.5f;
+
+    private float drag = 0.0f;
+    private float angDrag = 0.0f;
+
+    public bool isYawInverted = false;
+    public bool isPitchInverted = true;
+    public bool isRollInverted = true;
+
+    public float deadZoneX = 0.15f;
+    public float deadZoneY = 0.15f;
+
+    public bool showCursor = false;
+
+    public EnginesAnimation engineAnimation;
+
+    private Rigidbody rb;
+
+    public float warpTime;
+    private float actualLoading;
+
+    public GameObject warpGauge;
+    private Slider warpSlider;
+
+    // Use this for initialization
+    void Start()
+    {
+        engineAnimation = GetComponentInChildren<EnginesAnimation>();
+        rb = GetComponent<Rigidbody>();
+        Cursor.visible = showCursor;
+        drag = rb.drag;
+        angDrag = rb.angularDrag;
+
+        if(warpGauge == null)
+        {
+            warpGauge = GameObject.Find("WarpGauge");
+        }
+
+        if(warpGauge != null )
+        {
+            warpSlider = warpGauge.GetComponentInChildren<Slider>();
+            if(warpSlider == null)
+            {
+                
+                Debug.Log("Couldn't find warp slider");
+            }
+            else
+            {
+                Debug.Log("warpGauge gameObject empty");
+            }
+        }
+       
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        HandleWarpDrive();
+    }
+    
+    void HandleWarpDrive()
+    {
+        if(Input.GetAxis("Jump") > 0)
+        {
+            warpGauge.SetActive(true);
+            actualLoading += Time.deltaTime;
+            warpSlider.value = (actualLoading / warpTime);
+            if(actualLoading >= warpTime )
+            {
+                SceneManager.LoadSceneAsync("SystemMap", LoadSceneMode.Single);
+            }
+        }
+        else
+        {
+            actualLoading = 0;
+            warpGauge.SetActive(false);
+        }
+    }
+
+    void FixedUpdate()
+    {
+        Vector3 acceleration = ComputeThrusts();
+        Vector3 torque = ComputeTorques();
+
+        rb.AddRelativeForce(acceleration, ForceMode.Acceleration);
