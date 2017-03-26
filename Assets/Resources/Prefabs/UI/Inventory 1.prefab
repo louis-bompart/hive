@@ -693,7 +693,6 @@ GameObject:
   - component: {fileID: 114134163317011886}
   - component: {fileID: 114849488073983826}
   - component: {fileID: 114240676123302876}
-  - component: {fileID: 114004732279511582}
   - component: {fileID: 114123885645276648}
   m_Layer: 0
   m_Name: Inventory 1
@@ -1080,17 +1079,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &114004732279511582
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1682305368945498}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7fe16579eda5b47bbb6413624f9aadee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114016413997248674
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1207,6 +1195,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 787f714214c59423aad85163fb61cede, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isOpenOnStart: 0
 --- !u!114 &114081485470869936
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1770,6 +1759,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemJSON: {fileID: 4900000, guid: 88ecf4467fc164872932925ad3489235, type: 3}
+  inventory: 1
 --- !u!114 &114246255760541804
 MonoBehaviour:
   m_ObjectHideFlags: 1
