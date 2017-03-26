@@ -210,7 +210,7 @@ GameObject:
   - component: {fileID: 114219220318187076}
   - component: {fileID: 114154731864371758}
   m_Layer: 0
-  m_Name: ImobileEnemi
+  m_Name: StaticEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -966,6 +966,7 @@ MonoBehaviour:
   projectile: {fileID: 1274120049360702, guid: f7ade37b555daf54ca89325c0064cf90, type: 2}
   shotspeed: 15
   Spawnpoint: {fileID: 4364465419133964}
+  parent: {fileID: 0}
 --- !u!114 &114123916028644758
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1060,6 +1061,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _health: 100
   maxHP: 0
+  mats: []
+  OriginalEmissionsColors: []
 --- !u!135 &135562111867196808
 SphereCollider:
   m_ObjectHideFlags: 1

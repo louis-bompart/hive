@@ -132,7 +132,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1261195000369858, guid: db135da7b978727418e5965ed99b8a80, type: 2}
       propertyPath: m_Name
-      value: ImobileEnemi (1)
+      value: StaticEnemy (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: db135da7b978727418e5965ed99b8a80, type: 2}
