@@ -6,6 +6,7 @@ public class ProjectileScript : MonoBehaviour {
     private ShipStats stats;
     public GameObject parent;
 	// Use this for initialization
+
 	void Start () {
         stats = GameObject.Find("Stats").GetComponent<ShipStats>();
 	}
