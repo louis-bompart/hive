@@ -89,7 +89,7 @@ GameObject:
   - component: {fileID: 222318507508865324}
   - component: {fileID: 114158812256533142}
   m_Layer: 5
-  m_Name: Text
+  m_Name: AttackCounter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -409,7 +409,7 @@ GameObject:
   - component: {fileID: 222228617286052050}
   - component: {fileID: 114907878725120322}
   m_Layer: 5
-  m_Name: Text
+  m_Name: MobilityCounter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1364,7 +1364,7 @@ GameObject:
   - component: {fileID: 222245562362380006}
   - component: {fileID: 114760391305914758}
   m_Layer: 5
-  m_Name: Text
+  m_Name: DefenseCounter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

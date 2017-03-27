@@ -51,9 +51,9 @@ public class UpgradeCheater : MonoBehaviour {
             Input.GetKeyDown(KeyCode.LeftControl) && Input.GetKey(KeyCode.Keypad7))
         {
             Debug.Log("ALL BOOST AVAILABLES ACTIVATED");
-            GameObject.Find("Inventory").GetComponent<InventoryController>().AddItem(200, 10);
-            GameObject.Find("Inventory").GetComponent<InventoryController>().AddItem(201, 10);
-            GameObject.Find("Inventory").GetComponent<InventoryController>().AddItem(202, 10);
+            GameObject.Find("Inventory").GetComponent<InventoryController>().AddItem(200, 3);
+            GameObject.Find("Inventory").GetComponent<InventoryController>().AddItem(201, 3);
+            GameObject.Find("Inventory").GetComponent<InventoryController>().AddItem(202, 3);
         }
     }
 }

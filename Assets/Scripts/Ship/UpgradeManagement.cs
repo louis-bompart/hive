@@ -35,8 +35,12 @@ public class UpgradeManagement : MonoBehaviour
         GameObject TopSpeedGauge = GameObject.Find("TopSpeedUpgradeGauge");
         GameObject HandlingGauge = GameObject.Find("HandlingUpgradeGauge");
         DefensePoints = GameObject.Find("Inventory").GetComponent<InventoryController>().GetQuantity(200);
+        GameObject.Find("DefenseCounter").GetComponent<Text>().text = DefensePoints.ToString();
         AttackPoints = GameObject.Find("Inventory").GetComponent<InventoryController>().GetQuantity(201);
+        GameObject.Find("AttackCounter").GetComponent<Text>().text = AttackPoints.ToString();
         MobilityPoints = GameObject.Find("Inventory").GetComponent<InventoryController>().GetQuantity(202);
+        GameObject.Find("MobilityCounter").GetComponent<Text>().text = MobilityPoints.ToString();
+
         stats = GameObject.Find("Stats").GetComponent<ShipStats>();
         foreach (Transform child in HealthGauge.transform)
         {
@@ -151,11 +155,13 @@ public class UpgradeManagement : MonoBehaviour
         if (DefensePoints > 0)
         {
             DefensePoints--;
+            GameObject.Find("DefenseCounter").GetComponent<Text>().text = DefensePoints.ToString();
             HealthUp += 1;
             int i = 0;
-            if (stats.HealthStat + HealthUp >= 5)
+            if (stats.HealthStat + HealthUp > 5)
             {
                 HealthUp = 5 - stats.HealthStat;
+                DefensePoints++;
             }
             foreach (GameObject grad in HealthGaugeGrads)
             {
@@ -185,10 +191,12 @@ public class UpgradeManagement : MonoBehaviour
         {
             DefensePoints--;
             ArmorUp += 1;
+            GameObject.Find("DefenseCounter").GetComponent<Text>().text = DefensePoints.ToString();
             int i = 0;
             if (stats.ArmorStat + ArmorUp >= 5)
             {
                 ArmorUp = 5 - stats.ArmorStat;
+                DefensePoints++;
             }
             foreach (GameObject grad in ArmorGaugeGrads)
             {
@@ -217,11 +225,13 @@ public class UpgradeManagement : MonoBehaviour
         if (AttackPoints > 0)
         {
             AttackPoints--;
+            GameObject.Find("AttackCounter").GetComponent<Text>().text = AttackPoints.ToString();
             DamageUp += 1;
             int i = 0;
             if (stats.DamageStat + DamageUp >= 5)
             {
                 DamageUp = 5 - stats.DamageStat;
+                AttackPoints++;
             }
             foreach (GameObject grad in DamageGaugeGrads)
             {
@@ -250,11 +260,13 @@ public class UpgradeManagement : MonoBehaviour
         if (AttackPoints > 0)
         {
             AttackPoints--;
+            GameObject.Find("AttackCounter").GetComponent<Text>().text = AttackPoints.ToString();
             FireRateUp += 1;
             int i = 0;
             if (stats.FireRateStat + FireRateUp >= 5)
             {
                 FireRateUp = 5 - stats.FireRateStat;
+                AttackPoints++;
             }
             foreach (GameObject grad in FireRateGaugeGrads)
             {
@@ -283,11 +295,13 @@ public class UpgradeManagement : MonoBehaviour
         if(MobilityPoints > 0)
         {
             MobilityPoints--;
+            GameObject.Find("MobilityCounter").GetComponent<Text>().text = MobilityPoints.ToString();
             TopSpeedUp += 1;
             int i = 0;
             if (stats.TopSpeedStat + TopSpeedUp >= 5)
             {
                 TopSpeedUp = 5 - stats.TopSpeedStat;
+                MobilityPoints++;
             }
             foreach (GameObject grad in TopSpeedGaugeGrads)
             {
@@ -316,11 +330,13 @@ public class UpgradeManagement : MonoBehaviour
         if (MobilityPoints > 0)
         {
             MobilityPoints--;
+            GameObject.Find("MobilityCounter").GetComponent<Text>().text = MobilityPoints.ToString();
             HandlingUp += 1;
             int i = 0;
             if (stats.HandlingStat + HandlingUp >= 5)
             {
                 HandlingUp = 5 - stats.HandlingStat;
+                MobilityPoints++;
             }
             foreach (GameObject grad in HandlingGaugeGrads)
             {
@@ -407,7 +423,9 @@ public class UpgradeManagement : MonoBehaviour
         FireRateUp = 0;
         TopSpeedUp = 0;
         HandlingUp = 0;
-
+        GameObject.Find("DefenseCounter").GetComponent<Text>().text = DefensePoints.ToString();
+        GameObject.Find("AttackCounter").GetComponent<Text>().text = AttackPoints.ToString();
+        GameObject.Find("MobilityCounter").GetComponent<Text>().text = MobilityPoints.ToString();
         foreach (GameObject grad in HealthGaugeGrads)
         {
             if (grad.GetComponent<RawImage>().color == Color.yellow)
