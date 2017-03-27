@@ -12,7 +12,9 @@ public class DualBlastersScript : MonoBehaviour {
     public GameObject projectile;
     public float shotspeed;
     public Transform Spawnpoint;
-    public GameObject parent;
+    public GameObject Reticle;
+    public GameObject Gauge;
+
 
     private float lastShot;
 
@@ -32,7 +34,7 @@ public class DualBlastersScript : MonoBehaviour {
         {
             GameObject clone;
             clone = Instantiate(projectile, Spawnpoint.position, Spawnpoint.rotation);
-            clone.GetComponent<ProjectileScript>().SetParent(parent);
+            clone.GetComponent<ProjectileScript>().SetParent(Reticle,Gauge);
             clone.GetComponent<ProjectileScript>().dammage = damage;
 
             clone.GetComponent<Rigidbody>().velocity = Spawnpoint.forward * shotspeed;

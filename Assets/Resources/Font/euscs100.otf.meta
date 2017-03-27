@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 22ad92ba9f1ed3c478a59854fab5f73a
+timeCreated: 1490647839
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Eusocia solid
+  fontNames:
+  - Eusocia solid
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

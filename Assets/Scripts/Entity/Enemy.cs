@@ -8,7 +8,7 @@ public class Enemy : Entity {
     protected override void Start()
     {
         base.Start();
-
+        name = "Red Raven";
     }
 
     protected override void Update()

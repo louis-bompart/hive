@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class ProjectileScript : MonoBehaviour {
 
-    public GameObject parent;
+    public GameObject Reticle;
+    public GameObject Gauge;
     public float dammage;
 
     // Use this for initialization
@@ -27,16 +28,24 @@ public class ProjectileScript : MonoBehaviour {
         if(temp != null)
         {
             temp.takeDammage((int)dammage);
-            parent.GetComponent<OnHitColorChange>().OnHit();
+            if (Reticle != null)
+            {
+                Reticle.GetComponent<OnHitColorChange>().OnHit();
+            }
+            if (Gauge != null && temp.name != "Asteroid") {
+                Gauge.GetComponent<HealthGaugeDisplay>().DisplayHealthOnHit(temp.health, temp.maxHP, temp.name);
+            }
         }
-        
+
         Destroy(gameObject);
     }
 
 
-    public void SetParent(GameObject _parent)
+    public void SetParent(GameObject _reticle,GameObject _gauge)
     {
-        parent = _parent;
+        Reticle = _reticle;
+        Gauge = _gauge;
     }
+    
 
 }
