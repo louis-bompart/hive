@@ -19,6 +19,9 @@ public class UpgradeManagement : MonoBehaviour
     private static int FireRateUp = 0;
     private static int TopSpeedUp = 0;
     private static int HandlingUp = 0;
+    private static int DefensePoints = 0;
+    private static int AttackPoints = 0;
+    private static int MobilityPoints = 0;
 
     #endregion
 
@@ -31,6 +34,9 @@ public class UpgradeManagement : MonoBehaviour
         GameObject FireRateGauge = GameObject.Find("FireRateUpgradeGauge");
         GameObject TopSpeedGauge = GameObject.Find("TopSpeedUpgradeGauge");
         GameObject HandlingGauge = GameObject.Find("HandlingUpgradeGauge");
+        DefensePoints = GameObject.Find("Inventory").GetComponent<InventoryController>().GetQuantity(200);
+        AttackPoints = GameObject.Find("Inventory").GetComponent<InventoryController>().GetQuantity(201);
+        MobilityPoints = GameObject.Find("Inventory").GetComponent<InventoryController>().GetQuantity(202);
         stats = GameObject.Find("Stats").GetComponent<ShipStats>();
         foreach (Transform child in HealthGauge.transform)
         {
@@ -142,147 +148,199 @@ public class UpgradeManagement : MonoBehaviour
     #region Button click functions (update the values of the ship's stats)
     public void HealthUpgrade()
     {
-        HealthUp += 1;
-        int i = 0;
-        if (stats.HealthStat + HealthUp >= 5)
+        if (DefensePoints > 0)
         {
-            HealthUp = 5 - stats.HealthStat;
-        }
-        foreach (GameObject grad in HealthGaugeGrads)
-        {
-            if (i < HealthUp + stats.HealthStat)
+            DefensePoints--;
+            HealthUp += 1;
+            int i = 0;
+            if (stats.HealthStat + HealthUp >= 5)
             {
-                if (grad.GetComponent<RawImage>().color == Color.white)
+                HealthUp = 5 - stats.HealthStat;
+            }
+            foreach (GameObject grad in HealthGaugeGrads)
+            {
+                if (i < HealthUp + stats.HealthStat)
                 {
-                    grad.GetComponent<RawImage>().color = Color.yellow;
-                    i++;
-                }
-                else
-                {
-                    i++;
+                    if (grad.GetComponent<RawImage>().color == Color.white)
+                    {
+                        grad.GetComponent<RawImage>().color = Color.yellow;
+                        i++;
+                    }
+                    else
+                    {
+                        i++;
+                    }
                 }
             }
+        }
+        else
+        {
+            Debug.Log("Not enough defense upgrade kits !");
         }
     }
 
     public void ArmorUpgrade()
     {
-        ArmorUp += 1;
-        int i = 0;
-        if (stats.ArmorStat + ArmorUp >= 5)
+        if (DefensePoints > 0)
         {
-            ArmorUp = 5 - stats.ArmorStat;
-        }
-        foreach (GameObject grad in ArmorGaugeGrads)
-        {
-            if (i < ArmorUp + stats.ArmorStat)
+            DefensePoints--;
+            ArmorUp += 1;
+            int i = 0;
+            if (stats.ArmorStat + ArmorUp >= 5)
             {
-                if (grad.GetComponent<RawImage>().color == Color.white)
+                ArmorUp = 5 - stats.ArmorStat;
+            }
+            foreach (GameObject grad in ArmorGaugeGrads)
+            {
+                if (i < ArmorUp + stats.ArmorStat)
                 {
-                    grad.GetComponent<RawImage>().color = Color.yellow;
-                    i++;
-                }
-                else
-                {
-                    i++;
+                    if (grad.GetComponent<RawImage>().color == Color.white)
+                    {
+                        grad.GetComponent<RawImage>().color = Color.yellow;
+                        i++;
+                    }
+                    else
+                    {
+                        i++;
+                    }
                 }
             }
         }
+        else
+        {
+            Debug.Log("Not enough defense upgrade kits !");
+        }
     }
+
     public void DamageUpgrade()
     {
-        DamageUp += 1;
-        int i = 0;
-        if (stats.DamageStat + DamageUp >= 5)
+        if (AttackPoints > 0)
         {
-            DamageUp = 5 - stats.DamageStat;
-        }
-        foreach (GameObject grad in DamageGaugeGrads)
-        {
-            if (i < DamageUp + stats.DamageStat)
+            AttackPoints--;
+            DamageUp += 1;
+            int i = 0;
+            if (stats.DamageStat + DamageUp >= 5)
             {
-                if (grad.GetComponent<RawImage>().color == Color.white)
+                DamageUp = 5 - stats.DamageStat;
+            }
+            foreach (GameObject grad in DamageGaugeGrads)
+            {
+                if (i < DamageUp + stats.DamageStat)
                 {
-                    grad.GetComponent<RawImage>().color = Color.yellow;
-                    i++;
-                }
-                else
-                {
-                    i++;
+                    if (grad.GetComponent<RawImage>().color == Color.white)
+                    {
+                        grad.GetComponent<RawImage>().color = Color.yellow;
+                        i++;
+                    }
+                    else
+                    {
+                        i++;
+                    }
                 }
             }
         }
+        else
+        {
+            Debug.Log("Not enough attack upgrade kits !");
+        }
     }
+
     public void FireRateUpgrade()
     {
-        FireRateUp += 1;
-        int i = 0;
-        if (stats.FireRateStat + FireRateUp >= 5)
+        if (AttackPoints > 0)
         {
-            FireRateUp = 5 - stats.FireRateStat;
-        }
-        foreach (GameObject grad in FireRateGaugeGrads)
-        {
-            if (i < FireRateUp + stats.FireRateStat)
+            AttackPoints--;
+            FireRateUp += 1;
+            int i = 0;
+            if (stats.FireRateStat + FireRateUp >= 5)
             {
-                if (grad.GetComponent<RawImage>().color == Color.white)
+                FireRateUp = 5 - stats.FireRateStat;
+            }
+            foreach (GameObject grad in FireRateGaugeGrads)
+            {
+                if (i < FireRateUp + stats.FireRateStat)
                 {
-                    grad.GetComponent<RawImage>().color = Color.yellow;
-                    i++;
-                }
-                else
-                {
-                    i++;
+                    if (grad.GetComponent<RawImage>().color == Color.white)
+                    {
+                        grad.GetComponent<RawImage>().color = Color.yellow;
+                        i++;
+                    }
+                    else
+                    {
+                        i++;
+                    }
                 }
             }
         }
+        else
+        {
+            Debug.Log("Not enough attack upgrade kits !");
+        }
     }
+
     public void TopSpeedUpgrade()
     {
-        TopSpeedUp += 1;
-        int i = 0;
-        if (stats.TopSpeedStat + TopSpeedUp >= 5)
+        if(MobilityPoints > 0)
         {
-            TopSpeedUp = 5 - stats.TopSpeedStat;
-        }
-        foreach (GameObject grad in TopSpeedGaugeGrads)
-        {
-            if (i < TopSpeedUp + stats.TopSpeedStat)
+            MobilityPoints--;
+            TopSpeedUp += 1;
+            int i = 0;
+            if (stats.TopSpeedStat + TopSpeedUp >= 5)
             {
-                if (grad.GetComponent<RawImage>().color == Color.white)
+                TopSpeedUp = 5 - stats.TopSpeedStat;
+            }
+            foreach (GameObject grad in TopSpeedGaugeGrads)
+            {
+                if (i < TopSpeedUp + stats.TopSpeedStat)
                 {
-                    grad.GetComponent<RawImage>().color = Color.yellow;
-                    i++;
-                }
-                else
-                {
-                    i++;
+                    if (grad.GetComponent<RawImage>().color == Color.white)
+                    {
+                        grad.GetComponent<RawImage>().color = Color.yellow;
+                        i++;
+                    }
+                    else
+                    {
+                        i++;
+                    }
                 }
             }
+        }
+        else
+        {
+            Debug.Log("Not enough mobility upgrade kits !");
         }
     }
+
     public void HandlingUpgrade()
     {
-        HandlingUp += 1;
-        int i = 0;
-        if (stats.HandlingStat + HandlingUp >= 5)
+        if (MobilityPoints > 0)
         {
-            HandlingUp = 5 - stats.HandlingStat;
-        }
-        foreach (GameObject grad in HandlingGaugeGrads)
-        {
-            if (i < HandlingUp + stats.HandlingStat)
+            MobilityPoints--;
+            HandlingUp += 1;
+            int i = 0;
+            if (stats.HandlingStat + HandlingUp >= 5)
             {
-                if (grad.GetComponent<RawImage>().color == Color.white)
+                HandlingUp = 5 - stats.HandlingStat;
+            }
+            foreach (GameObject grad in HandlingGaugeGrads)
+            {
+                if (i < HandlingUp + stats.HandlingStat)
                 {
-                    grad.GetComponent<RawImage>().color = Color.yellow;
-                    i++;
-                }
-                else
-                {
-                    i++;
+                    if (grad.GetComponent<RawImage>().color == Color.white)
+                    {
+                        grad.GetComponent<RawImage>().color = Color.yellow;
+                        i++;
+                    }
+                    else
+                    {
+                        i++;
+                    }
                 }
             }
+        }       
+        else
+        {
+            Debug.Log("Not enough mobility upgrade kits !");
         }
     }
     #endregion

@@ -47,5 +47,13 @@ public class UpgradeCheater : MonoBehaviour {
             Debug.Log("HANDLING CODE ACTIVATED");
             GameObject.Find("Stats").GetComponent<ShipStats>().HandlingStat = 5;
         }
+        else if ((Input.GetKey(KeyCode.LeftControl) && Input.GetKeyDown(KeyCode.Keypad7)) ||
+            Input.GetKeyDown(KeyCode.LeftControl) && Input.GetKey(KeyCode.Keypad7))
+        {
+            Debug.Log("ALL BOOST AVAILABLES ACTIVATED");
+            GameObject.Find("Inventory").GetComponent<InventoryController>().AddItem(200, 10);
+            GameObject.Find("Inventory").GetComponent<InventoryController>().AddItem(201, 10);
+            GameObject.Find("Inventory").GetComponent<InventoryController>().AddItem(202, 10);
+        }
     }
 }
