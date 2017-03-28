@@ -41,12 +41,12 @@ using UnityEngine.SceneManagement;
 
 public class BaseAccess : MonoBehaviour
 {
-    public string SceneToAccess;
-    public Text Button_Prompt;
+    public string sceneToAccessName;
+    public Text buttonPrompt;
 
     private void OnTriggerEnter(Collider other)
     {
-        Button_Prompt.gameObject.SetActive(true);
+        buttonPrompt.gameObject.SetActive(true);
     }
 
     private void OnTriggerStay(Collider other)
@@ -54,12 +54,12 @@ public class BaseAccess : MonoBehaviour
         if (Input.GetAxis("Submit") > 0)
         {
             Cursor.visible = true;
-            SceneManager.LoadSceneAsync(SceneToAccess, LoadSceneMode.Single);
+            SceneManager.LoadSceneAsync(sceneToAccessName, LoadSceneMode.Single);
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        Button_Prompt.gameObject.SetActive(false);
+        buttonPrompt.gameObject.SetActive(false);
     }
 }

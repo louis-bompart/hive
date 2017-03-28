@@ -5,7 +5,7 @@ using UnityEngine;
 public class BaseInitialisation : MonoBehaviour {
 
     public GameObject[] droneTab;
-    public GameObject Shield;
+    public GameObject shield;
 
     private BaseStats stats;
 	// Use this for initialization
@@ -13,16 +13,16 @@ public class BaseInitialisation : MonoBehaviour {
         stats = GameObject.Find("Stats").GetComponent<BaseStats>();
 
         //DroneInit
-		for(int i =0; i <stats.NumberDroneStat;i++)
+		for(int i =0; i <stats.numberDronesStat;i++)
         {
             droneTab[i].SetActive(true);
             droneTab[i].GetComponentInChildren<DualBlastersScript>().damage = 1 + stats.fireDroneStat;
         }
 
         //Shield init
-        Shield.GetComponent<Shield>().maxHP = 50 + (stats.ShieldStat * 50);
-        Shield.GetComponent<Shield>().health = 50 + (stats.ShieldStat * 50);
-        Shield.GetComponent<Shield>().shieldRechargeRate = 1 + (stats.RechargeStat * 0.5f);
+        shield.GetComponent<Shield>().maxHP = 50 + (stats.shieldStat * 50);
+        shield.GetComponent<Shield>().health = 50 + (stats.shieldStat * 50);
+        shield.GetComponent<Shield>().shieldRechargeRate = 1 + (stats.chargeStat * 0.5f);
 	}
 	
 	// Update is called once per frame

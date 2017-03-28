@@ -4,18 +4,18 @@ using UnityEngine;
 
 public class ColliderDetectionEnter : MonoBehaviour {
 
-    public GameObject toBroacast;
+    public GameObject recipient;
     public string messageEnter;
     public string messageExit;
 
     public void OnTriggerEnter(Collider other)
     {
-        toBroacast.BroadcastMessage(messageEnter, other);
+        recipient.SendMessage(messageEnter, other);
     }
 
     void OnTriggerExit(Collider other)
     {
-        toBroacast.BroadcastMessage(messageExit, other);
+        recipient.SendMessage(messageExit, other);
     }
 
 }

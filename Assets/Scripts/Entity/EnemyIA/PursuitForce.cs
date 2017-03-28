@@ -3,30 +3,30 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PursuitForce : AbstratForce
+public class PursuitForce : AbstractForce
 {
 
-    public Transform wayPoint;
-    public float offSetForward;
-    public float offSetRight;
-    public float offSetUp;
-    public bool useTargeVelocity;
+    public Transform waypoint;
+    public float offsetForward;
+    public float offsetRight;
+    public float offsetUp;
+    public bool useTargetVelocity;
 
-    public override Vector3 CalculateForce()
+    public override Vector3 ComputeForce()
     {
-        Vector3 offWaypoint = wayPoint.position;
-        
+        Vector3 offWaypoint = waypoint.position;
 
-        Rigidbody rb = wayPoint.gameObject.GetComponent<Rigidbody>();
-        if(useTargeVelocity == true  &&  rb != null)
+
+        Rigidbody rb = waypoint.gameObject.GetComponent<Rigidbody>();
+        if (useTargetVelocity == true && rb != null)
         {
             Vector3 vel = rb.velocity;
-            Vector3 forwardOff = Vector3.Project(vel, wayPoint.forward);
-            forwardOff *= offSetForward;
-            Vector3 rightOff = Vector3.Project(vel, wayPoint.right);
-            rightOff *= offSetRight;
-            Vector3 upOff = Vector3.Project(vel, wayPoint.up);
-            upOff *= offSetUp;
+            Vector3 forwardOff = Vector3.Project(vel, waypoint.forward);
+            forwardOff *= offsetForward;
+            Vector3 rightOff = Vector3.Project(vel, waypoint.right);
+            rightOff *= offsetRight;
+            Vector3 upOff = Vector3.Project(vel, waypoint.up);
+            upOff *= offsetUp;
 
             offWaypoint += forwardOff;
             offWaypoint += rightOff;
@@ -34,14 +34,14 @@ public class PursuitForce : AbstratForce
         }
         else
         {
-            offWaypoint += wayPoint.forward * offSetForward;
-            offWaypoint += wayPoint.right * offSetRight;
-            offWaypoint += wayPoint.up * offSetUp;
+            offWaypoint += waypoint.forward * offsetForward;
+            offWaypoint += waypoint.right * offsetRight;
+            offWaypoint += waypoint.up * offsetUp;
         }
 
         Vector3 force = offWaypoint - transform.position;
 
-        if(force.magnitude>1)
+        if (force.magnitude > 1)
         {
             force = force.normalized;
         }

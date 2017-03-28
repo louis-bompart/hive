@@ -7,9 +7,9 @@ using System;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float MainThrust;
-    public float AuxThrust = 2.5f;
-    public float Torque = 2.5f;
+    public float mainThrust;
+    public float auxThrust = 2.5f;
+    public float torque = 2.5f;
 
     private float drag = 15.0f;
     private float angDrag = 0.0f;
@@ -68,11 +68,11 @@ public class PlayerMovement : MonoBehaviour
 
     private void UpdateSpeedAndAcceleration()
     {
-        terminalVelocity = 50.0f * (stats.TopSpeedStat + 1);
-        MainThrust = terminalVelocity / (3 * rb.mass);
+        terminalVelocity = 50.0f * (stats.topSppedStat + 1);
+        mainThrust = terminalVelocity / (3 * rb.mass);
         //rb.angularDrag = 7 - stats.HandlingStat;
 
-        float idealDrag = MainThrust / terminalVelocity;
+        float idealDrag = mainThrust / terminalVelocity;
 
         rb.drag = idealDrag / (idealDrag * Time.fixedDeltaTime + 1);
     }
@@ -121,7 +121,7 @@ public class PlayerMovement : MonoBehaviour
             WeaponSelector temp = gameObject.GetComponent<WeaponSelector>();
             if (temp != null)
             {
-                temp.weapons[temp.currentWeapon].BroadcastMessage("OnFire");
+                temp.weapons[temp.currentWeapon].SendMessage("OnFire");
             }
 
         }
@@ -144,7 +144,7 @@ public class PlayerMovement : MonoBehaviour
         {
             accelerationRate = -29.5521f * Mathf.Pow(v, 3) + 53.3271f * Mathf.Pow(v, 2) + -28.8817f * v + 5.10667f;
         }
-        return Vector3.ClampMagnitude(acceleration, accelerationRate * MainThrust);
+        return Vector3.ClampMagnitude(acceleration, accelerationRate * mainThrust);
     }
 
     /// <summary>
@@ -156,10 +156,10 @@ public class PlayerMovement : MonoBehaviour
         Vector3 torque = Vector3.zero;
         // TODO: Reverse w/ aux thrust
 
-        torque += Vector3.forward * Input.GetAxis("Roll") * Torque * (isRollInverted ? -1 : 1);
+        torque += Vector3.forward * Input.GetAxis("Roll") * this.torque * (isRollInverted ? -1 : 1);
         Vector3 mouse = GetMouse();
-        torque += Vector3.up * mouse.x * Torque * (isYawInverted ? -1 : 1);
-        torque += Vector3.right * mouse.y * Torque * (isPitchInverted ? -1 : 1);
+        torque += Vector3.up * mouse.x * this.torque * (isYawInverted ? -1 : 1);
+        torque += Vector3.right * mouse.y * this.torque * (isPitchInverted ? -1 : 1);
         return torque;
     }
 
@@ -187,11 +187,11 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 ComputeThrusts()
     {
         Vector3 acceleration = Vector3.zero;
-        acceleration += Vector3.forward * Input.GetAxis("Thrust") * MainThrust;
-        acceleration += Vector3.up * Input.GetAxis("Vertical") * AuxThrust;
-        acceleration += Vector3.right * Input.GetAxis("Horizontal") * AuxThrust;
-        engineAnimation.UpdateThrottle(Vector3.Project(acceleration, Vector3.forward).magnitude / MainThrust + 0.11f);
-        Vector3.ClampMagnitude(acceleration, MainThrust);
+        acceleration += Vector3.forward * Input.GetAxis("Thrust") * mainThrust;
+        acceleration += Vector3.up * Input.GetAxis("Vertical") * auxThrust;
+        acceleration += Vector3.right * Input.GetAxis("Horizontal") * auxThrust;
+        engineAnimation.UpdateThrottle(Vector3.Project(acceleration, Vector3.forward).magnitude / mainThrust + 0.11f);
+        Vector3.ClampMagnitude(acceleration, mainThrust);
         return acceleration;
     }
 
@@ -223,23 +223,23 @@ public class PlayerMovement : MonoBehaviour
         switch (severity)
         {
             case 0:
-                player.TakeArmorDamage(5, stats.ArmorStat);
+                player.TakeArmorDamage(5, stats.armorStat);
                 Debug.Log("Damage taken : 5.");
                 break;
             case 1:
-                player.TakeArmorDamage(10, stats.ArmorStat);
+                player.TakeArmorDamage(10, stats.armorStat);
                 Debug.Log("Damage taken : 10.");
                 break;
             case 2:
-                player.TakeArmorDamage(35, stats.ArmorStat);
+                player.TakeArmorDamage(35, stats.armorStat);
                 Debug.Log("Damage taken : 35.");
                 break;
             case 3:
-                player.TakeArmorDamage(90, stats.ArmorStat);
+                player.TakeArmorDamage(90, stats.armorStat);
                 Debug.Log("Damage taken : 90.");
                 break;
             case 4:
-                player.TakeArmorDamage(150, stats.ArmorStat);
+                player.TakeArmorDamage(150, stats.armorStat);
                 Debug.Log("Damage taken : 150.");
                 break;
             default:

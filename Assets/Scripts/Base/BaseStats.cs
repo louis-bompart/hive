@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class BaseStats : MonoBehaviour {
 
-    public int ScanRangeStat;
+    public int scanRangeStat;
     public int printerStat;
-    public int NumberDroneStat;
+    public int numberDronesStat;
     public int fireDroneStat;
-    public int ShieldStat;
-    public int RechargeStat;
+    public int shieldStat;
+    public int chargeStat;
 
 
 	// Use this for initialization

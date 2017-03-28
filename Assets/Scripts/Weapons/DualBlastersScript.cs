@@ -7,12 +7,12 @@ public class DualBlastersScript : MonoBehaviour {
     public string name = "DualBlasters";
     public int range;
     public int damage;
-    public float firerate;
+    public float fireRate;
     public int ammo;
 
     public GameObject projectile;
-    public float shotspeed;
-    public Transform Spawnpoint;
+    public float shotSpeed;
+    public Transform spawnPoint;
     public GameObject Reticle;
     public GameObject Gauge;
     
@@ -31,15 +31,15 @@ public class DualBlastersScript : MonoBehaviour {
 
     public void OnFire()
     {
-        if (lastShot + firerate < Time.time)
+        if (lastShot + fireRate < Time.time)
         {
             GameObject clone;
-            clone = Instantiate(projectile, Spawnpoint.position, Spawnpoint.rotation);
+            clone = Instantiate(projectile, spawnPoint.position, spawnPoint.rotation);
             clone.GetComponent<ProjectileScript>().SetParent(Reticle,Gauge,this.gameObject);
-            clone.GetComponent<ProjectileScript>().dammage = damage;
+            clone.GetComponent<ProjectileScript>().damage = damage;
 
-            clone.GetComponent<Rigidbody>().velocity = Spawnpoint.forward * shotspeed;
-            clone.GetComponent<Rigidbody>().velocity += Spawnpoint.GetComponentInParent<Rigidbody>().velocity;
+            clone.GetComponent<Rigidbody>().velocity = spawnPoint.forward * shotSpeed;
+            clone.GetComponent<Rigidbody>().velocity += spawnPoint.GetComponentInParent<Rigidbody>().velocity;
             lastShot = Time.time;
         }
 

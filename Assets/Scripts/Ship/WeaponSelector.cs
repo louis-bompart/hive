@@ -13,7 +13,8 @@ public class WeaponSelector : MonoBehaviour
     void Start()
     {
         nbWeapons = weapons.Length;
-        for (int i = 0; i < nbWeapons; i++) {
+        for (int i = 0; i < nbWeapons; i++)
+        {
             weapons[i].gameObject.SetActive(false);
 
         }
@@ -23,9 +24,6 @@ public class WeaponSelector : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-       
-
         for (int i = 0; i < nbWeapons; i++)
         {
             int j = i + 1;
@@ -36,12 +34,12 @@ public class WeaponSelector : MonoBehaviour
                 Debug.Log("arme équipée : " + i);
             }
         }
-        
-
     }
 
-    void SwitchWeapon(int index) {
-        for (int i = 0; i < nbWeapons; i++) {
+    void SwitchWeapon(int index)
+    {
+        for (int i = 0; i < nbWeapons; i++)
+        {
             weapons[i].gameObject.SetActive((i == index));
         }
     }

@@ -2,21 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShipStats : MonoBehaviour {
-
-    public int HealthStat;
-    public int ArmorStat;
-    public int DamageStat;
-    public int FireRateStat;
-    public int TopSpeedStat;
-    public int HandlingStat;
+public class ShipStats : MonoBehaviour
+{
+    public int healthStat;
+    public int armorStat;
+    public int damageStat;
+    public int fireRateStat;
+    public int topSppedStat;
+    public int handlingStat;
 
     void Awake()
     {
         if (!AlreadyPresent())
         {
             DontDestroyOnLoad(this);
-        }       
+        }
         else
         {
             Destroy(this);

@@ -6,54 +6,54 @@ using UnityEngine.UI;
 public class BaseUpgradeManager : MonoBehaviour
 {
     #region Gauge preparation
-    private List<GameObject> HealthGaugeGrads = new List<GameObject>();
-    private List<GameObject> ArmorGaugeGrads = new List<GameObject>();
-    private List<GameObject> DamageGaugeGrads = new List<GameObject>();
-    private List<GameObject> FireRateGaugeGrads = new List<GameObject>();
-    private List<GameObject> TopSpeedGaugeGrads = new List<GameObject>();
-    private List<GameObject> HandlingGaugeGrads = new List<GameObject>();
+    private List<GameObject> healtGaugeGrads = new List<GameObject>();
+    private List<GameObject> armorGaugeGrads = new List<GameObject>();
+    private List<GameObject> damageGaugeGrads = new List<GameObject>();
+    private List<GameObject> fireRateGaugeGrads = new List<GameObject>();
+    private List<GameObject> topSpeedGaugeGrads = new List<GameObject>();
+    private List<GameObject> handlingGaugeGrads = new List<GameObject>();
     private BaseStats stats;
     #endregion
 
     public void Start()
     {
         #region Gauge init
-        GameObject HealthGauge = GameObject.Find("HealthUpgradeGauge");
-        GameObject ArmorGauge = GameObject.Find("ArmorUpgradeGauge");
-        GameObject DamageGauge = GameObject.Find("DamageUpgradeGauge");
-        GameObject FireRateGauge = GameObject.Find("FireRateUpgradeGauge");
-        GameObject TopSpeedGauge = GameObject.Find("TopSpeedUpgradeGauge");
-        GameObject HandlingGauge = GameObject.Find("HandlingUpgradeGauge");
+        GameObject healthGauge = GameObject.Find("HealthUpgradeGauge");
+        GameObject armorGauge = GameObject.Find("ArmorUpgradeGauge");
+        GameObject damageGauge = GameObject.Find("DamageUpgradeGauge");
+        GameObject fireRateGauge = GameObject.Find("FireRateUpgradeGauge");
+        GameObject topSpeedGauge = GameObject.Find("TopSpeedUpgradeGauge");
+        GameObject handlingGauge = GameObject.Find("HandlingUpgradeGauge");
         stats = GameObject.Find("Stats").GetComponent<BaseStats>();
-        foreach (Transform child in HealthGauge.transform)
+        foreach (Transform child in healthGauge.transform)
         {
-            HealthGaugeGrads.Add(child.gameObject);
+            healtGaugeGrads.Add(child.gameObject);
         }
-        foreach (Transform child in ArmorGauge.transform)
+        foreach (Transform child in armorGauge.transform)
         {
-            ArmorGaugeGrads.Add(child.gameObject);
+            armorGaugeGrads.Add(child.gameObject);
         }
-        foreach (Transform child in DamageGauge.transform)
+        foreach (Transform child in damageGauge.transform)
         {
-            DamageGaugeGrads.Add(child.gameObject);
+            damageGaugeGrads.Add(child.gameObject);
         }
-        foreach (Transform child in FireRateGauge.transform)
+        foreach (Transform child in fireRateGauge.transform)
         {
-            FireRateGaugeGrads.Add(child.gameObject);
+            fireRateGaugeGrads.Add(child.gameObject);
         }
-        foreach (Transform child in TopSpeedGauge.transform)
+        foreach (Transform child in topSpeedGauge.transform)
         {
-            TopSpeedGaugeGrads.Add(child.gameObject);
+            topSpeedGaugeGrads.Add(child.gameObject);
         }
-        foreach (Transform child in HandlingGauge.transform)
+        foreach (Transform child in handlingGauge.transform)
         {
-            HandlingGaugeGrads.Add(child.gameObject);
+            handlingGaugeGrads.Add(child.gameObject);
         }
 
         int i = 0;
-        foreach (GameObject grad in HealthGaugeGrads)
+        foreach (GameObject grad in healtGaugeGrads)
         {
-            if (i < stats.ScanRangeStat)
+            if (i < stats.scanRangeStat)
             {
                 grad.GetComponent<RawImage>().color = Color.green;
                 i++;
@@ -64,7 +64,7 @@ public class BaseUpgradeManager : MonoBehaviour
                 break;
             }
         }
-        foreach (GameObject grad in ArmorGaugeGrads)
+        foreach (GameObject grad in armorGaugeGrads)
         {
             if (i < stats.printerStat)
             {
@@ -77,9 +77,9 @@ public class BaseUpgradeManager : MonoBehaviour
                 break;
             }
         }
-        foreach (GameObject grad in DamageGaugeGrads)
+        foreach (GameObject grad in damageGaugeGrads)
         {
-            if (i < stats.NumberDroneStat)
+            if (i < stats.numberDronesStat)
             {
                 grad.GetComponent<RawImage>().color = Color.green;
                 i++;
@@ -90,7 +90,7 @@ public class BaseUpgradeManager : MonoBehaviour
                 break;
             }
         }
-        foreach (GameObject grad in FireRateGaugeGrads)
+        foreach (GameObject grad in fireRateGaugeGrads)
         {
             if (i < stats.fireDroneStat)
             {
@@ -103,9 +103,9 @@ public class BaseUpgradeManager : MonoBehaviour
                 break;
             }
         }
-        foreach (GameObject grad in TopSpeedGaugeGrads)
+        foreach (GameObject grad in topSpeedGaugeGrads)
         {
-            if (i < stats.ShieldStat)
+            if (i < stats.shieldStat)
             {
                 grad.GetComponent<RawImage>().color = Color.green;
                 i++;
@@ -116,9 +116,9 @@ public class BaseUpgradeManager : MonoBehaviour
                 break;
             }
         }
-        foreach (GameObject grad in HandlingGaugeGrads)
+        foreach (GameObject grad in handlingGaugeGrads)
         {
-            if (i < stats.RechargeStat)
+            if (i < stats.chargeStat)
             {
                 grad.GetComponent<RawImage>().color = Color.green;
                 i++;
@@ -135,15 +135,15 @@ public class BaseUpgradeManager : MonoBehaviour
     #region Button click functions (update the values of the ship's stats)
     public void HealthUpgrade()
     {
-        stats.ScanRangeStat += 1;
+        stats.scanRangeStat += 1;
         int i = 0;
-        if (stats.ScanRangeStat >= 5)
+        if (stats.scanRangeStat >= 5)
         {
-            stats.ScanRangeStat = 5;
+            stats.scanRangeStat = 5;
         }
-        foreach (GameObject grad in HealthGaugeGrads)
+        foreach (GameObject grad in healtGaugeGrads)
         {
-            if (i < stats.ScanRangeStat)
+            if (i < stats.scanRangeStat)
             {
                 grad.GetComponent<RawImage>().color = Color.green;
                 i++;
@@ -163,7 +163,7 @@ public class BaseUpgradeManager : MonoBehaviour
         {
             stats.printerStat = 5;
         }
-        foreach (GameObject grad in ArmorGaugeGrads)
+        foreach (GameObject grad in armorGaugeGrads)
         {
             if (i < stats.printerStat)
             {
@@ -176,17 +176,18 @@ public class BaseUpgradeManager : MonoBehaviour
             }
         }
     }
+
     public void DamageUpgrade()
     {
-        stats.NumberDroneStat += 1;
+        stats.numberDronesStat += 1;
         int i = 0;
-        if (stats.NumberDroneStat >= 5)
+        if (stats.numberDronesStat >= 5)
         {
-            stats.NumberDroneStat = 5;
+            stats.numberDronesStat = 5;
         }
-        foreach (GameObject grad in DamageGaugeGrads)
+        foreach (GameObject grad in damageGaugeGrads)
         {
-            if (i < stats.NumberDroneStat)
+            if (i < stats.numberDronesStat)
             {
                 grad.GetComponent<RawImage>().color = Color.green;
                 i++;
@@ -197,6 +198,7 @@ public class BaseUpgradeManager : MonoBehaviour
             }
         }
     }
+
     public void FireRateUpgrade()
     {
         stats.fireDroneStat += 1;
@@ -205,7 +207,7 @@ public class BaseUpgradeManager : MonoBehaviour
         {
             stats.fireDroneStat = 5;
         }
-        foreach (GameObject grad in FireRateGaugeGrads)
+        foreach (GameObject grad in fireRateGaugeGrads)
         {
             if (i < stats.fireDroneStat)
             {
@@ -218,17 +220,18 @@ public class BaseUpgradeManager : MonoBehaviour
             }
         }
     }
+
     public void TopSpeedUpgrade()
     {
-        stats.ShieldStat += 1;
+        stats.shieldStat += 1;
         int i = 0;
-        if (stats.ShieldStat >= 5)
+        if (stats.shieldStat >= 5)
         {
-            stats.ShieldStat = 5;
+            stats.shieldStat = 5;
         }
-        foreach (GameObject grad in TopSpeedGaugeGrads)
+        foreach (GameObject grad in topSpeedGaugeGrads)
         {
-            if (i < stats.ShieldStat)
+            if (i < stats.shieldStat)
             {
                 grad.GetComponent<RawImage>().color = Color.green;
                 i++;
@@ -239,17 +242,18 @@ public class BaseUpgradeManager : MonoBehaviour
             }
         }
     }
+
     public void HandlingUpgrade()
     {
-        stats.RechargeStat += 1;
+        stats.chargeStat += 1;
         int i = 0;
-        if (stats.RechargeStat >= 5)
+        if (stats.chargeStat >= 5)
         {
-            stats.RechargeStat = 5;
+            stats.chargeStat = 5;
         }
-        foreach (GameObject grad in HandlingGaugeGrads)
+        foreach (GameObject grad in handlingGaugeGrads)
         {
-            if (i < stats.RechargeStat)
+            if (i < stats.chargeStat)
             {
                 grad.GetComponent<RawImage>().color = Color.green;
                 i++;

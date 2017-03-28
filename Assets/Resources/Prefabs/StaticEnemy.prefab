@@ -311,16 +311,16 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1543194743288140
+--- !u!1 &1608923539084004
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4468144618797418}
-  - component: {fileID: 135562111867196808}
-  - component: {fileID: 114477954951605744}
+  - component: {fileID: 4508854576771224}
+  - component: {fileID: 135698610932256620}
+  - component: {fileID: 114159241860462828}
   m_Layer: 2
   m_Name: CollisionDetectionSphere
   m_TagString: Untagged
@@ -468,7 +468,7 @@ Transform:
   - {fileID: 4945990959692086}
   - {fileID: 4367485038942742}
   - {fileID: 4916083956551580}
-  - {fileID: 4468144618797418}
+  - {fileID: 4508854576771224}
   - {fileID: 4332929125079050}
   - {fileID: 4364465419133964}
   - {fileID: 4480877648126586}
@@ -624,19 +624,6 @@ Transform:
   m_Father: {fileID: 4074899604201150}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4468144618797418
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1543194743288140}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
-  m_Children: []
-  m_Father: {fileID: 4074899604201150}
-  m_RootOrder: 11
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4480877648126586
 Transform:
   m_ObjectHideFlags: 1
@@ -663,6 +650,19 @@ Transform:
   - {fileID: 4175285988708328}
   m_Father: {fileID: 4074899604201150}
   m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4508854576771224
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1608923539084004}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
+  m_Children: []
+  m_Father: {fileID: 4074899604201150}
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4530734661822482
 Transform:
@@ -962,11 +962,11 @@ MonoBehaviour:
   name: DualBlasters
   range: 70
   damage: 2
-  firerate: 0.5
+  fireRate: 0.5
   ammo: -1
   projectile: {fileID: 1274120049360702, guid: f7ade37b555daf54ca89325c0064cf90, type: 2}
-  shotspeed: 15
-  Spawnpoint: {fileID: 4364465419133964}
+  shotSpeed: 15
+  spawnPoint: {fileID: 4364465419133964}
   Reticle: {fileID: 0}
   Gauge: {fileID: 0}
   Particleprefab: {fileID: 0}
@@ -981,9 +981,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd6b2761f08a702438f4e159a2abdebe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toBroacast: {fileID: 1261195000369858}
-  messageEnter: DetectionZoneEnter
-  messageExit: DetectionZoneExit
+  recipient: {fileID: 1261195000369858}
+  messageEnter: OnDetectionAreaEnter
+  messageExit: OnDetectionAreaExit
 --- !u!114 &114154731864371758
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -998,6 +998,20 @@ MonoBehaviour:
   currentWeapon: 0
   weapons:
   - {fileID: 1817406757347078}
+--- !u!114 &114159241860462828
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1608923539084004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd6b2761f08a702438f4e159a2abdebe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  recipient: {fileID: 1261195000369858}
+  messageEnter: CollisionAvoidanceEnter
+  messageExit: CollisionAvoidanceExit
 --- !u!114 &114219220318187076
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1010,20 +1024,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tagToAttack: Player
---- !u!114 &114477954951605744
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1543194743288140}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd6b2761f08a702438f4e159a2abdebe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  toBroacast: {fileID: 1261195000369858}
-  messageEnter: CollisionAvoidanceEnter
-  messageExit: CollisionAvoidanceExit
 --- !u!114 &114487955274484024
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1032,11 +1032,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1261195000369858}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e9ace3e77f156142b73f6dcd0dd970d, type: 3}
+  m_Script: {fileID: 11500000, guid: 15842324c3a236e4880045f988372c1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Weight: 45
-  zoneDetection: {fileID: 135562111867196808}
+  weight: 15
+  detectionArea: {fileID: 135698610932256620}
 --- !u!114 &114682399575580214
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1048,8 +1048,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12a9a622333018640a6951c0d50c3800, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MainThrust: 15
-  AuxThrust: 9
+  mainThrust: 5
+  auxThrust: 2.5
   rotationSpeed: 0.02
 --- !u!114 &114818144125942824
 MonoBehaviour:
@@ -1067,12 +1067,12 @@ MonoBehaviour:
   name: Red Raven 1
   mats: []
   OriginalEmissionsColors: []
---- !u!135 &135562111867196808
+--- !u!135 &135698610932256620
 SphereCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1543194743288140}
+  m_GameObject: {fileID: 1608923539084004}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
@@ -1134,7 +1134,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -1531076206
+  randomSeed: 1958020040
   InitialModule:
     serializedVersion: 3
     enabled: 1

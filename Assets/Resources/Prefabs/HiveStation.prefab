@@ -18142,7 +18142,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Weight: 15
-  zoneDetection: {fileID: 135885776858750276}
+  zoneDetection: {fileID: 0}
+  listInDetection: []
+  toRemove: []
 --- !u!114 &114029350045310848
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -18178,9 +18180,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd6b2761f08a702438f4e159a2abdebe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toBroacast: {fileID: 1086226398628404}
-  messageEnter: CollisionAvoidanceEnter
-  messageExit: CollisionAvoidanceExit
 --- !u!114 &114119187504468396
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -18192,9 +18191,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd6b2761f08a702438f4e159a2abdebe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toBroacast: {fileID: 1086226398628404}
-  messageEnter: DetectionZoneEnter
-  messageExit: DetectionZoneExit
 --- !u!114 &114136536053904604
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -18230,8 +18226,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7ad56db3f15e9f4da2c77d5d6ef66e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Weight: 15
-  wayPoint: {fileID: 4115551660666334}
+  weight: 15
+  waypoint: {fileID: 0}
   orbitDistance: 40
 --- !u!114 &114254624494087872
 MonoBehaviour:
@@ -18258,8 +18254,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12a9a622333018640a6951c0d50c3800, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MainThrust: 30
-  AuxThrust: 5
+  mainThrust: 5
+  auxThrust: 2.5
   rotationSpeed: 0.01
 --- !u!114 &114295949376188914
 MonoBehaviour:
@@ -18272,8 +18268,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7ad56db3f15e9f4da2c77d5d6ef66e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Weight: 15
-  wayPoint: {fileID: 4115551660666334}
+  weight: 15
+  waypoint: {fileID: 0}
   orbitDistance: 40
 --- !u!114 &114296277804173210
 MonoBehaviour:
@@ -18286,9 +18282,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd6b2761f08a702438f4e159a2abdebe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toBroacast: {fileID: 1798664284044136}
-  messageEnter: DetectionZoneEnter
-  messageExit: DetectionZoneExit
 --- !u!114 &114312580936616780
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -18328,6 +18321,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _health: 50
   maxHP: 0
+  name: 
   mats: []
   OriginalEmissionsColors: []
 --- !u!114 &114328103712173042
@@ -18341,14 +18335,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9a3912d782107749834d649fb0ad64b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  name: DualBlasters
   range: 70
   damage: 2
-  firerate: 0.5
+  fireRate: 0
   ammo: -1
   projectile: {fileID: 1274120049360702, guid: f7ade37b555daf54ca89325c0064cf90, type: 2}
-  shotspeed: 15
-  Spawnpoint: {fileID: 4139501576809006}
-  parent: {fileID: 0}
+  shotSpeed: 0
+  spawnPoint: {fileID: 0}
+  Reticle: {fileID: 0}
+  Gauge: {fileID: 0}
+  Particleprefab: {fileID: 0}
 --- !u!114 &114351183545614862
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -18362,6 +18359,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _health: 1000
   maxHP: 1000
+  name: 
   mats: []
   OriginalEmissionsColors: []
   shieldRechargeRate: 10
@@ -18376,8 +18374,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7ad56db3f15e9f4da2c77d5d6ef66e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Weight: 15
-  wayPoint: {fileID: 4115551660666334}
+  weight: 15
+  waypoint: {fileID: 0}
   orbitDistance: 40
 --- !u!114 &114374487771115338
 MonoBehaviour:
@@ -18391,7 +18389,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Weight: 15
-  zoneDetection: {fileID: 135468908645330840}
+  zoneDetection: {fileID: 0}
+  listInDetection: []
+  toRemove: []
 --- !u!114 &114428543049019652
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -18404,7 +18404,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Weight: 15
-  zoneDetection: {fileID: 135931144022393106}
+  zoneDetection: {fileID: 0}
+  listInDetection: []
+  toRemove: []
 --- !u!114 &114430108595412764
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -18417,7 +18419,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Weight: 15
-  zoneDetection: {fileID: 135029091596157824}
+  zoneDetection: {fileID: 0}
+  listInDetection: []
+  toRemove: []
 --- !u!114 &114478981418379442
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -18431,6 +18435,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _health: 50
   maxHP: 0
+  name: 
   mats: []
   OriginalEmissionsColors: []
 --- !u!114 &114499795082826358
@@ -18450,7 +18455,7 @@ MonoBehaviour:
   - {fileID: 1086226398628404}
   - {fileID: 1234049463290696}
   - {fileID: 1763630602061902}
-  Shield: {fileID: 1627784246636624}
+  shield: {fileID: 1627784246636624}
 --- !u!114 &114566330329742908
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -18462,14 +18467,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9a3912d782107749834d649fb0ad64b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  name: DualBlasters
   range: 70
   damage: 2
-  firerate: 0.5
+  fireRate: 0
   ammo: -1
   projectile: {fileID: 1274120049360702, guid: f7ade37b555daf54ca89325c0064cf90, type: 2}
-  shotspeed: 15
-  Spawnpoint: {fileID: 4172215845943952}
-  parent: {fileID: 0}
+  shotSpeed: 0
+  spawnPoint: {fileID: 0}
+  Reticle: {fileID: 0}
+  Gauge: {fileID: 0}
+  Particleprefab: {fileID: 0}
 --- !u!114 &114577835621695956
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -18481,14 +18489,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9a3912d782107749834d649fb0ad64b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  name: DualBlasters
   range: 70
   damage: 2
-  firerate: 0.5
+  fireRate: 0
   ammo: -1
   projectile: {fileID: 1274120049360702, guid: f7ade37b555daf54ca89325c0064cf90, type: 2}
-  shotspeed: 15
-  Spawnpoint: {fileID: 4525215548941202}
-  parent: {fileID: 0}
+  shotSpeed: 0
+  spawnPoint: {fileID: 0}
+  Reticle: {fileID: 0}
+  Gauge: {fileID: 0}
+  Particleprefab: {fileID: 0}
 --- !u!114 &114582573045783348
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -18500,8 +18511,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12a9a622333018640a6951c0d50c3800, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MainThrust: 30
-  AuxThrust: 5
+  mainThrust: 5
+  auxThrust: 2.5
   rotationSpeed: 0.01
 --- !u!114 &114638480025603332
 MonoBehaviour:
@@ -18514,14 +18525,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9a3912d782107749834d649fb0ad64b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  name: DualBlasters
   range: 70
   damage: 2
-  firerate: 0.5
+  fireRate: 0
   ammo: -1
   projectile: {fileID: 1274120049360702, guid: f7ade37b555daf54ca89325c0064cf90, type: 2}
-  shotspeed: 15
-  Spawnpoint: {fileID: 4260278777086502}
-  parent: {fileID: 0}
+  shotSpeed: 0
+  spawnPoint: {fileID: 0}
+  Reticle: {fileID: 0}
+  Gauge: {fileID: 0}
+  Particleprefab: {fileID: 0}
 --- !u!114 &114657720810903556
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -18533,9 +18547,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd6b2761f08a702438f4e159a2abdebe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toBroacast: {fileID: 1197650025998006}
-  messageEnter: DetectionZoneEnter
-  messageExit: DetectionZoneExit
 --- !u!114 &114672105003240380
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -18549,6 +18560,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _health: 50
   maxHP: 0
+  name: 
   mats: []
   OriginalEmissionsColors: []
 --- !u!114 &114675768723780340
@@ -18562,9 +18574,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd6b2761f08a702438f4e159a2abdebe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toBroacast: {fileID: 1234049463290696}
-  messageEnter: CollisionAvoidanceEnter
-  messageExit: CollisionAvoidanceExit
 --- !u!114 &114702373146586794
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -18590,9 +18599,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd6b2761f08a702438f4e159a2abdebe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toBroacast: {fileID: 1234049463290696}
-  messageEnter: DetectionZoneEnter
-  messageExit: DetectionZoneExit
 --- !u!114 &114769989882613006
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -18604,8 +18610,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7ad56db3f15e9f4da2c77d5d6ef66e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Weight: 15
-  wayPoint: {fileID: 4115551660666334}
+  weight: 15
+  waypoint: {fileID: 0}
   orbitDistance: 40
 --- !u!114 &114775132575655630
 MonoBehaviour:
@@ -18634,6 +18640,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _health: 50
   maxHP: 0
+  name: 
   mats: []
   OriginalEmissionsColors: []
 --- !u!114 &114792264360244432
@@ -18647,8 +18654,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12a9a622333018640a6951c0d50c3800, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MainThrust: 30
-  AuxThrust: 5
+  mainThrust: 5
+  auxThrust: 2.5
   rotationSpeed: 0.01
 --- !u!114 &114800062208947600
 MonoBehaviour:
@@ -18661,7 +18668,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f8edf769f218594bb9739783f531dfe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Button_Prompt: {fileID: 0}
+  sceneToAccessName: Hangar
+  buttonPrompt: {fileID: 0}
 --- !u!114 &114822555665077202
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -18673,8 +18681,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12a9a622333018640a6951c0d50c3800, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MainThrust: 30
-  AuxThrust: 5
+  mainThrust: 5
+  auxThrust: 2.5
   rotationSpeed: 0.01
 --- !u!114 &114843295521256178
 MonoBehaviour:
@@ -18689,6 +18697,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _health: 50
   maxHP: 0
+  name: 
   mats: []
   OriginalEmissionsColors: []
 --- !u!114 &114863169454523274
@@ -18702,9 +18711,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd6b2761f08a702438f4e159a2abdebe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toBroacast: {fileID: 1798664284044136}
-  messageEnter: CollisionAvoidanceEnter
-  messageExit: CollisionAvoidanceExit
 --- !u!114 &114913373209160238
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -18730,14 +18736,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9a3912d782107749834d649fb0ad64b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  name: DualBlasters
   range: 70
   damage: 2
-  firerate: 0.5
+  fireRate: 0
   ammo: -1
   projectile: {fileID: 1274120049360702, guid: f7ade37b555daf54ca89325c0064cf90, type: 2}
-  shotspeed: 15
-  Spawnpoint: {fileID: 4516016694143260}
-  parent: {fileID: 0}
+  shotSpeed: 0
+  spawnPoint: {fileID: 0}
+  Reticle: {fileID: 0}
+  Gauge: {fileID: 0}
+  Particleprefab: {fileID: 0}
 --- !u!114 &114924684831032366
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -18749,9 +18758,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd6b2761f08a702438f4e159a2abdebe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toBroacast: {fileID: 1197650025998006}
-  messageEnter: CollisionAvoidanceEnter
-  messageExit: CollisionAvoidanceExit
 --- !u!114 &114938555350647614
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -18764,7 +18770,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Weight: 15
-  zoneDetection: {fileID: 135475376744270516}
+  zoneDetection: {fileID: 0}
+  listInDetection: []
+  toRemove: []
 --- !u!114 &114940920561899806
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -18776,8 +18784,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7ad56db3f15e9f4da2c77d5d6ef66e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Weight: 15
-  wayPoint: {fileID: 4115551660666334}
+  weight: 15
+  waypoint: {fileID: 0}
   orbitDistance: 40
 --- !u!114 &114963840433164394
 MonoBehaviour:
@@ -18790,9 +18798,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd6b2761f08a702438f4e159a2abdebe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toBroacast: {fileID: 1763630602061902}
-  messageEnter: DetectionZoneEnter
-  messageExit: DetectionZoneExit
 --- !u!114 &114967751594153834
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -18804,9 +18809,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd6b2761f08a702438f4e159a2abdebe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toBroacast: {fileID: 1763630602061902}
-  messageEnter: CollisionAvoidanceEnter
-  messageExit: CollisionAvoidanceExit
 --- !u!114 &114968979717703326
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -18818,8 +18820,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12a9a622333018640a6951c0d50c3800, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MainThrust: 30
-  AuxThrust: 5
+  mainThrust: 5
+  auxThrust: 2.5
   rotationSpeed: 0.01
 --- !u!135 &135029091596157824
 SphereCollider:

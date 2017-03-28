@@ -9,7 +9,7 @@ public class Player : Entity {
     {
         base.Start();
         stats = GameObject.Find("Stats").GetComponent<ShipStats>();
-        maxHP = 100 + (stats.HealthStat * 50);
+        maxHP = 100 + (stats.healthStat * 50);
         health = maxHP;
     }
 

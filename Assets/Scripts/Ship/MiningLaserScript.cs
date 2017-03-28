@@ -3,20 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class MiningLaserScript : MonoBehaviour {
-
+public class MiningLaserScript : MonoBehaviour
+{
     LineRenderer line;
     GameObject particleObject;
     ParticleSystem particle;
     ParticleSystem.EmissionModule em;
-    public GameObject Particleprefab;
+    public GameObject particlePrefab;
     public int range = 50;
-    public Slider HealthGauge;
-    public GameObject HealthGaugeText;
+    public Slider healthGauge;
+    public GameObject healthGaugeText;
 
-    void Start ()
+    void Start()
     {
-        HealthGaugeText.SetActive(false);
+        healthGaugeText.SetActive(false);
+        healthGauge.gameObject.SetActive(false);
         line = gameObject.GetComponent<LineRenderer>();
         line.enabled = false;
         particleObject = Instantiate(gameObject);
@@ -27,20 +28,20 @@ public class MiningLaserScript : MonoBehaviour {
         em.enabled = false;
         gameObject.GetComponent<ParticleSystem>().Stop();
     }
-	
-	void Update ()
+
+    void Update()
     {
-		if(Input.GetButtonDown("Fire2"))
+        if (Input.GetButtonDown("Fire2"))
         {
             StopCoroutine("FireMiningLaser");
             StartCoroutine("FireMiningLaser");
         }
-	}
-    
+    }
+
     IEnumerator FireMiningLaser()
     {
         line.enabled = true;
-        while(Input.GetButton("Fire2"))
+        while (Input.GetButton("Fire2"))
         {
             line.GetComponent<Renderer>().material.mainTextureOffset = new Vector2(0, Time.time);
             Ray miningray = new Ray(transform.position, transform.forward);
@@ -53,34 +54,35 @@ public class MiningLaserScript : MonoBehaviour {
                 Asteroid asscript = hit.transform.gameObject.GetComponent<Asteroid>();
                 if (asscript != null)
                 {
-                    
-                    HealthGaugeText.SetActive(true);
+                    healthGauge.gameObject.SetActive(true);
+                    healthGaugeText.SetActive(true);
                     asscript.health -= 1;
-                    HealthGauge.value = asscript.health;
+                    healthGauge.value = asscript.health;
                     Debug.Log(asscript.health);
                     if (asscript.health <= 0)
                     {
-                        GameObject Particle = Instantiate(Particleprefab, hit.point, Random.rotation);
+                        GameObject Particle = Instantiate(particlePrefab, hit.point, Random.rotation);
                         Particle.transform.localScale = asscript.transform.localScale;
-                        Destroy(Particle,2);
+                        Destroy(Particle, 2);
                     }
                 }
-                
+
                 particleObject.transform.position = hit.point;
                 em.enabled = true;
-            }                
+            }
             else
             {
                 line.SetPosition(1, miningray.GetPoint(range));
-                HealthGaugeText.SetActive(false);
+                healthGaugeText.SetActive(false);
+                healthGauge.gameObject.SetActive(false);
                 em.enabled = false;
             }
-
 
             yield return null;
         }
 
-        HealthGaugeText.SetActive(false);
+        healthGaugeText.SetActive(false);
+        healthGauge.gameObject.SetActive(false);
         line.enabled = false;
         em.enabled = false;
     }

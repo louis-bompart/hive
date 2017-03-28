@@ -6,71 +6,71 @@ using UnityEngine.UI;
 public class UpgradeManagement : MonoBehaviour
 {
     #region Gauge preparation
-    private List<GameObject> HealthGaugeGrads = new List<GameObject>();
-    private List<GameObject> ArmorGaugeGrads = new List<GameObject>();
-    private List<GameObject> DamageGaugeGrads = new List<GameObject>();
-    private List<GameObject> FireRateGaugeGrads = new List<GameObject>();
-    private List<GameObject> TopSpeedGaugeGrads = new List<GameObject>();
-    private List<GameObject> HandlingGaugeGrads = new List<GameObject>();
+    private List<GameObject> healthGaugeGrads = new List<GameObject>();
+    private List<GameObject> armorGaugeGrads = new List<GameObject>();
+    private List<GameObject> damageGaugeGrads = new List<GameObject>();
+    private List<GameObject> fireRateGaugeGrads = new List<GameObject>();
+    private List<GameObject> topSpeedGaugeGrads = new List<GameObject>();
+    private List<GameObject> handlingGaugeGrads = new List<GameObject>();
     private ShipStats stats;
-    private static int HealthUp = 0;
-    private static int ArmorUp = 0;
-    private static int DamageUp = 0;
-    private static int FireRateUp = 0;
-    private static int TopSpeedUp = 0;
-    private static int HandlingUp = 0;
-    private static int DefensePoints = 0;
-    private static int AttackPoints = 0;
-    private static int MobilityPoints = 0;
+    private static int healthUp = 0;
+    private static int armorUp = 0;
+    private static int damageUp = 0;
+    private static int fireRateUp = 0;
+    private static int topSpeedUp = 0;
+    private static int handlingUp = 0;
+    private static int defensePoints = 0;
+    private static int attackPoints = 0;
+    private static int mobilityPoints = 0;
 
     #endregion
 
     public void Start()
-    {
+    {   
         #region Gauge init
-        GameObject HealthGauge = GameObject.Find("HealthUpgradeGauge");
-        GameObject ArmorGauge = GameObject.Find("ArmorUpgradeGauge");
-        GameObject DamageGauge = GameObject.Find("DamageUpgradeGauge");
-        GameObject FireRateGauge = GameObject.Find("FireRateUpgradeGauge");
-        GameObject TopSpeedGauge = GameObject.Find("TopSpeedUpgradeGauge");
-        GameObject HandlingGauge = GameObject.Find("HandlingUpgradeGauge");
-        DefensePoints = GameObject.Find("Inventory").GetComponent<InventoryController>().GetQuantity(200);
-        GameObject.Find("DefenseCounter").GetComponent<Text>().text = DefensePoints.ToString();
-        AttackPoints = GameObject.Find("Inventory").GetComponent<InventoryController>().GetQuantity(201);
-        GameObject.Find("AttackCounter").GetComponent<Text>().text = AttackPoints.ToString();
-        MobilityPoints = GameObject.Find("Inventory").GetComponent<InventoryController>().GetQuantity(202);
-        GameObject.Find("MobilityCounter").GetComponent<Text>().text = MobilityPoints.ToString();
+        GameObject healthGauge = GameObject.Find("HealthUpgradeGauge");
+        GameObject armorGauge = GameObject.Find("ArmorUpgradeGauge");
+        GameObject damageGauge = GameObject.Find("DamageUpgradeGauge");
+        GameObject fireRateGauge = GameObject.Find("FireRateUpgradeGauge");
+        GameObject topSpeedGauge = GameObject.Find("TopSpeedUpgradeGauge");
+        GameObject handlingGauge = GameObject.Find("HandlingUpgradeGauge");
+        defensePoints = GameObject.Find("Inventory").GetComponent<InventoryController>().GetQuantity(200);
+        GameObject.Find("DefenseCounter").GetComponent<Text>().text = defensePoints.ToString();
+        attackPoints = GameObject.Find("Inventory").GetComponent<InventoryController>().GetQuantity(201);
+        GameObject.Find("AttackCounter").GetComponent<Text>().text = attackPoints.ToString();
+        mobilityPoints = GameObject.Find("Inventory").GetComponent<InventoryController>().GetQuantity(202);
+        GameObject.Find("MobilityCounter").GetComponent<Text>().text = mobilityPoints.ToString();
 
         stats = GameObject.Find("Stats").GetComponent<ShipStats>();
-        foreach (Transform child in HealthGauge.transform)
+        foreach (Transform child in healthGauge.transform)
         {
-            HealthGaugeGrads.Add(child.gameObject);
+            healthGaugeGrads.Add(child.gameObject);
         }
-        foreach (Transform child in ArmorGauge.transform)
+        foreach (Transform child in armorGauge.transform)
         {
-            ArmorGaugeGrads.Add(child.gameObject);
+            armorGaugeGrads.Add(child.gameObject);
         }
-        foreach (Transform child in DamageGauge.transform)
+        foreach (Transform child in damageGauge.transform)
         {
-            DamageGaugeGrads.Add(child.gameObject);
+            damageGaugeGrads.Add(child.gameObject);
         }
-        foreach (Transform child in FireRateGauge.transform)
+        foreach (Transform child in fireRateGauge.transform)
         {
-            FireRateGaugeGrads.Add(child.gameObject);
+            fireRateGaugeGrads.Add(child.gameObject);
         }
-        foreach (Transform child in TopSpeedGauge.transform)
+        foreach (Transform child in topSpeedGauge.transform)
         {
-            TopSpeedGaugeGrads.Add(child.gameObject);
+            topSpeedGaugeGrads.Add(child.gameObject);
         }
-        foreach (Transform child in HandlingGauge.transform)
+        foreach (Transform child in handlingGauge.transform)
         {
-            HandlingGaugeGrads.Add(child.gameObject);
+            handlingGaugeGrads.Add(child.gameObject);
         }
 
         int i = 0;
-        foreach (GameObject grad in HealthGaugeGrads)
+        foreach (GameObject grad in healthGaugeGrads)
         {
-            if (i < stats.HealthStat)
+            if (i < stats.healthStat)
             {
                 grad.GetComponent<RawImage>().color = Color.green;
                 i++;
@@ -81,9 +81,9 @@ public class UpgradeManagement : MonoBehaviour
                 break;
             }
         }
-        foreach (GameObject grad in ArmorGaugeGrads)
+        foreach (GameObject grad in armorGaugeGrads)
         {
-            if (i < stats.ArmorStat)
+            if (i < stats.armorStat)
             {
                 grad.GetComponent<RawImage>().color = Color.green;
                 i++;
@@ -94,9 +94,9 @@ public class UpgradeManagement : MonoBehaviour
                 break;
             }
         }
-        foreach (GameObject grad in DamageGaugeGrads)
+        foreach (GameObject grad in damageGaugeGrads)
         {
-            if (i < stats.DamageStat)
+            if (i < stats.damageStat)
             {
                 grad.GetComponent<RawImage>().color = Color.green;
                 i++;
@@ -107,9 +107,9 @@ public class UpgradeManagement : MonoBehaviour
                 break;
             }
         }
-        foreach (GameObject grad in FireRateGaugeGrads)
+        foreach (GameObject grad in fireRateGaugeGrads)
         {
-            if (i < stats.FireRateStat)
+            if (i < stats.fireRateStat)
             {
                 grad.GetComponent<RawImage>().color = Color.green;
                 i++;
@@ -120,9 +120,9 @@ public class UpgradeManagement : MonoBehaviour
                 break;
             }
         }
-        foreach (GameObject grad in TopSpeedGaugeGrads)
+        foreach (GameObject grad in topSpeedGaugeGrads)
         {
-            if (i < stats.TopSpeedStat)
+            if (i < stats.topSppedStat)
             {
                 grad.GetComponent<RawImage>().color = Color.green;
                 i++;
@@ -133,9 +133,9 @@ public class UpgradeManagement : MonoBehaviour
                 break;
             }
         }
-        foreach (GameObject grad in HandlingGaugeGrads)
+        foreach (GameObject grad in handlingGaugeGrads)
         {
-            if (i < stats.HandlingStat)
+            if (i < stats.handlingStat)
             {
                 grad.GetComponent<RawImage>().color = Color.green;
                 i++;
@@ -152,20 +152,20 @@ public class UpgradeManagement : MonoBehaviour
     #region Button click functions (update the values of the ship's stats)
     public void HealthUpgrade()
     {
-        if (DefensePoints > 0)
+        if (defensePoints > 0)
         {
-            DefensePoints--;
-            GameObject.Find("DefenseCounter").GetComponent<Text>().text = DefensePoints.ToString();
-            HealthUp += 1;
+            defensePoints--;
+            GameObject.Find("DefenseCounter").GetComponent<Text>().text = defensePoints.ToString();
+            healthUp += 1;
             int i = 0;
-            if (stats.HealthStat + HealthUp > 5)
+            if (stats.healthStat + healthUp > 5)
             {
-                HealthUp = 5 - stats.HealthStat;
-                DefensePoints++;
+                healthUp = 5 - stats.healthStat;
+                defensePoints++;
             }
-            foreach (GameObject grad in HealthGaugeGrads)
+            foreach (GameObject grad in healthGaugeGrads)
             {
-                if (i < HealthUp + stats.HealthStat)
+                if (i < healthUp + stats.healthStat)
                 {
                     if (grad.GetComponent<RawImage>().color == Color.white)
                     {
@@ -187,20 +187,20 @@ public class UpgradeManagement : MonoBehaviour
 
     public void ArmorUpgrade()
     {
-        if (DefensePoints > 0)
+        if (defensePoints > 0)
         {
-            DefensePoints--;
-            ArmorUp += 1;
-            GameObject.Find("DefenseCounter").GetComponent<Text>().text = DefensePoints.ToString();
+            defensePoints--;
+            armorUp += 1;
+            GameObject.Find("DefenseCounter").GetComponent<Text>().text = defensePoints.ToString();
             int i = 0;
-            if (stats.ArmorStat + ArmorUp >= 5)
+            if (stats.armorStat + armorUp >= 5)
             {
-                ArmorUp = 5 - stats.ArmorStat;
-                DefensePoints++;
+                armorUp = 5 - stats.armorStat;
+                defensePoints++;
             }
-            foreach (GameObject grad in ArmorGaugeGrads)
+            foreach (GameObject grad in armorGaugeGrads)
             {
-                if (i < ArmorUp + stats.ArmorStat)
+                if (i < armorUp + stats.armorStat)
                 {
                     if (grad.GetComponent<RawImage>().color == Color.white)
                     {
@@ -222,20 +222,20 @@ public class UpgradeManagement : MonoBehaviour
 
     public void DamageUpgrade()
     {
-        if (AttackPoints > 0)
+        if (attackPoints > 0)
         {
-            AttackPoints--;
-            GameObject.Find("AttackCounter").GetComponent<Text>().text = AttackPoints.ToString();
-            DamageUp += 1;
+            attackPoints--;
+            GameObject.Find("AttackCounter").GetComponent<Text>().text = attackPoints.ToString();
+            damageUp += 1;
             int i = 0;
-            if (stats.DamageStat + DamageUp >= 5)
+            if (stats.damageStat + damageUp >= 5)
             {
-                DamageUp = 5 - stats.DamageStat;
-                AttackPoints++;
+                damageUp = 5 - stats.damageStat;
+                attackPoints++;
             }
-            foreach (GameObject grad in DamageGaugeGrads)
+            foreach (GameObject grad in damageGaugeGrads)
             {
-                if (i < DamageUp + stats.DamageStat)
+                if (i < damageUp + stats.damageStat)
                 {
                     if (grad.GetComponent<RawImage>().color == Color.white)
                     {
@@ -257,20 +257,20 @@ public class UpgradeManagement : MonoBehaviour
 
     public void FireRateUpgrade()
     {
-        if (AttackPoints > 0)
+        if (attackPoints > 0)
         {
-            AttackPoints--;
-            GameObject.Find("AttackCounter").GetComponent<Text>().text = AttackPoints.ToString();
-            FireRateUp += 1;
+            attackPoints--;
+            GameObject.Find("AttackCounter").GetComponent<Text>().text = attackPoints.ToString();
+            fireRateUp += 1;
             int i = 0;
-            if (stats.FireRateStat + FireRateUp >= 5)
+            if (stats.fireRateStat + fireRateUp >= 5)
             {
-                FireRateUp = 5 - stats.FireRateStat;
-                AttackPoints++;
+                fireRateUp = 5 - stats.fireRateStat;
+                attackPoints++;
             }
-            foreach (GameObject grad in FireRateGaugeGrads)
+            foreach (GameObject grad in fireRateGaugeGrads)
             {
-                if (i < FireRateUp + stats.FireRateStat)
+                if (i < fireRateUp + stats.fireRateStat)
                 {
                     if (grad.GetComponent<RawImage>().color == Color.white)
                     {
@@ -292,20 +292,20 @@ public class UpgradeManagement : MonoBehaviour
 
     public void TopSpeedUpgrade()
     {
-        if(MobilityPoints > 0)
+        if(mobilityPoints > 0)
         {
-            MobilityPoints--;
-            GameObject.Find("MobilityCounter").GetComponent<Text>().text = MobilityPoints.ToString();
-            TopSpeedUp += 1;
+            mobilityPoints--;
+            GameObject.Find("MobilityCounter").GetComponent<Text>().text = mobilityPoints.ToString();
+            topSpeedUp += 1;
             int i = 0;
-            if (stats.TopSpeedStat + TopSpeedUp >= 5)
+            if (stats.topSppedStat + topSpeedUp >= 5)
             {
-                TopSpeedUp = 5 - stats.TopSpeedStat;
-                MobilityPoints++;
+                topSpeedUp = 5 - stats.topSppedStat;
+                mobilityPoints++;
             }
-            foreach (GameObject grad in TopSpeedGaugeGrads)
+            foreach (GameObject grad in topSpeedGaugeGrads)
             {
-                if (i < TopSpeedUp + stats.TopSpeedStat)
+                if (i < topSpeedUp + stats.topSppedStat)
                 {
                     if (grad.GetComponent<RawImage>().color == Color.white)
                     {
@@ -327,20 +327,20 @@ public class UpgradeManagement : MonoBehaviour
 
     public void HandlingUpgrade()
     {
-        if (MobilityPoints > 0)
+        if (mobilityPoints > 0)
         {
-            MobilityPoints--;
-            GameObject.Find("MobilityCounter").GetComponent<Text>().text = MobilityPoints.ToString();
-            HandlingUp += 1;
+            mobilityPoints--;
+            GameObject.Find("MobilityCounter").GetComponent<Text>().text = mobilityPoints.ToString();
+            handlingUp += 1;
             int i = 0;
-            if (stats.HandlingStat + HandlingUp >= 5)
+            if (stats.handlingStat + handlingUp >= 5)
             {
-                HandlingUp = 5 - stats.HandlingStat;
-                MobilityPoints++;
+                handlingUp = 5 - stats.handlingStat;
+                mobilityPoints++;
             }
-            foreach (GameObject grad in HandlingGaugeGrads)
+            foreach (GameObject grad in handlingGaugeGrads)
             {
-                if (i < HandlingUp + stats.HandlingStat)
+                if (i < handlingUp + stats.handlingStat)
                 {
                     if (grad.GetComponent<RawImage>().color == Color.white)
                     {
@@ -365,48 +365,48 @@ public class UpgradeManagement : MonoBehaviour
 
     public void Validate()
     {
-        stats.HealthStat += HealthUp;
-        stats.ArmorStat += ArmorUp;
-        stats.DamageStat += DamageUp;
-        stats.FireRateStat += FireRateUp;
-        stats.TopSpeedStat += TopSpeedUp;
-        stats.HandlingStat += HandlingUp;
-        foreach (GameObject grad in HealthGaugeGrads)
+        stats.healthStat += healthUp;
+        stats.armorStat += armorUp;
+        stats.damageStat += damageUp;
+        stats.fireRateStat += fireRateUp;
+        stats.topSppedStat += topSpeedUp;
+        stats.handlingStat += handlingUp;
+        foreach (GameObject grad in healthGaugeGrads)
         {
             if (grad.GetComponent<RawImage>().color == Color.yellow)
             {
                 grad.GetComponent<RawImage>().color = Color.green;
             }
         }
-        foreach (GameObject grad in ArmorGaugeGrads)
+        foreach (GameObject grad in armorGaugeGrads)
         {
             if (grad.GetComponent<RawImage>().color == Color.yellow)
             {
                 grad.GetComponent<RawImage>().color = Color.green;
             }
         }
-        foreach (GameObject grad in DamageGaugeGrads)
+        foreach (GameObject grad in damageGaugeGrads)
         {
             if (grad.GetComponent<RawImage>().color == Color.yellow)
             {
                 grad.GetComponent<RawImage>().color = Color.green;
             }
         }
-        foreach (GameObject grad in FireRateGaugeGrads)
+        foreach (GameObject grad in fireRateGaugeGrads)
         {
             if (grad.GetComponent<RawImage>().color == Color.yellow)
             {
                 grad.GetComponent<RawImage>().color = Color.green;
             }
         }
-        foreach (GameObject grad in TopSpeedGaugeGrads)
+        foreach (GameObject grad in topSpeedGaugeGrads)
         {
             if (grad.GetComponent<RawImage>().color == Color.yellow)
             {
                 grad.GetComponent<RawImage>().color = Color.green;
             }
         }
-        foreach (GameObject grad in HandlingGaugeGrads)
+        foreach (GameObject grad in handlingGaugeGrads)
         {
             if (grad.GetComponent<RawImage>().color == Color.yellow)
             {
@@ -417,51 +417,51 @@ public class UpgradeManagement : MonoBehaviour
 
     public void Cancel()
     {
-        HealthUp = 0;
-        ArmorUp = 0;
-        DamageUp = 0;
-        FireRateUp = 0;
-        TopSpeedUp = 0;
-        HandlingUp = 0;
-        GameObject.Find("DefenseCounter").GetComponent<Text>().text = DefensePoints.ToString();
-        GameObject.Find("AttackCounter").GetComponent<Text>().text = AttackPoints.ToString();
-        GameObject.Find("MobilityCounter").GetComponent<Text>().text = MobilityPoints.ToString();
-        foreach (GameObject grad in HealthGaugeGrads)
+        healthUp = 0;
+        armorUp = 0;
+        damageUp = 0;
+        fireRateUp = 0;
+        topSpeedUp = 0;
+        handlingUp = 0;
+        GameObject.Find("DefenseCounter").GetComponent<Text>().text = defensePoints.ToString();
+        GameObject.Find("AttackCounter").GetComponent<Text>().text = attackPoints.ToString();
+        GameObject.Find("MobilityCounter").GetComponent<Text>().text = mobilityPoints.ToString();
+        foreach (GameObject grad in healthGaugeGrads)
         {
             if (grad.GetComponent<RawImage>().color == Color.yellow)
             {
                 grad.GetComponent<RawImage>().color = Color.white;
             }
         }
-        foreach (GameObject grad in ArmorGaugeGrads)
+        foreach (GameObject grad in armorGaugeGrads)
         {
             if (grad.GetComponent<RawImage>().color == Color.yellow)
             {
                 grad.GetComponent<RawImage>().color = Color.white;
             }
         }
-        foreach (GameObject grad in DamageGaugeGrads)
+        foreach (GameObject grad in damageGaugeGrads)
         {
             if (grad.GetComponent<RawImage>().color == Color.yellow)
             {
                 grad.GetComponent<RawImage>().color = Color.white;
             }
         }
-        foreach (GameObject grad in FireRateGaugeGrads)
+        foreach (GameObject grad in fireRateGaugeGrads)
         {
             if (grad.GetComponent<RawImage>().color == Color.yellow)
             {
                 grad.GetComponent<RawImage>().color = Color.white;
             }
         }
-        foreach (GameObject grad in TopSpeedGaugeGrads)
+        foreach (GameObject grad in topSpeedGaugeGrads)
         {
             if (grad.GetComponent<RawImage>().color == Color.yellow)
             {
                 grad.GetComponent<RawImage>().color = Color.white;
             }
         }
-        foreach (GameObject grad in HandlingGaugeGrads)
+        foreach (GameObject grad in handlingGaugeGrads)
         {
             if (grad.GetComponent<RawImage>().color == Color.yellow)
             {

@@ -2,7 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AsteroidsGenerator : MonoBehaviour {
+public class AsteroidsGenerator : MonoBehaviour
+{
 
     public GameObject[] asteroids;
     private Vector3 origin = Vector3.zero;
@@ -24,7 +25,9 @@ public class AsteroidsGenerator : MonoBehaviour {
     /// </summary>
     public float minDistance = 30.0f;
     public float maxDistance = 150.0f;
-    void Start() {
+
+    void Start()
+    {
         origin = transform.position;
         GenerateAsteroids(Random.Range(minCount, maxCount));
     }
@@ -34,16 +37,20 @@ public class AsteroidsGenerator : MonoBehaviour {
     /// maxSize and a random distance between them from minDistance to maxDistance.
     /// </summary>
     /// <param name="asteroidsCount">Number of Asteroids to Generate</param>
-    public void GenerateAsteroids(int asteroidsCount) {
-        for (int i = 0; i < asteroidsCount; i++) {
+    public void GenerateAsteroids(int asteroidsCount)
+    {
+        for (int i = 0; i < asteroidsCount; i++)
+        {
             float size = Random.Range(minSize, maxSize);
             GameObject prefab = asteroids[Random.Range(0, asteroids.Length)];
             Vector3 position = Vector3.zero;
 
-            for (int j = 0; j < 100; j++) {
+            for (int j = 0; j < 100; j++)
+            {
                 position = Random.insideUnitSphere * (minDistance + (maxDistance - minDistance) * Random.value);
                 position += origin;
-                if (!Physics.CheckSphere(position, size / 2.0f)) {
+                if (!Physics.CheckSphere(position, size / 2.0f))
+                {
                     break;
                 }
             }
@@ -59,25 +66,25 @@ public class AsteroidsGenerator : MonoBehaviour {
     private int[] mineralIdProbability = { 25, 40, 60, 75, 90, 100 };
     private int[] idMineral = { 100, 101, 102, 103, 104, 105 };
 
-    
+
 
     private void setMineralAndCount(GameObject toSet)
     {
         Asteroid astToSet = toSet.GetComponent<Asteroid>();
-        if(astToSet == null)
+        if (astToSet == null)
         {
             Debug.Log("Asteroid script not found");
             return;
         }
-        
+
 
         //Set the mineral count
         int max = Mathf.Max(mineralCountProbability);
         int rand = (int)(Random.value * max);
         int i;
-        for ( i = 0; i < mineralCountProbability.Length && rand > mineralCountProbability[i] ;i++)
+        for (i = 0; i < mineralCountProbability.Length && rand > mineralCountProbability[i]; i++)
         {
-            
+
         }
 
         astToSet.count = i;
@@ -90,7 +97,7 @@ public class AsteroidsGenerator : MonoBehaviour {
 
         }
         astToSet.idMineral = idMineral[i];
-        switch(astToSet.idMineral)
+        switch (astToSet.idMineral)
         {
             case 100:
                 break;
@@ -185,10 +192,10 @@ public class AsteroidsGenerator : MonoBehaviour {
     //List of texture
     public Texture[] texture;
 
-    private void setTexture(GameObject toSet,int id)
+    private void setTexture(GameObject toSet, int id)
     {
         int i = id - 100;
-        if(i>=0 && i< texture.Length)
+        if (i >= 0 && i < texture.Length)
         {
             toSet.GetComponent<Renderer>().material.mainTexture = texture[i];
         }

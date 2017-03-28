@@ -891,11 +891,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da7c67cd18af2334f813c67db6f79f1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Particleprefab: {fileID: 1027570773081274, guid: 04bb8664713f2684586743dd327fc1c7,
+  particlePrefab: {fileID: 1027570773081274, guid: 04bb8664713f2684586743dd327fc1c7,
     type: 2}
   range: 50
-  HealthGauge: {fileID: 0}
-  HealthGaugeText: {fileID: 0}
+  healthGauge: {fileID: 0}
+  healthGaugeText: {fileID: 0}
 --- !u!114 &114737167718623156
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -910,13 +910,13 @@ MonoBehaviour:
   name: BombLauncher
   range: 50
   damage: 30
-  firerate: 1
+  fireRate: 1
   ammo: 5
   projectile: {fileID: 1274120049360702, guid: f7ade37b555daf54ca89325c0064cf90, type: 2}
-  shotspeed: 25
-  Spawnpoint: {fileID: 4705707229161724}
-  Reticle: {fileID: 0}
-  Gauge: {fileID: 1958255677916824, guid: 45c15a3d539beed4b8ab7ddf0be0d608, type: 2}
+  shotSpeed: 25
+  spawnPoint: {fileID: 4705707229161724}
+  reticle: {fileID: 0}
+  gauge: {fileID: 0}
   Particleprefab: {fileID: 1912190500381684, guid: 832667cc4dc881742a5a8634b381daad,
     type: 2}
 --- !u!114 &114766263404173586
@@ -930,9 +930,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e5d7983f3e3e294f83b912f0514b1c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MainThrust: 15
-  AuxThrust: 9
-  Torque: 2.5
+  mainThrust: 0
+  auxThrust: 2.5
+  torque: 2.5
   isYawInverted: 0
   isPitchInverted: 1
   isRollInverted: 1
@@ -971,11 +971,11 @@ MonoBehaviour:
   name: DualBlasters
   range: 70
   damage: 2
-  firerate: 0.5
+  fireRate: 0.5
   ammo: -1
   projectile: {fileID: 1274120049360702, guid: f7ade37b555daf54ca89325c0064cf90, type: 2}
-  shotspeed: 15
-  Spawnpoint: {fileID: 4543075311984424}
+  shotSpeed: 15
+  spawnPoint: {fileID: 4543075311984424}
   Reticle: {fileID: 0}
   Gauge: {fileID: 0}
   Particleprefab: {fileID: 1912190500381684, guid: 832667cc4dc881742a5a8634b381daad,
@@ -8955,7 +8955,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -306877803
+  randomSeed: 1423041513
   InitialModule:
     serializedVersion: 3
     enabled: 1

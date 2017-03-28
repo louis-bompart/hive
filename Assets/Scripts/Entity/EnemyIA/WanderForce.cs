@@ -3,11 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WanderForce : AbstratForce {
+public class WanderForce : AbstractForce
+{
 
-    private float CircleRadius = 1;
-    private float TurnChance = 0.01f;
-    private float MaxRadius = 4;
+    private float circleRadius = 1;
+    private float turnChance = 0.01f;
+    private float maxRadius = 4;
 
 
     private Vector3 velocity;
@@ -15,17 +16,15 @@ public class WanderForce : AbstratForce {
     private Vector3 target;
 
 
-    public override Vector3 CalculateForce()
+    public override Vector3 ComputeForce()
     {
         return GetWanderForce().normalized;
     }
 
-
-
     private Vector3 GetWanderForce()
     {
 
-        if (UnityEngine.Random.value < TurnChance)
+        if (UnityEngine.Random.value < turnChance)
         {
             wanderForce = GetRandomWanderForce();
         }
@@ -38,7 +37,7 @@ public class WanderForce : AbstratForce {
         Vector3 circleCenter = gameObject.transform.forward.normalized;
         Vector2 randomPoint = UnityEngine.Random.insideUnitCircle;
 
-        Vector3 displacement = new Vector3(randomPoint.x, randomPoint.y) * CircleRadius;
+        Vector3 displacement = new Vector3(randomPoint.x, randomPoint.y) * circleRadius;
         displacement = Quaternion.LookRotation(transform.forward) * displacement;
 
         Vector3 wanderForce = circleCenter + displacement;
