@@ -12,7 +12,7 @@ public class WeaponSelector : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        
+        nbWeapons = weapons.Length;
         for (int i = 0; i < nbWeapons; i++) {
             weapons[i].gameObject.SetActive(false);
 

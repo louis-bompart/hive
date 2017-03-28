@@ -20,6 +20,7 @@ public class BaseInitialisation : MonoBehaviour {
         }
 
         //Shield init
+        Shield.GetComponent<Shield>().maxHP = 50 + (stats.ShieldStat * 50);
         Shield.GetComponent<Shield>().health = 50 + (stats.ShieldStat * 50);
         Shield.GetComponent<Shield>().shieldRechargeRate = 1 + (stats.RechargeStat * 0.5f);
 	}

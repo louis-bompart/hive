@@ -8,7 +8,7 @@ public class Slot : MonoBehaviour, IDropHandler
 
     private InventoryView inventoryView;
     private ItemData item;
-    private int amount;
+    public int amount;
 
     public int Amount
     {
@@ -23,7 +23,7 @@ public class Slot : MonoBehaviour, IDropHandler
         }
     }
 
-    void Start()
+    void Awake()
     {
         inventoryView = GameObject.Find("Inventory").GetComponent<InventoryView>();
         item = null;
@@ -60,8 +60,11 @@ public class Slot : MonoBehaviour, IDropHandler
     /// </summary>
     public void RemoveItem()
     {
-        Destroy(item.gameObject);
-        SetItem(null);
+        if(item != null)
+        {
+            Destroy(item.gameObject);
+            SetItem(null);
+        }
     }
 
     /// <summary>

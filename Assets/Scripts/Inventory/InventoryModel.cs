@@ -7,6 +7,4 @@ public class InventoryModel : MonoBehaviour
 
     public Dictionary<Item, int> inventory = new Dictionary<Item, int>();
 
-
-
 }

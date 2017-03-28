@@ -1,14 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 using UnityEngine;
+using System;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float MainThrust = 5.0f;
+    public float MainThrust;
     public float AuxThrust = 2.5f;
     public float Torque = 2.5f;
 
-    private float drag = 0.0f;
+    private float drag = 15.0f;
     private float angDrag = 0.0f;
 
     public bool isYawInverted = false;
@@ -19,53 +22,129 @@ public class PlayerMovement : MonoBehaviour
     public float deadZoneY = 0.15f;
 
     public bool showCursor = false;
-
+    public float velocity;
     public EnginesAnimation engineAnimation;
 
     private Rigidbody rb;
+    public ShipStats stats;
+    public float warpTime;
+    private float actualLoading;
+    private Player player;
+    public float terminalVelocity;
+
+    public GameObject warpGauge;
+    private Slider warpSlider;
 
     // Use this for initialization
     void Start()
     {
         engineAnimation = GetComponentInChildren<EnginesAnimation>();
         rb = GetComponent<Rigidbody>();
+        stats = GameObject.Find("Stats").GetComponent<ShipStats>();
+        player = GetComponent<Player>();
         Cursor.visible = showCursor;
         drag = rb.drag;
-        angDrag = rb.angularDrag;
+
+        UpdateSpeedAndAcceleration();
+
+        if (warpGauge == null)
+        {
+            warpGauge = GameObject.Find("WarpGauge");
+        }
+
+        if (warpGauge != null)
+        {
+            warpSlider = warpGauge.GetComponentInChildren<Slider>();
+            if (warpSlider == null)
+            {
+                Debug.Log("Couldn't find warp slider");
+            }
+            else
+            {
+                Debug.Log("warpGauge gameObject empty");
+            }
+        }
+    }
+
+    private void UpdateSpeedAndAcceleration()
+    {
+        terminalVelocity = 50.0f * (stats.TopSpeedStat + 1);
+        MainThrust = terminalVelocity / (3 * rb.mass);
+        //rb.angularDrag = 7 - stats.HandlingStat;
+
+        float idealDrag = MainThrust / terminalVelocity;
+
+        rb.drag = idealDrag / (idealDrag * Time.fixedDeltaTime + 1);
     }
 
     // Update is called once per frame
     void Update()
     {
-        HandleFAInput();
+        HandleWarpDrive();
+        UpdateSpeedAndAcceleration();
     }
-    
-    void HandleFAInput()
+
+    void HandleWarpDrive()
     {
-        if(Input.GetAxis("Flight Assist") > 0)
+        if (Input.GetAxis("Jump") > 0)
         {
-            rb.drag = Mathf.Abs(rb.drag - drag);
-            rb.angularDrag = Mathf.Abs(rb.angularDrag - angDrag);
+            warpGauge.SetActive(true);
+            actualLoading += Time.deltaTime;
+            warpSlider.value = (actualLoading / warpTime);
+            if (actualLoading >= warpTime)
+            {
+                SceneManager.LoadSceneAsync("SystemMap", LoadSceneMode.Single);
+            }
+        }
+        else
+        {
+            actualLoading = 0;
+            warpGauge.SetActive(false);
         }
     }
 
     void FixedUpdate()
     {
+        velocity = rb.velocity.sqrMagnitude;
         Vector3 acceleration = ComputeThrusts();
         Vector3 torque = ComputeTorques();
-
+        //if (rb.velocity.magnitude > (stats.TopSpeedStat +1)* 100)
+        //{
+        //    acceleration = Vector3.zero;
+        //}
+        acceleration = ModularCap(acceleration);
         rb.AddRelativeForce(acceleration, ForceMode.Acceleration);
         rb.AddRelativeTorque(torque, ForceMode.Acceleration);
 
-        if (Input.GetAxis("Fire1")>0)
+        if (Input.GetAxis("Fire1") > 0)
         {
             WeaponSelector temp = gameObject.GetComponent<WeaponSelector>();
             if (temp != null)
             {
                 temp.weapons[temp.currentWeapon].BroadcastMessage("OnFire");
             }
-           
+
         }
+    }
+
+    private Vector3 ModularCap(Vector3 acceleration)
+    {
+        float accelerationRate = 0.0f;
+        float velocity = rb.velocity.sqrMagnitude;
+        float v = velocity / terminalVelocity;
+        if (velocity < terminalVelocity * 0.3)
+        {
+            accelerationRate = 0.5f * Mathf.Pow(v, 3) + Mathf.Pow(v, 2) + 0.1f;
+        }
+        else if (velocity < terminalVelocity * 0.4)
+        {
+            accelerationRate = 0.2f * (1f - Mathf.Cos((800f * Mathf.PI / 119f) * 0.3f - 281f * Mathf.PI / 119f - Mathf.PI / 2f) + Mathf.Cos(Mathf.Cos((800f * Mathf.PI / 119f) * v - 281f * Mathf.PI / 119f - Mathf.PI / 2f) * 0.2f));
+        }
+        else
+        {
+            accelerationRate = -29.5521f * Mathf.Pow(v, 3) + 53.3271f * Mathf.Pow(v, 2) + -28.8817f * v + 5.10667f;
+        }
+        return Vector3.ClampMagnitude(acceleration, accelerationRate * MainThrust);
     }
 
     /// <summary>
@@ -92,11 +171,11 @@ public class PlayerMovement : MonoBehaviour
     {
         Vector3 mousePosition = Input.mousePosition - new Vector3(Screen.width / 2, Screen.height / 2, 0);
         //If mousePosition.x is in the deadzone then consider it to be at 0;
-        mousePosition.x = Mathf.Abs(mousePosition.x) > deadZoneX*Screen.width/2 ? mousePosition.x : 0;
+        mousePosition.x = Mathf.Abs(mousePosition.x) > deadZoneX * Screen.width / 2 ? mousePosition.x : 0;
         //Raw pixel value to percent ([0,1])
         mousePosition.x /= (Screen.width / 2);
         //Same for mousePosition.y
-        mousePosition.y = Mathf.Abs(mousePosition.y) > deadZoneY*Screen.height/2 ? mousePosition.y : 0;
+        mousePosition.y = Mathf.Abs(mousePosition.y) > deadZoneY * Screen.height / 2 ? mousePosition.y : 0;
         mousePosition.y /= (Screen.height / 2);
         return mousePosition;
     }
@@ -111,7 +190,61 @@ public class PlayerMovement : MonoBehaviour
         acceleration += Vector3.forward * Input.GetAxis("Thrust") * MainThrust;
         acceleration += Vector3.up * Input.GetAxis("Vertical") * AuxThrust;
         acceleration += Vector3.right * Input.GetAxis("Horizontal") * AuxThrust;
-        engineAnimation.UpdateThrottle(Vector3.Project(acceleration,Vector3.forward).magnitude / MainThrust +0.11f);
+        engineAnimation.UpdateThrottle(Vector3.Project(acceleration, Vector3.forward).magnitude / MainThrust + 0.11f);
+        Vector3.ClampMagnitude(acceleration, MainThrust);
         return acceleration;
     }
+
+    //Determines severity of a collision, based on ship's velocity, and inflicts damage to the player depending on that velocity.
+    private void OnCollisionEnter(Collision collision)
+    {
+        int velocity = (int)Mathf.Round(rb.velocity.sqrMagnitude);
+        int severity = 0;
+        if (velocity < 50)
+        {
+            severity = 0;
+        }
+        else if (velocity >= 50 && velocity < 100)
+        {
+            severity = 1;
+        }
+        else if (velocity >= 100 && velocity < 200)
+        {
+            severity = 2;
+        }
+        else if (velocity >= 200 && velocity < 325)
+        {
+            severity = 3;
+        }
+        else if (velocity >= 325)
+        {
+            severity = 4;
+        }
+        switch (severity)
+        {
+            case 0:
+                player.TakeArmorDamage(5, stats.ArmorStat);
+                Debug.Log("Damage taken : 5.");
+                break;
+            case 1:
+                player.TakeArmorDamage(10, stats.ArmorStat);
+                Debug.Log("Damage taken : 10.");
+                break;
+            case 2:
+                player.TakeArmorDamage(35, stats.ArmorStat);
+                Debug.Log("Damage taken : 35.");
+                break;
+            case 3:
+                player.TakeArmorDamage(90, stats.ArmorStat);
+                Debug.Log("Damage taken : 90.");
+                break;
+            case 4:
+                player.TakeArmorDamage(150, stats.ArmorStat);
+                Debug.Log("Damage taken : 150.");
+                break;
+            default:
+                break;
+        }
+    }
 }
+

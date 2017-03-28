@@ -12,6 +12,7 @@ public class BombLauncherScript : MonoBehaviour {
     public GameObject projectile;
     public float shotspeed;
     public Transform Spawnpoint;
+    public GameObject parent;
 
     private float lastShot;
 
@@ -33,7 +34,8 @@ public class BombLauncherScript : MonoBehaviour {
         {
             GameObject clone;
             clone = Instantiate(projectile, Spawnpoint.position, Spawnpoint.rotation);
-
+            clone.GetComponent<ProjectileScript>().SetParent(parent);
+            //clone.GetComponent<ProjectileScript>().dammage = damage;
             clone.GetComponent<Rigidbody>().velocity = Spawnpoint.forward * shotspeed;
             clone.GetComponent<Rigidbody>().velocity += Spawnpoint.GetComponentInParent<Rigidbody>().velocity;
             lastShot = Time.time;

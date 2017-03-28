@@ -12,9 +12,10 @@ public class Entity : MonoBehaviour {
     /// <summary>
     /// Only for inspector, use health for get set and operations
     /// </summary>
-    public int _health;
+    public float _health;
+    public float maxHP;
 
-    public int health
+    public float health
     {
         set
         {
@@ -22,6 +23,10 @@ public class Entity : MonoBehaviour {
             if(_health<=0)
             {
                 OnKill();
+            }
+            if(_health>=maxHP)
+            {
+                _health = maxHP;
             }
             
         }
@@ -32,33 +37,38 @@ public class Entity : MonoBehaviour {
     }
 
 
-    IEnumerator hitColor() {
+    public Material[] mats;
+    public Color[] OriginalEmissionsColors;
 
-        Material[] mats = GetComponentInChildren<MeshRenderer>().materials;
-        Color[] EmissionsColors = new Color[mats.Length];
+
+    public IEnumerator hitColor()
+    {
+
+
         int i = 0;
         foreach (Material mat in mats)
         {
-            EmissionsColors[i] = mat.GetColor("_EmissionColor");
-            i++;
+
             mat.SetColor("_EmissionColor", Color.red);
+            i++;
 
         }
         yield return new WaitForSeconds(0.05f);
         int j = 0;
         foreach (Material mat in mats)
         {
-            mat.SetColor("_EmissionColor", EmissionsColors[j]);
+            mat.SetColor("_EmissionColor", OriginalEmissionsColors[j]);
             j++;
         }
     }
 
     //Inflic domage to the entity, return if the entity is still alive
-    public bool takeDammage(int dammageIn)
+    public virtual bool takeDammage(int dammageIn)
     {
         StartCoroutine(hitColor());
 
         health -= dammageIn;
+        Debug.Log(health);
         if(health<=0)
         {
             return false;
@@ -70,6 +80,28 @@ public class Entity : MonoBehaviour {
        
     }
 
+    //Inflict damage to the entity, reducing the damage depending on the armor of the entity. Return true if entity is still alive.
+    public virtual bool TakeArmorDamage(int damageIn, int armorStat)
+    {
+        StartCoroutine(hitColor());
+        if (armorStat == 0)
+        {
+            health -= damageIn;
+        }
+        else
+        {
+            health -= damageIn / (7 - armorStat);
+        }
+        Debug.Log(health);
+        if (health <= 0)
+        {
+            return false;
+        }
+        else
+        {
+            return true;
+        }
+    }
     /// <summary>
     /// Called when health reach 0
     /// Shouldn't be overide
@@ -94,7 +126,18 @@ public class Entity : MonoBehaviour {
     // Use this for initialization
     protected virtual void Start()
     {
-
+        if(maxHP == 0)
+        {
+            maxHP = _health;
+        }
+        mats = GetComponentInChildren<MeshRenderer>().materials;
+        OriginalEmissionsColors = new Color[mats.Length];
+        int i = 0;
+        foreach (Material mat in mats)
+        {
+            OriginalEmissionsColors[i] = mat.GetColor("_EmissionColor");
+            i++;
+        }
     }
 
     // Update is called once per frame
