@@ -36,7 +36,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4692096235960888}
   m_Layer: 0
-  m_Name: HardAsteroField
+  m_Name: Prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

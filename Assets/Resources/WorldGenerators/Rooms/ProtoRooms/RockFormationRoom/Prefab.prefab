@@ -651,7 +651,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4138586152457766}
   m_Layer: 0
-  m_Name: RockFormationRoom
+  m_Name: Prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -8,7 +8,7 @@ public abstract class LocalWorldGenerator : MonoBehaviour
 {
     //ToDo put to static when worldgenerators'll be read from Resources
     public static List<LocalWorldGenerator> worldGenerators;
-    
+
     public static LocalWorldGenerator Create(int seed)
     {
         if (worldGenerators == null)
@@ -23,12 +23,15 @@ public abstract class LocalWorldGenerator : MonoBehaviour
         Room firstRoom = null;
         newLWG.InitializeRoomList();
         List<Room> copyRooms = new List<Room>(newLWG.rooms);
-        int i = 1;
-        while (firstRoom == null && i - 1 < copyRooms.Count)
+        //int i = 1;
+        while (firstRoom == null && copyRooms.Count > 0)
         {
-            int index = UnityEngine.Random.Range(i, copyRooms.Count) - 1;
-            i++;
-            firstRoom = copyRooms[index].canBeFirst ? copyRooms[index] : null;
+            int index = UnityEngine.Random.Range(1, copyRooms.Count) - 1;
+            //i++;
+            if (copyRooms[index].canBeFirst)
+                firstRoom = copyRooms[index];
+            else
+                copyRooms.RemoveAt(index);
         }
         if (firstRoom == null)
         {
@@ -65,7 +68,7 @@ public abstract class LocalWorldGenerator : MonoBehaviour
     }
 
     private Dictionary<Vector3, Room> RecursiveBacktracking(Dictionary<Vector3, Room> assignment, Dictionary<Vector3, List<Room>> csp)
-    {  
+    {
         AC3.Execute(ref csp);
         if (CheckAssignment(assignment))
         {

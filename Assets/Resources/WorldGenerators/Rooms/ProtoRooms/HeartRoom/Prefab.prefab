@@ -1271,7 +1271,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4037456745189732}
   m_Layer: 0
-  m_Name: HeartRoom
+  m_Name: Prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
