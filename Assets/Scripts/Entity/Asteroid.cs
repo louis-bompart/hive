@@ -30,5 +30,6 @@ public class Asteroid : Entity {
     protected override void Start () {
         base.Start();
         inv = GameObject.Find("Inventory");
+        name = "Asteroid";
     }
 }

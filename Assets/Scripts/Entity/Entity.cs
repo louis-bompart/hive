@@ -5,7 +5,8 @@ using UnityEngine;
 /// <summary>
 /// Basic entity script, enable to take dommage and death of the entity
 /// </summary>
-public class Entity : MonoBehaviour {
+public class Entity : MonoBehaviour
+{
 
 
     #region health and death
@@ -14,21 +15,22 @@ public class Entity : MonoBehaviour {
     /// </summary>
     public float _health;
     public float maxHP;
+    public string name;
 
     public float health
     {
         set
         {
             _health = value;
-            if(_health<=0)
+            if (_health <= 0)
             {
                 OnKill();
             }
-            if(_health>=maxHP)
+            if (_health >= maxHP)
             {
                 _health = maxHP;
             }
-            
+
         }
         get
         {
@@ -69,7 +71,7 @@ public class Entity : MonoBehaviour {
 
         health -= dammageIn;
         Debug.Log(health);
-        if(health<=0)
+        if (health <= 0)
         {
             return false;
         }
@@ -77,7 +79,7 @@ public class Entity : MonoBehaviour {
         {
             return true;
         }
-       
+
     }
 
     //Inflict damage to the entity, reducing the damage depending on the armor of the entity. Return true if entity is still alive.
@@ -118,7 +120,7 @@ public class Entity : MonoBehaviour {
     /// </summary>
     protected virtual void endOfLife()
     {
-       
+
     }
     #endregion
 
@@ -126,7 +128,7 @@ public class Entity : MonoBehaviour {
     // Use this for initialization
     protected virtual void Start()
     {
-        if(maxHP == 0)
+        if (maxHP == 0)
         {
             maxHP = _health;
         }

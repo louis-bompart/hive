@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class DualBlastersScript : MonoBehaviour {
 
+    public string name = "DualBlasters";
     public int range;
     public int damage;
     public float firerate;
@@ -12,19 +13,20 @@ public class DualBlastersScript : MonoBehaviour {
     public GameObject projectile;
     public float shotspeed;
     public Transform Spawnpoint;
-    public GameObject parent;
+    public GameObject Reticle;
+    public GameObject Gauge;
+    
+    public GameObject Particleprefab;
 
     private float lastShot;
-    private ShipStats stats;
 
     // Use this for initialization
     void Start () {
-        stats = GameObject.Find("Stats").GetComponent<ShipStats>();
-	}
+    }
 	
 	// Update is called once per frame
 	void Update () {
-        firerate = 2 - (stats.FireRateStat * 0.35f);
+
     }
 
     public void OnFire()
@@ -33,14 +35,20 @@ public class DualBlastersScript : MonoBehaviour {
         {
             GameObject clone;
             clone = Instantiate(projectile, Spawnpoint.position, Spawnpoint.rotation);
-            clone.GetComponent<ProjectileScript>().SetParent(parent);
-            //clone.GetComponent<ProjectileScript>().dammage = damage;
+            clone.GetComponent<ProjectileScript>().SetParent(Reticle,Gauge,this.gameObject);
+            clone.GetComponent<ProjectileScript>().dammage = damage;
 
             clone.GetComponent<Rigidbody>().velocity = Spawnpoint.forward * shotspeed;
             clone.GetComponent<Rigidbody>().velocity += Spawnpoint.GetComponentInParent<Rigidbody>().velocity;
             lastShot = Time.time;
         }
 
+    }
+
+    public void DestroyEnemyAnimation(Transform DeathTransform)
+    {
+        GameObject Particle = Instantiate(Particleprefab, DeathTransform.position, Random.rotation);
+        Destroy(Particle, 2);
     }
 
 }
