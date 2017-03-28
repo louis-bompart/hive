@@ -41,7 +41,7 @@ using UnityEngine.SceneManagement;
 
 public class BaseAccess : MonoBehaviour
 {
-
+    public string SceneToAccess;
     public Text Button_Prompt;
 
     private void OnTriggerEnter(Collider other)
@@ -54,7 +54,7 @@ public class BaseAccess : MonoBehaviour
         if (Input.GetAxis("Submit") > 0)
         {
             Cursor.visible = true;
-            SceneManager.LoadSceneAsync("Bridge", LoadSceneMode.Single);
+            SceneManager.LoadSceneAsync(SceneToAccess, LoadSceneMode.Single);
         }
     }
 

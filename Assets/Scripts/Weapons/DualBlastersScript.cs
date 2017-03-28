@@ -15,15 +15,16 @@ public class DualBlastersScript : MonoBehaviour {
     public GameObject parent;
 
     private float lastShot;
+    private ShipStats stats;
 
     // Use this for initialization
     void Start () {
-		
+        stats = GameObject.Find("Stats").GetComponent<ShipStats>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-
+        firerate = 2 - (stats.FireRateStat * 0.35f);
     }
 
     public void OnFire()
@@ -33,7 +34,7 @@ public class DualBlastersScript : MonoBehaviour {
             GameObject clone;
             clone = Instantiate(projectile, Spawnpoint.position, Spawnpoint.rotation);
             clone.GetComponent<ProjectileScript>().SetParent(parent);
-            clone.GetComponent<ProjectileScript>().dammage = damage;
+            //clone.GetComponent<ProjectileScript>().dammage = damage;
 
             clone.GetComponent<Rigidbody>().velocity = Spawnpoint.forward * shotspeed;
             clone.GetComponent<Rigidbody>().velocity += Spawnpoint.GetComponentInParent<Rigidbody>().velocity;

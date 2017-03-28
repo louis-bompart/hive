@@ -13,6 +13,19 @@ public class ShipStats : MonoBehaviour {
 
     void Awake()
     {
-        DontDestroyOnLoad(this);
+        if (!AlreadyPresent())
+        {
+            DontDestroyOnLoad(this);
+        }       
+        else
+        {
+            Destroy(this);
+        }
+    }
+
+    private bool AlreadyPresent()
+    {
+        ShipStats[] Ts = FindObjectsOfType<ShipStats>();
+        return Ts.Length > 1;
     }
 }

@@ -215,6 +215,7 @@ GameObject:
   - component: {fileID: 54663109215630576}
   - component: {fileID: 114437054417721854}
   - component: {fileID: 114022012893576404}
+  - component: {fileID: 114763163353023664}
   m_Layer: 9
   m_Name: Ship
   m_TagString: Player
@@ -763,7 +764,7 @@ Rigidbody:
   m_GameObject: {fileID: 1443073370890012}
   serializedVersion: 2
   m_Mass: 3
-  m_Drag: 1
+  m_Drag: 5
   m_AngularDrag: 1
   m_UseGravity: 0
   m_IsKinematic: 0
@@ -914,6 +915,17 @@ MonoBehaviour:
   shotspeed: 50
   Spawnpoint: {fileID: 4705707229161724}
   parent: {fileID: 0}
+--- !u!114 &114763163353023664
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1443073370890012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d1ab4ca15a18c14f92e4358be487b82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114766263404173586
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -934,6 +946,7 @@ MonoBehaviour:
   deadZoneX: 0.15
   deadZoneY: 0.15
   showCursor: 0
+  velocity: 0
   engineAnimation: {fileID: 0}
   warpTime: 5
   warpGauge: {fileID: 0}

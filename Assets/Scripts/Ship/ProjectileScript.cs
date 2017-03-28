@@ -3,13 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class ProjectileScript : MonoBehaviour {
-
+    private ShipStats stats;
     public GameObject parent;
-    public float dammage;
+	// Use this for initialization
 
-    // Use this for initialization
-    void Start () {
-		
+	void Start () {
+        stats = GameObject.Find("Stats").GetComponent<ShipStats>();
 	}
 	
 	// Update is called once per frame
@@ -26,17 +25,14 @@ public class ProjectileScript : MonoBehaviour {
         Entity temp = entity.GetComponentInParent<Entity>();
         if(temp != null)
         {
-            temp.takeDammage((int)dammage);
+            temp.takeDammage((stats.DamageStat+1) * 5);
             parent.GetComponent<OnHitColorChange>().OnHit();
         }
         
-        Destroy(gameObject);
+        Destroy(gameObject, 0.05f);
     }
-
-
     public void SetParent(GameObject _parent)
     {
         parent = _parent;
     }
-
 }
