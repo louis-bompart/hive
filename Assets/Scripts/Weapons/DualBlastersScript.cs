@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class DualBlastersScript : MonoBehaviour {
 
+    public string name = "DualBlasters";
     public int range;
     public int damage;
     public float firerate;
@@ -14,14 +15,14 @@ public class DualBlastersScript : MonoBehaviour {
     public Transform Spawnpoint;
     public GameObject Reticle;
     public GameObject Gauge;
-
+    
+    public GameObject Particleprefab;
 
     private float lastShot;
 
     // Use this for initialization
     void Start () {
-		
-	}
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -34,7 +35,7 @@ public class DualBlastersScript : MonoBehaviour {
         {
             GameObject clone;
             clone = Instantiate(projectile, Spawnpoint.position, Spawnpoint.rotation);
-            clone.GetComponent<ProjectileScript>().SetParent(Reticle,Gauge);
+            clone.GetComponent<ProjectileScript>().SetParent(Reticle,Gauge,this.gameObject);
             clone.GetComponent<ProjectileScript>().dammage = damage;
 
             clone.GetComponent<Rigidbody>().velocity = Spawnpoint.forward * shotspeed;
@@ -42,6 +43,12 @@ public class DualBlastersScript : MonoBehaviour {
             lastShot = Time.time;
         }
 
+    }
+
+    public void DestroyEnemyAnimation(Transform DeathTransform)
+    {
+        GameObject Particle = Instantiate(Particleprefab, DeathTransform.position, Random.rotation);
+        Destroy(Particle, 2);
     }
 
 }

@@ -18,4 +18,9 @@ public class Enemy : Entity {
 
     }
 
+    protected override void endOfLife()
+    {
+        base.endOfLife();
+    }
+
 }

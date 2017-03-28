@@ -6,6 +6,7 @@ public class ProjectileScript : MonoBehaviour {
 
     public GameObject Reticle;
     public GameObject Gauge;
+    public GameObject Weapon;
     public float dammage;
 
     // Use this for initialization
@@ -31,6 +32,20 @@ public class ProjectileScript : MonoBehaviour {
             if (Reticle != null)
             {
                 Reticle.GetComponent<OnHitColorChange>().OnHit();
+                if (Weapon != null) {
+
+                    if ((temp.health <= 0) && (temp.tag == "Enemy"))
+                    {
+                        if (Weapon.name == "Dual Blasters")
+                        {
+                            Weapon.GetComponent<DualBlastersScript>().DestroyEnemyAnimation(temp.transform);
+                        }
+                        if (Weapon.name == "Bomb Launcher")
+                        {
+                            Weapon.GetComponent<BombLauncherScript>().DestroyEnemyAnimation(temp.transform);
+                        }
+                    }
+                }
             }
             if (Gauge != null && temp.name != "Asteroid") {
                 Gauge.GetComponent<HealthGaugeDisplay>().DisplayHealthOnHit(temp.health, temp.maxHP, temp.name);
@@ -41,10 +56,11 @@ public class ProjectileScript : MonoBehaviour {
     }
 
 
-    public void SetParent(GameObject _reticle,GameObject _gauge)
+    public void SetParent(GameObject _reticle,GameObject _gauge,GameObject _weapon)
     {
         Reticle = _reticle;
         Gauge = _gauge;
+        Weapon = _weapon;
     }
     
 

@@ -402,7 +402,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1443073370890012}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -169.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4504435864648934}
@@ -877,6 +877,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _health: 100
   maxHP: 0
+  name: 
   mats: []
   OriginalEmissionsColors: []
 --- !u!114 &114504859211074120
@@ -906,14 +907,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35ec201a5f34d9d449f04b063a63b2d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  name: BombLauncher
   range: 50
-  damage: 10
+  damage: 30
   firerate: 1
   ammo: 5
-  projectile: {fileID: 1274120049360702, guid: f7ade37b555daf54ca89325c0064cf90, type: 2}
-  shotspeed: 50
+  projectile: {fileID: 1018493795678806, guid: f7ade37b555daf54ca89325c0064cf90, type: 2}
+  shotspeed: 25
   Spawnpoint: {fileID: 4705707229161724}
-  parent: {fileID: 0}
+  Reticle: {fileID: 0}
+  Gauge: {fileID: 1958255677916824, guid: 45c15a3d539beed4b8ab7ddf0be0d608, type: 2}
+  Particleprefab: {fileID: 1912190500381684, guid: 832667cc4dc881742a5a8634b381daad,
+    type: 2}
 --- !u!114 &114766263404173586
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -960,14 +965,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9a3912d782107749834d649fb0ad64b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  name: DualBlasters
   range: 70
   damage: 2
   firerate: 0.5
   ammo: -1
-  projectile: {fileID: 1274120049360702, guid: f7ade37b555daf54ca89325c0064cf90, type: 2}
+  projectile: {fileID: 1018493795678806, guid: f7ade37b555daf54ca89325c0064cf90, type: 2}
   shotspeed: 15
   Spawnpoint: {fileID: 4543075311984424}
-  parent: {fileID: 0}
+  Reticle: {fileID: 0}
+  Gauge: {fileID: 0}
+  Particleprefab: {fileID: 1912190500381684, guid: 832667cc4dc881742a5a8634b381daad,
+    type: 2}
 --- !u!120 &120055505289874344
 LineRenderer:
   m_ObjectHideFlags: 1
