@@ -7,7 +7,7 @@ public class ProjectileScript : MonoBehaviour
 
     public GameObject reticle;
     public GameObject gauge;
-    public GameObject weapon;
+    public Weapon weapon;
     public float damage;
 
     // Use this for initialization
@@ -40,14 +40,7 @@ public class ProjectileScript : MonoBehaviour
 
                     if ((temp.health <= 0) && (temp.tag == "Enemy"))
                     {
-                        if (weapon.name == "Dual Blasters")
-                        {
-                            weapon.GetComponent<DualBlastersScript>().DestroyEnemyAnimation(temp.transform);
-                        }
-                        if (weapon.name == "Bomb Launcher")
-                        {
-                            weapon.GetComponent<BombLauncherScript>().DestroyEnemyAnimation(temp.transform);
-                        }
+                            weapon.DestroyEnemyAnimation(temp.transform);
                     }
                 }
             }
@@ -56,11 +49,10 @@ public class ProjectileScript : MonoBehaviour
                 gauge.GetComponent<HealthGaugeDisplay>().DisplayHealthOnHit(temp.health, temp.maxHP, temp.name);
             }
         }
-
         Destroy(gameObject);
     }
 
-    public void SetParent(GameObject _reticle, GameObject _gauge, GameObject _weapon)
+    public void SetParent(GameObject _reticle, GameObject _gauge, Weapon _weapon)
     {
         reticle = _reticle;
         gauge = _gauge;
