@@ -10,7 +10,10 @@ public class Shield : Entity
     private float lastUpdate;
     private float deltaPool;
 
-
+    private void Awake()
+    {
+        name = "Hive Station Shield";
+    }
     // Use this for initialization
     /*
      * protected override void Start () {
@@ -18,17 +21,18 @@ public class Shield : Entity
 	}*/
 
     // Update is called once per frame
-    protected override void Update () {
+    protected override void Update()
+    {
 
 
         deltaPool += Time.time - lastUpdate;
         lastUpdate = Time.time;
 
-        if(deltaPool>=1)
+        if (deltaPool >= 1)
         {
             health += shieldRechargeRate;
             deltaPool = 0;
         }
 
-	}
+    }
 }
