@@ -236,7 +236,7 @@ Prefab:
     - target: {fileID: 224179055502424564, guid: fdf57665c914b42ae9200952b620095f,
         type: 2}
       propertyPath: m_AnchorMax.x
-      value: 0.00990099
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224179055502424564, guid: fdf57665c914b42ae9200952b620095f,
         type: 2}
@@ -891,7 +891,7 @@ Prefab:
     - target: {fileID: 224535958213141500, guid: fdf57665c914b42ae9200952b620095f,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -25
       objectReference: {fileID: 0}
     - target: {fileID: 224829024670733688, guid: fdf57665c914b42ae9200952b620095f,
         type: 2}
@@ -911,7 +911,7 @@ Prefab:
     - target: {fileID: 224829024670733688, guid: fdf57665c914b42ae9200952b620095f,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -50
       objectReference: {fileID: 0}
     - target: {fileID: 224055620893909746, guid: fdf57665c914b42ae9200952b620095f,
         type: 2}
@@ -931,23 +931,43 @@ Prefab:
     - target: {fileID: 224055620893909746, guid: fdf57665c914b42ae9200952b620095f,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -11.73238
       objectReference: {fileID: 0}
     - target: {fileID: 224055620893909746, guid: fdf57665c914b42ae9200952b620095f,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 9.46476
       objectReference: {fileID: 0}
     - target: {fileID: 224803651525949644, guid: fdf57665c914b42ae9200952b620095f,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 23.46476
       objectReference: {fileID: 0}
     - target: {fileID: 114058035033468380, guid: fdf57665c914b42ae9200952b620095f,
         type: 2}
       propertyPath: inventoryModel
       value: 
       objectReference: {fileID: 1545913969}
+    - target: {fileID: 224224989662539264, guid: fdf57665c914b42ae9200952b620095f,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224494295405727890, guid: fdf57665c914b42ae9200952b620095f,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224993978253499328, guid: fdf57665c914b42ae9200952b620095f,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224993978253499328, guid: fdf57665c914b42ae9200952b620095f,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114011957006018184, guid: fdf57665c914b42ae9200952b620095f, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: fdf57665c914b42ae9200952b620095f, type: 2}
@@ -1077,28 +1097,14 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 114504859211074120, guid: 0a893021f5e363a45a0b33c6531da8f4,
         type: 2}
-      propertyPath: HealthGaugeText
-      value: 
-      objectReference: {fileID: 1686154426}
-    - target: {fileID: 114504859211074120, guid: 0a893021f5e363a45a0b33c6531da8f4,
-        type: 2}
       propertyPath: HealthGauge
       value: 
       objectReference: {fileID: 1107153598}
-    - target: {fileID: 4154534379842236, guid: 0a893021f5e363a45a0b33c6531da8f4, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114737167718623156, guid: 0a893021f5e363a45a0b33c6531da8f4,
+    - target: {fileID: 114504859211074120, guid: 0a893021f5e363a45a0b33c6531da8f4,
         type: 2}
-      propertyPath: parent
+      propertyPath: HealthGaugeText
       value: 
-      objectReference: {fileID: 1568335553}
-    - target: {fileID: 114889963790137360, guid: 0a893021f5e363a45a0b33c6531da8f4,
-        type: 2}
-      propertyPath: parent
-      value: 
-      objectReference: {fileID: 1568335553}
+      objectReference: {fileID: 1686154426}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0a893021f5e363a45a0b33c6531da8f4, type: 2}
   m_IsPrefabParent: 0
@@ -1155,6 +1161,11 @@ Prefab:
         type: 2}
       propertyPath: shieldRechargeRate
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114800062208947600, guid: ccdb2c99b0eb7ca47845c5471b7e0ede,
+        type: 2}
+      propertyPath: SceneToAccess
+      value: Hangar
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ccdb2c99b0eb7ca47845c5471b7e0ede, type: 2}
@@ -1387,11 +1398,6 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 575667512}
   m_Script: {fileID: 11500000, guid: 7fe16579eda5b47bbb6413624f9aadee, type: 3}
---- !u!1 &1568335553 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1757499780938100, guid: fdf57665c914b42ae9200952b620095f,
-    type: 2}
-  m_PrefabInternal: {fileID: 481113048}
 --- !u!1 &1686154426 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1925515669143938, guid: fdf57665c914b42ae9200952b620095f,

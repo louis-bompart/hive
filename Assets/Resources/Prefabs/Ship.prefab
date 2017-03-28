@@ -215,7 +215,6 @@ GameObject:
   - component: {fileID: 54663109215630576}
   - component: {fileID: 114437054417721854}
   - component: {fileID: 114022012893576404}
-  - component: {fileID: 114763163353023664}
   m_Layer: 9
   m_Name: Ship
   m_TagString: Player
@@ -403,7 +402,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1443073370890012}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -169.2}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4504435864648934}
@@ -913,7 +912,7 @@ MonoBehaviour:
   damage: 30
   firerate: 1
   ammo: 5
-  projectile: {fileID: 1018493795678806, guid: f7ade37b555daf54ca89325c0064cf90, type: 2}
+  projectile: {fileID: 1274120049360702, guid: f7ade37b555daf54ca89325c0064cf90, type: 2}
   shotspeed: 25
   Spawnpoint: {fileID: 4705707229161724}
   Reticle: {fileID: 0}
@@ -942,7 +941,9 @@ MonoBehaviour:
   showCursor: 0
   velocity: 0
   engineAnimation: {fileID: 0}
+  stats: {fileID: 0}
   warpTime: 5
+  terminalVelocity: 0
   warpGauge: {fileID: 0}
 --- !u!114 &114887738573207152
 MonoBehaviour:
@@ -972,7 +973,7 @@ MonoBehaviour:
   damage: 2
   firerate: 0.5
   ammo: -1
-  projectile: {fileID: 1018493795678806, guid: f7ade37b555daf54ca89325c0064cf90, type: 2}
+  projectile: {fileID: 1274120049360702, guid: f7ade37b555daf54ca89325c0064cf90, type: 2}
   shotspeed: 15
   Spawnpoint: {fileID: 4543075311984424}
   Reticle: {fileID: 0}
