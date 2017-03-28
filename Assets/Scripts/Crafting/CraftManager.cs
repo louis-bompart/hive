@@ -6,9 +6,9 @@ using UnityEngine.UI;
 public class CraftManager : MonoBehaviour
 {
 
-    public GameObject inventory;
-    private InventoryModel inventoryModel;
-    private InventoryController inventoryController;
+    
+    public InventoryModel inventoryModel;
+    public InventoryController inventoryController;
 
     public GameObject craftPanel;
     public GameObject[] recipePanel;
@@ -41,12 +41,12 @@ public class CraftManager : MonoBehaviour
         database = CraftDatabase.Instance(craftJSON);
         idatabase = ItemDatabase.Instance(itemJSON);
 
-        inventoryController = inventory.GetComponent<InventoryController>();
-        inventoryModel = inventory.GetComponent<InventoryModel>();
 
-        for (int i = 0; i < 3; i++)
+
+
+        for(int i = 0; i<database.database.Count;i++)
         {
-            AddCraft(i);
+            AddCraft(database.database[i].id);
         }
 
     }
@@ -66,9 +66,8 @@ public class CraftManager : MonoBehaviour
         // Instantiate the recipeItem 
 
         int category = craftToAdd.category;
-        Debug.Log(recipePanel[category].transform.childCount);
-        GameObject recipeslt = Instantiate(recipeSlot, recipePanel[category].transform.GetChild(1)); // Add a recipeSlot in the approppriate Panel
-        recipeslt.transform.GetChild(3).gameObject.SetActive(true); // Lock the receipt
+        GameObject recipeslt = Instantiate(recipeSlot, recipePanel[category].transform.Find("Panel")); // Add a recipeSlot in the approppriate Panel
+        //recipeslt.transform.GetChild(3).gameObject.SetActive(true); // Lock the receipt
 
         // Instantiate the productItem 
 
@@ -88,7 +87,7 @@ public class CraftManager : MonoBehaviour
 
         // Instantiate the componentItems 
 
-        int numberOfComp = craftToAdd.itemsID.Length - 1;
+        int numberOfComp = craftToAdd.itemsID.Length -1;
         int[] componentID = new int[numberOfComp];
         int[] componentAmount = new int[numberOfComp];
 
@@ -102,13 +101,15 @@ public class CraftManager : MonoBehaviour
         }
 
         for (int i = 0; i < numberOfComp; i++)
-        {
+        { 
             GameObject compSlot = Instantiate(craftSlot, recipeslt.transform.GetChild(1)); // creates the ComponentSlot of the Component panel of the recipeSlot
             GameObject compObj = Instantiate(craftItem, compSlot.transform); // creates the craftItem gameObject in the ComponentSlot of the component panel of the recipeSlot
-            compObj.GetComponent<ItemData>().item = componentItem[i]; // sets the item
+            compObj.GetComponent<ItemData>().item = componentItem[i]; // sets the 
             compObj.GetComponent<Image>().sprite = componentItem[i].Sprite; // sets the sprite
             compObj.transform.localPosition = Vector2.zero; // sets the position of the item according to the slot
             compObj.name = componentItem[i].Title; // sets the name of the gameObject
+            compSlot.GetComponentInChildren<Text>().text = componentAmount[i].ToString();
+            compSlot.GetComponentInChildren<Text>().transform.SetAsLastSibling();
 
         }
 
@@ -129,18 +130,16 @@ public class CraftManager : MonoBehaviour
         // Does the inventory contains the components ? 
 
         bool isCreatable = true;
-
-        for (int k = 0; k < componentID.Length; k++)
-        { // looping on the components
-            if (!isCreatable)
-            { // Already found a lack of component
-                break;
-            }
+       
+        for (int k = 0; k < componentID.Length && isCreatable; k++)
+        { // looping on the 
             bool isCreatableAux = true;
+            bool gotComponent = false;
             foreach (Item key in inventory.Keys) // looking for the component in the inventory items List
             {
                 if (key.id == componentID[k])
                 { // Component found
+                    gotComponent = true;
                     if (inventory[key] < componentAmount[k])
                     { // Not enough materials
                         isCreatableAux = false;
@@ -148,7 +147,7 @@ public class CraftManager : MonoBehaviour
                     }
                 }
             }
-            if (!isCreatableAux)
+            if (!isCreatableAux || gotComponent == false)
             {
                 isCreatable = false;
             }
@@ -165,6 +164,12 @@ public class CraftManager : MonoBehaviour
             {// looping on the components
                 inventoryController.RemoveItem(componentID[k], componentAmount[k]);
             }
+
+            
+        }
+        else
+        {
+            Debug.Log("Component not creatable");
         }
     }
 }

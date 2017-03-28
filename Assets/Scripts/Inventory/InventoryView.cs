@@ -85,9 +85,13 @@ public class InventoryView : MonoBehaviour
     {
         LoadInventory();
     }
-    private void LoadInventory()
+    public void LoadInventory()
     {
         Dictionary<Item, int> inventoryDico = inventoryModel.inventory;
+        foreach(Slot slot in slots)
+        {
+            slot.RemoveItem();
+        }
         foreach (Item item in inventoryDico.Keys)
         {
             updateAddNewItemView(item, inventoryDico[item]);
@@ -190,11 +194,14 @@ public class InventoryView : MonoBehaviour
                     updateAddNewItemView(itemToAdd, remainingAmount);
             }
         }
+        
     }
 
     public void updateAmountItemView(Item itemToUpdate, int amount = 1)
     {
-        while (amount > 0)
+
+        LoadInventory();
+        /*while (amount > 0)
         {
             Slot slot = findSlotWithItem(itemToUpdate);
             if (slot == null)
@@ -218,6 +225,8 @@ public class InventoryView : MonoBehaviour
                 }
             }
         }
+        */
+
         //int slot = itemsData[itemToUpdate]; // Gets the item slot position
         //slots[slot].transform.GetChild(0).GetChild(0).GetComponent<Text>().text = amount.ToString(); // updates the amount text
     }
@@ -240,13 +249,7 @@ public class InventoryView : MonoBehaviour
 
     public void updateRemoveItemView(Item itemToRemove)
     {
-        Slot slot = null;
-        do
-        {
-            slot = findSlotWithItem(itemToRemove);
-            slot.RemoveItem();
-            freeSlot++;
-        } while (slot != null);
+        LoadInventory();
     }
 
     //public void updateMoveItemView(Item itemToMove, GameObject slotToFill)

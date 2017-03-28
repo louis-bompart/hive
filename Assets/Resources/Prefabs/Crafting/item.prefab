@@ -72,8 +72,9 @@ MonoBehaviour:
     title: 
     price: 0
     description: 
-    stackable: 0
+    stackSize: 0
     slug: 
+  currentSlot: {fileID: 0}
 --- !u!222 &222334645572659368
 CanvasRenderer:
   m_ObjectHideFlags: 1
