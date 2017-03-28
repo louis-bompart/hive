@@ -1064,6 +1064,16 @@ Prefab:
       propertyPath: Gauge
       value: 
       objectReference: {fileID: 1795080710}
+    - target: {fileID: 114737167718623156, guid: 0a893021f5e363a45a0b33c6531da8f4,
+        type: 2}
+      propertyPath: reticle
+      value: 
+      objectReference: {fileID: 557732633}
+    - target: {fileID: 114737167718623156, guid: 0a893021f5e363a45a0b33c6531da8f4,
+        type: 2}
+      propertyPath: gauge
+      value: 
+      objectReference: {fileID: 1795080710}
     - target: {fileID: 114504859211074120, guid: 0a893021f5e363a45a0b33c6531da8f4,
         type: 2}
       propertyPath: healthGauge
