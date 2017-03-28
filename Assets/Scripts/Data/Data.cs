@@ -11,7 +11,7 @@ public class Data : MonoBehaviour
     {
         get
         {
-            if(_instance==null)
+            if (_instance == null)
             {
                 Debug.Log("ForcedDataInitialisation");
                 GameObject data = new GameObject("Data");
@@ -30,22 +30,33 @@ public class Data : MonoBehaviour
     #endregion
 
     #region Base Data
-        
-    #endregion
 
-    private void initialise()
+    #endregion
+    private bool AlreadyPresent()
+    {
+        //Yeah datas ain't right but well, deal with it.
+        Data[] datas = GameObject.FindObjectsOfType<Data>();
+        return datas.Length > 1;
+    }
+    private void Initialize()
     {
         //Conservation of the new gameObject on load
         GameObject.DontDestroyOnLoad(gameObject);
-
-
     }
 
     public void Awake()
     {
-        _instance = this;
-        initialise();
+        if (AlreadyPresent())
+        {
+            DestroyImmediate(this);
+        }
+        else
+        {
+            _instance = this;
+            Initialize();
+        }
     }
+
 
 
 }

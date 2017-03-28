@@ -13,10 +13,17 @@ public class InventoryController : MonoBehaviour
     /// The database.
     /// </summary>
     private ItemDatabase database;
-
+    public enum Inventory
+    {
+        Ship,
+        Base
+    }
+    public Inventory inventory;
+    private string inventoryName;
     private InventoryModel inventoryModel;
     private int freeSlot;
     private InventoryView inventoryView;
+
     //public int FreeSlot
     //{
     //    get
@@ -30,12 +37,43 @@ public class InventoryController : MonoBehaviour
     //    }
     //}
 
-    void Start()
+    void Awake()
     {
         database = ItemDatabase.Instance(itemJSON);
-        inventoryModel = this.gameObject.GetComponent<InventoryModel>();
+        inventoryName = null;
+        switch (inventory)
+        {
+            case Inventory.Ship:
+                inventoryName = "ShipInventory";
+                break;
+            case Inventory.Base:
+                inventoryName = "BaseInventory";
+                break;
+            default:
+                Debug.LogError("No inventory selected !", this);
+                break;
+        }
+        inventoryModel = GameObject.Find(inventoryName).GetComponent<InventoryModel>();
         inventoryView = this.gameObject.GetComponent<InventoryView>();
         //FreeSlot = inventoryView.slotsAmount;
+    }
+
+    private void Start()
+    {
+
+    }
+
+    private void Update()
+    {
+        if (inventoryModel == null)
+        {
+            Debug.LogWarning("Oups, inventory lost. Trying to recover...");
+            inventoryModel = GameObject.Find(inventoryName).GetComponent<InventoryModel>();
+            if (inventoryModel == null)
+                Debug.Log("Inventory Recovered, all good !");
+            else
+                Debug.LogError("Snap, inventory recovery failed, we're in trouble !");
+        }
     }
 
     public int GetQuantity(Item item)
@@ -170,6 +208,7 @@ public class InventoryController : MonoBehaviour
                 inventoryView.updateRemoveItemView(itemToRemove); // updates the view
             }
         }
+        inventoryView.LoadInventory();
     }
 
 }

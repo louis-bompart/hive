@@ -5,7 +5,8 @@ using UnityEngine;
 /// <summary>
 /// Basic entity script, enable to take dommage and death of the entity
 /// </summary>
-public class Entity : MonoBehaviour {
+public class Entity : MonoBehaviour
+{
 
 
     #region health and death
@@ -21,15 +22,15 @@ public class Entity : MonoBehaviour {
         set
         {
             _health = value;
-            if(_health<=0)
+            if (_health <= 0)
             {
                 OnKill();
             }
-            if(_health>=maxHP)
+            if (_health >= maxHP)
             {
                 _health = maxHP;
             }
-            
+
         }
         get
         {
@@ -64,12 +65,13 @@ public class Entity : MonoBehaviour {
     }
 
     //Inflic domage to the entity, return if the entity is still alive
-    public bool takeDammage(int dammageIn)
+    public virtual bool takeDammage(int dammageIn)
     {
         StartCoroutine(hitColor());
 
         health -= dammageIn;
-        if(health<=0)
+        Debug.Log(health);
+        if (health <= 0)
         {
             return false;
         }
@@ -77,9 +79,31 @@ public class Entity : MonoBehaviour {
         {
             return true;
         }
-       
+
     }
 
+    //Inflict damage to the entity, reducing the damage depending on the armor of the entity. Return true if entity is still alive.
+    public virtual bool TakeArmorDamage(int damageIn, int armorStat)
+    {
+        StartCoroutine(hitColor());
+        if (armorStat == 0)
+        {
+            health -= damageIn;
+        }
+        else
+        {
+            health -= damageIn / (7 - armorStat);
+        }
+        Debug.Log(health);
+        if (health <= 0)
+        {
+            return false;
+        }
+        else
+        {
+            return true;
+        }
+    }
     /// <summary>
     /// Called when health reach 0
     /// Shouldn't be overide
@@ -96,7 +120,7 @@ public class Entity : MonoBehaviour {
     /// </summary>
     protected virtual void endOfLife()
     {
-       
+
     }
     #endregion
 
@@ -104,7 +128,7 @@ public class Entity : MonoBehaviour {
     // Use this for initialization
     protected virtual void Start()
     {
-        if(maxHP == 0)
+        if (maxHP == 0)
         {
             maxHP = _health;
         }
