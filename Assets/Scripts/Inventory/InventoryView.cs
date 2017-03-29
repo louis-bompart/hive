@@ -247,7 +247,7 @@ public class InventoryView : MonoBehaviour
         freeSlot++;
     }
 
-    public void updateRemoveItemView(Item itemToRemove)
+    public void UpdateViewAfterRemoval(Item itemToRemove)
     {
         LoadInventory();
     }

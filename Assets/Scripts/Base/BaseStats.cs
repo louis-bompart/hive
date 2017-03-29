@@ -12,10 +12,10 @@ public class BaseStats : MonoBehaviour {
     public int chargeStat;
 
 
-	// Use this for initialization
-	void Start () {
-        DontDestroyOnLoad(gameObject);
-	}
+	//// Use this for initialization
+	//void Start () {
+ //       DontDestroyOnLoad(gameObject);
+	//}
 	
 
 }

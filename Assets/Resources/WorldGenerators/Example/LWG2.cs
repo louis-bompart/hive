@@ -12,7 +12,7 @@ public class LWG2 : LocalWorldGenerator
 
         rooms.Add(new EmptyRoom());
 
-        rooms.Add(new BigRockRoom());
+        //rooms.Add(new BigRockRoom());
         rooms.Add(new HeartRoom());
         rooms.Add(new RockFormationRoom());
         rooms.Add(new EnemiesRockRoom());
@@ -20,12 +20,12 @@ public class LWG2 : LocalWorldGenerator
         rooms.Add(new EasyAsteroidFieldRoom());
         rooms.Add(new HardAsteroidFieldRoom());
         rooms.Add(new MediumAsteroidFieldRoom());
-        rooms.Add(new RichAsteroidFieldRoom());
+        //rooms.Add(new RichAsteroidFieldRoom());
     }
 
     private void Start()
     {
-        roomSize = 25f;
+       // roomSize = 25f;
         foreach (Vector3 key in localWorld.Keys)
         {
             Instantiate(localWorld[key].prefab, key * roomSize, localWorld[key].prefab.transform.rotation, transform.parent);

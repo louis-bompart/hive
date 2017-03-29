@@ -108,6 +108,7 @@ public class InventoryController : MonoBehaviour
                 model.Remove(itemToAdd);
             model.Add(itemToAdd, currentAmount + amount);
             // updates the view
+
             inventoryView.updateAddNewItemView(itemToAdd, amount);
         }
         //    ////If one slot still have some room for the amount to add
@@ -191,21 +192,21 @@ public class InventoryController : MonoBehaviour
     {
         Item itemToRemove = database.FetchItemByID(itemID);
 
-        Dictionary<Item, int> inventory = inventoryModel.inventory;
+        //Dictionary<Item, int> inventory = inventoryModel.inventory;
 
-        if (inventory.ContainsKey(itemToRemove))
+        if (inventoryModel.inventory.ContainsKey(itemToRemove))
         { // if the item is in the list
-            if (amount < inventory[itemToRemove])
+            if (amount < inventoryModel.inventory[itemToRemove])
             { // if the amount to remove is lower than the amount in the inventory
-                inventory[itemToRemove] -= amount; // updates the amount of the model
-                inventoryView.updateAmountItemView(itemToRemove, inventory[itemToRemove]); // updates the view
+                inventoryModel.inventory[itemToRemove] -= amount; // updates the amount of the model
+                inventoryView.updateAmountItemView(itemToRemove, inventoryModel.inventory[itemToRemove]); // updates the view
             }
             else
             { // remove the item completely
-                if (amount > inventory[itemToRemove])
+                if (amount > inventoryModel.inventory[itemToRemove])
                     Debug.LogWarning("Try to remove more item than available in the model, ain't right");
-                inventory.Remove(itemToRemove); // remove the item
-                inventoryView.updateRemoveItemView(itemToRemove); // updates the view
+                inventoryModel.inventory.Remove(itemToRemove); // remove the item
+                inventoryView.UpdateViewAfterRemoval(itemToRemove); // updates the view
             }
         }
         inventoryView.LoadInventory();

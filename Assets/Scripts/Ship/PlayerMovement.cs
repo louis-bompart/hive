@@ -68,7 +68,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void UpdateSpeedAndAcceleration()
     {
-        terminalVelocity = 50.0f * (stats.topSppedStat + 1);
+        terminalVelocity = 50.0f * (stats.topSpeed + 1);
         mainThrust = terminalVelocity / (3 * rb.mass);
         //rb.angularDrag = 7 - stats.HandlingStat;
 

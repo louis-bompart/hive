@@ -6,12 +6,13 @@ public class Trash : MonoBehaviour, IDropHandler
 {
 
     private InventoryController inventoryController;
-    private InventoryModel inventoryModel;
+    //private InventoryModel inventoryModel;
 
     void Start()
     {
-        inventoryController = GameObject.Find("Inventory").GetComponent<InventoryController>();
-        inventoryModel = GameObject.Find("Inventory").GetComponent<InventoryModel>();
+        //inventoryController = GameObject.Find("Inventory").GetComponent<InventoryController>();
+        inventoryController = GetComponentInParent<InventoryController>();
+        //inventoryModel = GameObject.Find("Inventory").GetComponent<InventoryModel>();
     }
 
     /// <summary>

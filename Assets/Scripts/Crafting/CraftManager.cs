@@ -135,6 +135,7 @@ public class CraftManager : MonoBehaviour
         { // looping on the 
             bool isCreatableAux = true;
             bool gotComponent = false;
+            //ToDo use the controller with GetQuantity()
             foreach (Item key in inventory.Keys) // looking for the component in the inventory items List
             {
                 if (key.id == componentID[k])

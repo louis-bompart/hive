@@ -435,6 +435,21 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 114247683436097918, guid: 653c1b73580695b4a973862aedcc553f,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: LittleAsteroField
+      objectReference: {fileID: 0}
+    - target: {fileID: 114866861463088358, guid: 653c1b73580695b4a973862aedcc553f,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: LittleAsteroField
+      objectReference: {fileID: 0}
+    - target: {fileID: 114387471173797878, guid: 653c1b73580695b4a973862aedcc553f,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: LittleAsteroField
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 653c1b73580695b4a973862aedcc553f, type: 2}
   m_IsPrefabParent: 0

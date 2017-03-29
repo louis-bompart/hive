@@ -25,7 +25,7 @@ public class Slot : MonoBehaviour, IDropHandler
 
     void Awake()
     {
-        inventoryView = GameObject.Find("Inventory").GetComponent<InventoryView>();
+        //inventoryView = GameObject.Find("Inventory").GetComponent<InventoryView>();
         item = null;
         Amount = -1;
     }

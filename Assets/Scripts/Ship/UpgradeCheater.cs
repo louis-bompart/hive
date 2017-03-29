@@ -39,7 +39,7 @@ public class UpgradeCheater : MonoBehaviour {
             Input.GetKeyDown(KeyCode.LeftControl) && Input.GetKey(KeyCode.Keypad5))
         {
             Debug.Log("TOP SPEED CODE ACTIVATED");
-            GameObject.Find("Stats").GetComponent<ShipStats>().topSppedStat = 5;
+            GameObject.Find("Stats").GetComponent<ShipStats>().topSpeed = 5;
         }
         else if ((Input.GetKey(KeyCode.LeftControl) && Input.GetKeyDown(KeyCode.Keypad6)) ||
             Input.GetKeyDown(KeyCode.LeftControl) && Input.GetKey(KeyCode.Keypad6))

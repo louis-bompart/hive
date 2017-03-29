@@ -5,7 +5,7 @@ using UnityEngine;
 public class InventoryTest : MonoBehaviour {
 
 
-    public InventoryController invCtrl;
+    public InventoryController inventoryController;
 	// Use this for initialization
 	void Start () {
 		
@@ -18,7 +18,12 @@ public class InventoryTest : MonoBehaviour {
 
     public void AddItem()
     {
-        invCtrl.AddItem(100, 5);
-        invCtrl.AddItem(101, 5);
+        inventoryController.AddItem(200, 5);
+        inventoryController.AddItem(201, 3);
+        inventoryController.AddItem(202, 3);
+
+        inventoryController.AddItem(210, 3);
+        inventoryController.AddItem(211, 3);
+        inventoryController.AddItem(212, 3);
     }
 }

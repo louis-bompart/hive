@@ -18,6 +18,7 @@ public class BigRockRoom : RockRoom
     protected override void Initialize()
     {
         base.Initialize();
+        rules.Add(new NoNearCenterRule(this));
         prefab = Resources.Load<GameObject>("WorldGenerators/Rooms/ProtoRooms/BigRockRoom/Prefab");
     }
 }
