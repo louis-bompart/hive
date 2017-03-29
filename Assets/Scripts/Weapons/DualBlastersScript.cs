@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DualBlastersScript : MonoBehaviour {
 
-    public string name = "DualBlasters";
+    public new string name = "DualBlasters";
     public int range;
     public int damage;
     public float fireRate;

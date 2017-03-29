@@ -15,7 +15,7 @@ public class Entity : MonoBehaviour
     /// </summary>
     public float _health;
     public float maxHP;
-    public string name;
+    public new string name;
 
     public float health
     {

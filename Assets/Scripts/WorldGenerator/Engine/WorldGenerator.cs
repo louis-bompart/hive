@@ -30,7 +30,7 @@ public class WorldGenerator : MonoBehaviour
         nbOfPOI = seed % maxPOI;
         for (int i = 0; i < nbOfPOI; i++)
         {
-            POI newPOI = POI.Create(Random.Range(int.MinValue, int.MaxValue));
+            /*POI newPOI = */POI.Create(Random.Range(int.MinValue, int.MaxValue));
 
         }
     }

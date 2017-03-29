@@ -11,8 +11,8 @@ public class PlayerMovement : MonoBehaviour
     public float auxThrust = 2.5f;
     public float torque = 2.5f;
 
-    private float drag = 15.0f;
-    private float angDrag = 0.0f;
+    //private float drag = 15.0f;
+    //private float angDrag = 0.0f;
 
     public bool isYawInverted = false;
     public bool isPitchInverted = true;
@@ -43,7 +43,7 @@ public class PlayerMovement : MonoBehaviour
         stats = GameObject.Find("Stats").GetComponent<ShipStats>();
         player = GetComponent<Player>();
         Cursor.visible = showCursor;
-        drag = rb.drag;
+        //drag = rb.drag;
 
         UpdateSpeedAndAcceleration();
 

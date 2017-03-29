@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BombLauncherScript : MonoBehaviour {
 
-    public string name = "BombLauncher";
+    public new string name = "BombLauncher";
     public int range;
     public int damage;
     public float fireRate;
