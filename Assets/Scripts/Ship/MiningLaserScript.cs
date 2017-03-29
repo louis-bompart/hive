@@ -57,7 +57,7 @@ public class MiningLaserScript : MonoBehaviour
                     healthGauge.gameObject.SetActive(true);
                     healthGaugeText.SetActive(true);
                     asscript.health -= 1;
-                    healthGauge.value = asscript.health;
+                    healthGauge.value = asscript.health/(asscript.maxHP + 1);
                     Debug.Log(asscript.health);
                     if (asscript.health <= 0)
                     {
