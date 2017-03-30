@@ -133,22 +133,8 @@ public class CraftManager : MonoBehaviour
        
         for (int k = 0; k < componentID.Length && isCreatable; k++)
         { // looping on the 
-            bool isCreatableAux = true;
-            bool gotComponent = false;
-            //ToDo use the controller with GetQuantity()
-            foreach (Item key in inventory.Keys) // looking for the component in the inventory items List
-            {
-                if (key.id == componentID[k])
-                { // Component found
-                    gotComponent = true;
-                    if (inventory[key] < componentAmount[k])
-                    { // Not enough materials
-                        isCreatableAux = false;
-                        break;
-                    }
-                }
-            }
-            if (!isCreatableAux || gotComponent == false)
+        //ToDo use the controller with GetQuantity()
+            if (countItemId(componentID[k]) < componentAmount[k])
             {
                 isCreatable = false;
             }
@@ -172,5 +158,22 @@ public class CraftManager : MonoBehaviour
         {
             Debug.Log("Component not creatable");
         }
+    }
+
+    private int countItemId(int id)
+    {
+        int ret = 0;
+        Dictionary<Item, int> inventory = inventoryModel.inventory;
+        foreach (Item key in inventory.Keys) // looking for the component in the inventory items List
+        {
+
+            if (key.id == id)
+            {
+                ret += inventory[key];
+            }
+        }
+
+        Debug.Log("Wait" +id + " : " + ret);
+        return ret;
     }
 }
