@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 23305404240595228}
   - component: {fileID: 54445552296903502}
   - component: {fileID: 114850782440164240}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Projectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -57,7 +57,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: ccdc768b4be76044786a8ee8b1e632f4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -108,6 +108,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc861af33d95ef740bd2a9261349c0b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reticle: {fileID: 0}
+  Gauge: {fileID: 0}
+  Weapon: {fileID: 0}
+  dammage: 0
 --- !u!136 &136005712252913402
 CapsuleCollider:
   m_ObjectHideFlags: 1
