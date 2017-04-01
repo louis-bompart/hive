@@ -1,0 +1,17 @@
+{
+  "database": [
+    {
+      "id": 1,
+      "Name": "Training Quest",
+      
+      "isMainQuest": true
+      "Description": "Learn the rudiments of mining by foraging for 5 titanium ores.",
+      "Objective": [ 100 ],
+      "ObjectiveQuantity": [ 5 ],
+      "timeLimit": 900,
+      "rewards": [ 101 ],
+      "rewardsQuantity": [ 10 ]
+    }
+  ]
+
+}
