@@ -1,22 +1,21 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using System.IO;
 using UnityEngine;
 
 [System.Serializable]
-public class QuestDatabase
-{
+public class QuestDatabase{
+
     public List<Quest> database = new List<Quest>();
     private Dictionary<int, Quest> databaseIndexed;
     private static QuestDatabase instance;
 
-    private QuestDatabase(TextAsset questDataBaseJson)
+    private QuestDatabase(TextAsset questDatabaseJson)
     {
-        instance = JsonUtility.FromJson<QuestDatabase>(questDataBaseJson.text);
+        instance = JsonUtility.FromJson<QuestDatabase>(questDatabaseJson.text);
         instance.databaseIndexed = new Dictionary<int, Quest>();
-        foreach (Quest quest in instance.database)
+        foreach(Quest q in instance.database)
         {
-            instance.databaseIndexed.Add(quest.ID, quest);
+            instance.databaseIndexed.Add(q.id, q);
         }
     }
 
@@ -29,7 +28,7 @@ public class QuestDatabase
 
     public static QuestDatabase Instance(TextAsset json)
     {
-        if (instance == null)
+        if(instance == null)
         {
             new QuestDatabase(json);
         }
