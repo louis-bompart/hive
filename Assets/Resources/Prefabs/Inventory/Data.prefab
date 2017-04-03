@@ -146,7 +146,7 @@ MonoBehaviour:
   armorStat: 0
   damageStat: 0
   fireRateStat: 0
-  topSppedStat: 0
+  topSpeed: 0
   handlingStat: 0
 --- !u!114 &114081171758144220
 MonoBehaviour:
@@ -159,6 +159,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fe16579eda5b47bbb6413624f9aadee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inventoryType: 0
+  slotCounts: 0
+  usedSlot: 0
 --- !u!114 &114363389466316182
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -181,6 +184,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fe16579eda5b47bbb6413624f9aadee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inventoryType: 1
+  slotCounts: 0
+  usedSlot: 0
 --- !u!114 &114923565998158904
 MonoBehaviour:
   m_ObjectHideFlags: 1
