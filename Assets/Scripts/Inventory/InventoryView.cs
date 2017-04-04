@@ -16,8 +16,11 @@ public class InventoryView : MonoBehaviour
     /// <summary>
     /// The slot amount.
     /// </summary>
-    public int slotsAmount = 15;
-
+    public int slotsAmount;
+    /// <summary>
+    /// please don't use me
+    /// </summary>
+    [System.Obsolete]
     private int freeSlot;
 
     public enum Inventory
@@ -26,14 +29,17 @@ public class InventoryView : MonoBehaviour
         Base
     }
     public Inventory inventory;
-    private string inventoryName;
+    //private string inventoryName;
     private InventoryModel inventoryModel;
 
     /// <summary>
     /// List of slots.
     /// </summary>
     public Slot[] slots;
-
+    /// <summary>
+    /// please don't use me
+    /// </summary>
+    [System.Obsolete]
     public int FreeSlot
     {
         get
@@ -57,20 +63,23 @@ public class InventoryView : MonoBehaviour
     /// </summary>
     void Awake()
     {
-        inventoryName = null;
+        InventoryModel.Inventory associatedModel = InventoryModel.Inventory.Ship;
         switch (inventory)
         {
             case Inventory.Ship:
-                inventoryName = "ShipInventory";
+                associatedModel = InventoryModel.Inventory.Ship;
                 break;
             case Inventory.Base:
-                inventoryName = "BaseInventory";
+                associatedModel = InventoryModel.Inventory.Base;
                 break;
             default:
                 Debug.LogError("No inventory selected !", this);
                 break;
         }
-        inventoryModel = GameObject.Find(inventoryName).GetComponent<InventoryModel>();
+        Data data = FindObjectOfType<Data>();
+        List<InventoryModel> models = new List<InventoryModel>(data.GetComponentsInChildren<InventoryModel>());
+        //Sorry for the lambda
+        inventoryModel = models.Find(x => x.inventoryType == associatedModel);
         // For now the nb of slots is hard-coded, most preferable option : Do some math to fix the size of each slot etc (not worth it 4 now)
         //slotAmount = InventoryModel.slotsAmount;
         freeSlot = slotsAmount;
@@ -79,6 +88,7 @@ public class InventoryView : MonoBehaviour
         //	slots [i] = Instantiate (inventorySlot);
         //	slots [i].transform.SetParent (slotPanel.transform);
         //}
+        slotsAmount = inventoryModel.slotCounts;
     }
 
     private void Start()
@@ -88,13 +98,13 @@ public class InventoryView : MonoBehaviour
     public void LoadInventory()
     {
         Dictionary<Item, int> inventoryDico = inventoryModel.inventory;
-        foreach(Slot slot in slots)
+        foreach (Slot slot in slots)
         {
             slot.RemoveItem();
         }
         foreach (Item item in inventoryDico.Keys)
         {
-            updateAddNewItemView(item, inventoryDico[item]);
+            UpdateAddNewItemView(item, inventoryDico[item]);
         }
     }
 
@@ -117,7 +127,7 @@ public class InventoryView : MonoBehaviour
     /// Return the first empty slot available
     /// </summary>
     /// <returns>The slot found, or null if none has been found</returns>
-    private Slot getEmptySlot()
+    private Slot GetEmptySlot()
     {
         foreach (Slot slot in slots)
         {
@@ -132,7 +142,7 @@ public class InventoryView : MonoBehaviour
         return freeSlot > 0;
     }
 
-    public void updateAddNewItemView(Item itemToAdd, int amount = 1)
+    public void UpdateAddNewItemView(Item itemToAdd, int amount = 1)
     {
         if (amount > 0)
         {
@@ -142,12 +152,12 @@ public class InventoryView : MonoBehaviour
                 slotToUse = getStackWithRoom(itemToAdd);
             else
             {
-                slotToUse = getEmptySlot();
+                slotToUse = GetEmptySlot();
                 isNewSlot = true;
             }
             if (slotToUse == null && itemToAdd.StackSize > 0)
             {
-                slotToUse = getEmptySlot();
+                slotToUse = GetEmptySlot();
                 isNewSlot = true;
             }
             if (slotToUse == null)
@@ -158,10 +168,13 @@ public class InventoryView : MonoBehaviour
                 int stackCurrentAmount = 0;
                 int remainingAmount = 0;
                 if (isNewSlot)
+                {
+                    inventoryModel.usedSlot++;
                     if (itemToAdd.StackSize > 0)
                         stackCurrentAmount = Math.Min(amount, itemToAdd.StackSize);
                     else
                         stackCurrentAmount = amount;
+                }
                 else
                 {
                     stackCurrentAmount = Math.Min(slotToUse.Amount + amount, itemToAdd.StackSize);
@@ -191,13 +204,13 @@ public class InventoryView : MonoBehaviour
                 slotToUse.SetItem(itemObj.GetComponent<ItemData>());
                 slotToUse.Amount = stackCurrentAmount;
                 if (remainingAmount > 0)
-                    updateAddNewItemView(itemToAdd, remainingAmount);
+                    UpdateAddNewItemView(itemToAdd, remainingAmount);
             }
         }
-        
+
     }
 
-    public void updateAmountItemView(Item itemToUpdate, int amount = 1)
+    public void UpdateAmountView(Item itemToUpdate, int amount = 1)
     {
 
         LoadInventory();
@@ -244,7 +257,7 @@ public class InventoryView : MonoBehaviour
     public void ClearSlot(Slot slot)
     {
         slot.RemoveItem();
-        freeSlot++;
+        inventoryModel.usedSlot--;
     }
 
     public void UpdateViewAfterRemoval(Item itemToRemove)
