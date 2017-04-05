@@ -16,6 +16,7 @@ public class QuestDatabase
         questDatabaseInstance.questDatabaseIndexed = new Dictionary<int, Quest>();
         foreach (Quest quest in questDatabaseInstance.questDatabase)
         {
+
             foreach (string s in quest.objectives.Split(','))
             {
                 int x = 0;

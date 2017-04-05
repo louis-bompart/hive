@@ -8,14 +8,52 @@ public class QuestLogController : MonoBehaviour {
 
     private QuestDatabase database;
 
+    private QuestLogModel qlogmodel;
+    private QuestLogView qlogview;
+    public QuestProgress qprogress;
+
     void Awake()
     {
         database = QuestDatabase.Instance(questJSON);
+        qlogmodel = GetComponent<QuestLogModel>();
+        qlogview = GetComponent<QuestLogView>();
+        qprogress = GameObject.Find("Data").GetComponentInChildren<QuestProgress>();
     }
 
     private void Start()
     {
-        Debug.Log(database.FetchQuestByID(1).QuestName);
-        Debug.Log(database.FetchQuestByID(2).ObjectiveList.Count);
+        UpdateQuestLog();
+    }
+
+    private void Update()
+    {
+        if(qlogmodel == null)
+        {
+            Debug.LogWarning("Quest log lost. Trying to recover...");
+            qlogmodel = GameObject.Find("QuestLogModel").GetComponent<QuestLogModel>();
+            if (qlogmodel != null)
+                Debug.Log("We're good, Quest log recovered !");
+            else
+                Debug.LogError("Quest log recovery failed. You have no purpose. Just like Ruf.");
+        }
+    }
+
+    public void UpdateQuestLog()
+    {
+        qlogmodel.questlog = new Dictionary<Quest, int>();
+        Quest mainquest = database.FetchQuestByID(qprogress.questProgress);
+        qlogmodel.questlog.Add(mainquest, mainquest.ID);
+        if(mainquest.subQuests != "")
+        {
+            foreach (int subquestID in mainquest.SubQuestsList)
+            {
+                int sqid = subquestID;
+                if (qprogress.CompletedQuests.Find(i => i == sqid) == 0)
+                {
+                    qlogmodel.questlog.Add(database.FetchQuestByID(subquestID), subquestID);
+                }
+            }
+        }      
+        qlogview.LoadQuestLog();
     }
 }

@@ -2,29 +2,68 @@
 	"questDatabase": [
 		{
 			"id": 1,
-			"questName": "Titanium",
-			"client": "Ta mere",
-			"description": "Ta mere a besoin de titanium pour son fer a repasser. Don't give up skeleton.",
+			"questName": "First contract",
+			"client": "Yves",
+			"description": "Recuperez 5 minerais de titanium et 3 minerais de sulfurite.",
       "isMainQuest": true,
       "timeLimit": 900,
-      "objectives": "100",
-      "objectiveQuantity": "5",
+      "objectives": "100,101",
+      "objectiveQuantity": "5,3",
       "rewardType": "item",
       "rewardParameters": "200,5",
-      "subQuests": "2"
+      "subQuests": "100,101,102"
 			},
-		{
-			"id": 2,
-			"questName": "Sucre",
-			"client": "Ta soeur",
-			"description": "Don't give up skeleton.",
+    {
+      "id": 100,
+      "questName": "Pirate Inquiry",
+      "client": "Pirates",
+      "description": "Arr.",
       "isMainQuest": false,
       "timeLimit": 900,
-      "objectives": "4,5,6",
+      "objectives": "101",
       "objectiveQuantity": "5",
       "rewardType": "item",
       "rewardParameters": "200,5",
       "subQuests": ""
-			}
+    },
+    {
+      "id": 101,
+      "questName": "Give me pull",
+      "client": "Louis",
+      "description": "Oublie pas de faire une branche par feature.",
+      "isMainQuest": false,
+      "timeLimit": 900,
+      "objectives": "101",
+      "objectiveQuantity": "5",
+      "rewardType": "item",
+      "rewardParameters": "200,5",
+      "subQuests": ""
+    },
+    {
+      "id": 102,
+      "questName": "Ruf est grand",
+      "client": "La sainte eglise de Ruf",
+      "description": "Worship Ruf for he is mighty.",
+      "isMainQuest": false,
+      "timeLimit": 900,
+      "objectives": "101",
+      "objectiveQuantity": "5",
+      "rewardType": "item",
+      "rewardParameters": "200,5",
+      "subQuests": ""
+    },
+    {
+      "id": 2,
+      "questName": "Ruf est grand, edition 2",
+      "client": "La sainte eglise de Ruf",
+      "description": "Worship Ruf for he is mighty.",
+      "isMainQuest": true,
+      "timeLimit": 900,
+      "objectives": "101",
+      "objectiveQuantity": "5",
+      "rewardType": "item",
+      "rewardParameters": "200,5",
+      "subQuests": ""
+    }
 	]
 }
