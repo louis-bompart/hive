@@ -26,11 +26,6 @@ public class DialogueBox : MonoBehaviour {
         updateText();
 	}
 
-    public void test()
-    {
-        Debug.Log("Test");
-    }
-
     public void prontNewText(string text, float newProntTime = -1)
     {
         if(newProntTime >= 0)

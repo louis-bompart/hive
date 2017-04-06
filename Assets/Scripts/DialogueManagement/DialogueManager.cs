@@ -28,6 +28,7 @@ public class DialogueManager : MonoBehaviour {
 	
     public void lauchDialogue(string inText,float prontTime = -1)
     {
+        inText = inText.Replace("\n", System.Environment.NewLine);
         box.prontNewText(inText, prontTime);
     }
 }

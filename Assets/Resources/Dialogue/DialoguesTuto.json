@@ -1,0 +1,14 @@
+{
+	"database": [
+		{
+			"_ID": "TestDialogue",
+			"_Text": "Hello, je suis une licorne rangé dans une database JSOM \n j'ai la péche et je fait même des retours charios",
+			"_displayTime": 2
+			},
+		{
+			"_ID": "TestDialogue2",
+			"_Text": "Hello, je suis une licorne rangé dans une database JSOM \n j'ai la péche et je fait même des retours charios",
+			"_displayTime": 2
+			}
+	]
+}
