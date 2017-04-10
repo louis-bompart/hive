@@ -10,5 +10,35 @@
 			"_Text": "Hello, je suis une licorne rangé dans une database JSOM \n j'ai la péche et je fait même des retours charios",
 			"_displayTime": 2
 			}
+			,
+		{
+			"_ID": "EnterState1",
+			"_Text": "Enter state 1",
+			"_displayTime": 2
+			}
+			,
+		{
+			"_ID": "ExitState1",
+			"_Text": "Exit state 1",
+			"_displayTime": 2
+			}
+			,
+		{
+			"_ID": "EnterState2",
+			"_Text": "Enter state 2",
+			"_displayTime": 2
+			}
+			,
+		{
+			"_ID": "ExitState2",
+			"_Text": "Exit state 2",
+			"_displayTime": 2
+			}
+			,
+		{
+			"_ID": "EnterState3",
+			"_Text": "Enter state 3",
+			"_displayTime": 2
+			}
 	]
 }

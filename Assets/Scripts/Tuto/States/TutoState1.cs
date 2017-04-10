@@ -13,8 +13,8 @@ public class TutoState1 : State
     public override void StateEnter()
     {
         base.StateEnter();
-        DialogueManager.instance.lauchDialogue(DialogueDatabase.Instance().getDialogue("TestDialogue").Text);
-        //DialogueManager.instance.lauchDialogue(DialogueDatabase.Instance().getDialogue("TestDialogue").Text);
+        DialogueManager.instance.lauchDialogue(DialogueDatabase.Instance().getDialogue("EnterState1"));
+        
     }
 
     public override void StateUpdate()
@@ -24,7 +24,7 @@ public class TutoState1 : State
         //Debug.Log(DialogueDatabase.Instance());
         if(deltaTime >= 5)
         {
-            FSM.changeState(null);
+            FSM.changeState(new TutoState2(FSM));
         }
 
     }
@@ -32,7 +32,6 @@ public class TutoState1 : State
     public override void StateExit()
     {
         base.StateExit();
-        DialogueManager.instance.lauchDialogue(DialogueDatabase.Instance().getDialogue("TestDialogue2").Text);
-        //DialogueManager.instance.lauchDialogue("Hello je suis une licorne et j'ai la banane! (Exit State1)");
+        DialogueManager.instance.lauchDialogue(DialogueDatabase.Instance().getDialogue("ExitState1"));
     }
 }
