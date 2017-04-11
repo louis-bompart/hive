@@ -11,8 +11,13 @@ public class StateManager : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         changeState(new TutoState1(this));
-	}
+    }
 	
+    void Awake()
+    {
+        
+    }
+
 	// Update is called once per frame
 	void Update () {
         if(currentState != null)

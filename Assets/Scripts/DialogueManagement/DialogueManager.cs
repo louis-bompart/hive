@@ -15,9 +15,7 @@ public class DialogueManager : MonoBehaviour {
         {
             if(_instance == null)
             {
-                Debug.Log("not good");
-                GameObject temp = new GameObject("DialogueManager");
-                _instance = temp.AddComponent<DialogueManager>();
+                Debug.Log("not good: No instance of dialogue manager found");
             }
             return _instance;
         }
@@ -46,7 +44,11 @@ public class DialogueManager : MonoBehaviour {
 
     public void lauchDialogue(DialogueDataItem inD)
     {
-        inD.Text = inD.Text.Replace("\n", System.Environment.NewLine);
-        toLaunch.Add(inD);
+        if(inD != null)
+        {
+            inD.Text = inD.Text.Replace("\n", System.Environment.NewLine);
+            toLaunch.Add(inD);
+        }
+
     }
 }

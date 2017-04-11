@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TutoState1 : State
 {
@@ -13,16 +14,16 @@ public class TutoState1 : State
     public override void StateEnter()
     {
         base.StateEnter();
-        DialogueManager.instance.lauchDialogue(DialogueDatabase.Instance().getDialogue("EnterState1"));
-        
+        DialogueManager.instance.lauchDialogue(DialogueDatabase.Instance().getDialogue("DialogueTuto1"));
+        DialogueManager.instance.lauchDialogue(DialogueDatabase.Instance().getDialogue("DialogueTuto2"));
+        DialogueManager.instance.lauchDialogue(DialogueDatabase.Instance().getDialogue("DialogueTuto3"));
+        DialogueManager.instance.lauchDialogue(DialogueDatabase.Instance().getDialogue("DialogueTuto4"));
     }
 
     public override void StateUpdate()
     {
         base.StateUpdate();
-        deltaTime += Time.deltaTime;
-        //Debug.Log(DialogueDatabase.Instance());
-        if(deltaTime >= 5)
+        if (SceneManager.GetActiveScene().name == "Release")
         {
             FSM.changeState(new TutoState2(FSM));
         }
@@ -32,6 +33,6 @@ public class TutoState1 : State
     public override void StateExit()
     {
         base.StateExit();
-        DialogueManager.instance.lauchDialogue(DialogueDatabase.Instance().getDialogue("ExitState1"));
+
     }
 }

@@ -7,7 +7,7 @@ public class DialogueDictionay : MonoBehaviour {
     public TextAsset JSONDialogue;
 
 	// Use this for initialization
-	void Awake () {
+	void Start () {
         DialogueDatabase.initDatabase(JSONDialogue);
 	}
 	

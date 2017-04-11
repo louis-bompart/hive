@@ -61,7 +61,7 @@ public class PlayerMovement : MonoBehaviour
             }
             else
             {
-                Debug.Log("warpGauge gameObject empty");
+                Debug.LogError("warpGauge gameObject empty");
             }
         }
     }

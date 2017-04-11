@@ -5,6 +5,7 @@ using UnityEngine;
 public class OptionMenuClick : MonoBehaviour
 {
     private static int nbPause = 0;
+    private static bool lockCursor;
 
     // Use this for initialization
     void Start()
@@ -57,9 +58,12 @@ public class OptionMenuClick : MonoBehaviour
     static public void PauseGame()
     {
         nbPause += 1;
-        Debug.Log("Pause" + nbPause);
         if (nbPause > 0)
         {
+            if(nbPause == 1)
+            {
+                lockCursor = Cursor.visible;
+            }
             Time.timeScale = 0;
             Cursor.visible = true;
         }
@@ -72,11 +76,10 @@ public class OptionMenuClick : MonoBehaviour
     static public void UnPauseGame()
     {
         nbPause -= 1;
-        Debug.Log("UnPause" + nbPause);
         if (nbPause <= 0)
         {
             Time.timeScale = 1;
-            Cursor.visible = false;
+            Cursor.visible = lockCursor;
             nbPause = 0;
         }
     }
