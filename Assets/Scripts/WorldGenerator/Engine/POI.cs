@@ -23,12 +23,13 @@ public class POI : MonoBehaviour
         //newPOI.y = Random.Range(-WorldGenerator.maxY, WorldGenerator.maxY);
         return newPOI;
     }
-
+    
     void Start()
     {
         if (isCurrent)
         {
-            Instantiate(playerInSystemPrefab, Vector3.zero, transform.rotation, transform);
+            Instantiate(playerInSystemPrefab, transform.position, transform.rotation, transform);
+            Camera.main.transform.position = transform.position + Vector3.up*100f; 
         }
     }
 
