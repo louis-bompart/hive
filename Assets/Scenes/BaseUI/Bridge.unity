@@ -657,9 +657,10 @@ MonoBehaviour:
     timeLimit: 0
     objectives: 
     objectiveQuantity: 
-    rewardType: 
-    rewardParameters: 
+    reward: 
+    rewardQuantity: 
     subQuests: 
+    victory: 0
   Validate: {fileID: 430176626}
 --- !u!1 &171930878
 GameObject:
@@ -2702,9 +2703,10 @@ MonoBehaviour:
     timeLimit: 0
     objectives: 
     objectiveQuantity: 
-    rewardType: 
-    rewardParameters: 
+    reward: 
+    rewardQuantity: 
     subQuests: 
+    victory: 0
   Validate: {fileID: 1351935385}
 --- !u!1 &270331772
 GameObject:
@@ -2797,9 +2799,10 @@ MonoBehaviour:
     timeLimit: 0
     objectives: 
     objectiveQuantity: 
-    rewardType: 
-    rewardParameters: 
+    reward: 
+    rewardQuantity: 
     subQuests: 
+    victory: 0
   Validate: {fileID: 197079043}
 --- !u!1 &272040579
 GameObject:
@@ -3784,7 +3787,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questJSON: {fileID: 4900000, guid: 9bdfab30c9771cb4699f267badcaacee, type: 3}
-  qprogress: {fileID: 0}
+  qprogress: {fileID: 1045378307}
 --- !u!1 &430176626
 GameObject:
   m_ObjectHideFlags: 0
@@ -4072,9 +4075,10 @@ MonoBehaviour:
     timeLimit: 0
     objectives: 
     objectiveQuantity: 
-    rewardType: 
-    rewardParameters: 
+    reward: 
+    rewardQuantity: 
     subQuests: 
+    victory: 0
   Validate: {fileID: 12086535}
 --- !u!1 &581699797
 GameObject:
@@ -5580,9 +5584,10 @@ MonoBehaviour:
     timeLimit: 0
     objectives: 
     objectiveQuantity: 
-    rewardType: 
-    rewardParameters: 
+    reward: 
+    rewardQuantity: 
     subQuests: 
+    victory: 0
   Validate: {fileID: 1330942257}
 --- !u!1 &1781916710
 GameObject:

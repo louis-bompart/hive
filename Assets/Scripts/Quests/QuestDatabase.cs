@@ -29,11 +29,17 @@ public class QuestDatabase
                 int.TryParse(s, out x);
                 quest.ObjectiveQuantityList.Add(x);
             }
-            foreach (string s in quest.rewardParameters.Split(','))
+            foreach (string s in quest.reward.Split(','))
             {
                 int x = 0;
                 int.TryParse(s, out x);
-                quest.RewardParameterList.Add(x);
+                quest.RewardList.Add(x);
+            }
+            foreach (string s in quest.rewardQuantity.Split(','))
+            {
+                int x = 0;
+                int.TryParse(s, out x);
+                quest.RewardQuantityList.Add(x);
             }
             foreach (string s in quest.subQuests.Split(','))
             {

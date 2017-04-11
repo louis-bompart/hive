@@ -94,26 +94,26 @@ public class Quest
             objectiveQuantity = value;
         }
     }
-    public string RewardType
+    public string Reward
     {
         get
         {
-            return rewardType;
+            return reward;
         }
         set
         {
-            rewardType = value;
+            reward = value;
         }
     }
-    public string RewardParameters
+    public string RewardQuantity
     {
         get
         {
-            return rewardParameters;
+            return rewardQuantity;
         }
         set
         {
-            rewardParameters = value;
+            rewardQuantity = value;
         }
     }
     public string SubQuests
@@ -127,9 +127,21 @@ public class Quest
             subQuests = value;
         }
     }
+    public int Victory
+    {
+        get
+        {
+            return victory;
+        }
+        set
+        {
+            victory = value;
+        }
+    }
     public List<int> ObjectiveList = new List<int>();
     public List<int> ObjectiveQuantityList = new List<int>();
-    public List<int> RewardParameterList = new List<int>();
+    public List<int> RewardList = new List<int>();
+    public List<int> RewardQuantityList = new List<int>();
     public List<int> SubQuestsList = new List<int>();
 
     public int id;
@@ -140,12 +152,13 @@ public class Quest
     public int timeLimit;
     public string objectives;
     public string objectiveQuantity;
-    public string rewardType;
-    public string rewardParameters;
+    public string reward;
+    public string rewardQuantity;
     public string subQuests;
+    public int victory;
 
     public Quest(int id, string questName, string client, string description, bool isMainQuest, int timeLimit, 
-        string objectives, string objectiveQuantity, string rewardType, string rewardParameters, string subQuests)
+        string objectives, string objectiveQuantity, string reward, string rewardQuantity, string subQuests, int victory)
     {
         this.ID = id;
         this.QuestName = questName;
@@ -155,10 +168,10 @@ public class Quest
         this.TimeLimit = timeLimit;
         this.Objectives = objectives;
         this.ObjectiveQuantity = objectiveQuantity;
-        this.RewardType = rewardType;
-        this.RewardParameters = rewardParameters;
+        this.Reward = reward;
+        this.RewardQuantity = rewardQuantity;
         this.SubQuests = subQuests;
-         
+        this.Victory = victory;
     }
 
     public Quest()

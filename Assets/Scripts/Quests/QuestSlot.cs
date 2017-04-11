@@ -100,40 +100,15 @@ public class QuestSlot : MonoBehaviour {
     public void DeliverRewards()
     {
         InventoryController invctrl = GameObject.Find("ShipInventoryLarge").GetComponent<InventoryController>();
-        switch (quest.RewardType)
+        using (var e1 = quest.RewardList.GetEnumerator())
+        using (var e2 = quest.RewardQuantityList.GetEnumerator())
         {
-            case ("item"):
-                List<int> itemsIDToGive = new List<int>();
-                List<int> itemsQuantityToGive = new List<int>();
-                using (var e1 = quest.RewardParameterList.GetEnumerator())
-                {
-                    while (e1.MoveNext())
-                    {
-                        itemsIDToGive.Add(e1.Current);
-                        e1.MoveNext();
-                    }
-                }
-                using (var e2 = quest.RewardParameterList.GetEnumerator())
-                {
-                    e2.MoveNext();
-                    while(e2.MoveNext())
-                    {
-                        itemsQuantityToGive.Add(e2.Current);
-                    }
-                }
-                using (var e1 = itemsIDToGive.GetEnumerator())
-                using (var e2 = itemsQuantityToGive.GetEnumerator())
-                {
-                    while(e1.MoveNext() && e2.MoveNext())
-                    {
-                        invctrl.AddItem(e1.Current, e2.Current);
-                    }
-                }
-                break;
-            default:
-                break;
+            while(e1.MoveNext() && e2.MoveNext())
+            {
+                invctrl.AddItem(e1.Current, e2.Current);
+            }
         }
-        if(quest.IsMainQuest)
+        if (quest.IsMainQuest)
         {
             GameObject.Find("Data").GetComponentInChildren<QuestProgress>().questProgress++;
         }
