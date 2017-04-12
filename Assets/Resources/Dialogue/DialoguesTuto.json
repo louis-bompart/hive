@@ -1,0 +1,86 @@
+{
+	"database": [
+		{
+			"_ID": "TestDialogue",
+			"_Text": "TestDialogue1",
+			"_displayTime": 2
+			},
+		{
+			"_ID": "TestDialogue2",
+			"_Text": "TestDialogue2",
+			"_displayTime": 2
+			}
+			,
+		{
+			"_ID": "DialogueTuto1",
+			"_Text": "*Artificial voice*: End of cryopreservation process \nPatient physic state : Alive \nPatient brain state: Dammaged \nFuther analysis demonstrate dammage in the memory place of the patient brain \n\nPermanant amnesiac possibility: 85,6%. ",
+			"_displayTime": 6
+			}
+			,
+		{
+			"_ID": "DialogueTuto2",
+			"_Text": "*Artificial voice*: Hello, i am MAYA, a Artificial intelligence designed to help you settle a base of opperation for the HIVE corporation in the Centauri system\n\nI see that you don't understand what i am talking about. Let me explain your contract toward HIVE",
+			"_displayTime": 6
+			}
+			,
+		{
+			"_ID": "DialogueTuto3",
+			"_Text": "As a agent of HIVE, you have been send toward the Centauri system in order to installe a base of opperation for HIVE in a near futur.\nFor now, you are in a SEED, a standard transport vessel. HIVE require you to updgrade that SEED with mineral at your disposition in the near system.",
+			"_displayTime": 6
+			}
+			,
+		{
+			"_ID": "DialogueTuto4",
+			"_Text": "Once you have upgraded the SEED, you will be given futhrer instruction\nBecause your brain have been dommaged, i will assist you for your first mining opperation\nFirst, try to undock of the base. For that, click on the Exit Base button",
+			"_displayTime": 6
+			}
+			,
+		{
+			"_ID": "DialogueTuto5",
+			"_Text": "Good, you are now in space. You will see that the SEED is equiped with a shield that protect the docking ring from external enviromnent menace. For now, let's focus on the navigation of your ship.",
+			"_displayTime": 6
+			}
+			,
+		{
+			"_ID": "DialogueTuto6",
+			"_Text": "Your ship is a BEE class mining frigate. But it structure have been dommaged during the travel from Earth to Centauri, you can expect low manevrability of the ship and low speed. But the mining laser is still intact.",
+			"_displayTime": 6
+			}
+			,
+		{
+			"_ID": "DialogueTuto7",
+			"_Text": "To control your ship, you can use your mousse cursor to turn the ship\nOther inputs should follow the standard of all HIVE commande input.\nYou can turn your ship, Travel forward and backward, and event use auxilari propulsor.",
+			"_displayTime": 6
+			}
+			,
+		{
+			"_ID": "DialogueTuto8",
+			"_Text": "To mine some mineral, face a asteroide and activate your mining laser. Stantard input are the right click on the mouse. \nThe laser will mine the asteroide until all mineral are extracted.\nTry to mine some asteroide",
+			"_displayTime": 6
+			}
+			,
+		{
+			"_ID": "DialogueTuto9",
+			"_Text": "To repair basic functionality of the base, you will need 10 unit of tritanium, 10 unity of Carbonite and 5 unity of Monazite\nYou can check the cargo of your ship with the inventory interface.\nUse 'I' to open inventory",
+			"_displayTime": 6
+			}
+			,
+		{
+			"_ID": "DialogueTuto10",
+			"_Text": "Congratulation, with this mineral, we can repair basic functionality of your base, let's go back to the base.",
+			"_displayTime": 4
+			}
+			,
+		{
+			"_ID": "DialogueTuto11",
+			"_Text": "Nice work, you have repair your base. HIVE will now contact you and give you more instruction.",
+			"_displayTime": 4
+			}
+			,
+		{
+			"_ID": "DialogueTuto12",
+			"_Text": "You can go to the brige to see the current contract that you have to follow",
+			"_displayTime": 3
+			}
+	]
+}
