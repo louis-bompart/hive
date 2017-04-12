@@ -166,7 +166,6 @@ GameObject:
   - component: {fileID: 171930881}
   - component: {fileID: 171930880}
   - component: {fileID: 171930879}
-  - component: {fileID: 171930884}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -242,86 +241,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &171930884
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 171930878}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: efb361a368e83bc4ca8c59974adc28a0, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 1
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 2
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    - serializedVersion: 2
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 2
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 0
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 2
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 2
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 0
 --- !u!1 &272040579
 GameObject:
   m_ObjectHideFlags: 0
@@ -1994,7 +1913,7 @@ Prefab:
     - target: {fileID: 224833886403407334, guid: 39c9f6d39c26a6b439a506348a3c0c45,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -115.098816
       objectReference: {fileID: 0}
     - target: {fileID: 224833886403407334, guid: 39c9f6d39c26a6b439a506348a3c0c45,
         type: 2}
@@ -2004,7 +1923,7 @@ Prefab:
     - target: {fileID: 224833886403407334, guid: 39c9f6d39c26a6b439a506348a3c0c45,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 220.19763
       objectReference: {fileID: 0}
     - target: {fileID: 224047227049286990, guid: 39c9f6d39c26a6b439a506348a3c0c45,
         type: 2}
@@ -2024,7 +1943,7 @@ Prefab:
     - target: {fileID: 224047227049286990, guid: 39c9f6d39c26a6b439a506348a3c0c45,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -230.19763
       objectReference: {fileID: 0}
     - target: {fileID: 224047227049286990, guid: 39c9f6d39c26a6b439a506348a3c0c45,
         type: 2}
@@ -2034,7 +1953,7 @@ Prefab:
     - target: {fileID: 224047227049286990, guid: 39c9f6d39c26a6b439a506348a3c0c45,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 285.19763
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 39c9f6d39c26a6b439a506348a3c0c45, type: 2}
@@ -2809,7 +2728,7 @@ Prefab:
     - target: {fileID: 224404652712705236, guid: 108eba55f827b724d9fe114b620f258e,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -25
       objectReference: {fileID: 0}
     - target: {fileID: 224404652712705236, guid: 108eba55f827b724d9fe114b620f258e,
         type: 2}
@@ -2834,7 +2753,7 @@ Prefab:
     - target: {fileID: 224209802464370610, guid: 108eba55f827b724d9fe114b620f258e,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -98.09885
       objectReference: {fileID: 0}
     - target: {fileID: 224209802464370610, guid: 108eba55f827b724d9fe114b620f258e,
         type: 2}
@@ -3360,6 +3279,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114159331424426790, guid: e8b5f9df6f01b584f8b139aeaf7328da,
+        type: 2}
+      propertyPath: Musiques.Array.size
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 4563612865239774, guid: e8b5f9df6f01b584f8b139aeaf7328da, type: 2}
       propertyPath: m_LocalPosition.x
       value: 937.917
@@ -3392,6 +3316,36 @@ Prefab:
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 82286678815364738, guid: e8b5f9df6f01b584f8b139aeaf7328da,
+        type: 2}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 82286678815364738, guid: e8b5f9df6f01b584f8b139aeaf7328da,
+        type: 2}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: efb361a368e83bc4ca8c59974adc28a0, type: 3}
+    - target: {fileID: 114159331424426790, guid: e8b5f9df6f01b584f8b139aeaf7328da,
+        type: 2}
+      propertyPath: Musiques.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: c1c1bd3e4ed0e5643ae53a94ae6d2e1d, type: 3}
+    - target: {fileID: 114159331424426790, guid: e8b5f9df6f01b584f8b139aeaf7328da,
+        type: 2}
+      propertyPath: Musiques.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 2d892833da69bc247959f1efb1a1b086, type: 3}
+    - target: {fileID: 114159331424426790, guid: e8b5f9df6f01b584f8b139aeaf7328da,
+        type: 2}
+      propertyPath: Musiques.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 9668bb2132f33ab40957d154fbcd6d74, type: 3}
+    - target: {fileID: 114159331424426790, guid: e8b5f9df6f01b584f8b139aeaf7328da,
+        type: 2}
+      propertyPath: Musiques.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: efb361a368e83bc4ca8c59974adc28a0, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e8b5f9df6f01b584f8b139aeaf7328da, type: 2}
   m_IsPrefabParent: 0

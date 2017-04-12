@@ -13,7 +13,7 @@ EditorBuildSettings:
     path: Assets/Scenes/BaseUI/Factory.unity
   - enabled: 1
     path: Assets/Scenes/BaseUI/Hangar.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/UpgradeTest.unity
   - enabled: 0
     path: Assets/Scenes/NoBuildScene/Hangar.unity
@@ -23,3 +23,5 @@ EditorBuildSettings:
     path: Assets/Scenes/LittleAsteroidField.unity
   - enabled: 1
     path: Assets/Scenes/BaseUI/Bridge.unity
+  - enabled: 1
+    path: Assets/Scenes/EndGameScenes/HiveVictory.unity

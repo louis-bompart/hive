@@ -144,7 +144,7 @@ public class CraftManager : MonoBehaviour
         { // Enough of every components
           // Adds the product a productAmount of times 
             inventoryController.AddItem(productID, productAmount);
-
+            GameObject.Find("Data").GetComponentInChildren<OtherStats>().CraftedItems++;
             // Remove the components 
 
             for (int k = 0; k < componentID.Length; k++)
