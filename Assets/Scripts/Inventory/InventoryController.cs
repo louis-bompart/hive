@@ -69,7 +69,7 @@ public class InventoryController : MonoBehaviour
         {
             Debug.LogWarning("Oups, inventory lost. Trying to recover...");
             inventoryModel = GameObject.Find(inventoryName).GetComponent<InventoryModel>();
-            if (inventoryModel == null)
+            if (inventoryModel != null)
                 Debug.Log("Inventory Recovered, all good !");
             else
                 Debug.LogError("Snap, inventory recovery failed, we're in trouble !");
