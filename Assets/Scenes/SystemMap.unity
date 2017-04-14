@@ -132,8 +132,8 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 114969693876230882, guid: 2b762ffad3a17cb4ea0a17257edc3be6,
         type: 2}
-      propertyPath: randomizeSeed
-      value: 1
+      propertyPath: minPOI
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2b762ffad3a17cb4ea0a17257edc3be6, type: 2}
@@ -424,7 +424,11 @@ Prefab:
     - target: {fileID: 114923565998158904, guid: e8b5f9df6f01b584f8b139aeaf7328da,
         type: 2}
       propertyPath: scanRangeStat
-      value: 10
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1873207264176682, guid: e8b5f9df6f01b584f8b139aeaf7328da, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e8b5f9df6f01b584f8b139aeaf7328da, type: 2}
