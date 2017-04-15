@@ -1,0 +1,74 @@
+{
+	"questDatabase": [
+		{
+			"id": 1,
+			"questName": "First contract",
+			"client": "Yves",
+			"description": "Recuperez 5 minerais de titanium et 3 minerais de sulfurite.",
+      "isMainQuest": true,
+      "timeLimit": 900,
+      "objectives": "100,101",
+      "objectiveQuantity": "5,11",
+      "reward": "200,201,202",
+      "rewardQuantity": "1,1,1",
+      "subQuests": "100,101,102",
+      "victory": 1
+			},
+    {
+      "id": 100,
+      "questName": "Pirate Inquiry",
+      "client": "Pirates",
+      "description": "Arr.",
+      "isMainQuest": false,
+      "timeLimit": 900,
+      "objectives": "101",
+      "objectiveQuantity": "20",
+      "reward": "200,201,202",
+      "rewardQuantity": "2,2,2",
+      "subQuests": "",
+      "victory": 0
+    },
+    {
+      "id": 101,
+      "questName": "Give me pull",
+      "client": "Louis",
+      "description": "Oublie pas de faire une branche par feature.",
+      "isMainQuest": false,
+      "timeLimit": 900,
+      "objectives": "101",
+      "objectiveQuantity": "5",
+      "reward": "210,211,212",
+      "rewardQuantity": "1,1,1",
+      "subQuests": "",
+      "victory": 0
+    },
+    {
+      "id": 102,
+      "questName": "Ruf est grand",
+      "client": "La sainte eglise de Ruf",
+      "description": "Worship Ruf for he is mighty.",
+      "isMainQuest": false,
+      "timeLimit": 900,
+      "objectives": "101",
+      "objectiveQuantity": "5",
+      "reward": "210,211,212",
+      "rewardQuantity": "2,2,2",
+      "subQuests": "",
+      "victory": 0
+    },
+    {
+      "id": 2,
+      "questName": "Ruf est grand, edition 2",
+      "client": "La sainte eglise de Ruf",
+      "description": "Worship Ruf for he is mighty.",
+      "isMainQuest": true,
+      "timeLimit": 900,
+      "objectives": "101",
+      "objectiveQuantity": "5",
+      "reward": "101",
+      "rewardQuantity": "6",
+      "subQuests": "",
+      "victory": 0
+    }
+	]
+}

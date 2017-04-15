@@ -865,6 +865,21 @@ MonoBehaviour:
   weapons:
   - {fileID: 1936452754400306}
   - {fileID: 1207613089157504}
+--- !u!114 &114349980973532234
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1397315683347820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa8687d8521b94048823dd98e18a7459, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Musiques:
+  - {fileID: 8300000, guid: c1c1bd3e4ed0e5643ae53a94ae6d2e1d, type: 3}
+  - {fileID: 8300000, guid: 2d892833da69bc247959f1efb1a1b086, type: 3}
+  - {fileID: 8300000, guid: 9668bb2132f33ab40957d154fbcd6d74, type: 3}
 --- !u!114 &114437054417721854
 MonoBehaviour:
   m_ObjectHideFlags: 1
