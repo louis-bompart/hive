@@ -10,6 +10,7 @@ public class ProjectileScript : MonoBehaviour
     public Weapon weapon;
     public float damage;
 
+
     // Use this for initialization
     void Start()
     {

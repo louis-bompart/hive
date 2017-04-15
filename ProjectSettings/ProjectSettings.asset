@@ -455,6 +455,8 @@ PlayerSettings:
   cloudServicesEnabled:
     Build: 1
     Collab: 0
+    ErrorHub: 0
+    Hub: 0
     UNet: 1
   cloudProjectId: aa8d3513-5d65-4442-ba86-420c6ba95305
   projectName: 8INF830

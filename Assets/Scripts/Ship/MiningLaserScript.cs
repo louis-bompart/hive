@@ -14,6 +14,14 @@ public class MiningLaserScript : MonoBehaviour
     public Slider healthGauge;
     public GameObject healthGaugeText;
 
+	public AudioClip laserSound;
+
+	private AudioSource source;
+
+	void Awake(){
+		source = GetComponent<AudioSource> ();
+	}
+
     void Start()
     {
         healthGaugeText.SetActive(false);
@@ -31,11 +39,14 @@ public class MiningLaserScript : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetButtonDown("Fire2"))
-        {
-            StopCoroutine("FireMiningLaser");
-            StartCoroutine("FireMiningLaser");
-        }
+		if (Input.GetButtonDown ("Fire2")) {
+			StopCoroutine ("FireMiningLaser");
+			StartCoroutine ("FireMiningLaser");
+		} else {
+			if (source.isPlaying) {
+				source.Stop ();
+			}
+		}
     }
 
     IEnumerator FireMiningLaser()
@@ -47,6 +58,8 @@ public class MiningLaserScript : MonoBehaviour
             Ray miningray = new Ray(transform.position, transform.forward);
             RaycastHit hit;
             line.SetPosition(0, miningray.origin);
+
+			source.Play ();
 
             if (Physics.Raycast(miningray, out hit, range))
             {
