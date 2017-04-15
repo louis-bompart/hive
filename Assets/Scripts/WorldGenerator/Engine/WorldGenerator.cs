@@ -23,6 +23,7 @@ public class WorldGenerator : MonoBehaviour
 
     private Vector3 last = Vector3.zero;
     internal bool isReady;
+    public int minPOI;
 
     // Use this for initialization
     private void Awake()
@@ -51,7 +52,7 @@ public class WorldGenerator : MonoBehaviour
             seed = Random.Range(0, int.MaxValue);
         }
         Random.InitState(seed);
-        nbOfPOI = seed % maxPOI;
+        nbOfPOI = Random.RandomRange(minPOI, maxPOI);
         //nbOfPOI = maxPOI;
         //ToDo Init starbase
         //blabla don't forget to set barycenter as the pos of the starbase
@@ -96,7 +97,10 @@ public class WorldGenerator : MonoBehaviour
         }
         variance /= (float)positions.Count;
     }
-
+    public void TakeCurrent(POI poi)
+    {
+        current = poi.transform.position;
+    }
     // Update is called once per frame
     void Update()
     {
