@@ -42,6 +42,10 @@ public class QuestLogController : MonoBehaviour {
     {
         qlogmodel.questlog = new Dictionary<Quest, int>();
         Quest mainquest = database.FetchQuestByID(qprogress.questProgress);
+        if(qprogress.questTimer == -1000 || qprogress.questTimer == 0)
+        {
+            qprogress.questTimer = mainquest.timeLimit;
+        }
         qlogmodel.questlog.Add(mainquest, mainquest.ID);
         if(mainquest.subQuests != "")
         {

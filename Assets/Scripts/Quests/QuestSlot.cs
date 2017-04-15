@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class QuestSlot : MonoBehaviour {
@@ -94,6 +95,7 @@ public class QuestSlot : MonoBehaviour {
             }
         }
         GameObject.Find("Data").GetComponentInChildren<QuestProgress>().CompletedQuests.Add(quest.ID);
+        GameObject.Find("Data").GetComponentInChildren<QuestProgress>().questTimer = -1000;
         DeliverRewards();
     }
 
@@ -111,6 +113,18 @@ public class QuestSlot : MonoBehaviour {
         if (quest.IsMainQuest)
         {
             GameObject.Find("Data").GetComponentInChildren<QuestProgress>().questProgress++;
+        }
+        if(quest.Victory == 1)
+        {
+            SceneManager.LoadSceneAsync("HiveVictory", LoadSceneMode.Single);
+        }
+        else if(quest.Victory == 2)
+        {
+            SceneManager.LoadSceneAsync("AIRVictory", LoadSceneMode.Single);
+        }
+        else if(quest.Victory == 3)
+        {
+            SceneManager.LoadSceneAsync("SelfVictory", LoadSceneMode.Single);
         }
         GameObject.Find("QuestLog").GetComponent<QuestLogController>().UpdateQuestLog();
     }

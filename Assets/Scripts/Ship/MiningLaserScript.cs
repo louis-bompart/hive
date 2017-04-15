@@ -63,6 +63,7 @@ public class MiningLaserScript : MonoBehaviour
                     {
                         GameObject Particle = Instantiate(particlePrefab, hit.point, Random.rotation);
                         Particle.transform.localScale = asscript.transform.localScale;
+                        GameObject.Find("Data").GetComponentInChildren<OtherStats>().DestroyedAsteroids++;
                         Destroy(Particle, 2);
                     }
                 }
