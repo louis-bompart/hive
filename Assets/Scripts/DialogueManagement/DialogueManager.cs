@@ -8,6 +8,7 @@ public class DialogueManager : MonoBehaviour {
     private static DialogueManager _instance;
 
     List<DialogueDataItem> toLaunch;
+    AudioSource audiSrc;
 
     public static DialogueManager instance
     {
@@ -25,30 +26,45 @@ public class DialogueManager : MonoBehaviour {
     {
         _instance = this;
         toLaunch = new List<DialogueDataItem>();
+        audiSrc = GetComponent<AudioSource>();
     }
 	
     public void Update()
     {
         if(toLaunch.Count >0 &&  box.isActiveAndEnabled == false )
         {
-            DialogueDataItem t = toLaunch[0];
-            toLaunch.RemoveAt(0);
-            box.prontNewText(t.Text,t.displayTime);
+            nextDialogue();
         }
     }
 
     public void lauchDialogue(string inText,float prontTime = -1)
     {
-        lauchDialogue(new DialogueDataItem("null", inText, prontTime));
+        lauchDialogue(new DialogueDataItem("null", inText, prontTime,""));
     }
 
     public void lauchDialogue(DialogueDataItem inD)
     {
         if(inD != null)
         {
+            Debug.Log(inD.ClipAudio);
             inD.Text = inD.Text.Replace("\n", System.Environment.NewLine);
             toLaunch.Add(inD);
         }
+    }
 
+    private void nextDialogue( )
+    {
+        DialogueDataItem t = toLaunch[0];
+        toLaunch.RemoveAt(0);
+        box.prontNewText(t.Text, t.displayTime);
+        if(t.ClipAudio != null && audiSrc != null)
+        {
+            AudioClip newClip = Resources.Load<AudioClip>("Dialogue/AudioClip/" + t.ClipAudio);
+            if(newClip != null)
+            {
+                audiSrc.clip = newClip;
+                audiSrc.Play();
+            }
+        }
     }
 }

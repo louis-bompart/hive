@@ -103,7 +103,6 @@ GameObject:
   - component: {fileID: 4888603897743616}
   - component: {fileID: 114585092186692836}
   - component: {fileID: 114961763079571764}
-  - component: {fileID: 114362496478610992}
   m_Layer: 0
   m_Name: StateManager
   m_TagString: Untagged
@@ -318,18 +317,6 @@ MonoBehaviour:
   inventoryType: 0
   slotCounts: 0
   usedSlot: 0
---- !u!114 &114362496478610992
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1873207264176682}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a3604e8221815824dacaee3a8ee6fd32, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  JSONDialogue: {fileID: 4900000, guid: 579bab636451c1443931e488ae355193, type: 3}
 --- !u!114 &114363389466316182
 MonoBehaviour:
   m_ObjectHideFlags: 1

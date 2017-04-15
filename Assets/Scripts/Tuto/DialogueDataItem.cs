@@ -8,6 +8,7 @@ public class DialogueDataItem
     public string _ID;
     public string _Text;
     public float _displayTime;
+    public string _ClipAudio;
 
 
     public string ID
@@ -44,12 +45,24 @@ public class DialogueDataItem
         }
     }
 
+    public string ClipAudio
+    {
+        get
+        {
+            return _ClipAudio;
+        }
+        set
+        {
+            _ClipAudio = value;
+        }
+    }
 
-    public DialogueDataItem(string ID,string Text,float displayTime )
+    public DialogueDataItem(string ID,string Text,float displayTime, string ClipAudio )
     {
         _ID = ID;
         _Text = Text;
         _displayTime = displayTime;
+        _ClipAudio = ClipAudio;
     }
 
 

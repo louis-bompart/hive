@@ -27,7 +27,7 @@ public class DialogueDatabase
             if (database[i].ID == id)
                 return database[i];
         }
-        return new DialogueDataItem("null","Dialogue missing from Database ID : " + id,0);
+        return new DialogueDataItem("null","Dialogue missing from Database ID : " + id,0,"");
     }
 
     public static DialogueDatabase Instance()
