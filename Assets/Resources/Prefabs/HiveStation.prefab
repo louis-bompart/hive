@@ -18821,6 +18821,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneToAccessName: Bridge
   buttonPrompt: {fileID: 0}
+  baseAudio: {fileID: 1842142278284942, guid: 63ff7ebee0cd77f4c96ac5ae88b7934b, type: 2}
 --- !u!114 &114873729192327066
 MonoBehaviour:
   m_ObjectHideFlags: 1

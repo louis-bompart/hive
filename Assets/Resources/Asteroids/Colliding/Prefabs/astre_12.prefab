@@ -123,5 +123,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 100
+  maxHP: 0
+  name: 
+  mats: []
+  OriginalEmissionsColors: []
   idMineral: 0
   count: 0

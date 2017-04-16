@@ -5,7 +5,6 @@ using UnityEngine;
 public class EnginesAnimation : MonoBehaviour
 {
 
-
     public float ThrottlePercent = 0.0f;
     ParticleSystem[] engines;
     // Use this for initialization

@@ -35,8 +35,8 @@ public class Data : MonoBehaviour
     private bool AlreadyPresent()
     {
         //Yeah datas ain't right but well, deal with it.
-        Data[] datas = GameObject.FindObjectsOfType<Data>();
-        return datas.Length > 1;
+
+        return _instance != null;
     }
     private void Initialize()
     {
@@ -48,7 +48,7 @@ public class Data : MonoBehaviour
     {
         if (AlreadyPresent())
         {
-            DestroyImmediate(this);
+            DestroyImmediate(this.gameObject,true);
         }
         else
         {
