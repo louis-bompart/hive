@@ -2,25 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+//Not good.
 public class DualBlastersScript : Weapon {
 
-    public new string name = "DualBlasters";
-    public int range;
-    public int damage;
-    public float fireRate;
-    public int ammo;
+    public string weaponName = "DualBlasters";
 
-    public GameObject projectile;
-    public float shotSpeed;
-    public Transform spawnPoint;
-    public GameObject Reticle;
-    public GameObject Gauge;
-    
-    public GameObject Particleprefab;
-	public AudioClip shotSound;
-
-    private float lastShot;
-	private AudioSource audioSource;
 
 	void Awake(){
 		audioSource = GetComponent<AudioSource>();
@@ -41,7 +28,7 @@ public class DualBlastersScript : Weapon {
 			audioSource.PlayOneShot (shotSound);
             GameObject clone;
             clone = Instantiate(projectile, spawnPoint.position, spawnPoint.rotation);
-            clone.GetComponent<ProjectileScript>().SetParent(Reticle,Gauge,this.gameObject);
+            clone.GetComponent<ProjectileScript>().SetParent(Reticle,Gauge,this);
             clone.GetComponent<ProjectileScript>().damage = damage;
 
             clone.GetComponent<Rigidbody>().velocity = spawnPoint.forward * shotSpeed;

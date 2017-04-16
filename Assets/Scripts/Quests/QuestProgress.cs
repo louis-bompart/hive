@@ -21,9 +21,10 @@ public class QuestProgress : MonoBehaviour {
     {
         StartCoroutine(TimerTick());
     }
-
+    
     private IEnumerator TimerTick()
     {
+    
         questTimer--;
         yield return new WaitForSeconds(1);
         if(questTimer <= 0 && questTimer != -1000)
@@ -32,7 +33,7 @@ public class QuestProgress : MonoBehaviour {
         }
         StartCoroutine(TimerTick());
     }
-
+    
     public void StopTimer()
     {
         StopAllCoroutines();

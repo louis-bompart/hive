@@ -45,8 +45,8 @@ public class PlayerMovement : MonoBehaviour
 
 	void Awake(){
 		sounds = GetComponents<AudioSource>();
-		noise1 = sounds [0];
-		noise2 = sounds [1];
+		/*noise1 = sounds [0];
+		noise2 = sounds [1];*/
 	}
 
     // Use this for initialization
@@ -56,6 +56,7 @@ public class PlayerMovement : MonoBehaviour
         FindObjectOfType<QuestProgress>().StartTimer();
         engineAnimation = GetComponentInChildren<EnginesAnimation>();
         rb = GetComponent<Rigidbody>();
+        Debug.Log(rb);
         stats = GameObject.Find("Stats").GetComponent<ShipStats>();
         player = GetComponent<Player>();
         Cursor.visible = showCursor;
@@ -73,11 +74,7 @@ public class PlayerMovement : MonoBehaviour
             warpSlider = warpGauge.GetComponentInChildren<Slider>();
             if (warpSlider == null)
             {
-                Debug.Log("Couldn't find warp slider");
-            }
-            else
-            {
-                Debug.LogError("warpGauge gameObject empty");
+                Debug.LogError("Couldn't find warp slider");
             }
         }
     }

@@ -60,6 +60,6 @@ public class AudiManager : MonoBehaviour {
 
     bool testInBase()
     {
-        return (SceneManager.GetActiveScene().name == "Bridge" || SceneManager.GetActiveScene().name == "Factory" || SceneManager.GetActiveScene().name == "StorageBay");
+        return (SceneManager.GetActiveScene().name == "Bridge" || SceneManager.GetActiveScene().name == "Factory" || SceneManager.GetActiveScene().name == "StorageBay" || SceneManager.GetActiveScene().name == "Hangar");
     }
 }

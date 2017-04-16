@@ -18,11 +18,15 @@ public class Weapon : MonoBehaviour {
 
     public GameObject Particleprefab;
 
-    private float lastShot;
+    protected float lastShot;
+
+    public AudioClip shotSound;
+    protected AudioSource audioSource;
 
     // Use this for initialization
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame

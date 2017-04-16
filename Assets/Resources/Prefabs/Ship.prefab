@@ -217,7 +217,6 @@ GameObject:
   - component: {fileID: 114022012893576404}
   - component: {fileID: 82261548687315738}
   - component: {fileID: 82226415675201032}
-  - component: {fileID: 114734446024328090}
   m_Layer: 9
   m_Name: Ship
   m_TagString: Player
@@ -1276,7 +1275,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 
+    m_RotationOrder: 4
 --- !u!92 &92191110067066036
 Behaviour:
   m_ObjectHideFlags: 1
@@ -1350,21 +1349,6 @@ MonoBehaviour:
   weapons:
   - {fileID: 1936452754400306}
   - {fileID: 1207613089157504}
---- !u!114 &114349980973532234
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1397315683347820}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa8687d8521b94048823dd98e18a7459, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Musiques:
-  - {fileID: 8300000, guid: c1c1bd3e4ed0e5643ae53a94ae6d2e1d, type: 3}
-  - {fileID: 8300000, guid: 2d892833da69bc247959f1efb1a1b086, type: 3}
-  - {fileID: 8300000, guid: 9668bb2132f33ab40957d154fbcd6d74, type: 3}
 --- !u!114 &114437054417721854
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1397,7 +1381,7 @@ MonoBehaviour:
   range: 50
   healthGauge: {fileID: 0}
   healthGaugeText: {fileID: 0}
-  laserSound: {fileID: 8300000, guid: 22b9e82fc74fc4e05b063cc264e32144, type: 3}
+  laserSound: {fileID: 0}
 --- !u!114 &114737167718623156
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1421,6 +1405,7 @@ MonoBehaviour:
   Gauge: {fileID: 0}
   Particleprefab: {fileID: 1912190500381684, guid: 832667cc4dc881742a5a8634b381daad,
     type: 2}
+  shotSound: {fileID: 0}
 --- !u!114 &114766263404173586
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1446,12 +1431,12 @@ MonoBehaviour:
   stats: {fileID: 0}
   terminalVelocity: 0
   warpGauge: {fileID: 0}
-  warpSound: {fileID: 8300000, guid: 42300e764ee174b88b9c4c028b539ef2, type: 3}
-  warpedSound: {fileID: 8300000, guid: 7ebc6b68d75884576ae5a733a595fb51, type: 3}
-  movementSound: {fileID: 8300000, guid: 7674c94a1b8a74ee0a4129e24f12464f, type: 3}
+  warpSound: {fileID: 0}
+  warpedSound: {fileID: 0}
+  movementSound: {fileID: 0}
   sounds: []
-  noise1: {fileID: 82261548687315738}
-  noise2: {fileID: 82226415675201032}
+  noise1: {fileID: 0}
+  noise2: {fileID: 0}
 --- !u!114 &114887738573207152
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1487,22 +1472,8 @@ MonoBehaviour:
   Gauge: {fileID: 0}
   Particleprefab: {fileID: 1912190500381684, guid: 832667cc4dc881742a5a8634b381daad,
     type: 2}
-  shotSound: {fileID: 8300000, guid: 0baf8895bd4244d19b15e970abe02c3b, type: 3}
---- !u!114 &114939046845507572
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1397315683347820}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa8687d8521b94048823dd98e18a7459, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Musiques:
-  - {fileID: 8300000, guid: c1c1bd3e4ed0e5643ae53a94ae6d2e1d, type: 3}
-  - {fileID: 8300000, guid: 2d892833da69bc247959f1efb1a1b086, type: 3}
-  - {fileID: 8300000, guid: 9668bb2132f33ab40957d154fbcd6d74, type: 3}
+  shotSound: {fileID: 0}
+  weaponName: DualBlasters
 --- !u!120 &120055505289874344
 LineRenderer:
   m_ObjectHideFlags: 1

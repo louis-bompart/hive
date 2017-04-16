@@ -46,7 +46,6 @@ public class DialogueManager : MonoBehaviour {
     {
         if(inD != null)
         {
-            Debug.Log(inD.ClipAudio);
             inD.Text = inD.Text.Replace("\n", System.Environment.NewLine);
             toLaunch.Add(inD);
         }

@@ -27,8 +27,7 @@
 		{
 			"_ID": "DialogueTuto3",
 			"_Text": "As a agent of HIVE, you have been send toward the Centauri system in order to installe a base of opperation for HIVE in a near futur.\nFor now, you are in a SEED, a standard transport vessel. HIVE require you to updgrade that SEED with mineral at your disposition in the near system.",
-			"_displayTime": 6,
-			"_ClipAudio": "TestAudioClip"
+			"_displayTime": 6
 			}
 			,
 		{

@@ -68,7 +68,6 @@ public class QuestSlot : MonoBehaviour {
                     currentQuantity = invctrl.GetQuantity(e1.Current);
                     if (e2.Current > currentQuantity)
                     {
-                        Debug.Log("Pas assez");
                         return false;
                     }
                 }

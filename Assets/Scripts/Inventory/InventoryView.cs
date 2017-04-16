@@ -104,6 +104,7 @@ public class InventoryView : MonoBehaviour
         }
         foreach (Item item in inventoryDico.Keys)
         {
+            Debug.Log("Item id " + item.id);
             UpdateAddNewItemView(item, inventoryDico[item]);
         }
     }
