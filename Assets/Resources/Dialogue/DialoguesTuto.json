@@ -1,0 +1,83 @@
+{
+	"database": [
+		{
+			"_ID": "TestDialogue",
+			"_Text": "TestDialogue1",
+			"_displayTime": 2,
+			"_ClipAudio": "Test"
+			},
+		{
+			"_ID": "TestDialogue2",
+			"_Text": "TestDialogue2",
+			"_displayTime": 2
+			},
+		{
+			"_ID": "DialogueTuto1",
+			"_Text": "*Artificial voice*: Cryopreservation process terminated succesfully. \nAnalyzing subject physical state... Vital functions stable. \nAnalyzing subject mental state... Error detected.  \nAnalyzing issues... Irreversible damage in patient's cerebellum. \n\nPatient cognitive functions are functional. High possibility of memory loss due to long cryopreservation period. ",
+			"_displayTime": 6
+			},
+		{
+			"_ID": "DialogueTuto2",
+			"_Text": "AI introduction protocol initialized.\n\nHello, user. This unit is an artificial intelligence designed by HIVE. Designation : MAYA. \nDue to the damage in User's memory subsystems, This unit will now reiterate the goal of User's mission. \n\nExplanation protocol initialized.",
+			"_displayTime": 6
+			}
+			,
+		{
+			"_ID": "DialogueTuto3",
+			"_Text": "User agreed to sell its body to the HIVE corporation, and has been sent in the Alpha Centauri system to create a forward base of operations for HIVE to take control of the system.\n\nUser's tasks are to send various rare minerals to HIVE. \nAs for tools, User only possess a standard mining vessel, that you may upgrade as you see fit.",
+			"_displayTime": 6
+			}
+			,
+		{
+			"_ID": "DialogueTuto4",
+			"_Text": "First, this unit needs confirmation that the vessel is still in working order. This unit need User to go in space and perform a routine ore collection to activate the station's primary functions. Click the Exit Base button to start.",
+			"_displayTime": 6
+			}
+			,
+		{
+			"_ID": "DialogueTuto5",
+			"_Text": "Performing integrity check-ups... Hull Integrity 100%. \nPerforming manoeuvrability check-ups... Error. Reactor damaged. Fine-tuning movement protocol disabled.\n\n No threat to user's life detected.",
+			"_displayTime": 6
+			}
+			,
+		{
+			"_ID": "DialogueTuto6",
+			"_Text": "User's ship has been badly damaged. However, mining laser and basic defensive weapon are still functional. As a BEE class corvette, the ship needs nothing else to operate. Howver, consider that maximum speed and handling are heavily limited for now, due to the damage sustained.",
+			"_displayTime": 6
+			}
+			,
+		{
+			"_ID": "DialogueTuto7",
+			"_Text": "Basic movement explanation protocol initialized.\nThe corvette can be oriented with the mouse. \nAll other commands are following the standard HIVE control scheme.\nThe ship has three-dimensional movement capabilities, and can move any way you want it too.",
+			"_displayTime": 6
+			}
+			,
+		{
+			"_ID": "DialogueTuto8",
+			"_Text": "Collection explanation protocol initialized. \nUser's mining laser is bound to the right click of User's mouse. To start collection process, simply hold it close enough to an asteroid. If collection is underway, a gauge displaying the physical integrity of the asteroid will display on top of your screen.\nOnce physical integrity reaches zero, the ore will be collected automatically.\nUser should try to collect ore from some asteroids.",
+			"_displayTime": 6
+			}
+			,
+		{
+			"_ID": "DialogueTuto9",
+			"_Text": "This unit's previous routine scan determined that you'll need 10 units of tritanium, 10 unity of Carbonite and 5 unity of Monazite to restore all functionality to the station.\nUser can check the cargo of its ship with the inventory interface.\nUse 'I' to open inventory",
+			"_displayTime": 6
+			},
+		{
+			"_ID": "DialogueTuto10",
+			"_Text": "This unit detected that your cargo holds all necessary minerals to perform critical station maintenance. This unit advises User to go back to the base so this unit can start the maintenance operation.",
+			"_displayTime": 4
+			},
+    {
+      "_ID": "DialogueTuto11",
+      "_Text": "Assembling 3D printer... Restoring communication interface... Repurposing hangar and storage bay facilities... Base maintenance complete. User is now fully capable of fulfilling HIVE's contracts.\n Current contracts can be found on the bridge's interface.",
+      "_displayTime": 4
+    },
+    {
+      "_ID": "DialogueTuto12",
+      "_Text": "Friendly reminder protocol initiated.\n\n Remember that User's life belongs to HIVE, as they are the ones that send the necessary resources for User to live. \nIf User tries to commit rebellious acts against the corporation, or fail to fulfill contracts to HIVE in time, this unit will shut down all life support inside the station, and treat you as collateral damage from a pirate attack. Good luck.",
+      "_displayTime": 7
+    }
+  ]
+}
+
