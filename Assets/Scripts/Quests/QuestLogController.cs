@@ -11,6 +11,7 @@ public class QuestLogController : MonoBehaviour {
     private QuestLogModel qlogmodel;
     private QuestLogView qlogview;
     public QuestProgress qprogress;
+    private bool OkToAdd = true;
 
     void Awake()
     {
@@ -54,7 +55,23 @@ public class QuestLogController : MonoBehaviour {
                 int sqid = subquestID;
                 if (qprogress.CompletedQuests.Find(i => i == sqid) == 0)
                 {
-                    qlogmodel.questlog.Add(database.FetchQuestByID(subquestID), subquestID);
+                    Quest questToAdd = database.FetchQuestByID(subquestID);
+                    if(questToAdd.RequiredQuestList.Count != 0)
+                    {
+                        foreach (int id in questToAdd.RequiredQuestList)
+                        {
+                            if (qprogress.CompletedQuests.Find(i => i == sqid) == 0)
+                            {
+                                OkToAdd = false;
+                                break;
+                            }
+                        }
+                    }
+                    else
+                    {
+                        OkToAdd = true;
+                    }
+                    if(OkToAdd) qlogmodel.questlog.Add(database.FetchQuestByID(sqid), sqid);
                 }
             }
         }      

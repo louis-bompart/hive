@@ -47,6 +47,13 @@ public class QuestDatabase
                 int.TryParse(s, out x);
                 quest.SubQuestsList.Add(x);
             }
+            foreach (string s in quest.requiredQuests.Split(','))
+            {
+                int x = 0;
+                int.TryParse(s, out x);
+                if(x != 0)
+                quest.RequiredQuestList.Add(x);
+            }
             questDatabaseInstance.questDatabaseIndexed.Add(quest.ID, quest);
         }
     }

@@ -5,14 +5,14 @@ using UnityEngine;
 public class QuestLogView : MonoBehaviour
 {
 
-    private QuestSlot[] qslots;
+    public QuestSlot Mainqslot;
+    public QuestSlot[] Subqslots;
     private QuestLogModel qlogmodel;
 
 
     private void Awake()
     {
         qlogmodel = GetComponent<QuestLogModel>();
-        qslots = GetComponentsInChildren<QuestSlot>(true);
     }
 
     private void Start()
@@ -23,24 +23,38 @@ public class QuestLogView : MonoBehaviour
     public void LoadQuestLog()
     {
         int i = 0;
-        foreach(QuestSlot qslot in qslots)
+        Mainqslot.quest = new Quest();
+        foreach(QuestSlot qslot in Subqslots)
         {
             qslot.quest = new Quest();
             qslot.DisplayNoQuest();
         }
+        foreach(Quest q in qlogmodel.questlog.Keys)
+        {
+            if(q.isMainQuest)
+            {
+                Mainqslot.quest = q;
+                Mainqslot.DisplayQuestName();
+                break;
+            }
+        }
         foreach (Quest q in qlogmodel.questlog.Keys)
         {
-            qslots[i].quest = q;
-            qslots[i].DisplayQuestName();
-            i++;
-        }
-        for (i = 0; i < qslots.Length; i++)
-        {
-            if (qslots[i].quest.ID == -1)
+            if (!q.isMainQuest)
             {
-                qslots[i].DisplayNoQuest();
+                Subqslots[i].quest = q;
+                Subqslots[i].DisplayQuestName();
+                i++;
             }
-            qslots[i].DisplayValidateButton();
+        }
+        Mainqslot.DisplayValidateButton();
+        for (i = 0; i < Subqslots.Length; i++)
+        {
+            if (Subqslots[i].quest.ID == -1)
+            {
+                Subqslots[i].DisplayNoQuest();
+            }
+            Subqslots[i].DisplayValidateButton();
         }
     }
 }

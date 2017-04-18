@@ -258,23 +258,18 @@ public class PlayerMovement : MonoBehaviour
         {
             case 0:
                 player.TakeArmorDamage(5, stats.armorStat);
-                Debug.Log("Damage taken : 5.");
                 break;
             case 1:
                 player.TakeArmorDamage(10, stats.armorStat);
-                Debug.Log("Damage taken : 10.");
                 break;
             case 2:
                 player.TakeArmorDamage(35, stats.armorStat);
-                Debug.Log("Damage taken : 35.");
                 break;
             case 3:
                 player.TakeArmorDamage(90, stats.armorStat);
-                Debug.Log("Damage taken : 90.");
                 break;
             case 4:
                 player.TakeArmorDamage(150, stats.armorStat);
-                Debug.Log("Damage taken : 150.");
                 break;
             default:
                 break;

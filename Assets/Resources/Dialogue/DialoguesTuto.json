@@ -13,29 +13,25 @@
 			},
 		{
 			"_ID": "DialogueTuto1",
-			"_Text": "*Artificial voice*: Cryopreservation process terminated successfully. \nAnalyzing subject physical state... Vital functions stable. \nAnalyzing subject mental state... Error detected.  \nAnalyzing issues... Irreversible damage in patient's cerebellum. \n\nPatient cognitive functions are functional. High possibility of memory loss due to long cryopreservation period. ",
-			"_displayTime": 24,
-			"_ClipAudio": "Tuto1"
+			"_Text": "*Artificial voice*: Cryopreservation process terminated succesfully. \nAnalyzing subject physical state... Vital functions stable. \nAnalyzing subject mental state... Error detected.  \nAnalyzing issues... Irreversible damage in patient's cerebellum. \n\nPatient cognitive functions are functional. High possibility of memory loss due to long cryopreservation period. ",
+			"_displayTime": 6
 			},
 		{
 			"_ID": "DialogueTuto2",
-			"_Text": "AI introduction protocol initialized.\n\nHello, user. This unit is an artificial intelligence designed by HIVE. Designation : MAYA. \nDue to the damage in User's memory subsystems, This unit will now reiterate the goal of User's mission. \n\nExplanation protocol initialized.",	
-			"_displayTime": 17,
-			"_ClipAudio": "Tuto2"
+			"_Text": "AI introduction protocol initialized.\n\nHello, user. This unit is an artificial intelligence designed by HIVE. Designation : MAYA. \nDue to the damage in User's memory subsystems, This unit will now reiterate the goal of User's mission. \n\nExplanation protocol initialized.",
+			"_displayTime": 6
 			}
 			,
 		{
 			"_ID": "DialogueTuto3",
 			"_Text": "User agreed to sell its body to the HIVE corporation, and has been sent in the Alpha Centauri system to create a forward base of operations for HIVE to take control of the system.\n\nUser's tasks are to send various rare minerals to HIVE. \nAs for tools, User only possess a standard mining vessel, that you may upgrade as you see fit.",
-			"_displayTime": 19,
-			"_ClipAudio": "Tuto3"
+			"_displayTime": 6
 			}
 			,
 		{
 			"_ID": "DialogueTuto4",
 			"_Text": "First, this unit needs confirmation that the vessel is still in working order. This unit need User to go in space and perform a routine ore collection to activate the station's primary functions. Click the Exit Base button to start.",
-			"_displayTime": 12,
-			"_ClipAudio": "Tuto4"
+			"_displayTime": 6
 			}
 			,
 		{
@@ -84,3 +80,4 @@
     }
   ]
 }
+
