@@ -65,7 +65,7 @@ namespace Inventory
 
         private Vector2 ComputeCellSize()
         {
-            float width = transform.parent.GetComponent<RectTransform>().rect.width - transform.parent.GetComponent<VerticalLayoutGroup>().padding.horizontal;
+            float width = transform.parent.GetComponent<RectTransform>().rect.width;
             float height = GetComponent<RectTransform>().rect.height - layout.padding.vertical;
             float size = Mathf.Min(width, height) / Mathf.Sqrt(model.slots.Count);
             return new Vector2(size - layout.spacing.x, size - layout.spacing.y);

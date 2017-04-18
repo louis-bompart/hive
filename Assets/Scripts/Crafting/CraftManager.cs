@@ -10,7 +10,7 @@ public class CraftManager : MonoBehaviour
 
 
     //public InventoryModel inventoryModel;
-    public InventoryController inventoryController;
+    private static InventoryController inventoryController;
 
     public GameObject craftPanel;
     public GameObject[] recipePanel;
@@ -33,6 +33,11 @@ public class CraftManager : MonoBehaviour
     /// </summary>
     private CraftDatabase database;
     private ItemDatabase idatabase;
+
+    private void Awake()
+    {
+        inventoryController = new List<InventoryController>(GameObject.FindObjectsOfType<InventoryController>()).Find(x => x.inventoryType == InventoryController.Inventory.Ship);
+    }
 
     /// <summary>
     /// instantiate item and slot list.
@@ -73,8 +78,11 @@ public class CraftManager : MonoBehaviour
         // Instantiate the recipeItem 
 
         int category = craftToAdd.category;
-        GameObject recipeslt = Instantiate(recipeSlot, recipePanel[category].transform.Find("Panel")); // Add a recipeSlot in the approppriate Panel
+        GameObject recipeslt = Instantiate(recipeSlot);
+        recipeslt.transform.SetParent(recipePanel[category].transform.Find("Panel"), false);// Add a recipeSlot in the approppriate Panel
         //recipeslt.transform.GetChild(3).gameObject.SetActive(true); // Lock the receipt
+        Transform product = recipeslt.transform.Find("Slot").Find("Product Panel");
+        Transform component = recipeslt.transform.Find("Slot").Find("Component Panel");
 
         // Instantiate the productItem 
 
@@ -82,10 +90,11 @@ public class CraftManager : MonoBehaviour
         int productAmount = craftToAdd.itemsAmount[0];
 
         Item productItem = idatabase.FetchItemByID(productID);
-
         ItemView productObj = ItemView.CreateStandalone(productItem, productAmount);
-        productObj.transform.SetParent(recipeslt.transform.GetChild(0).GetChild(0));
+        productObj.transform.SetParent(product, false);
         productObj.transform.localPosition = Vector2.zero; // sets the position of the item according to the slot
+        //productObj.transform.localPosition = Vector2.zero; // sets the position of the item according to the slot
+        productObj.transform.localScale = Vector3.one;
         // Instantiate the componentItems 
 
         int numberOfComp = craftToAdd.itemsID.Length - 1;
@@ -105,17 +114,29 @@ public class CraftManager : MonoBehaviour
         {
             //recipeslt.transform.GetChild(1);
             ItemView compObj = ItemView.CreateStandalone(componentItem[i], productAmount);
-            compObj.transform.SetParent(recipeslt.transform.GetChild(0).GetChild(0));
+            compObj.transform.SetParent(component, false);
             compObj.transform.localPosition = Vector2.zero; // sets the position of the item according to the slot
+            compObj.transform.localScale = Vector3.one;
+
         }
 
         // Instantiate the create Button Function 
 
-        Button button = recipeslt.transform.GetChild(2).GetComponent<Button>();
+        Button button = recipeslt.GetComponentInChildren<Button>();
         button.onClick.AddListener(() =>
         {
             createObject(productID, productAmount, componentID, componentAmount);
         });
+        product.GetComponent<HorizontalFitter>().Refit();
+        //component.GetComponent<HorizontalFitter>().Refit();
+        LayoutRebuilder.ForceRebuildLayoutImmediate(component.GetComponent<RectTransform>());
+        float width = component.GetComponent<RectTransform>().rect.width;
+        float height = component.GetComponent<RectTransform>().rect.height - component.GetComponent<GridLayoutGroup>().padding.vertical;
+        float size = Mathf.Min(width, height) / Mathf.Sqrt(component.transform.childCount);
+        component.GetComponent<GridLayoutGroup>().cellSize = new Vector2(size - component.GetComponent<GridLayoutGroup>().spacing.x, size - component.GetComponent<GridLayoutGroup>().spacing.y);
+        LayoutRebuilder.MarkLayoutForRebuild(product.GetComponent<RectTransform>());
+        LayoutRebuilder.MarkLayoutForRebuild(recipeslt.GetComponent<RectTransform>());
+        LayoutRebuilder.MarkLayoutForRebuild(GetComponent<RectTransform>());
     }
 
     public void createObject(int productID, int productAmount, int[] componentID, int[] componentAmount)

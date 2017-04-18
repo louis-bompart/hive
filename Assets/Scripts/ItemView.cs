@@ -29,6 +29,8 @@ namespace Inventory
             ItemView toReturn = Instantiate(prefab).GetComponent<ItemView>();
             toReturn.isStandalone = true;
             toReturn.GetComponent<Image>().sprite = item.Sprite;
+            toReturn.GetComponent<Image>().type = Image.Type.Simple;
+            toReturn.GetComponent<Image>().preserveAspect = true;
             toReturn.amount = amount;
             toReturn.amountView.text = toReturn.amount.ToString();
             return toReturn;
