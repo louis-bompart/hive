@@ -7,6 +7,6 @@ public class StorageBayButton : MonoBehaviour
 {
     public void Click()
     {
-        SceneManager.LoadScene("StorageBay", LoadSceneMode.Single);
+        SceneManager.LoadSceneAsync("StorageBay", LoadSceneMode.Single);
     }
 }
