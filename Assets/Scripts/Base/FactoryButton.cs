@@ -7,6 +7,6 @@ public class FactoryButton : MonoBehaviour
 {
     public void Click()
     {
-        SceneManager.LoadScene("Factory", LoadSceneMode.Single);
+        SceneManager.LoadSceneAsync("Factory", LoadSceneMode.Single);
     }
 }

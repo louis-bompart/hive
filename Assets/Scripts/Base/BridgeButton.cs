@@ -8,6 +8,6 @@ public class BridgeButton : MonoBehaviour
 
     public void Click()
     {
-        SceneManager.LoadScene("Bridge", LoadSceneMode.Single);
+        SceneManager.LoadSceneAsync("Bridge", LoadSceneMode.Single);
     }
 }
