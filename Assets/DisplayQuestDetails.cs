@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using ItemNS;
 
 public class DisplayQuestDetails : MonoBehaviour {
 
@@ -12,7 +13,6 @@ public class DisplayQuestDetails : MonoBehaviour {
     public GameObject descriptionPanel;
     public GameObject objectivePanel;
     public GameObject rewardPanel;
-    public TextAsset itemJSON;
     private ItemDatabase itemDataBase;
     
     
@@ -20,7 +20,7 @@ public class DisplayQuestDetails : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         quest = GetComponent<QuestSlot>().quest;
-        itemDataBase = ItemDatabase.Instance(itemJSON);
+        ItemDatabase.GetInstance(out itemDataBase);
         if (quest.IsMainQuest) { Display();}
     }
 
@@ -42,7 +42,7 @@ public class DisplayQuestDetails : MonoBehaviour {
             int quantity = objectiveQuantities[i];
             objective += quantity.ToString() + " ";
             Item item = itemDataBase.FetchItemByID(objectiveItems[i]);
-            objective += item.Title;
+            objective += item.title;
             if (i < objectiveQuantities.Count - 1) {
                 objective += "\n";
             }
@@ -57,7 +57,7 @@ public class DisplayQuestDetails : MonoBehaviour {
             int rewardQuantity = rewardQuantities[j];
             reward += rewardQuantity.ToString() + " ";
             Item rewardItem = itemDataBase.FetchItemByID(rewardItems[j]);
-            reward += rewardItem.Title;
+            reward += rewardItem.title;
             if (j < rewardQuantities.Count - 1) {
                 reward += "\n";
             }
