@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class TutoState1 : State
 {
-    private float deltaTime = 0;
+
 
     public TutoState1(StateManager fms) : base(fms)
     {

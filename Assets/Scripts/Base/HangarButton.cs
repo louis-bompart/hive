@@ -7,6 +7,6 @@ public class HangarButton : MonoBehaviour
 {
     public void Click()
     {
-        SceneManager.LoadScene("Hangar", LoadSceneMode.Single);
+        SceneManager.LoadSceneAsync("Hangar", LoadSceneMode.Single);
     }
 }

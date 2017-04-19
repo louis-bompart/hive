@@ -2117,7 +2117,13 @@ MonoBehaviour:
   maxrSpeed: 2
   minmSpeed: 2
   maxmSpeed: 10
-  texture: []
+  texture:
+  - {fileID: 2800000, guid: 72a5af05fb6f3f54098f3c8c74a83739, type: 3}
+  - {fileID: 2800000, guid: d211b38bda9bddb4fa92a8f53d2eb655, type: 3}
+  - {fileID: 2800000, guid: fe9bc22208c26a54b9bb21f7324e2cd4, type: 3}
+  - {fileID: 2800000, guid: 398fd545d0e3a854f8d5fe8363402799, type: 3}
+  - {fileID: 2800000, guid: da3dbca77e03c484d952535a06293408, type: 3}
+  - {fileID: 2800000, guid: c53a6c5a337562e438aaf7a904ba0c70, type: 3}
 --- !u!114 &114587257103375640
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2182,7 +2188,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9a3912d782107749834d649fb0ad64b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: DualBlasters
   range: 70
   damage: 2
   fireRate: 0.5
@@ -2193,6 +2198,7 @@ MonoBehaviour:
   Reticle: {fileID: 0}
   Gauge: {fileID: 0}
   Particleprefab: {fileID: 0}
+  shotSound: {fileID: 0}
 --- !u!114 &114957746155189868
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2217,7 +2223,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9a3912d782107749834d649fb0ad64b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: DualBlasters
   range: 70
   damage: 2
   fireRate: 0.5
@@ -2228,6 +2233,7 @@ MonoBehaviour:
   Reticle: {fileID: 0}
   Gauge: {fileID: 0}
   Particleprefab: {fileID: 0}
+  shotSound: {fileID: 0}
 --- !u!135 &135428627087875346
 SphereCollider:
   m_ObjectHideFlags: 1

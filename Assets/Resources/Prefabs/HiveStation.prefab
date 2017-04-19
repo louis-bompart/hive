@@ -102,7 +102,7 @@ GameObject:
   - component: {fileID: 135747334059809622}
   m_Layer: 0
   m_Name: HiveDrone
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -590,7 +590,7 @@ GameObject:
   - component: {fileID: 114687593551493130}
   m_Layer: 0
   m_Name: Drone (1)
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -848,7 +848,7 @@ GameObject:
   - component: {fileID: 114380781614807782}
   m_Layer: 0
   m_Name: Drone (3)
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1001,7 +1001,7 @@ GameObject:
   - component: {fileID: 114217761352502782}
   m_Layer: 0
   m_Name: Drone
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1308,7 +1308,7 @@ GameObject:
   - component: {fileID: 114194906242238412}
   m_Layer: 0
   m_Name: Drone (4)
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2286,7 +2286,7 @@ GameObject:
   - component: {fileID: 114516366687855772}
   m_Layer: 0
   m_Name: Drone (2)
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2839,7 +2839,7 @@ GameObject:
   - component: {fileID: 135889535214777736}
   m_Layer: 0
   m_Name: HiveDrone
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3206,7 +3206,7 @@ GameObject:
   - component: {fileID: 135937456150581372}
   m_Layer: 0
   m_Name: HiveDrone
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4299,7 +4299,7 @@ GameObject:
   - component: {fileID: 135375853088462244}
   m_Layer: 0
   m_Name: HiveDrone
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4627,7 +4627,7 @@ GameObject:
   - component: {fileID: 135210375418223590}
   m_Layer: 0
   m_Name: HiveDrone
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7827,7 +7827,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1950663857014708}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.27}
+  m_LocalPosition: {x: 0, y: -0, z: 1.02}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4988637998973124}
@@ -8087,7 +8087,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1558324901156914}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.27}
+  m_LocalPosition: {x: -0, y: 0, z: 0.91}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4911808752605248}
@@ -8283,7 +8283,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1974483488662592}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.27}
+  m_LocalPosition: {x: 0, y: 0, z: 0.974}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4052698931545248}
@@ -8453,7 +8453,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1154749033806430}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.27}
+  m_LocalPosition: {x: -0, y: 0, z: 0.92}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4934158160673310}
@@ -8814,7 +8814,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1784070684812276}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.27}
+  m_LocalPosition: {x: -0, y: -0, z: 1.19}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4388393800708204}
@@ -17966,7 +17966,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 5, y: 5, z: 5}
+  m_Size: {x: 10, y: 10, z: 10}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &65384920425167538
 BoxCollider:
@@ -17978,7 +17978,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 5, y: 5, z: 5}
+  m_Size: {x: 10, y: 10, z: 10}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &65419938445428148
 BoxCollider:
@@ -17990,7 +17990,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 5, y: 5, z: 5}
+  m_Size: {x: 10, y: 10, z: 10}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &65646117828720886
 BoxCollider:
@@ -18002,7 +18002,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 5, y: 5, z: 5}
+  m_Size: {x: 10, y: 10, z: 10}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &65768145218483934
 BoxCollider:
@@ -18014,7 +18014,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 5, y: 5, z: 5}
+  m_Size: {x: 10, y: 10, z: 10}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &65875640343552320
 BoxCollider:
@@ -18141,7 +18141,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b0b8a14ed8aaa1478f186a9676e22fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tagToAttack: Ennemi
+  tagToAttack: Enemy
 --- !u!114 &114061042123711618
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -18167,7 +18167,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b0b8a14ed8aaa1478f186a9676e22fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tagToAttack: Ennemi
+  tagToAttack: Enemy
 --- !u!114 &114117370153803722
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -18193,7 +18193,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b0b8a14ed8aaa1478f186a9676e22fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tagToAttack: Ennemi
+  tagToAttack: Enemy
 --- !u!114 &114158784789040736
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -18205,8 +18205,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12a9a622333018640a6951c0d50c3800, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainThrust: 5
-  auxThrust: 2.5
+  mainThrust: 8
+  auxThrust: 3
   rotationSpeed: 0.01
 --- !u!114 &114170731459429042
 MonoBehaviour:
@@ -18219,17 +18219,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9a3912d782107749834d649fb0ad64b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: DualBlasters
   range: 70
   damage: 2
   fireRate: 1
   ammo: -1
   projectile: {fileID: 1274120049360702, guid: f7ade37b555daf54ca89325c0064cf90, type: 2}
-  shotSpeed: 0
-  spawnPoint: {fileID: 0}
+  shotSpeed: 2
+  spawnPoint: {fileID: 4824560586095200}
   Reticle: {fileID: 0}
   Gauge: {fileID: 0}
   Particleprefab: {fileID: 0}
+  shotSound: {fileID: 0}
 --- !u!114 &114194906242238412
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -18254,17 +18254,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9a3912d782107749834d649fb0ad64b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: DualBlasters
   range: 70
   damage: 2
   fireRate: 1
   ammo: -1
   projectile: {fileID: 1274120049360702, guid: f7ade37b555daf54ca89325c0064cf90, type: 2}
-  shotSpeed: 0
-  spawnPoint: {fileID: 0}
+  shotSpeed: 2
+  spawnPoint: {fileID: 4701769368220296}
   Reticle: {fileID: 0}
   Gauge: {fileID: 0}
   Particleprefab: {fileID: 0}
+  shotSound: {fileID: 0}
 --- !u!114 &114217761352502782
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -18347,17 +18347,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9a3912d782107749834d649fb0ad64b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: DualBlasters
   range: 70
   damage: 2
   fireRate: 1
   ammo: -1
   projectile: {fileID: 1274120049360702, guid: f7ade37b555daf54ca89325c0064cf90, type: 2}
-  shotSpeed: 0
-  spawnPoint: {fileID: 0}
+  shotSpeed: 2
+  spawnPoint: {fileID: 4860082799623726}
   Reticle: {fileID: 0}
   Gauge: {fileID: 0}
   Particleprefab: {fileID: 0}
+  shotSound: {fileID: 0}
 --- !u!114 &114319263927793900
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -18399,17 +18399,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9a3912d782107749834d649fb0ad64b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: DualBlasters
   range: 70
   damage: 2
   fireRate: 1
   ammo: -1
   projectile: {fileID: 1274120049360702, guid: f7ade37b555daf54ca89325c0064cf90, type: 2}
-  shotSpeed: 0
-  spawnPoint: {fileID: 0}
+  shotSpeed: 2
+  spawnPoint: {fileID: 4769622342271772}
   Reticle: {fileID: 0}
   Gauge: {fileID: 0}
   Particleprefab: {fileID: 0}
+  shotSound: {fileID: 0}
 --- !u!114 &114351183545614862
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -18523,8 +18523,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12a9a622333018640a6951c0d50c3800, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainThrust: 5
-  auxThrust: 2.5
+  mainThrust: 8
+  auxThrust: 3
   rotationSpeed: 0.01
 --- !u!114 &114441638943630362
 MonoBehaviour:
@@ -18581,8 +18581,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12a9a622333018640a6951c0d50c3800, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainThrust: 5
-  auxThrust: 2.5
+  mainThrust: 8
+  auxThrust: 3
   rotationSpeed: 0.01
 --- !u!114 &114482070252143232
 MonoBehaviour:
@@ -18669,8 +18669,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12a9a622333018640a6951c0d50c3800, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainThrust: 5
-  auxThrust: 2.5
+  mainThrust: 8
+  auxThrust: 3
   rotationSpeed: 0.01
 --- !u!114 &114516366687855772
 MonoBehaviour:
@@ -18738,7 +18738,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b0b8a14ed8aaa1478f186a9676e22fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tagToAttack: Ennemi
+  tagToAttack: Enemy
 --- !u!114 &114647825046829120
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -18750,7 +18750,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b0b8a14ed8aaa1478f186a9676e22fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tagToAttack: Ennemi
+  tagToAttack: Enemy
 --- !u!114 &114672896516391302
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -18762,8 +18762,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12a9a622333018640a6951c0d50c3800, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainThrust: 5
-  auxThrust: 2.5
+  mainThrust: 8
+  auxThrust: 3
   rotationSpeed: 0.01
 --- !u!114 &114687593551493130
 MonoBehaviour:
@@ -18821,7 +18821,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneToAccessName: Bridge
   buttonPrompt: {fileID: 0}
-  baseAudio: {fileID: 1842142278284942, guid: 63ff7ebee0cd77f4c96ac5ae88b7934b, type: 2}
 --- !u!114 &114873729192327066
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -18833,17 +18832,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9a3912d782107749834d649fb0ad64b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: DualBlasters
   range: 70
   damage: 2
   fireRate: 1
   ammo: -1
   projectile: {fileID: 1274120049360702, guid: f7ade37b555daf54ca89325c0064cf90, type: 2}
-  shotSpeed: 0
-  spawnPoint: {fileID: 0}
+  shotSpeed: 2
+  spawnPoint: {fileID: 4935687711051792}
   Reticle: {fileID: 0}
   Gauge: {fileID: 0}
   Particleprefab: {fileID: 0}
+  shotSound: {fileID: 0}
 --- !u!135 &135100880891142770
 SphereCollider:
   m_ObjectHideFlags: 1

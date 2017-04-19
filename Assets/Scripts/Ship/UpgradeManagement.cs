@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using Inventory;
 public class UpgradeManagement : MonoBehaviour
 {
     #region Gauge preparation
@@ -37,9 +37,12 @@ public class UpgradeManagement : MonoBehaviour
     public GameObject defenceCounter;
     public GameObject attackCounter;
     public GameObject mobilityCounter;
-
+    private void Awake()
+    {
+        inventoryController = new List<InventoryController>(GameObject.FindObjectsOfType<InventoryController>()).Find(x => x.inventoryType == InventoryController.Inventory.Ship);
+    }
     public void Start()
-    {   
+    {
         #region Gauge init
         GameObject healthGauge = GameObject.Find("HealthUpgradeGauge");
         GameObject armorGauge = GameObject.Find("ArmorUpgradeGauge");
@@ -47,11 +50,8 @@ public class UpgradeManagement : MonoBehaviour
         GameObject fireRateGauge = GameObject.Find("FireRateUpgradeGauge");
         GameObject topSpeedGauge = GameObject.Find("TopSpeedUpgradeGauge");
         GameObject handlingGauge = GameObject.Find("HandlingUpgradeGauge");
-        //inventoryController = GameObject.Find("ShipInventoryC").GetComponent<InventoryController>();
-        if(inventoryController == null )
-        {
+        if (inventoryController == null)
             Debug.LogError("InventoryController not attached !", this);
-        }
         UpdateUpgradeCount();
 
         stats = Data.instance.GetComponentInChildren<ShipStats>();
@@ -164,8 +164,6 @@ public class UpgradeManagement : MonoBehaviour
 
     private void UpdateUpgradeCount()
     {
-       
-        defensePoints = inventoryController.GetQuantity(200);
         defenceCounter.GetComponent<Text>().text = defensePoints.ToString();
         attackPoints = inventoryController.GetQuantity(201);
         attackCounter.GetComponent<Text>().text = attackPoints.ToString();
@@ -316,7 +314,7 @@ public class UpgradeManagement : MonoBehaviour
 
     public void TopSpeedUpgrade()
     {
-        if(mobilityPoints > 0)
+        if (mobilityPoints > 0)
         {
             mobilityPoints--;
             mobilityCounter.GetComponent<Text>().text = mobilityPoints.ToString();
@@ -377,7 +375,7 @@ public class UpgradeManagement : MonoBehaviour
                     }
                 }
             }
-        }       
+        }
         else
         {
             Debug.Log("Not enough mobility grade kits !");
