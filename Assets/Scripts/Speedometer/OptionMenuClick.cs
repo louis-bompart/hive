@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class OptionMenuClick : MonoBehaviour
 {
@@ -27,7 +28,7 @@ public class OptionMenuClick : MonoBehaviour
     /// </summary>
     public void OnReturnMainMenu()
     {
-        //TODO
+        StartCoroutine(PlaySoundAndLoadScene());
     }
 
     /// <summary>
@@ -39,8 +40,8 @@ public class OptionMenuClick : MonoBehaviour
         if (gameObject.activeInHierarchy)
         {
             //The Menu is open, so we want to close it
-            gameObject.SetActive(false);
             OptionMenuClick.UnPauseGame();
+            gameObject.SetActive(false);
         }
         else
         {
@@ -88,7 +89,20 @@ public class OptionMenuClick : MonoBehaviour
     /// </summary>
     public void OnQuitGame()
     {
-
+        AudioSource audio = GetComponent<AudioSource>();
+        audio.Play();
         Application.Quit();
     }
+
+
+    IEnumerator PlaySoundAndLoadScene()
+    {
+        AudioSource audio = GetComponent<AudioSource>();
+        audio.Play();
+        yield return new WaitForSeconds(audio.clip.length);
+
+        SceneManager.LoadScene("Main Menu");
+
+    }
+    
 }
