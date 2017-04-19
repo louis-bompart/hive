@@ -24,6 +24,8 @@ public class HealthGaugeDisplay : MonoBehaviour {
     {
         HealthGauge.SetActive(true);
         StartCoroutine(DisplayHealthGauge(HealthGaugeDisplayTime, health, maxHP, name));
+
+
     }
 
     public IEnumerator DisplayHealthGauge(float HealthGaugeDisplayTime, float health, float maxHP, string name) {

@@ -1275,7 +1275,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
 --- !u!92 &92191110067066036
 Behaviour:
   m_ObjectHideFlags: 1
@@ -1431,12 +1431,12 @@ MonoBehaviour:
   stats: {fileID: 0}
   terminalVelocity: 0
   warpGauge: {fileID: 0}
-  warpSound: {fileID: 0}
-  warpedSound: {fileID: 0}
-  movementSound: {fileID: 0}
+  warpSound: {fileID: 8300000, guid: 42300e764ee174b88b9c4c028b539ef2, type: 3}
+  warpedSound: {fileID: 8300000, guid: 7ebc6b68d75884576ae5a733a595fb51, type: 3}
+  movementSound: {fileID: 8300000, guid: 7674c94a1b8a74ee0a4129e24f12464f, type: 3}
   sounds: []
-  noise1: {fileID: 0}
-  noise2: {fileID: 0}
+  noise1: {fileID: 82261548687315738}
+  noise2: {fileID: 82226415675201032}
 --- !u!114 &114887738573207152
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1472,7 +1472,7 @@ MonoBehaviour:
   Gauge: {fileID: 0}
   Particleprefab: {fileID: 1912190500381684, guid: 832667cc4dc881742a5a8634b381daad,
     type: 2}
-  shotSound: {fileID: 0}
+  shotSound: {fileID: 8300000, guid: 0baf8895bd4244d19b15e970abe02c3b, type: 3}
   weaponName: DualBlasters
 --- !u!120 &120055505289874344
 LineRenderer:

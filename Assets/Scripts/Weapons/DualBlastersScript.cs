@@ -5,23 +5,13 @@ using UnityEngine;
 
 //Not good.
 public class DualBlastersScript : Weapon {
-
-    public string weaponName = "DualBlasters";
-
+    
 
 	void Awake(){
 		audioSource = GetComponent<AudioSource>();
 	}
-    // Use this for initialization
-    void Start () {
-    }
-	
-	// Update is called once per frame
-	void Update () {
 
-    }
-
-    public void OnFire()
+    override public void OnFire()
     {
         if (lastShot + fireRate < Time.time)
         {
@@ -38,7 +28,7 @@ public class DualBlastersScript : Weapon {
 
     }
 
-    public void DestroyEnemyAnimation(Transform DeathTransform)
+    public override void DestroyEnemyAnimation(Transform DeathTransform)
     {
         GameObject Particle = Instantiate(Particleprefab, DeathTransform.position, Random.rotation);
         Destroy(Particle, 2);

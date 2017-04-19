@@ -56,7 +56,6 @@ public class PlayerMovement : MonoBehaviour
         FindObjectOfType<QuestProgress>().StartTimer();
         engineAnimation = GetComponentInChildren<EnginesAnimation>();
         rb = GetComponent<Rigidbody>();
-        Debug.Log(rb);
         stats = GameObject.Find("Stats").GetComponent<ShipStats>();
         player = GetComponent<Player>();
         Cursor.visible = showCursor;

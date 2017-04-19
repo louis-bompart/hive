@@ -53,7 +53,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   localMaxRadius: 2
   localMinRadius: 1
-  roomSize: 7
+  roomSize: 8
   radius: 0
   partialCounter: 0
   partialMax: 1

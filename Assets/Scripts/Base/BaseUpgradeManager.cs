@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Inventory;
 
 public class BaseUpgradeManager : MonoBehaviour
 {
@@ -32,7 +33,10 @@ public class BaseUpgradeManager : MonoBehaviour
     public GameObject maxShieldGauge;
     public GameObject rechargeRateGauge;
 
-    
+    private void Awake()
+    {
+        inventoryController = new List<InventoryController>(GameObject.FindObjectsOfType<InventoryController>()).Find(x => x.inventoryType == InventoryController.Inventory.Base);
+    }
 
     #endregion
 
