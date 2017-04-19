@@ -21,7 +21,6 @@ GameObject:
   - component: {fileID: 224573110359790018}
   - component: {fileID: 222334645572659368}
   - component: {fileID: 114146283640788200}
-  - component: {fileID: 114248771281271820}
   m_Layer: 5
   m_Name: item
   m_TagString: Untagged
@@ -56,25 +55,6 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
---- !u!114 &114248771281271820
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1884303301895802}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 597565a2344444e978530b4a6b794a58, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  item:
-    id: -1
-    title: 
-    price: 0
-    description: 
-    stackSize: 0
-    slug: 
-  currentSlot: {fileID: 0}
 --- !u!222 &222334645572659368
 CanvasRenderer:
   m_ObjectHideFlags: 1

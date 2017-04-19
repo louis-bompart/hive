@@ -108,7 +108,7 @@ MonoBehaviour:
   maxCount: 30
   minDistance: 0.5
   maxDistance: 5
-  mineralCountProbability: 
+  mineralCountProbability: 14000000280000001400000014000000
   minrSpeed: 0
   maxrSpeed: 0
   minmSpeed: 0

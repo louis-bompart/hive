@@ -53,6 +53,7 @@ public class DialogueManager : MonoBehaviour {
 
     private void nextDialogue( )
     {
+		audiSrc.Stop ();
         DialogueDataItem t = toLaunch[0];
         toLaunch.RemoveAt(0);
         box.prontNewText(t.Text, t.displayTime);

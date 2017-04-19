@@ -26,7 +26,7 @@ public class ProjectileScript : MonoBehaviour
     void OnTriggerEnter(Collider entity)
     {
         //entity.gameObject.GetComponent<AsteroidsDesintegration>().health -= 5;
-        Debug.Log(entity.gameObject.name);
+        //Debug.Log(entity.gameObject.name);
         //Debug.Log(entity.gameObject.GetComponent<AsteroidsDesintegration>().health);
         //Destroy(gameObject)
         Entity temp = entity.GetComponentInParent<Entity>();

@@ -6,12 +6,13 @@ public class MapDisplay : MonoBehaviour
 {
 
     public Dictionary<Vector3, string> positions;
-    private bool generationDone;
+    //Not used
+    //private bool generationDone;
     Vector3 current;
     // Use this for initialization
     void Start()
     {
-        generationDone = false;
+        //generationDone = false;
         //WorldGenerator worldGenerator = FindObjectOfType<WorldGenerator>();
         positions = WorldGenerator.instance.positions;
         current = WorldGenerator.instance.current;
@@ -23,7 +24,7 @@ public class MapDisplay : MonoBehaviour
     {
         //if (!generationDone && WorldGenerator.instance.isReady)
         {
-            generationDone = true;
+            //generationDone = true;
             foreach (Vector3 position in positions.Keys)
             {
                 POI.Create(position, positions[position], position == current);

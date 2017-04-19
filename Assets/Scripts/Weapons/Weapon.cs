@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour {
 
-    public string name;
+
     public int range;
     public int damage;
     public float fireRate;
@@ -24,18 +24,18 @@ public class Weapon : MonoBehaviour {
     protected AudioSource audioSource;
 
     // Use this for initialization
-    void Start()
+    protected virtual void Start()
     {
         audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
-    void Update()
+    protected virtual void Update()
     {
 
     }
 
-    public void OnFire()
+    virtual public void OnFire()
     {
         if (lastShot + fireRate < Time.time)
         {
@@ -51,7 +51,7 @@ public class Weapon : MonoBehaviour {
 
     }
 
-    public void DestroyEnemyAnimation(Transform DeathTransform)
+    virtual public void DestroyEnemyAnimation(Transform DeathTransform)
     {
         GameObject Particle = Instantiate(Particleprefab, DeathTransform.position, Random.rotation);
         Destroy(Particle, 2);

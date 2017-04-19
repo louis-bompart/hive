@@ -9780,6 +9780,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 1000
+  maxHP: 0
+  name: 
+  mats: []
+  OriginalEmissionsColors: []
   idMineral: 0
   count: 0
 --- !u!114 &114026252009067076
@@ -9794,6 +9798,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 1000
+  maxHP: 0
+  name: 
+  mats: []
+  OriginalEmissionsColors: []
   idMineral: 0
   count: 0
 --- !u!114 &114040270502078384
@@ -9808,6 +9816,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 1000
+  maxHP: 0
+  name: 
+  mats: []
+  OriginalEmissionsColors: []
   idMineral: 0
   count: 0
 --- !u!114 &114045065382704988
@@ -9822,6 +9834,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 1000
+  maxHP: 0
+  name: 
+  mats: []
+  OriginalEmissionsColors: []
   idMineral: 0
   count: 0
 --- !u!114 &114051062271863778
@@ -9836,6 +9852,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 1000
+  maxHP: 0
+  name: 
+  mats: []
+  OriginalEmissionsColors: []
   idMineral: 0
   count: 0
 --- !u!114 &114059150175737482
@@ -9850,6 +9870,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 1000
+  maxHP: 0
+  name: 
+  mats: []
+  OriginalEmissionsColors: []
   idMineral: 0
   count: 0
 --- !u!114 &114066078031885874
@@ -9864,6 +9888,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 1000
+  maxHP: 0
+  name: 
+  mats: []
+  OriginalEmissionsColors: []
   idMineral: 0
   count: 0
 --- !u!114 &114084272936816260
@@ -9878,6 +9906,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 1000
+  maxHP: 0
+  name: 
+  mats: []
+  OriginalEmissionsColors: []
   idMineral: 0
   count: 0
 --- !u!114 &114086093340429826
@@ -9892,6 +9924,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 1000
+  maxHP: 0
+  name: 
+  mats: []
+  OriginalEmissionsColors: []
   idMineral: 0
   count: 0
 --- !u!114 &114088657495408998
@@ -9906,6 +9942,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 1000
+  maxHP: 0
+  name: 
+  mats: []
+  OriginalEmissionsColors: []
   idMineral: 0
   count: 0
 --- !u!114 &114092491439799488
@@ -9920,6 +9960,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 1000
+  maxHP: 0
+  name: 
+  mats: []
+  OriginalEmissionsColors: []
   idMineral: 0
   count: 0
 --- !u!114 &114092822062601862
@@ -9934,6 +9978,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 1000
+  maxHP: 0
+  name: 
+  mats: []
+  OriginalEmissionsColors: []
   idMineral: 0
   count: 0
 --- !u!114 &114094269051585494
@@ -9948,6 +9996,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 1000
+  maxHP: 0
+  name: 
+  mats: []
+  OriginalEmissionsColors: []
   idMineral: 0
   count: 0
 --- !u!114 &114095525760658520
@@ -9962,6 +10014,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 1000
+  maxHP: 0
+  name: 
+  mats: []
+  OriginalEmissionsColors: []
   idMineral: 0
   count: 0
 --- !u!114 &114127001510316982
@@ -9976,6 +10032,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 1000
+  maxHP: 0
+  name: 
+  mats: []
+  OriginalEmissionsColors: []
   idMineral: 0
   count: 0
 --- !u!114 &114130944794101706
@@ -9990,6 +10050,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 1000
+  maxHP: 0
+  name: 
+  mats: []
+  OriginalEmissionsColors: []
   idMineral: 0
   count: 0
 --- !u!114 &114151063500795182
@@ -10004,6 +10068,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 1000
+  maxHP: 0
+  name: 
+  mats: []
+  OriginalEmissionsColors: []
   idMineral: 0
   count: 0
 --- !u!114 &114161446412363766
@@ -10018,6 +10086,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 1000
+  maxHP: 0
+  name: 
+  mats: []
+  OriginalEmissionsColors: []
   idMineral: 0
   count: 0
 --- !u!114 &114176553797277126
@@ -10032,6 +10104,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 1000
+  maxHP: 0
+  name: 
+  mats: []
+  OriginalEmissionsColors: []
   idMineral: 0
   count: 0
 --- !u!114 &114183651025611142
@@ -10046,6 +10122,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 1000
+  maxHP: 0
+  name: 
+  mats: []
+  OriginalEmissionsColors: []
   idMineral: 0
   count: 0
 --- !u!114 &114192270873797434
@@ -10060,6 +10140,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 1000
+  maxHP: 0
+  name: 
+  mats: []
+  OriginalEmissionsColors: []
   idMineral: 0
   count: 0
 --- !u!114 &114203660223301812
@@ -10074,6 +10158,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 1000
+  maxHP: 0
+  name: 
+  mats: []
+  OriginalEmissionsColors: []
   idMineral: 0
   count: 0
 --- !u!114 &114211361469707046
@@ -10088,6 +10176,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 1000
+  maxHP: 0
+  name: 
+  mats: []
+  OriginalEmissionsColors: []
   idMineral: 0
   count: 0
 --- !u!114 &114264371049773440
@@ -10102,6 +10194,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 1000
+  maxHP: 0
+  name: 
+  mats: []
+  OriginalEmissionsColors: []
   idMineral: 0
   count: 0
 --- !u!114 &114275156661274782
@@ -10116,6 +10212,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 1000
+  maxHP: 0
+  name: 
+  mats: []
+  OriginalEmissionsColors: []
   idMineral: 0
   count: 0
 --- !u!114 &114275574959792068
@@ -10130,6 +10230,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 1000
+  maxHP: 0
+  name: 
+  mats: []
+  OriginalEmissionsColors: []
   idMineral: 0
   count: 0
 --- !u!114 &114276565699623012
@@ -10144,6 +10248,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 1000
+  maxHP: 0
+  name: 
+  mats: []
+  OriginalEmissionsColors: []
   idMineral: 0
   count: 0
 --- !u!114 &114297912115028436
@@ -10158,6 +10266,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 1000
+  maxHP: 0
+  name: 
+  mats: []
+  OriginalEmissionsColors: []
   idMineral: 0
   count: 0
 --- !u!114 &114313160406936034
@@ -10172,6 +10284,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 1000
+  maxHP: 0
+  name: 
+  mats: []
+  OriginalEmissionsColors: []
   idMineral: 0
   count: 0
 --- !u!114 &114332916080528962
@@ -10186,6 +10302,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 1000
+  maxHP: 0
+  name: 
+  mats: []
+  OriginalEmissionsColors: []
   idMineral: 0
   count: 0
 --- !u!114 &114351852118774076
@@ -10200,6 +10320,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 1000
+  maxHP: 0
+  name: 
+  mats: []
+  OriginalEmissionsColors: []
   idMineral: 0
   count: 0
 --- !u!114 &114363507356834592
@@ -10214,6 +10338,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 1000
+  maxHP: 0
+  name: 
+  mats: []
+  OriginalEmissionsColors: []
   idMineral: 0
   count: 0
 --- !u!114 &114388375079699412
@@ -10228,6 +10356,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 1000
+  maxHP: 0
+  name: 
+  mats: []
+  OriginalEmissionsColors: []
   idMineral: 0
   count: 0
 --- !u!114 &114389541812788108
@@ -10242,6 +10374,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 1000
+  maxHP: 0
+  name: 
+  mats: []
+  OriginalEmissionsColors: []
   idMineral: 0
   count: 0
 --- !u!114 &114392946860635262
@@ -10256,6 +10392,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 1000
+  maxHP: 0
+  name: 
+  mats: []
+  OriginalEmissionsColors: []
   idMineral: 0
   count: 0
 --- !u!114 &114402282527533950
@@ -10270,6 +10410,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 1000
+  maxHP: 0
+  name: 
+  mats: []
+  OriginalEmissionsColors: []
   idMineral: 0
   count: 0
 --- !u!114 &114414506782703394
@@ -10284,6 +10428,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 1000
+  maxHP: 0
+  name: 
+  mats: []
+  OriginalEmissionsColors: []
   idMineral: 0
   count: 0
 --- !u!114 &114423006673315294
@@ -10298,6 +10446,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 1000
+  maxHP: 0
+  name: 
+  mats: []
+  OriginalEmissionsColors: []
   idMineral: 0
   count: 0
 --- !u!114 &114441882864651456
@@ -10312,6 +10464,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 1000
+  maxHP: 0
+  name: 
+  mats: []
+  OriginalEmissionsColors: []
   idMineral: 0
   count: 0
 --- !u!114 &114456894646931944
@@ -10326,6 +10482,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 1000
+  maxHP: 0
+  name: 
+  mats: []
+  OriginalEmissionsColors: []
   idMineral: 0
   count: 0
 --- !u!114 &114483571011363206
@@ -10340,6 +10500,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 1000
+  maxHP: 0
+  name: 
+  mats: []
+  OriginalEmissionsColors: []
   idMineral: 0
   count: 0
 --- !u!114 &114492315965891040
@@ -10354,6 +10518,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 1000
+  maxHP: 0
+  name: 
+  mats: []
+  OriginalEmissionsColors: []
   idMineral: 0
   count: 0
 --- !u!114 &114497866656230828
@@ -10368,6 +10536,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 1000
+  maxHP: 0
+  name: 
+  mats: []
+  OriginalEmissionsColors: []
   idMineral: 0
   count: 0
 --- !u!114 &114506750874817328
@@ -10382,6 +10554,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 1000
+  maxHP: 0
+  name: 
+  mats: []
+  OriginalEmissionsColors: []
   idMineral: 0
   count: 0
 --- !u!114 &114513808078129674
@@ -10396,6 +10572,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 1000
+  maxHP: 0
+  name: 
+  mats: []
+  OriginalEmissionsColors: []
   idMineral: 0
   count: 0
 --- !u!114 &114514739966934032
@@ -10410,6 +10590,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 1000
+  maxHP: 0
+  name: 
+  mats: []
+  OriginalEmissionsColors: []
   idMineral: 0
   count: 0
 --- !u!114 &114523143828177756
@@ -10424,6 +10608,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 1000
+  maxHP: 0
+  name: 
+  mats: []
+  OriginalEmissionsColors: []
   idMineral: 0
   count: 0
 --- !u!114 &114530582624980166
@@ -10438,6 +10626,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 1000
+  maxHP: 0
+  name: 
+  mats: []
+  OriginalEmissionsColors: []
   idMineral: 0
   count: 0
 --- !u!114 &114554570071195256
@@ -10452,6 +10644,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 1000
+  maxHP: 0
+  name: 
+  mats: []
+  OriginalEmissionsColors: []
   idMineral: 0
   count: 0
 --- !u!114 &114568829320801940
@@ -10466,6 +10662,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 1000
+  maxHP: 0
+  name: 
+  mats: []
+  OriginalEmissionsColors: []
   idMineral: 0
   count: 0
 --- !u!114 &114584976051351792
@@ -10480,6 +10680,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 1000
+  maxHP: 0
+  name: 
+  mats: []
+  OriginalEmissionsColors: []
   idMineral: 0
   count: 0
 --- !u!114 &114600524619140556
@@ -10494,6 +10698,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 1000
+  maxHP: 0
+  name: 
+  mats: []
+  OriginalEmissionsColors: []
   idMineral: 0
   count: 0
 --- !u!114 &114612180410240996
@@ -10508,6 +10716,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 1000
+  maxHP: 0
+  name: 
+  mats: []
+  OriginalEmissionsColors: []
   idMineral: 0
   count: 0
 --- !u!114 &114617379841070016
@@ -10522,6 +10734,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 1000
+  maxHP: 0
+  name: 
+  mats: []
+  OriginalEmissionsColors: []
   idMineral: 0
   count: 0
 --- !u!114 &114632033314761436
@@ -10536,6 +10752,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 1000
+  maxHP: 0
+  name: 
+  mats: []
+  OriginalEmissionsColors: []
   idMineral: 0
   count: 0
 --- !u!114 &114640625369550252
@@ -10550,6 +10770,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 1000
+  maxHP: 0
+  name: 
+  mats: []
+  OriginalEmissionsColors: []
   idMineral: 0
   count: 0
 --- !u!114 &114641944810926704
@@ -10564,6 +10788,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 1000
+  maxHP: 0
+  name: 
+  mats: []
+  OriginalEmissionsColors: []
   idMineral: 0
   count: 0
 --- !u!114 &114648956803465200
@@ -10578,6 +10806,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 1000
+  maxHP: 0
+  name: 
+  mats: []
+  OriginalEmissionsColors: []
   idMineral: 0
   count: 0
 --- !u!114 &114651249967405510
@@ -10592,6 +10824,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 1000
+  maxHP: 0
+  name: 
+  mats: []
+  OriginalEmissionsColors: []
   idMineral: 0
   count: 0
 --- !u!114 &114655464197556814
@@ -10606,6 +10842,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 1000
+  maxHP: 0
+  name: 
+  mats: []
+  OriginalEmissionsColors: []
   idMineral: 0
   count: 0
 --- !u!114 &114663868175723498
@@ -10620,6 +10860,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 1000
+  maxHP: 0
+  name: 
+  mats: []
+  OriginalEmissionsColors: []
   idMineral: 0
   count: 0
 --- !u!114 &114679129343601962
@@ -10634,6 +10878,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 1000
+  maxHP: 0
+  name: 
+  mats: []
+  OriginalEmissionsColors: []
   idMineral: 0
   count: 0
 --- !u!114 &114683558092164226
@@ -10680,6 +10928,13 @@ MonoBehaviour:
   maxrSpeed: 2
   minmSpeed: 0
   maxmSpeed: 5
+  texture:
+  - {fileID: 2800000, guid: 72a5af05fb6f3f54098f3c8c74a83739, type: 3}
+  - {fileID: 2800000, guid: d211b38bda9bddb4fa92a8f53d2eb655, type: 3}
+  - {fileID: 2800000, guid: fe9bc22208c26a54b9bb21f7324e2cd4, type: 3}
+  - {fileID: 2800000, guid: 398fd545d0e3a854f8d5fe8363402799, type: 3}
+  - {fileID: 2800000, guid: da3dbca77e03c484d952535a06293408, type: 3}
+  - {fileID: 2800000, guid: c53a6c5a337562e438aaf7a904ba0c70, type: 3}
 --- !u!114 &114701913430354656
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -10692,6 +10947,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 1000
+  maxHP: 0
+  name: 
+  mats: []
+  OriginalEmissionsColors: []
   idMineral: 0
   count: 0
 --- !u!114 &114706567955057186
@@ -10706,6 +10965,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 1000
+  maxHP: 0
+  name: 
+  mats: []
+  OriginalEmissionsColors: []
   idMineral: 0
   count: 0
 --- !u!114 &114717210312336986
@@ -10720,6 +10983,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 1000
+  maxHP: 0
+  name: 
+  mats: []
+  OriginalEmissionsColors: []
   idMineral: 0
   count: 0
 --- !u!114 &114717278974563040
@@ -10734,6 +11001,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 1000
+  maxHP: 0
+  name: 
+  mats: []
+  OriginalEmissionsColors: []
   idMineral: 0
   count: 0
 --- !u!114 &114718006806471252
@@ -10748,6 +11019,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 1000
+  maxHP: 0
+  name: 
+  mats: []
+  OriginalEmissionsColors: []
   idMineral: 0
   count: 0
 --- !u!114 &114719148863685154
@@ -10762,6 +11037,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 1000
+  maxHP: 0
+  name: 
+  mats: []
+  OriginalEmissionsColors: []
   idMineral: 0
   count: 0
 --- !u!114 &114743898536274056
@@ -10776,6 +11055,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 1000
+  maxHP: 0
+  name: 
+  mats: []
+  OriginalEmissionsColors: []
   idMineral: 0
   count: 0
 --- !u!114 &114752391258793408
@@ -10790,6 +11073,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 1000
+  maxHP: 0
+  name: 
+  mats: []
+  OriginalEmissionsColors: []
   idMineral: 0
   count: 0
 --- !u!114 &114791809374467478
@@ -10804,6 +11091,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 1000
+  maxHP: 0
+  name: 
+  mats: []
+  OriginalEmissionsColors: []
   idMineral: 0
   count: 0
 --- !u!114 &114815630885437728
@@ -10818,6 +11109,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 1000
+  maxHP: 0
+  name: 
+  mats: []
+  OriginalEmissionsColors: []
   idMineral: 0
   count: 0
 --- !u!114 &114818053214760176
@@ -10832,6 +11127,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 1000
+  maxHP: 0
+  name: 
+  mats: []
+  OriginalEmissionsColors: []
   idMineral: 0
   count: 0
 --- !u!114 &114826987324876080
@@ -10846,6 +11145,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 1000
+  maxHP: 0
+  name: 
+  mats: []
+  OriginalEmissionsColors: []
   idMineral: 0
   count: 0
 --- !u!114 &114833759214536906
@@ -10860,6 +11163,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 1000
+  maxHP: 0
+  name: 
+  mats: []
+  OriginalEmissionsColors: []
   idMineral: 0
   count: 0
 --- !u!114 &114840469175090676
@@ -10874,6 +11181,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 1000
+  maxHP: 0
+  name: 
+  mats: []
+  OriginalEmissionsColors: []
   idMineral: 0
   count: 0
 --- !u!114 &114848140941519848
@@ -10888,6 +11199,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 1000
+  maxHP: 0
+  name: 
+  mats: []
+  OriginalEmissionsColors: []
   idMineral: 0
   count: 0
 --- !u!114 &114854417404363336
@@ -10902,6 +11217,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 1000
+  maxHP: 0
+  name: 
+  mats: []
+  OriginalEmissionsColors: []
   idMineral: 0
   count: 0
 --- !u!114 &114860346957371206
@@ -10916,6 +11235,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 1000
+  maxHP: 0
+  name: 
+  mats: []
+  OriginalEmissionsColors: []
   idMineral: 0
   count: 0
 --- !u!114 &114863915052940392
@@ -10930,6 +11253,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 1000
+  maxHP: 0
+  name: 
+  mats: []
+  OriginalEmissionsColors: []
   idMineral: 0
   count: 0
 --- !u!114 &114872921495728388
@@ -10944,6 +11271,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 1000
+  maxHP: 0
+  name: 
+  mats: []
+  OriginalEmissionsColors: []
   idMineral: 0
   count: 0
 --- !u!114 &114880610556751176
@@ -10958,6 +11289,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 1000
+  maxHP: 0
+  name: 
+  mats: []
+  OriginalEmissionsColors: []
   idMineral: 0
   count: 0
 --- !u!114 &114899638268645232
@@ -10972,6 +11307,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 1000
+  maxHP: 0
+  name: 
+  mats: []
+  OriginalEmissionsColors: []
   idMineral: 0
   count: 0
 --- !u!114 &114907583437996362
@@ -10986,6 +11325,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 1000
+  maxHP: 0
+  name: 
+  mats: []
+  OriginalEmissionsColors: []
   idMineral: 0
   count: 0
 --- !u!114 &114938901270313942
@@ -11000,6 +11343,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 1000
+  maxHP: 0
+  name: 
+  mats: []
+  OriginalEmissionsColors: []
   idMineral: 0
   count: 0
 --- !u!114 &114949535576539656
@@ -11014,6 +11361,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 1000
+  maxHP: 0
+  name: 
+  mats: []
+  OriginalEmissionsColors: []
   idMineral: 0
   count: 0
 --- !u!114 &114951257647126898
@@ -11028,6 +11379,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 1000
+  maxHP: 0
+  name: 
+  mats: []
+  OriginalEmissionsColors: []
   idMineral: 0
   count: 0
 --- !u!114 &114955270098590100
@@ -11042,6 +11397,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 1000
+  maxHP: 0
+  name: 
+  mats: []
+  OriginalEmissionsColors: []
   idMineral: 0
   count: 0
 --- !u!114 &114967038667225424
@@ -11056,6 +11415,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 1000
+  maxHP: 0
+  name: 
+  mats: []
+  OriginalEmissionsColors: []
   idMineral: 0
   count: 0
 --- !u!114 &114973513544171288
@@ -11070,5 +11433,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 1000
+  maxHP: 0
+  name: 
+  mats: []
+  OriginalEmissionsColors: []
   idMineral: 0
   count: 0

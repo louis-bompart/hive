@@ -28,7 +28,7 @@ public class TutoState4 : State
     public override void StateExit()
     {
         base.StateExit();
-        DialogueManager.instance.lauchDialogue(DialogueDatabase.Instance().getDialogue("DialogueTuto11").Text);
-        DialogueManager.instance.lauchDialogue(DialogueDatabase.Instance().getDialogue("DialogueTuto12").Text);
+        DialogueManager.instance.lauchDialogue(DialogueDatabase.Instance().getDialogue("DialogueTuto11"));
+        DialogueManager.instance.lauchDialogue(DialogueDatabase.Instance().getDialogue("DialogueTuto12"));
     }
 }
