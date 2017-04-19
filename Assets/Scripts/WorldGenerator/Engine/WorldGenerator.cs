@@ -52,7 +52,7 @@ public class WorldGenerator : MonoBehaviour
             seed = Random.Range(0, int.MaxValue);
         }
         Random.InitState(seed);
-        nbOfPOI = Random.RandomRange(minPOI, maxPOI);
+        nbOfPOI = Random.Range(minPOI, maxPOI);
         //nbOfPOI = maxPOI;
         //ToDo Init starbase
         //blabla don't forget to set barycenter as the pos of the starbase
@@ -77,14 +77,21 @@ public class WorldGenerator : MonoBehaviour
 
     private void UpdateBarycenter()
     {
-        if (barycenter == null)
-            barycenter = positions.Keys.GetEnumerator().Current;
-        else
+        barycenter *= positions.Count - 1;
+        barycenter += last;
+        barycenter /= (float)positions.Count;
+
+        /* Useless test, vector3 never == null
+         if (barycenter != null)
         {
             barycenter *= positions.Count - 1;
             barycenter += last;
             barycenter /= (float)positions.Count;
         }
+        else
+        {
+            barycenter = positions.Keys.GetEnumerator().Current;
+        }*/
     }
 
     private void UpdateVariance()

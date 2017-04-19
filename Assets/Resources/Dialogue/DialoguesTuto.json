@@ -13,25 +13,29 @@
 			},
 		{
 			"_ID": "DialogueTuto1",
-			"_Text": "*Artificial voice*: Cryopreservation process terminated succesfully. \nAnalyzing subject physical state... Vital functions stable. \nAnalyzing subject mental state... Error detected.  \nAnalyzing issues... Irreversible damage in patient's cerebellum. \n\nPatient cognitive functions are functional. High possibility of memory loss due to long cryopreservation period. ",
-			"_displayTime": 6
+			"_Text": "*Artificial voice*: Cryopreservation process terminated successfully. \nAnalyzing subject physical state... Vital functions stable. \nAnalyzing subject mental state... Error detected.  \nAnalyzing issues... Irreversible damage in patient's cerebellum. \n\nPatient cognitive functions are functional. High possibility of memory loss due to long cryopreservation period. ",
+			"_displayTime": 24,
+			"_ClipAudio": "Tuto1"
 			},
 		{
 			"_ID": "DialogueTuto2",
-			"_Text": "AI introduction protocol initialized.\n\nHello, user. This unit is an artificial intelligence designed by HIVE. Designation : MAYA. \nDue to the damage in User's memory subsystems, This unit will now reiterate the goal of User's mission. \n\nExplanation protocol initialized.",
-			"_displayTime": 6
+			"_Text": "AI introduction protocol initialized.\n\nHello, user. This unit is an artificial intelligence designed by HIVE. Designation : MAYA. \nDue to the damage in User's memory subsystems, This unit will now reiterate the goal of User's mission. \n\nExplanation protocol initialized.",	
+			"_displayTime": 17,
+			"_ClipAudio": "Tuto2"
 			}
 			,
 		{
 			"_ID": "DialogueTuto3",
 			"_Text": "User agreed to sell its body to the HIVE corporation, and has been sent in the Alpha Centauri system to create a forward base of operations for HIVE to take control of the system.\n\nUser's tasks are to send various rare minerals to HIVE. \nAs for tools, User only possess a standard mining vessel, that you may upgrade as you see fit.",
-			"_displayTime": 6
+			"_displayTime": 19,
+			"_ClipAudio": "Tuto3"
 			}
 			,
 		{
 			"_ID": "DialogueTuto4",
 			"_Text": "First, this unit needs confirmation that the vessel is still in working order. This unit need User to go in space and perform a routine ore collection to activate the station's primary functions. Click the Exit Base button to start.",
-			"_displayTime": 6
+			"_displayTime": 12,
+			"_ClipAudio": "Tuto4"
 			}
 			,
 		{
@@ -68,16 +72,15 @@
 			"_Text": "This unit detected that your cargo holds all necessary minerals to perform critical station maintenance. This unit advises User to go back to the base so this unit can start the maintenance operation.",
 			"_displayTime": 4
 			},
-    {
-      "_ID": "DialogueTuto11",
-      "_Text": "Assembling 3D printer... Restoring communication interface... Repurposing hangar and storage bay facilities... Base maintenance complete. User is now fully capable of fulfilling HIVE's contracts.\n Current contracts can be found on the bridge's interface.",
-      "_displayTime": 4
-    },
-    {
-      "_ID": "DialogueTuto12",
-      "_Text": "Friendly reminder protocol initiated.\n\n Remember that User's life belongs to HIVE, as they are the ones that send the necessary resources for User to live. \nIf User tries to commit rebellious acts against the corporation, or fail to fulfill contracts to HIVE in time, this unit will shut down all life support inside the station, and treat you as collateral damage from a pirate attack. Good luck.",
-      "_displayTime": 7
-    }
+		{
+		  "_ID": "DialogueTuto11",
+		  "_Text": "Assembling 3D printer... Restoring communication interface... Repurposing hangar and storage bay facilities... Base maintenance complete. User is now fully capable of fulfilling HIVE's contracts.\n Current contracts can be found on the bridge's interface.",
+		  "_displayTime": 4
+		},
+		{
+		  "_ID": "DialogueTuto12",
+		  "_Text": "Friendly reminder protocol initiated.\n\n Remember that User's life belongs to HIVE, as they are the ones that send the necessary resources for User to live. \nIf User tries to commit rebellious acts against the corporation, or fail to fulfill contracts to HIVE in time, this unit will shut down all life support inside the station, and treat you as collateral damage from a pirate attack. Good luck.",
+		  "_displayTime": 7
+		}
   ]
 }
-

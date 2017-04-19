@@ -14,6 +14,11 @@ public class PursuitForce : AbstractForce
 
     public override Vector3 ComputeForce()
     {
+        if(waypoint == null)
+        {
+            this.enabled = false;
+            return new Vector3(0,0,0);
+        }
         Vector3 offWaypoint = waypoint.position;
 
 

@@ -2,67 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
-public class CraftManager : MonoBehaviour
-{
-
-    
-    public InventoryModel inventoryModel;
-    public InventoryController inventoryController;
-
-    public GameObject craftPanel;
-    public GameObject[] recipePanel;
-
-    public GameObject recipeSlot;
-
-    public GameObject craftSlot;
-    public GameObject craftItem;
-
-
-    /// <summary>
-    /// The category amount.
-    /// </summary>
-    public int categoryAmount = 4;
-
-    public TextAsset craftJSON;
-    public TextAsset itemJSON;
-
-    /// <summary>
-    /// The databases.
-    /// </summary>
-    private CraftDatabase database;
-    private ItemDatabase idatabase;
-
-    /// <summary>
-    /// instantiate item and slot list.
-    /// </summary>
-    void Start()
-    {
-        database = CraftDatabase.Instance(craftJSON);
-        idatabase = ItemDatabase.Instance(itemJSON);
-
-
-
-
-        for(int i = 0; i<database.database.Count;i++)
-        {
-            AddCraft(database.database[i].id);
-        }
-
-        int impS = Data.instance.GetComponentInChildren<BaseStats>().printerStat;
-        for(int t = 0; t < recipePanel.Length; t++)
-        {
-            recipePanel[t].SetActive(false);
-        }
-        for(int i = 0; i < impS && i < recipePanel.Length; i++)
-        {
-            recipePanel[i].SetActive(true);
-        }
-
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
 using Inventory;
 using ItemNS;
 
@@ -109,14 +48,18 @@ public class CraftManager : MonoBehaviour
         ItemDatabase.GetInstance(out idatabase);
 
         for (int i = 0; i < database.database.Count; i++)
+        {
             AddCraft(database.database[i].id);
         }
 
         int impS = Data.instance.GetComponentInChildren<BaseStats>().printerStat;
         for (int t = 0; t < recipePanel.Length; t++)
         {
+            recipePanel[t].SetActive(false);
         }
         for (int i = 0; i < impS && i < recipePanel.Length; i++)
+        {
+            recipePanel[i].SetActive(true);
         }
 
     }
@@ -238,4 +181,4 @@ public class CraftManager : MonoBehaviour
     {
         return inventoryController.GetQuantity(id);
     }
-}
+}
