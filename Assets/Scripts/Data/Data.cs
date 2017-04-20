@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -21,7 +22,6 @@ public class Data : MonoBehaviour
             return _instance;
         }
     }
-
     #endregion
 
     #region Inventory Data
@@ -32,6 +32,7 @@ public class Data : MonoBehaviour
     #region Base Data
 
     #endregion
+
     private bool AlreadyPresent()
     {
         //Yeah datas ain't right but well, deal with it.
@@ -48,7 +49,7 @@ public class Data : MonoBehaviour
     {
         if (AlreadyPresent())
         {
-            DestroyImmediate(this.gameObject,true);
+            DestroyImmediate(this.gameObject, true);
         }
         else
         {
@@ -56,7 +57,4 @@ public class Data : MonoBehaviour
             Initialize();
         }
     }
-
-
-
 }
