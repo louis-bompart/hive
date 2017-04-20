@@ -43,6 +43,8 @@ public class PlayerMovement : MonoBehaviour
 	public AudioSource noise1;
 	public AudioSource noise2;
 
+    public bool canJump;
+
 	void Awake(){
 		sounds = GetComponents<AudioSource>();
 		/*noise1 = sounds [0];
@@ -52,6 +54,7 @@ public class PlayerMovement : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        canJump = FindObjectOfType<Data>().GetComponentInChildren<BaseStats>().scanRangeStat > 0;
         warpTime = warpSound.length + 0.5f;
         FindObjectOfType<QuestProgress>().StartTimer();
         engineAnimation = GetComponentInChildren<EnginesAnimation>();
@@ -103,7 +106,7 @@ public class PlayerMovement : MonoBehaviour
 
     void HandleWarpDrive()
     {
-        if (Input.GetAxis("Jump") > 0)
+        if (Input.GetAxis("Jump") > 0 && canJump)
         {
 			
             warpGauge.SetActive(true);
