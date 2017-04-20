@@ -9,17 +9,17 @@ public abstract class LocalWorldGenerator : MonoBehaviour
     //ToDo put to static when worldgenerators'll be read from Resources
     public static List<LocalWorldGenerator> worldGenerators;
 
-    public static LocalWorldGenerator Create(int seed)
+    public static LocalWorldGenerator Create()
     {
         if (worldGenerators == null)
         {
             LoadGenerators();
         }
 
-        UnityEngine.Random.InitState(seed);
+        //UnityEngine.Random.InitState(seed);
         LocalWorldGenerator newLWG = Instantiate<LocalWorldGenerator>(worldGenerators[UnityEngine.Random.Range(1, worldGenerators.Count) - 1]);
         newLWG.radius = UnityEngine.Random.Range(newLWG.localMinRadius, newLWG.localMaxRadius);
-        UnityEngine.Random.InitState(seed);
+        //UnityEngine.Random.InitState(seed);
         Room firstRoom = null;
         newLWG.InitializeRoomList();
         List<Room> copyRooms = new List<Room>(newLWG.rooms);

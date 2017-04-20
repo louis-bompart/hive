@@ -20,7 +20,7 @@ public class NoNearCenterRule : RoomRule
 
     public override RoomRule GetCopy(Room room)
     {
-        return new NoSameNeighborRule(this, room);
+        return new NoNearCenterRule(this, room);
     }
 
     public override bool isAdmissible(Room other)
