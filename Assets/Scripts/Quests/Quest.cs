@@ -127,6 +127,17 @@ public class Quest
             subQuests = value;
         }
     }
+    public string RequiredQuests
+    {
+        get
+        {
+            return requiredQuests;
+        }
+        set
+        {
+            requiredQuests = value;
+        }
+    }
     public int Victory
     {
         get
@@ -143,6 +154,7 @@ public class Quest
     public List<int> RewardList = new List<int>();
     public List<int> RewardQuantityList = new List<int>();
     public List<int> SubQuestsList = new List<int>();
+    public List<int> RequiredQuestList = new List<int>();
 
     public int id;
     public string questName;
@@ -155,10 +167,11 @@ public class Quest
     public string reward;
     public string rewardQuantity;
     public string subQuests;
+    public string requiredQuests;
     public int victory;
 
     public Quest(int id, string questName, string client, string description, bool isMainQuest, int timeLimit, 
-        string objectives, string objectiveQuantity, string reward, string rewardQuantity, string subQuests, int victory)
+        string objectives, string objectiveQuantity, string reward, string rewardQuantity, string subQuests,string requiredQuests, int victory)
     {
         this.ID = id;
         this.QuestName = questName;
@@ -171,6 +184,7 @@ public class Quest
         this.Reward = reward;
         this.RewardQuantity = rewardQuantity;
         this.SubQuests = subQuests;
+        this.RequiredQuests = requiredQuests;
         this.Victory = victory;
     }
 

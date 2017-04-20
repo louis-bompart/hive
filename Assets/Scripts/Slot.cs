@@ -141,5 +141,9 @@ namespace Inventory
         {
             return (obj as Slot).id == this.id;
         }
+        public override int GetHashCode()
+        {
+            return base.GetHashCode();
+        }
     }
 }

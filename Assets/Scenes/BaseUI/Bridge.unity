@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -468,6 +468,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 992038588}
     m_Modifications:
+    - target: {fileID: 114530932967766468, guid: 9a3e4575eee1fe94e8c9b8ce857efd6f,
+        type: 2}
+      propertyPath: Subqslots.Array.size
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 224087697199126328, guid: 9a3e4575eee1fe94e8c9b8ce857efd6f,
         type: 2}
       propertyPath: m_LocalPosition.x
@@ -823,9 +828,89 @@ Prefab:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114262390805776768, guid: 9a3e4575eee1fe94e8c9b8ce857efd6f,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114372523592829962, guid: 9a3e4575eee1fe94e8c9b8ce857efd6f,
+        type: 2}
+      propertyPath: m_FontData.m_FontSize
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 114372523592829962, guid: 9a3e4575eee1fe94e8c9b8ce857efd6f,
+        type: 2}
+      propertyPath: m_FontData.m_MinSize
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114530932967766468, guid: 9a3e4575eee1fe94e8c9b8ce857efd6f,
+        type: 2}
+      propertyPath: Mainqslot
+      value: 
+      objectReference: {fileID: 588324984}
+    - target: {fileID: 114530932967766468, guid: 9a3e4575eee1fe94e8c9b8ce857efd6f,
+        type: 2}
+      propertyPath: Subqslots.Array.data[1]
+      value: 
+      objectReference: {fileID: 588324982}
+    - target: {fileID: 114530932967766468, guid: 9a3e4575eee1fe94e8c9b8ce857efd6f,
+        type: 2}
+      propertyPath: Subqslots.Array.data[0]
+      value: 
+      objectReference: {fileID: 588324983}
+    - target: {fileID: 114530932967766468, guid: 9a3e4575eee1fe94e8c9b8ce857efd6f,
+        type: 2}
+      propertyPath: Subqslots.Array.data[2]
+      value: 
+      objectReference: {fileID: 588324981}
+    - target: {fileID: 114530932967766468, guid: 9a3e4575eee1fe94e8c9b8ce857efd6f,
+        type: 2}
+      propertyPath: Subqslots.Array.data[3]
+      value: 
+      objectReference: {fileID: 1225614323}
+    - target: {fileID: 1171390253956610, guid: 9a3e4575eee1fe94e8c9b8ce857efd6f, type: 2}
+      propertyPath: m_Name
+      value: SubQuestSlot1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1648463290331790, guid: 9a3e4575eee1fe94e8c9b8ce857efd6f, type: 2}
+      propertyPath: m_Name
+      value: SubQuestSlot2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1060475526316258, guid: 9a3e4575eee1fe94e8c9b8ce857efd6f, type: 2}
+      propertyPath: m_Name
+      value: SubQuestSlot3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1694137805574980, guid: 9a3e4575eee1fe94e8c9b8ce857efd6f, type: 2}
+      propertyPath: m_Name
+      value: SubQuestSlot4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9a3e4575eee1fe94e8c9b8ce857efd6f, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &588324981 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114266946775591346, guid: 9a3e4575eee1fe94e8c9b8ce857efd6f,
+    type: 2}
+  m_PrefabInternal: {fileID: 588324980}
+  m_Script: {fileID: 11500000, guid: 8a8dfd165eda2f04db0a6ce140fb7944, type: 3}
+--- !u!114 &588324982 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114062294926238942, guid: 9a3e4575eee1fe94e8c9b8ce857efd6f,
+    type: 2}
+  m_PrefabInternal: {fileID: 588324980}
+  m_Script: {fileID: 11500000, guid: 8a8dfd165eda2f04db0a6ce140fb7944, type: 3}
+--- !u!114 &588324983 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114234362622313330, guid: 9a3e4575eee1fe94e8c9b8ce857efd6f,
+    type: 2}
+  m_PrefabInternal: {fileID: 588324980}
+  m_Script: {fileID: 11500000, guid: 8a8dfd165eda2f04db0a6ce140fb7944, type: 3}
+--- !u!114 &588324984 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114245391680776116, guid: 9a3e4575eee1fe94e8c9b8ce857efd6f,
+    type: 2}
+  m_PrefabInternal: {fileID: 588324980}
+  m_Script: {fileID: 11500000, guid: 8a8dfd165eda2f04db0a6ce140fb7944, type: 3}
 --- !u!1001 &619594085
 Prefab:
   m_ObjectHideFlags: 0
@@ -1051,7 +1136,7 @@ Prefab:
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1949806842}
+      objectReference: {fileID: 1296304495}
     - target: {fileID: 114765834959967378, guid: aa58d9a30ccae3f4f8b9993a07c89c0b,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -1157,6 +1242,12 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1225614323 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114895792962505708, guid: 9a3e4575eee1fe94e8c9b8ce857efd6f,
+    type: 2}
+  m_PrefabInternal: {fileID: 588324980}
+  m_Script: {fileID: 11500000, guid: 8a8dfd165eda2f04db0a6ce140fb7944, type: 3}
 --- !u!1 &1296304494 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1057890647353140, guid: 2653d05272ebf334c9c973cf53fe482d,

@@ -24,7 +24,7 @@ public class HealthGaugeDisplay : MonoBehaviour {
     {
         HealthGauge.SetActive(true);
         StartCoroutine(DisplayHealthGauge(HealthGaugeDisplayTime, health, maxHP, name));
-      
+
 
     }
 
@@ -32,8 +32,11 @@ public class HealthGaugeDisplay : MonoBehaviour {
         HealthGaugeSlider.maxValue = maxHP;
         HealthGaugeSlider.value = health;
         HealthGaugeText.GetComponent<Text>().text = name;
-        yield return new WaitForSeconds(HealthGaugeDisplayTime);
-        HealthGauge.SetActive(false);
+        if (HealthGaugeDisplayTime != 0)
+        {
+            yield return new WaitForSeconds(HealthGaugeDisplayTime);
+            HealthGauge.SetActive(false);
+        }
 
     }
 }

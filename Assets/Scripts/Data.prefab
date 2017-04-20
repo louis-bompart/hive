@@ -450,9 +450,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 632ed34056c49254e9266e7924cab9b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scanRangeStat: 1
+  scanRangeStat: 0
   printerStat: 0
-  numberDronesStat: 5
+  numberDronesStat: 0
   fireDroneStat: 0
   shieldStat: 0
   chargeStat: 0

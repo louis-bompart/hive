@@ -14,9 +14,13 @@ public class HorizontalFitter : MonoBehaviour, ICanvasElement
 
     public void Refit()
     {
-        HorizontalLayoutGroup group = GetComponent<HorizontalLayoutGroup>();
+        //Never used
+        //HorizontalLayoutGroup group = GetComponent<HorizontalLayoutGroup>();
+
         RectTransform rectT = GetComponent<RectTransform>();
-        RectTransform rectP = rectT.transform.parent.parent.parent.GetComponent<RectTransform>();
+
+        //Never used
+        //RectTransform rectP = rectT.transform.parent.parent.parent.GetComponent<RectTransform>();
         //float width = Mathf.Min((rectP.rect.width - group.padding.horizontal) / transform.childCount - group.spacing, rectT.rect.height - group.padding.vertical);
         float width = rectT.rect.height;
         for (int i = 0; i < transform.childCount; i++)
