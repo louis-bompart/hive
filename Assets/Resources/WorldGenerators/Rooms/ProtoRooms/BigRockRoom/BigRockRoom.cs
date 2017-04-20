@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BigRockRoom : RockRoom
+public class BigRockRoom : RockRoom, IEnemyRoom
 {
     public BigRockRoom()
     {

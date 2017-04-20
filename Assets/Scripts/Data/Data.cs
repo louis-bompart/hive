@@ -32,6 +32,8 @@ public class Data : MonoBehaviour
     #region Base Data
 
     #endregion
+
+    private Random rnd;
     private bool AlreadyPresent()
     {
         //Yeah datas ain't right but well, deal with it.
