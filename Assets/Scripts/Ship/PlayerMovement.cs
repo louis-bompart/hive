@@ -42,7 +42,11 @@ public class PlayerMovement : MonoBehaviour
 
     public AudioSource[] sounds;
     public AudioSource noise1;
-    public AudioSource noise2;
+    public AudioSource noise2;
+
+    public bool canJump;
+
+
     public Vector3 baseExitPosition;
     public Vector3 baseExitRotation;
     void Awake()

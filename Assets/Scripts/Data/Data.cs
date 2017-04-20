@@ -33,7 +33,7 @@ public class Data : MonoBehaviour
 
     #endregion
 
-    private Random rnd;
+    private UnityEngine.Random rnd;
     private bool AlreadyPresent()
     {
         //Yeah datas ain't right but well, deal with it.
