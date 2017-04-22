@@ -76,7 +76,7 @@ namespace Inventory
         /// </summary>
         public void ConstructDataString()
         {
-            data = "<color=#" + ColorUtility.ToHtmlStringRGB(textColor) + "><b>" + item.title + "</b></color>\n" + item.description;
+            data = "<color=#" + ColorUtility.ToHtmlStringRGB(textColor) + "><b>" + item.title + "</b></color>\n\n" + item.description;
             gameObject.transform.GetChild(0).GetComponent<Text>().text = data;
             LayoutRebuilder.MarkLayoutForRebuild(this.transform as RectTransform);
         }
