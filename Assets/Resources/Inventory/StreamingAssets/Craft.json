@@ -49,7 +49,7 @@
 			"category": 2,
 			"title": "Drone parts Recipe",
 			"price": 150,
-			"nbItems": 3,
+			"nbItems": 4,
 			"itemsID": [211,100,101,103],
 			"itemsAmount": [1,6,10,5],
 			"slug": "MobilityUpgrade"
@@ -60,7 +60,7 @@
 			"category": 0,
 			"title": "Nexus Core Recipe",
 			"price": 150,
-			"nbItems": 3,
+			"nbItems": 5,
 			"itemsID": [212,102,103,104,105],
 			"itemsAmount": [1,5,5,5,15],
 			"slug": "MobilityUpgrade"

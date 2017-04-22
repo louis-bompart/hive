@@ -2467,7 +2467,7 @@ Prefab:
       objectReference: {fileID: 327234059}
     - target: {fileID: 1091849282685728, guid: 2275c44403845494b809ae3c91d6a544, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2275c44403845494b809ae3c91d6a544, type: 2}
@@ -4123,6 +4123,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 114956234646922912, guid: 121be7faa62ba1440883e55ae246358b,
+        type: 2}
+      propertyPath: printerStat
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 121be7faa62ba1440883e55ae246358b, type: 2}
   m_IsPrefabParent: 0
@@ -4289,7 +4294,7 @@ Prefab:
     - target: {fileID: 224106454872340040, guid: b6c6a453e9c231947b81ae48a4f19956,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: -645.25
+      value: -516.25
       objectReference: {fileID: 0}
     - target: {fileID: 224106454872340040, guid: b6c6a453e9c231947b81ae48a4f19956,
         type: 2}
