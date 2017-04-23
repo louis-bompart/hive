@@ -4,6 +4,7 @@ using UnityEngine;
 using Inventory;
 public class Asteroid : Entity
 {
+	public GameObject particlePrefab;
 
     #region Mineral id and count
     public int idMineral;
@@ -20,6 +21,11 @@ public class Asteroid : Entity
         {
             shipInventoryController.AddItem(idMineral,1);
         }
+
+		GameObject Particle = Instantiate(particlePrefab, this.transform.position, Random.rotation);
+		Particle.transform.localScale = this.transform.localScale;
+		FindObjectOfType<Data>().GetComponentInChildren<OtherStats>().DestroyedAsteroids++;
+		Destroy(Particle, 2);
     }
 
 

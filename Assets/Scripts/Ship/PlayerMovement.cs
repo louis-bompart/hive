@@ -39,14 +39,11 @@ public class PlayerMovement : MonoBehaviour
 	public AudioClip warpedSound;
 	public AudioClip movementSound;
 
-	public AudioSource[] sounds;
 	public AudioSource noise1;
 	public AudioSource noise2;
 
 	void Awake(){
-		sounds = GetComponents<AudioSource>();
-		/*noise1 = sounds [0];
-		noise2 = sounds [1];*/
+
 	}
 
     // Use this for initialization
@@ -76,16 +73,16 @@ public class PlayerMovement : MonoBehaviour
                 Debug.LogError("Couldn't find warp slider");
             }
         }
+
+		noise1.Play ();
     }
 
     private void UpdateSpeedAndAcceleration()
     {
 		float velocity = rb.velocity.sqrMagnitude;
         terminalVelocity = 50.0f * (stats.topSpeed + 1);
-
 		float v = velocity / terminalVelocity;
-		noise1.Stop ();
-		noise1.PlayOneShot (movementSound, v);
+		noise1.volume = v;
         mainThrust = terminalVelocity / (3 * rb.mass);
         //rb.angularDrag = 7 - stats.HandlingStat;
 
@@ -129,7 +126,6 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
-			noise1.Stop ();
 			noise2.Stop ();
             actualLoading = 0;
             warpGauge.SetActive(false);
