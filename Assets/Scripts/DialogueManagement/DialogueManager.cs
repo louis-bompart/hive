@@ -35,6 +35,10 @@ public class DialogueManager : MonoBehaviour {
         {
             nextDialogue();
         }
+        if(box.isActiveAndEnabled == false )
+        {
+            audiSrc.Stop();
+        }
     }
 
     public void lauchDialogue(string inText,float prontTime = -1)
@@ -53,6 +57,7 @@ public class DialogueManager : MonoBehaviour {
 
     private void nextDialogue( )
     {
+		audiSrc.Stop ();
         DialogueDataItem t = toLaunch[0];
         toLaunch.RemoveAt(0);
         box.prontNewText(t.Text, t.displayTime);

@@ -127,5 +127,7 @@ MonoBehaviour:
   name: 
   mats: []
   OriginalEmissionsColors: []
+  particlePrefab: {fileID: 1027570773081274, guid: 04bb8664713f2684586743dd327fc1c7,
+    type: 2}
   idMineral: 0
   count: 0

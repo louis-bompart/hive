@@ -63,7 +63,7 @@ public class AsteroidsGenerator : MonoBehaviour
 
     #region MineralCountSetter
     public int[] mineralCountProbability;
-    private int[] mineralIdProbability = { 25, 40, 60, 75, 90, 100 };
+    public int[] mineralIdProbability = { 25, 40, 60, 75, 90, 100 };
     private int[] idMineral = { 100, 101, 102, 103, 104, 105 };
 
 
