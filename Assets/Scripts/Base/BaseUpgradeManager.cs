@@ -35,7 +35,7 @@ public class BaseUpgradeManager : MonoBehaviour
 
     private void Awake()
     {
-        inventoryController = new List<InventoryController>(GameObject.FindObjectsOfType<InventoryController>()).Find(x => x.inventoryType == InventoryController.Inventory.Base);
+        inventoryController = new List<InventoryController>(Data.instance.GetComponentsInChildren<InventoryController>()).Find(x => x.inventoryType == InventoryController.Inventory.Both);
     }
 
     #endregion
