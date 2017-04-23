@@ -568,7 +568,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55f6ae0c8c4b0df40944430769f231c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inventoryType: 0
+  inventoryType: 1
 --- !u!114 &140500535
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3084,7 +3084,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Ship Inventory
+  m_Text: "Base\n Inventory"
 --- !u!222 &926351455
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4294,7 +4294,7 @@ Prefab:
     - target: {fileID: 224106454872340040, guid: b6c6a453e9c231947b81ae48a4f19956,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: -516.25
+      value: -274.75
       objectReference: {fileID: 0}
     - target: {fileID: 224106454872340040, guid: b6c6a453e9c231947b81ae48a4f19956,
         type: 2}
