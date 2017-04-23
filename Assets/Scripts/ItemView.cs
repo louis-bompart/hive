@@ -12,6 +12,10 @@ namespace Inventory
         public Text amountView;
         internal SlotView currentSlot;
         bool isStandalone;
+        /// <summary>
+        /// Used only if isStandalone
+        /// </summary>
+        ItemNS.Item standalone;
 
         internal static ItemView Create(SlotView slot)
         {
@@ -28,6 +32,7 @@ namespace Inventory
         {
             ItemView toReturn = Instantiate(prefab).GetComponent<ItemView>();
             toReturn.isStandalone = true;
+            toReturn.standalone = item;
             toReturn.GetComponent<Image>().sprite = item.Sprite;
             toReturn.GetComponent<Image>().type = Image.Type.Simple;
             toReturn.GetComponent<Image>().preserveAspect = true;
@@ -64,14 +69,13 @@ namespace Inventory
         public void OnPointerEnter(PointerEventData eventData)
         {
             if (isStandalone)
-                return;
-            Tooltip.instance.Activate(Slot.GetSlotFromId(currentSlot.slotID).item);
+                Tooltip.instance.Activate(standalone);
+            else
+                Tooltip.instance.Activate(Slot.GetSlotFromId(currentSlot.slotID).item);
         }
 
         public void OnPointerExit(PointerEventData eventData)
         {
-            if (isStandalone)
-                return;
             Tooltip.instance.Desactivate();
         }
     }
