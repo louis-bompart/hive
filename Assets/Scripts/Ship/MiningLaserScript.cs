@@ -71,13 +71,13 @@ public class MiningLaserScript : MonoBehaviour
                     healthGaugeText.SetActive(true);
                     asscript.health -= 1;
                     healthGauge.value = asscript.health/(asscript.maxHP + 1);
-                    if (asscript.health <= 0)
+                    /*if (asscript.health <= 0)
                     {
                         GameObject Particle = Instantiate(particlePrefab, hit.point, Random.rotation);
                         Particle.transform.localScale = asscript.transform.localScale;
                         FindObjectOfType<Data>().GetComponentInChildren<OtherStats>().DestroyedAsteroids++;
                         Destroy(Particle, 2);
-                    }
+                    }*/
                 }
 
                 particleObject.transform.position = hit.point;
