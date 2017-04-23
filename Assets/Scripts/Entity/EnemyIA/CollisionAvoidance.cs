@@ -29,27 +29,31 @@ public class CollisionAvoidance : AbstractForce {
     public override Vector3 ComputeForce()
     {
         Vector3 force = new Vector3(0, 0, 0);
-        foreach(Collider act in listInDetection)
+        if(listInDetection != null && listInDetection.Count>0)
         {
-            if(act != null)
+            foreach (Collider act in listInDetection)
             {
-                Vector3 closestPoint = detectionArea.ClosestPointOnBounds(act.transform.position);
-                Vector3 centerToCollision = closestPoint - act.transform.position;
-                centerToCollision = centerToCollision.normalized;
-                force += centerToCollision;
+                if (act != null)
+                {
+                    Vector3 closestPoint = detectionArea.ClosestPointOnBounds(act.transform.position);
+                    Vector3 centerToCollision = closestPoint - act.transform.position;
+                    centerToCollision = centerToCollision.normalized;
+                    force += centerToCollision;
+                }
+                else
+                {
+                    toRemove.Add(act);
+                }
+
+
             }
-            else
+
+            foreach (Collider act in toRemove)
             {
-                toRemove.Add(act);
+                listInDetection.Remove(act);
             }
-
-
         }
-
-        foreach(Collider act in toRemove)
-        {
-            listInDetection.Remove(act);
-        }
+        
 
         return force.normalized;
     }

@@ -10,6 +10,9 @@ public class ProjectileScript : MonoBehaviour
     public Weapon weapon;
     public float damage;
 
+    public float lifeTime = 10;
+
+
 
     // Use this for initialization
     void Start()
@@ -20,7 +23,12 @@ public class ProjectileScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        lifeTime -= Time.deltaTime;
+        if(lifeTime<=0)
+        {
+            Destroy(gameObject);
+        }
+        
     }
 
     void OnTriggerEnter(Collider entity)
