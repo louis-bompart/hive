@@ -348,7 +348,14 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Texte de description de la fin de partie
+  m_Text: HIVE upheld their promise, and after sending confirmation, you received
+    the reactor that would allow you to return to Earth. After some tinkering, you
+    managed to install it on your ship, and uploaded Earth's coordinates. After the
+    jump, you surrendered your ship to HIVE, who gave you in exchange a seizable amount
+    of credits for your work. Thanks to your efforts, HIVE managed to operate a merger
+    with AIR, therefore becoming the only corporation with trade rights in Alpha Centauri
+    and the Sol system. Meanwhile, you lived a peaceful, quiet life, far from political
+    machinations.
 --- !u!114 &114211898765582100
 MonoBehaviour:
   m_ObjectHideFlags: 1

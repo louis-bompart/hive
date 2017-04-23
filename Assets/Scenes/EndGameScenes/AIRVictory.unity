@@ -91,6 +91,63 @@ NavMeshSettings:
     cellSize: 0.16666667
     accuratePlacement: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &578700739
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4230883549898946, guid: fe39204d8616807409ff642be65cb1a4, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 430.5273
+      objectReference: {fileID: 0}
+    - target: {fileID: 4230883549898946, guid: fe39204d8616807409ff642be65cb1a4, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 262.62985
+      objectReference: {fileID: 0}
+    - target: {fileID: 4230883549898946, guid: fe39204d8616807409ff642be65cb1a4, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4230883549898946, guid: fe39204d8616807409ff642be65cb1a4, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4230883549898946, guid: fe39204d8616807409ff642be65cb1a4, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4230883549898946, guid: fe39204d8616807409ff642be65cb1a4, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4230883549898946, guid: fe39204d8616807409ff642be65cb1a4, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4230883549898946, guid: fe39204d8616807409ff642be65cb1a4, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114078472674649198, guid: fe39204d8616807409ff642be65cb1a4,
+        type: 2}
+      propertyPath: m_Text
+      value: Choosing to forsake the HIVE corporation that left you for dead in space,
+        and only used you for your strategic value as a rogue miner in Alpha Centauri,
+        you chose to instead join with AIR. With your help, AIR managed to obtain
+        invaluable allies in the whole system, and after a few years of machinations,
+        they used this connections to sever all ties with the Sol system. Following
+        this, they declared Alpha Centauri as an independant empire. Since your contribution
+        represented a turning point in AIR's scheme, you have been made a board member
+        of the company. As such, when the empire was created, you became the ruler
+        of a large portion ofit. Even though a war with Sol is brewing, your actions
+        as a miner brought you fame, money, and recognition as one of the heroes of
+        Alpha Centauri.
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: fe39204d8616807409ff642be65cb1a4, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1250280192
 GameObject:
   m_ObjectHideFlags: 0
