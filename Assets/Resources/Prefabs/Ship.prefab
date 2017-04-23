@@ -215,7 +215,6 @@ GameObject:
   - component: {fileID: 54663109215630576}
   - component: {fileID: 114437054417721854}
   - component: {fileID: 114022012893576404}
-  - component: {fileID: 82261548687315738}
   - component: {fileID: 82226415675201032}
   m_Layer: 9
   m_Name: Ship
@@ -405,8 +404,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1443073370890012}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 25.7}
+  m_LocalRotation: {x: 0, y: 0.9659258, z: 0, w: 0.2588191}
+  m_LocalPosition: {x: 1.2, y: 3.1, z: 48.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4504435864648934}
@@ -418,7 +417,7 @@ Transform:
   - {fileID: 4543075311984424}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 150, z: 0}
 --- !u!4 &4199785087549636
 Transform:
   m_ObjectHideFlags: 1
@@ -884,9 +883,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 0
-  m_Volume: 0.5
+  m_audioClip: {fileID: 8300000, guid: 7674c94a1b8a74ee0a4129e24f12464f, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -942,7 +941,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -955,12 +954,12 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
---- !u!82 &82261548687315738
+--- !u!82 &82513600658353674
 AudioSource:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1443073370890012}
+  m_GameObject: {fileID: 1521297416321744}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
@@ -1022,7 +1021,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -1134,7 +1133,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
+  MinDistance: 20
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
@@ -1182,7 +1181,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -1300,7 +1299,7 @@ MonoBehaviour:
   range: 50
   healthGauge: {fileID: 0}
   healthGaugeText: {fileID: 0}
-  laserSound: {fileID: 0}
+  laserSound: {fileID: 8300000, guid: 22b9e82fc74fc4e05b063cc264e32144, type: 3}
 --- !u!114 &114737167718623156
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1323,7 +1322,7 @@ MonoBehaviour:
   Gauge: {fileID: 0}
   Particleprefab: {fileID: 1912190500381684, guid: 832667cc4dc881742a5a8634b381daad,
     type: 2}
-  shotSound: {fileID: 0}
+  shotSound: {fileID: 8300000, guid: 0baf8895bd4244d19b15e970abe02c3b, type: 3}
 --- !u!114 &114766263404173586
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1345,15 +1344,18 @@ MonoBehaviour:
   deadZoneY: 0.15
   showCursor: 0
   velocity: 0
-  engineAnimation: {fileID: 0}
+  engineAnimation: {fileID: 114887738573207152}
   stats: {fileID: 0}
   terminalVelocity: 0
   warpGauge: {fileID: 0}
   warpSound: {fileID: 8300000, guid: 42300e764ee174b88b9c4c028b539ef2, type: 3}
   warpedSound: {fileID: 8300000, guid: 7ebc6b68d75884576ae5a733a595fb51, type: 3}
   movementSound: {fileID: 8300000, guid: 7674c94a1b8a74ee0a4129e24f12464f, type: 3}
-  noise1: {fileID: 82261548687315738}
+  sounds: []
+  noise1: {fileID: 82513600658353674}
   noise2: {fileID: 82226415675201032}
+  baseExitPosition: {x: 1.2, y: 3.1, z: 48.6}
+  baseExitRotation: {x: 0, y: 150, z: 0}
 --- !u!114 &114887738573207152
 MonoBehaviour:
   m_ObjectHideFlags: 1

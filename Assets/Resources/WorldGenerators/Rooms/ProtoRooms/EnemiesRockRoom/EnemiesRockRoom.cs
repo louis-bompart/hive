@@ -12,13 +12,13 @@ public class EnemiesRockRoom : RockRoom, IEnemyRoom
 
     public override Room GetCopy(Vector3 position)
     {
-        return new RichAsteroidFieldRoom(this, position);
+        return new EnemiesRockRoom(this, position);
     }
 
     protected override void Initialize()
     {
         base.Initialize();
         rules.Add(new NoNearCenterRule(this));
-        prefab = Resources.Load<GameObject>("WorldGenerators/Rooms/ProtoRooms/RichAsteroidFieldRoom/Prefab");
+        prefab = Resources.Load<GameObject>("WorldGenerators/Rooms/ProtoRooms/EnemiesRockRoom/Prefab");
     }
 }

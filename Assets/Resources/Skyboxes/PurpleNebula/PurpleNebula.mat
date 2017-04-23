@@ -60,14 +60,14 @@ Material:
     m_Floats:
     - first:
         name: _Exposure
-      second: 2.52
+      second: 1.62
     - first:
         name: _Rotation
-      second: 0
+      second: 360
     m_Colors:
     - first:
         name: _Color
       second: {r: 1, g: 1, b: 1, a: 1}
     - first:
         name: _Tint
-      second: {r: 0.38235295, g: 0.3559837, b: 0, a: 0.5}
+      second: {r: 1, g: 0.43448272, b: 0, a: 0.5}

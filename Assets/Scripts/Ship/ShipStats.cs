@@ -10,7 +10,13 @@ public class ShipStats : MonoBehaviour
     public int fireRateStat;
     public int topSpeed;
     public int handlingStat;
+    public enum Origin
+    {
+        Base,
+        Space
+    }
 
+    public Origin origin = Origin.Base;
     //void Awake()
     //{
     //    if (!AlreadyPresent())
