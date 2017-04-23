@@ -91,6 +91,69 @@ NavMeshSettings:
     cellSize: 0.16666667
     accuratePlacement: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &136541554
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4230883549898946, guid: fe39204d8616807409ff642be65cb1a4, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 430.5273
+      objectReference: {fileID: 0}
+    - target: {fileID: 4230883549898946, guid: fe39204d8616807409ff642be65cb1a4, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 193
+      objectReference: {fileID: 0}
+    - target: {fileID: 4230883549898946, guid: fe39204d8616807409ff642be65cb1a4, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4230883549898946, guid: fe39204d8616807409ff642be65cb1a4, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4230883549898946, guid: fe39204d8616807409ff642be65cb1a4, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4230883549898946, guid: fe39204d8616807409ff642be65cb1a4, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4230883549898946, guid: fe39204d8616807409ff642be65cb1a4, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4230883549898946, guid: fe39204d8616807409ff642be65cb1a4, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114078472674649198, guid: fe39204d8616807409ff642be65cb1a4,
+        type: 2}
+      propertyPath: m_Text
+      value: Between becoming the lapdog of a corporation that left you for dead a
+        hundred years ago, or joining the feeble revolution of their direct adversaries,
+        you instead chose to ignore all those futile plots and instead chose to emancipate
+        yourself from all of this. After telling your intentions to HIVE, they cut
+        off all power from your life support systems. Luckily, the devices you crafted
+        during your time in Alpha Centauri immediately turned on, and as such, you
+        became truly independant and free to live as you please. Using the cloning
+        devices, you managed to create at first a family, then workers for your budding
+        space mining company. Fueled by your knowledge of the sector, your company
+        soon thrived on requests from any clients, be it AIR, HIVE, or others. After
+        years passed, your company became a huge conglomerate, able to rivalize with
+        HIVE and AIR for Alpha Centauri's ownership.
+      objectReference: {fileID: 0}
+    - target: {fileID: 224737085739471320, guid: fe39204d8616807409ff642be65cb1a4,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -88
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: fe39204d8616807409ff642be65cb1a4, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &174308570
 GameObject:
   m_ObjectHideFlags: 0

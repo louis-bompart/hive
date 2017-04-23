@@ -1073,17 +1073,17 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_AnchoredPosition.y
-      value: -11.880411
+      value: -12
       objectReference: {fileID: 0}
     - target: {fileID: 224460722790789102, guid: b6c6a453e9c231947b81ae48a4f19956,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 9.760822
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 224460722790789102, guid: b6c6a453e9c231947b81ae48a4f19956,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 23.760822
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 224106454872340040, guid: b6c6a453e9c231947b81ae48a4f19956,
         type: 2}

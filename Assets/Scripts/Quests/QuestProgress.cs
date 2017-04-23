@@ -31,7 +31,7 @@ public class QuestProgress : MonoBehaviour {
         yield return new WaitForSeconds(1);
         if(questTimer <= 0 && questTimer != -1000)
         {
-            SceneManager.LoadScene("GameOver", LoadSceneMode.Single);
+            SceneManager.LoadSceneAsync("GameOver", LoadSceneMode.Single);
         }
         StartCoroutine(TimerTick());
     }

@@ -20,7 +20,7 @@ public class BaseAccess : MonoBehaviour
         {
             Cursor.visible = true;
             GameObject.Find("Data").GetComponentInChildren<QuestProgress>().StopTimer();
-            SceneManager.LoadScene(sceneToAccessName, LoadSceneMode.Single);
+            SceneManager.LoadSceneAsync(sceneToAccessName, LoadSceneMode.Single);
         }
     }
 
