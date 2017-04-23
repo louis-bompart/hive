@@ -118,7 +118,7 @@ public class PlayerMovement : MonoBehaviour
 
     void HandleWarpDrive()
     {
-        if (Input.GetAxis("Jump") > 0 && canJump)
+        if (Input.GetAxis("Jump") > 0 && canJump || (actualLoading/warpTime) > 0.8 )
         {
 
             warpGauge.SetActive(true);
@@ -155,6 +155,12 @@ public class PlayerMovement : MonoBehaviour
             warpGauge.SetActive(false);
         }
     }
+
+    public void OnDammageTaken()
+    {
+        actualLoading = 0;
+    }
+
 
     void FixedUpdate()
     {
