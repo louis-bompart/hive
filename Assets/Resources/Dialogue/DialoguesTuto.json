@@ -34,53 +34,62 @@
 		{
 			"_ID": "DialogueTuto4",
 			"_Text": "First, this unit needs confirmation that the vessel is still in working order. This unit need User to go in space and perform a routine ore collection to activate the station's primary functions. Click the Exit Base button to start.",
-			"_displayTime": 12,
+			"_displayTime": 13,
 			"_ClipAudio": "Tuto4"
 			}
 			,
 		{
 			"_ID": "DialogueTuto5",
 			"_Text": "Performing integrity check-ups... Hull Integrity 100%. \nPerforming manoeuvrability check-ups... Error. Reactor damaged. Fine-tuning movement protocol disabled.\n\n No threat to user's life detected.",
-			"_displayTime": 6
+			"_displayTime": 14,
+			"_ClipAudio": "Tuto5"
 			}
 			,
 		{
 			"_ID": "DialogueTuto6",
-			"_Text": "User's ship has been badly damaged. However, mining laser and basic defensive weapon are still functional. As a BEE class corvette, the ship needs nothing else to operate. Howver, consider that maximum speed and handling are heavily limited for now, due to the damage sustained.",
-			"_displayTime": 6
+			"_Text": "User's ship has been badly damaged. However, mining laser and basic defensive weapon are still functional. As a BEE class corvette, the ship needs nothing else to operate. However, consider that maximum speed and handling are heavily limited for now, due to the damage sustained.",
+			"_displayTime": 17,
+			"_ClipAudio": "Tuto6"
 			}
 			,
 		{
 			"_ID": "DialogueTuto7",
 			"_Text": "Basic movement explanation protocol initialized.\nThe corvette can be oriented with the mouse. \nAll other commands are following the standard HIVE control scheme.\nThe ship has three-dimensional movement capabilities, and can move any way you want it too.",
-			"_displayTime": 6
+			"_displayTime": 15,
+			"_ClipAudio": "Tuto7"
 			}
 			,
 		{
 			"_ID": "DialogueTuto8",
 			"_Text": "Collection explanation protocol initialized. \nUser's mining laser is bound to the right click of User's mouse. To start collection process, simply hold it close enough to an asteroid. If collection is underway, a gauge displaying the physical integrity of the asteroid will display on top of your screen.\nOnce physical integrity reaches zero, the ore will be collected automatically.\nUser should try to collect ore from some asteroids.",
-			"_displayTime": 6
+			"_displayTime": 27,
+			"_ClipAudio": "Tuto8"
 			}
 			,
 		{
 			"_ID": "DialogueTuto9",
-			"_Text": "This unit's previous routine scan determined that you'll need 10 units of tritanium, 10 unity of Carbonite and 5 unity of Monazite to restore all functionality to the station.\nUser can check the cargo of its ship with the inventory interface.\nUse 'I' to open inventory",
-			"_displayTime": 6
+			"_Text": "This unit's previous routine scan determined that you'll need 10 units of tritanium, 10 units of Carbonite and 5 units of Monazite to restore all functionality to the station.\nUser can check the cargo of its ship with the inventory interface.\nUse 'I' to open inventory.",
+			"_displayTime": 16,
+			"_ClipAudio": "Tuto9"
 			},
 		{
 			"_ID": "DialogueTuto10",
 			"_Text": "This unit detected that your cargo holds all necessary minerals to perform critical station maintenance. This unit advises User to go back to the base so this unit can start the maintenance operation.",
-			"_displayTime": 4
+			"_displayTime": 11,
+			"_ClipAudio": "Tuto10"
+
 			},
-		{
-		  "_ID": "DialogueTuto11",
-		  "_Text": "Assembling 3D printer... Restoring communication interface... Repurposing hangar and storage bay facilities... Base maintenance complete. User is now fully capable of fulfilling HIVE's contracts.\n Current contracts can be found on the bridge's interface.",
-		  "_displayTime": 4
-		},
-		{
-		  "_ID": "DialogueTuto12",
-		  "_Text": "Friendly reminder protocol initiated.\n\n Remember that User's life belongs to HIVE, as they are the ones that send the necessary resources for User to live. \nIf User tries to commit rebellious acts against the corporation, or fail to fulfill contracts to HIVE in time, this unit will shut down all life support inside the station, and treat you as collateral damage from a pirate attack. Good luck.",
-		  "_displayTime": 7
-		}
+    {
+      "_ID": "DialogueTuto11",
+      "_Text": "Assembling 3D printer... Restoring communication interface... Repurposing hangar and storage bay facilities... Base maintenance complete. User is now fully capable of fulfilling HIVE's contracts.\n Current contracts can be found on the bridge's interface.",
+      "_displayTime": 18,
+	"_ClipAudio": "Tuto11"
+    },
+    {
+      "_ID": "DialogueTuto12",
+      "_Text": "Friendly reminder protocol initiated.\n\n Remember that User's life belongs to HIVE, as they are the ones that send the necessary resources for User to live. \nIf User tries to commit rebellious acts against the corporation, or fail to fulfill contracts to HIVE in time, this unit will shut down all life support inside the station, and treat you as collateral damage from a pirate attack. Good luck.",
+      "_displayTime": 24,
+	"_ClipAudio": "Tuto12"
+    }
   ]
 }
