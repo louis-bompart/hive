@@ -72,6 +72,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4047323533045354}
   - component: {fileID: 114689091681552948}
+  - component: {fileID: 114492089666466876}
   m_Layer: 0
   m_Name: QuestManager
   m_TagString: Untagged
@@ -225,7 +226,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -281,7 +282,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -352,6 +353,7 @@ MonoBehaviour:
   fireRateStat: 0
   topSpeed: 0
   handlingStat: 0
+  origin: 0
 --- !u!114 &114404394531678390
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -376,6 +378,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventoryType: 0
+--- !u!114 &114492089666466876
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1560017513346614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d16cbd68c925e70468ac544db27a8443, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  raidNumber: 0
 --- !u!114 &114535727016507464
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -450,7 +464,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 632ed34056c49254e9266e7924cab9b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scanRangeStat: 0
+  scanRangeStat: 5
   printerStat: 0
   numberDronesStat: 0
   fireDroneStat: 0

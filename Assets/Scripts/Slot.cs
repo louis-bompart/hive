@@ -134,7 +134,11 @@ namespace Inventory
                 GetSlotFromSlot(this).amount -= amount;
                 model.NotifyViews();
             }
-            model.items[item] -= amount;
+            if (item != null)
+            {
+                model.items[item] -= amount;
+            }
+           
             GetSlotFromSlot(this).model.NotifyViews();
         }
         public override bool Equals(object obj)
