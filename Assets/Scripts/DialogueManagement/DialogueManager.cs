@@ -35,6 +35,10 @@ public class DialogueManager : MonoBehaviour {
         {
             nextDialogue();
         }
+        if(box.isActiveAndEnabled == false )
+        {
+            audiSrc.Stop();
+        }
     }
 
     public void lauchDialogue(string inText,float prontTime = -1)
