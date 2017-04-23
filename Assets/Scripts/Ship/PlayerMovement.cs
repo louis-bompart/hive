@@ -22,12 +22,13 @@ public class PlayerMovement : MonoBehaviour
     public float deadZoneY = 0.15f;
 
     public bool showCursor = false;
+
     public float velocity;
     public EnginesAnimation engineAnimation;
 
     private Rigidbody rb;
     public ShipStats stats;
-	private float warpTime;
+    private float warpTime;
     private float actualLoading;
     private Player player;
     public float terminalVelocity;
@@ -35,28 +36,43 @@ public class PlayerMovement : MonoBehaviour
     public GameObject warpGauge;
     private Slider warpSlider;
 
-	public AudioClip warpSound;
-	public AudioClip warpedSound;
-	public AudioClip movementSound;
+    public AudioClip warpSound;
+    public AudioClip warpedSound;
+    public AudioClip movementSound;
 
-	public AudioSource[] sounds;
-	public AudioSource noise1;
-	public AudioSource noise2;
+    public AudioSource noise1;
+    public AudioSource noise2;
 
-	void Awake(){
-		sounds = GetComponents<AudioSource>();
-		/*noise1 = sounds [0];
-		noise2 = sounds [1];*/
-	}
+    public bool canJump;
+
+    public Vector3 baseExitPosition;
+    public Vector3 baseExitRotation;
+    void Awake()
+    {
+        stats = FindObjectOfType<Data>().GetComponentInChildren<ShipStats>();
+        switch (stats.origin)
+        {
+            case ShipStats.Origin.Base:
+                stats.origin = ShipStats.Origin.Space;
+                transform.position = baseExitPosition;
+                transform.eulerAngles = baseExitRotation;
+                break;
+            case ShipStats.Origin.Space:
+                break;
+            default:
+                break;
+        }
+    }
 
     // Use this for initialization
     void Start()
     {
+        canJump = FindObjectOfType<Data>().GetComponentInChildren<BaseStats>().scanRangeStat > 0;
         warpTime = warpSound.length + 0.5f;
         FindObjectOfType<QuestProgress>().StartTimer();
         engineAnimation = GetComponentInChildren<EnginesAnimation>();
         rb = GetComponent<Rigidbody>();
-        stats = GameObject.Find("Stats").GetComponent<ShipStats>();
+
         player = GetComponent<Player>();
         Cursor.visible = showCursor;
         //drag = rb.drag;
@@ -76,19 +92,18 @@ public class PlayerMovement : MonoBehaviour
                 Debug.LogError("Couldn't find warp slider");
             }
         }
+        noise1.Play();
     }
 
     private void UpdateSpeedAndAcceleration()
     {
-		float velocity = rb.velocity.sqrMagnitude;
+        float velocity = rb.velocity.sqrMagnitude;
         terminalVelocity = 50.0f * (stats.topSpeed + 1);
 
-		float v = velocity / terminalVelocity;
-		noise1.Stop ();
-		noise1.PlayOneShot (movementSound, v);
+        float v = velocity / terminalVelocity;
         mainThrust = terminalVelocity / (3 * rb.mass);
         //rb.angularDrag = 7 - stats.HandlingStat;
-
+        noise1.volume = v;
         float idealDrag = mainThrust / terminalVelocity;
 
         rb.drag = idealDrag / (idealDrag * Time.fixedDeltaTime + 1);
@@ -103,24 +118,30 @@ public class PlayerMovement : MonoBehaviour
 
     void HandleWarpDrive()
     {
-        if (Input.GetAxis("Jump") > 0)
+        if (Input.GetAxis("Jump") > 0 && canJump)
         {
-			
+
             warpGauge.SetActive(true);
             actualLoading += Time.deltaTime;
             warpSlider.value = (actualLoading / warpTime);
 
-			if (actualLoading < warpSound.length){
-				if (!noise2.isPlaying) {
-					noise2.PlayOneShot (warpSound, 0.2F);
-				}
-			} else {
-				if (actualLoading < warpSound.length + warpedSound.length) {
-					if (!noise2.isPlaying) {
-						noise2.PlayOneShot (warpedSound, 1F);
-					}
-				}
-			}
+            if (actualLoading < warpSound.length)
+            {
+                if (!noise2.isPlaying)
+                {
+                    noise2.PlayOneShot(warpSound, 0.2F);
+                }
+            }
+            else
+            {
+                if (actualLoading < warpSound.length + warpedSound.length)
+                {
+                    if (!noise2.isPlaying)
+                    {
+                        noise2.PlayOneShot(warpedSound, 1F);
+                    }
+                }
+            }
 
             if (actualLoading >= warpTime)
             {
@@ -129,8 +150,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
-			noise1.Stop ();
-			noise2.Stop ();
+            noise2.Stop();
             actualLoading = 0;
             warpGauge.SetActive(false);
         }
