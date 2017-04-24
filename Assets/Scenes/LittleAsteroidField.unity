@@ -227,6 +227,10 @@ Prefab:
       propertyPath: baseExitRotation.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1443073370890012, guid: 0a893021f5e363a45a0b33c6531da8f4, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0a893021f5e363a45a0b33c6531da8f4, type: 2}
   m_IsPrefabParent: 0
@@ -314,6 +318,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1469354830494966, guid: 2cf56417af599b747bf864e3d606d38c, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2cf56417af599b747bf864e3d606d38c, type: 2}
   m_IsPrefabParent: 0
@@ -355,6 +363,10 @@ Prefab:
     - target: {fileID: 4393454304908668, guid: be90aa0d28263e844ae792c7bc603e58, type: 2}
       propertyPath: m_RootOrder
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1825855884500822, guid: be90aa0d28263e844ae792c7bc603e58, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: be90aa0d28263e844ae792c7bc603e58, type: 2}
@@ -1248,9 +1260,24 @@ Prefab:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1139781131725254, guid: fdf57665c914b42ae9200952b620095f, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114885528965516014, guid: fdf57665c914b42ae9200952b620095f,
+        type: 2}
+      propertyPath: box
+      value: 
+      objectReference: {fileID: 1726068858}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fdf57665c914b42ae9200952b620095f, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &1726068858 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114172637886965682, guid: fdf57665c914b42ae9200952b620095f,
+    type: 2}
+  m_PrefabInternal: {fileID: 1527237190}
+  m_Script: {fileID: 11500000, guid: 70655029c889f224382b9717b8388921, type: 3}
 --- !u!1 &1795080710 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1904675855280852, guid: fdf57665c914b42ae9200952b620095f,
@@ -1362,6 +1389,10 @@ Prefab:
         type: 2}
       propertyPath: m_SizeDelta.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1391790506829240, guid: b6c6a453e9c231947b81ae48a4f19956, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b6c6a453e9c231947b81ae48a4f19956, type: 2}

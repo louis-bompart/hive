@@ -102,12 +102,12 @@ MonoBehaviour:
   - {fileID: 199658, guid: dc134c807fe86f04aacd9559cad52091, type: 2}
   - {fileID: 155636, guid: 51db1e0f8a2ffb841a9e47380df0fc62, type: 2}
   - {fileID: 193304, guid: 197689c139fb671489c4faec41b5fb80, type: 2}
-  minSize: 0.2
-  maxSize: 0.3
+  minSize: 0.5
+  maxSize: 0.9
   minCount: 5
-  maxCount: 30
-  minDistance: 0.5
-  maxDistance: 5
+  maxCount: 15
+  minDistance: 1
+  maxDistance: 7
   mineralCountProbability: 14000000280000001400000014000000
   mineralIdProbability: 0a00000014000000280000003c0000005000000064000000
   minrSpeed: 0
