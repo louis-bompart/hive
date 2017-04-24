@@ -25,7 +25,7 @@ RenderSettings:
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
   m_AmbientMode: 0
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 88ec9a13802800449aaf825aff3aadc7, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -98,49 +98,112 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4230883549898946, guid: fe39204d8616807409ff642be65cb1a4, type: 2}
+    - target: {fileID: 4110661309956494, guid: c3149afb6a46a7340a98c422014a9b44, type: 2}
       propertyPath: m_LocalPosition.x
       value: 487.15567
       objectReference: {fileID: 0}
-    - target: {fileID: 4230883549898946, guid: fe39204d8616807409ff642be65cb1a4, type: 2}
+    - target: {fileID: 4110661309956494, guid: c3149afb6a46a7340a98c422014a9b44, type: 2}
       propertyPath: m_LocalPosition.y
       value: 272.7482
       objectReference: {fileID: 0}
-    - target: {fileID: 4230883549898946, guid: fe39204d8616807409ff642be65cb1a4, type: 2}
+    - target: {fileID: 4110661309956494, guid: c3149afb6a46a7340a98c422014a9b44, type: 2}
       propertyPath: m_LocalPosition.z
       value: -574.2907
       objectReference: {fileID: 0}
-    - target: {fileID: 4230883549898946, guid: fe39204d8616807409ff642be65cb1a4, type: 2}
+    - target: {fileID: 4110661309956494, guid: c3149afb6a46a7340a98c422014a9b44, type: 2}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4230883549898946, guid: fe39204d8616807409ff642be65cb1a4, type: 2}
+    - target: {fileID: 4110661309956494, guid: c3149afb6a46a7340a98c422014a9b44, type: 2}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4230883549898946, guid: fe39204d8616807409ff642be65cb1a4, type: 2}
+    - target: {fileID: 4110661309956494, guid: c3149afb6a46a7340a98c422014a9b44, type: 2}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4230883549898946, guid: fe39204d8616807409ff642be65cb1a4, type: 2}
+    - target: {fileID: 4110661309956494, guid: c3149afb6a46a7340a98c422014a9b44, type: 2}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4230883549898946, guid: fe39204d8616807409ff642be65cb1a4, type: 2}
+    - target: {fileID: 4110661309956494, guid: c3149afb6a46a7340a98c422014a9b44, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114078472674649198, guid: fe39204d8616807409ff642be65cb1a4,
+    - target: {fileID: 114479736775476466, guid: c3149afb6a46a7340a98c422014a9b44,
         type: 2}
-      propertyPath: m_Text
-      value: Your time in space has come to an end. As the last remnant of the SEED
-        project, your failure will just mark the final nail in the coffin for this
-        venture. Seeing as the project was already deemed as a failure years ago,
-        your death will just be the final catalyst needed for its case to finally
-        be closed.
+      propertyPath: m_FontData.m_Alignment
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114007679737760530, guid: c3149afb6a46a7340a98c422014a9b44,
+        type: 2}
+      propertyPath: m_FontData.m_Alignment
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114688223472181828, guid: c3149afb6a46a7340a98c422014a9b44,
+        type: 2}
+      propertyPath: m_FontData.m_Alignment
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471093568566958, guid: c3149afb6a46a7340a98c422014a9b44,
+        type: 2}
+      propertyPath: m_FontData.m_Alignment
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114910737844749804, guid: c3149afb6a46a7340a98c422014a9b44,
+        type: 2}
+      propertyPath: m_FontData.m_Alignment
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114556149392336158, guid: c3149afb6a46a7340a98c422014a9b44,
+        type: 2}
+      propertyPath: m_FontData.m_Alignment
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: fe39204d8616807409ff642be65cb1a4, type: 2}
+  m_ParentPrefab: {fileID: 100100000, guid: c3149afb6a46a7340a98c422014a9b44, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1001 &223525902
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4189689998601312, guid: 121be7faa62ba1440883e55ae246358b, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 937.917
+      objectReference: {fileID: 0}
+    - target: {fileID: 4189689998601312, guid: 121be7faa62ba1440883e55ae246358b, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 515.917
+      objectReference: {fileID: 0}
+    - target: {fileID: 4189689998601312, guid: 121be7faa62ba1440883e55ae246358b, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4189689998601312, guid: 121be7faa62ba1440883e55ae246358b, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4189689998601312, guid: 121be7faa62ba1440883e55ae246358b, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4189689998601312, guid: 121be7faa62ba1440883e55ae246358b, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4189689998601312, guid: 121be7faa62ba1440883e55ae246358b, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4189689998601312, guid: 121be7faa62ba1440883e55ae246358b, type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 121be7faa62ba1440883e55ae246358b, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &224847290
 GameObject:
@@ -290,5 +353,5 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
