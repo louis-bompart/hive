@@ -132,9 +132,9 @@ public class CraftManager : MonoBehaviour
         product.GetComponent<HorizontalFitter>().Refit();
         //component.GetComponent<HorizontalFitter>().Refit();
         LayoutRebuilder.ForceRebuildLayoutImmediate(component.GetComponent<RectTransform>());
-        float width = component.GetComponent<RectTransform>().rect.width;
-        float height = component.GetComponent<RectTransform>().rect.height - component.GetComponent<GridLayoutGroup>().padding.vertical;
-        float size = Mathf.Min(width, height) / Mathf.Sqrt(component.transform.childCount);
+        //float width = component.GetComponent<RectTransform>().rect.width;
+        //float height = component.GetComponent<RectTransform>().rect.height - component.GetComponent<GridLayoutGroup>().padding.vertical;
+        //float size = Mathf.Min(width, height) / Mathf.Sqrt(component.transform.childCount);
         //component.GetComponent<GridLayoutGroup>().cellSize = new Vector2(size - component.GetComponent<GridLayoutGroup>().spacing.x, size - component.GetComponent<GridLayoutGroup>().spacing.y);
         LayoutRebuilder.MarkLayoutForRebuild(product.GetComponent<RectTransform>());
         LayoutRebuilder.MarkLayoutForRebuild(recipeslt.GetComponent<RectTransform>());
