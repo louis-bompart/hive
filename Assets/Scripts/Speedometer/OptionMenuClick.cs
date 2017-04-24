@@ -35,6 +35,7 @@ public class OptionMenuClick : MonoBehaviour
     public void OnReturnMainMenu()
     {
         StartCoroutine(PlaySoundAndLoadScene());
+        SceneManager.LoadSceneAsync("Main Menu", LoadSceneMode.Single);
     }
 
     /// <summary>

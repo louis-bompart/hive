@@ -1351,9 +1351,9 @@ MonoBehaviour:
   warpSound: {fileID: 8300000, guid: 42300e764ee174b88b9c4c028b539ef2, type: 3}
   warpedSound: {fileID: 8300000, guid: 7ebc6b68d75884576ae5a733a595fb51, type: 3}
   movementSound: {fileID: 8300000, guid: 7674c94a1b8a74ee0a4129e24f12464f, type: 3}
-  sounds: []
   noise1: {fileID: 82513600658353674}
   noise2: {fileID: 82226415675201032}
+  canJump: 0
   baseExitPosition: {x: 1.2, y: 3.1, z: 48.6}
   baseExitRotation: {x: 0, y: 150, z: 0}
 --- !u!114 &114887738573207152
