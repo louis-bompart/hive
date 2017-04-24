@@ -9,6 +9,7 @@ public class QuestProgress : MonoBehaviour {
     public int questProgress;
     public List<int> CompletedQuests;
     public int questTimer;
+    public GameObject questTimeDisplay;
 
     private void Awake()
     {
@@ -20,14 +21,15 @@ public class QuestProgress : MonoBehaviour {
 
     public void StartTimer()
     {
-        GameObject.Find("QuestTimer").GetComponentInChildren<Slider>().maxValue = questTimer;
+        questTimeDisplay = GameObject.Find("QuestTimeDisplay");
+        questTimeDisplay.GetComponent<Text>().text = Mathf.Floor(questTimer/60).ToString("00") + ":" + (questTimer%60).ToString("00");
         StartCoroutine(TimerTick());
     }
     
     private IEnumerator TimerTick()
     {    
         questTimer--;
-        GameObject.Find("QuestTimer").GetComponentInChildren<Slider>().value = questTimer;
+        questTimeDisplay.GetComponent<Text>().text = Mathf.Floor(questTimer / 60).ToString("00") + ":" + (questTimer % 60).ToString("00");
         yield return new WaitForSeconds(1);
         if(questTimer <= 0 && questTimer != -1000)
         {
