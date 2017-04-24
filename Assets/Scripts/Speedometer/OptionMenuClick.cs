@@ -8,6 +8,12 @@ public class OptionMenuClick : MonoBehaviour
     private static int nbPause = 0;
     private static bool lockCursor;
 
+
+    public static bool isPaused()
+    {
+        return (nbPause > 0);
+    }
+
     // Use this for initialization
     void Start()
     {

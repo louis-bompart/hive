@@ -207,6 +207,26 @@ Prefab:
       propertyPath: healthGaugeText
       value: 
       objectReference: {fileID: 885809103}
+    - target: {fileID: 114766263404173586, guid: 0a893021f5e363a45a0b33c6531da8f4,
+        type: 2}
+      propertyPath: baseExitPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114766263404173586, guid: 0a893021f5e363a45a0b33c6531da8f4,
+        type: 2}
+      propertyPath: baseExitPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114766263404173586, guid: 0a893021f5e363a45a0b33c6531da8f4,
+        type: 2}
+      propertyPath: baseExitPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114766263404173586, guid: 0a893021f5e363a45a0b33c6531da8f4,
+        type: 2}
+      propertyPath: baseExitRotation.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0a893021f5e363a45a0b33c6531da8f4, type: 2}
   m_IsPrefabParent: 0
@@ -1224,6 +1244,10 @@ Prefab:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1067317040278410, guid: fdf57665c914b42ae9200952b620095f, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fdf57665c914b42ae9200952b620095f, type: 2}
   m_IsPrefabParent: 0
@@ -1332,7 +1356,7 @@ Prefab:
     - target: {fileID: 224106454872340040, guid: b6c6a453e9c231947b81ae48a4f19956,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: -274.75
+      value: -341.5
       objectReference: {fileID: 0}
     - target: {fileID: 224106454872340040, guid: b6c6a453e9c231947b81ae48a4f19956,
         type: 2}

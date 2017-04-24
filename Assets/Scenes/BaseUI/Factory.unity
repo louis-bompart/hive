@@ -2574,11 +2574,11 @@ Canvas:
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
-  m_OverrideSorting: 0
+  m_OverrideSorting: 1
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_TargetDisplay: 0
 --- !u!1 &761508699
 GameObject:
@@ -4308,7 +4308,7 @@ Prefab:
     - target: {fileID: 224106454872340040, guid: b6c6a453e9c231947b81ae48a4f19956,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: -204.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1391790506829240, guid: b6c6a453e9c231947b81ae48a4f19956, type: 2}
       propertyPath: m_IsActive

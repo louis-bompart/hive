@@ -9221,6 +9221,7 @@ MonoBehaviour:
   name: 
   mats: []
   OriginalEmissionsColors: []
+  particlePrefab: {fileID: 0}
   idMineral: 0
   count: 0
 --- !u!114 &114034289455236292
@@ -9239,6 +9240,7 @@ MonoBehaviour:
   name: 
   mats: []
   OriginalEmissionsColors: []
+  particlePrefab: {fileID: 0}
   idMineral: 0
   count: 0
 --- !u!114 &114040615878875622
@@ -9257,6 +9259,7 @@ MonoBehaviour:
   name: 
   mats: []
   OriginalEmissionsColors: []
+  particlePrefab: {fileID: 0}
   idMineral: 0
   count: 0
 --- !u!114 &114042896935279052
@@ -9275,6 +9278,7 @@ MonoBehaviour:
   name: 
   mats: []
   OriginalEmissionsColors: []
+  particlePrefab: {fileID: 0}
   idMineral: 0
   count: 0
 --- !u!114 &114045922395278850
@@ -9293,6 +9297,7 @@ MonoBehaviour:
   name: 
   mats: []
   OriginalEmissionsColors: []
+  particlePrefab: {fileID: 0}
   idMineral: 0
   count: 0
 --- !u!114 &114049955423484192
@@ -9311,6 +9316,7 @@ MonoBehaviour:
   name: 
   mats: []
   OriginalEmissionsColors: []
+  particlePrefab: {fileID: 0}
   idMineral: 0
   count: 0
 --- !u!114 &114051534542555912
@@ -9329,6 +9335,7 @@ MonoBehaviour:
   name: 
   mats: []
   OriginalEmissionsColors: []
+  particlePrefab: {fileID: 0}
   idMineral: 0
   count: 0
 --- !u!114 &114051819404817946
@@ -9347,6 +9354,7 @@ MonoBehaviour:
   name: 
   mats: []
   OriginalEmissionsColors: []
+  particlePrefab: {fileID: 0}
   idMineral: 0
   count: 0
 --- !u!114 &114078953975279686
@@ -9365,6 +9373,7 @@ MonoBehaviour:
   name: 
   mats: []
   OriginalEmissionsColors: []
+  particlePrefab: {fileID: 0}
   idMineral: 0
   count: 0
 --- !u!114 &114089504528497906
@@ -9383,6 +9392,7 @@ MonoBehaviour:
   name: 
   mats: []
   OriginalEmissionsColors: []
+  particlePrefab: {fileID: 0}
   idMineral: 0
   count: 0
 --- !u!114 &114090761086337204
@@ -9401,6 +9411,7 @@ MonoBehaviour:
   name: 
   mats: []
   OriginalEmissionsColors: []
+  particlePrefab: {fileID: 0}
   idMineral: 0
   count: 0
 --- !u!114 &114090770655818026
@@ -9419,6 +9430,7 @@ MonoBehaviour:
   name: 
   mats: []
   OriginalEmissionsColors: []
+  particlePrefab: {fileID: 0}
   idMineral: 0
   count: 0
 --- !u!114 &114091382641799590
@@ -9437,6 +9449,7 @@ MonoBehaviour:
   name: 
   mats: []
   OriginalEmissionsColors: []
+  particlePrefab: {fileID: 0}
   idMineral: 0
   count: 0
 --- !u!114 &114100417542092748
@@ -9455,6 +9468,7 @@ MonoBehaviour:
   name: 
   mats: []
   OriginalEmissionsColors: []
+  particlePrefab: {fileID: 0}
   idMineral: 0
   count: 0
 --- !u!114 &114109753367434214
@@ -9473,6 +9487,7 @@ MonoBehaviour:
   name: 
   mats: []
   OriginalEmissionsColors: []
+  particlePrefab: {fileID: 0}
   idMineral: 0
   count: 0
 --- !u!114 &114113541374523252
@@ -9491,6 +9506,7 @@ MonoBehaviour:
   name: 
   mats: []
   OriginalEmissionsColors: []
+  particlePrefab: {fileID: 0}
   idMineral: 0
   count: 0
 --- !u!114 &114130859312712452
@@ -9509,6 +9525,7 @@ MonoBehaviour:
   name: 
   mats: []
   OriginalEmissionsColors: []
+  particlePrefab: {fileID: 0}
   idMineral: 0
   count: 0
 --- !u!114 &114178125512519396
@@ -9527,6 +9544,7 @@ MonoBehaviour:
   name: 
   mats: []
   OriginalEmissionsColors: []
+  particlePrefab: {fileID: 0}
   idMineral: 0
   count: 0
 --- !u!114 &114211815685640840
@@ -9545,6 +9563,7 @@ MonoBehaviour:
   name: 
   mats: []
   OriginalEmissionsColors: []
+  particlePrefab: {fileID: 0}
   idMineral: 0
   count: 0
 --- !u!114 &114226906379970856
@@ -9563,6 +9582,7 @@ MonoBehaviour:
   name: 
   mats: []
   OriginalEmissionsColors: []
+  particlePrefab: {fileID: 0}
   idMineral: 0
   count: 0
 --- !u!114 &114228134179969118
@@ -9581,6 +9601,7 @@ MonoBehaviour:
   name: 
   mats: []
   OriginalEmissionsColors: []
+  particlePrefab: {fileID: 0}
   idMineral: 0
   count: 0
 --- !u!114 &114274564069769276
@@ -9599,6 +9620,7 @@ MonoBehaviour:
   name: 
   mats: []
   OriginalEmissionsColors: []
+  particlePrefab: {fileID: 0}
   idMineral: 0
   count: 0
 --- !u!114 &114274681493044704
@@ -9617,6 +9639,7 @@ MonoBehaviour:
   name: 
   mats: []
   OriginalEmissionsColors: []
+  particlePrefab: {fileID: 0}
   idMineral: 0
   count: 0
 --- !u!114 &114281484844326786
@@ -9635,6 +9658,7 @@ MonoBehaviour:
   name: 
   mats: []
   OriginalEmissionsColors: []
+  particlePrefab: {fileID: 0}
   idMineral: 0
   count: 0
 --- !u!114 &114285455234472538
@@ -9653,6 +9677,7 @@ MonoBehaviour:
   name: 
   mats: []
   OriginalEmissionsColors: []
+  particlePrefab: {fileID: 0}
   idMineral: 0
   count: 0
 --- !u!114 &114289979617935152
@@ -9671,6 +9696,7 @@ MonoBehaviour:
   name: 
   mats: []
   OriginalEmissionsColors: []
+  particlePrefab: {fileID: 0}
   idMineral: 0
   count: 0
 --- !u!114 &114291381483440460
@@ -9689,6 +9715,7 @@ MonoBehaviour:
   name: 
   mats: []
   OriginalEmissionsColors: []
+  particlePrefab: {fileID: 0}
   idMineral: 0
   count: 0
 --- !u!114 &114301461433340484
@@ -9707,6 +9734,7 @@ MonoBehaviour:
   name: 
   mats: []
   OriginalEmissionsColors: []
+  particlePrefab: {fileID: 0}
   idMineral: 0
   count: 0
 --- !u!114 &114317696524459918
@@ -9725,6 +9753,7 @@ MonoBehaviour:
   name: 
   mats: []
   OriginalEmissionsColors: []
+  particlePrefab: {fileID: 0}
   idMineral: 0
   count: 0
 --- !u!114 &114324843103469394
@@ -9743,6 +9772,7 @@ MonoBehaviour:
   name: 
   mats: []
   OriginalEmissionsColors: []
+  particlePrefab: {fileID: 0}
   idMineral: 0
   count: 0
 --- !u!114 &114328236739219858
@@ -9761,6 +9791,7 @@ MonoBehaviour:
   name: 
   mats: []
   OriginalEmissionsColors: []
+  particlePrefab: {fileID: 0}
   idMineral: 0
   count: 0
 --- !u!114 &114339521742469160
@@ -9779,6 +9810,7 @@ MonoBehaviour:
   name: 
   mats: []
   OriginalEmissionsColors: []
+  particlePrefab: {fileID: 0}
   idMineral: 0
   count: 0
 --- !u!114 &114354515707640596
@@ -9797,6 +9829,7 @@ MonoBehaviour:
   name: 
   mats: []
   OriginalEmissionsColors: []
+  particlePrefab: {fileID: 0}
   idMineral: 0
   count: 0
 --- !u!114 &114354689973868404
@@ -9815,6 +9848,7 @@ MonoBehaviour:
   name: 
   mats: []
   OriginalEmissionsColors: []
+  particlePrefab: {fileID: 0}
   idMineral: 0
   count: 0
 --- !u!114 &114355042883343886
@@ -9833,6 +9867,7 @@ MonoBehaviour:
   name: 
   mats: []
   OriginalEmissionsColors: []
+  particlePrefab: {fileID: 0}
   idMineral: 0
   count: 0
 --- !u!114 &114356891020401204
@@ -9851,6 +9886,7 @@ MonoBehaviour:
   name: 
   mats: []
   OriginalEmissionsColors: []
+  particlePrefab: {fileID: 0}
   idMineral: 0
   count: 0
 --- !u!114 &114362022349553010
@@ -9869,6 +9905,7 @@ MonoBehaviour:
   name: 
   mats: []
   OriginalEmissionsColors: []
+  particlePrefab: {fileID: 0}
   idMineral: 0
   count: 0
 --- !u!114 &114368119108095644
@@ -9911,6 +9948,7 @@ MonoBehaviour:
   minDistance: 0
   maxDistance: 5
   mineralCountProbability: 1e00000046000000
+  mineralIdProbability: 1e000000320000003c000000460000005000000064000000
   minrSpeed: 0
   maxrSpeed: 1
   minmSpeed: 0
@@ -9938,6 +9976,7 @@ MonoBehaviour:
   name: 
   mats: []
   OriginalEmissionsColors: []
+  particlePrefab: {fileID: 0}
   idMineral: 0
   count: 0
 --- !u!114 &114397534013340276
@@ -9956,6 +9995,7 @@ MonoBehaviour:
   name: 
   mats: []
   OriginalEmissionsColors: []
+  particlePrefab: {fileID: 0}
   idMineral: 0
   count: 0
 --- !u!114 &114411713935546842
@@ -9974,6 +10014,7 @@ MonoBehaviour:
   name: 
   mats: []
   OriginalEmissionsColors: []
+  particlePrefab: {fileID: 0}
   idMineral: 0
   count: 0
 --- !u!114 &114418406856276248
@@ -9992,6 +10033,7 @@ MonoBehaviour:
   name: 
   mats: []
   OriginalEmissionsColors: []
+  particlePrefab: {fileID: 0}
   idMineral: 0
   count: 0
 --- !u!114 &114421753214443632
@@ -10010,6 +10052,7 @@ MonoBehaviour:
   name: 
   mats: []
   OriginalEmissionsColors: []
+  particlePrefab: {fileID: 0}
   idMineral: 0
   count: 0
 --- !u!114 &114456220782261344
@@ -10028,6 +10071,7 @@ MonoBehaviour:
   name: 
   mats: []
   OriginalEmissionsColors: []
+  particlePrefab: {fileID: 0}
   idMineral: 0
   count: 0
 --- !u!114 &114458261203548482
@@ -10046,6 +10090,7 @@ MonoBehaviour:
   name: 
   mats: []
   OriginalEmissionsColors: []
+  particlePrefab: {fileID: 0}
   idMineral: 0
   count: 0
 --- !u!114 &114464352622963126
@@ -10064,6 +10109,7 @@ MonoBehaviour:
   name: 
   mats: []
   OriginalEmissionsColors: []
+  particlePrefab: {fileID: 0}
   idMineral: 0
   count: 0
 --- !u!114 &114471525992520736
@@ -10082,6 +10128,7 @@ MonoBehaviour:
   name: 
   mats: []
   OriginalEmissionsColors: []
+  particlePrefab: {fileID: 0}
   idMineral: 0
   count: 0
 --- !u!114 &114475717570118484
@@ -10100,6 +10147,7 @@ MonoBehaviour:
   name: 
   mats: []
   OriginalEmissionsColors: []
+  particlePrefab: {fileID: 0}
   idMineral: 0
   count: 0
 --- !u!114 &114477620901458390
@@ -10118,6 +10166,7 @@ MonoBehaviour:
   name: 
   mats: []
   OriginalEmissionsColors: []
+  particlePrefab: {fileID: 0}
   idMineral: 0
   count: 0
 --- !u!114 &114490465272980038
@@ -10136,6 +10185,7 @@ MonoBehaviour:
   name: 
   mats: []
   OriginalEmissionsColors: []
+  particlePrefab: {fileID: 0}
   idMineral: 0
   count: 0
 --- !u!114 &114499242467620028
@@ -10154,6 +10204,7 @@ MonoBehaviour:
   name: 
   mats: []
   OriginalEmissionsColors: []
+  particlePrefab: {fileID: 0}
   idMineral: 0
   count: 0
 --- !u!114 &114522432970121948
@@ -10172,6 +10223,7 @@ MonoBehaviour:
   name: 
   mats: []
   OriginalEmissionsColors: []
+  particlePrefab: {fileID: 0}
   idMineral: 0
   count: 0
 --- !u!114 &114591956254402036
@@ -10190,6 +10242,7 @@ MonoBehaviour:
   name: 
   mats: []
   OriginalEmissionsColors: []
+  particlePrefab: {fileID: 0}
   idMineral: 0
   count: 0
 --- !u!114 &114600757703720184
@@ -10208,6 +10261,7 @@ MonoBehaviour:
   name: 
   mats: []
   OriginalEmissionsColors: []
+  particlePrefab: {fileID: 0}
   idMineral: 0
   count: 0
 --- !u!114 &114605684934110394
@@ -10226,6 +10280,7 @@ MonoBehaviour:
   name: 
   mats: []
   OriginalEmissionsColors: []
+  particlePrefab: {fileID: 0}
   idMineral: 0
   count: 0
 --- !u!114 &114628011762384286
@@ -10244,6 +10299,7 @@ MonoBehaviour:
   name: 
   mats: []
   OriginalEmissionsColors: []
+  particlePrefab: {fileID: 0}
   idMineral: 0
   count: 0
 --- !u!114 &114629576882216154
@@ -10262,6 +10318,7 @@ MonoBehaviour:
   name: 
   mats: []
   OriginalEmissionsColors: []
+  particlePrefab: {fileID: 0}
   idMineral: 0
   count: 0
 --- !u!114 &114638097070636394
@@ -10280,6 +10337,7 @@ MonoBehaviour:
   name: 
   mats: []
   OriginalEmissionsColors: []
+  particlePrefab: {fileID: 0}
   idMineral: 0
   count: 0
 --- !u!114 &114639870860157868
@@ -10298,6 +10356,7 @@ MonoBehaviour:
   name: 
   mats: []
   OriginalEmissionsColors: []
+  particlePrefab: {fileID: 0}
   idMineral: 0
   count: 0
 --- !u!114 &114641782614970794
@@ -10316,6 +10375,7 @@ MonoBehaviour:
   name: 
   mats: []
   OriginalEmissionsColors: []
+  particlePrefab: {fileID: 0}
   idMineral: 0
   count: 0
 --- !u!114 &114648797075927480
@@ -10334,6 +10394,7 @@ MonoBehaviour:
   name: 
   mats: []
   OriginalEmissionsColors: []
+  particlePrefab: {fileID: 0}
   idMineral: 0
   count: 0
 --- !u!114 &114664457396221856
@@ -10352,6 +10413,7 @@ MonoBehaviour:
   name: 
   mats: []
   OriginalEmissionsColors: []
+  particlePrefab: {fileID: 0}
   idMineral: 0
   count: 0
 --- !u!114 &114720477637264704
@@ -10370,6 +10432,7 @@ MonoBehaviour:
   name: 
   mats: []
   OriginalEmissionsColors: []
+  particlePrefab: {fileID: 0}
   idMineral: 0
   count: 0
 --- !u!114 &114721213005213844
@@ -10388,6 +10451,7 @@ MonoBehaviour:
   name: 
   mats: []
   OriginalEmissionsColors: []
+  particlePrefab: {fileID: 0}
   idMineral: 0
   count: 0
 --- !u!114 &114734826521179726
@@ -10406,6 +10470,7 @@ MonoBehaviour:
   name: 
   mats: []
   OriginalEmissionsColors: []
+  particlePrefab: {fileID: 0}
   idMineral: 0
   count: 0
 --- !u!114 &114752139577232918
@@ -10424,6 +10489,7 @@ MonoBehaviour:
   name: 
   mats: []
   OriginalEmissionsColors: []
+  particlePrefab: {fileID: 0}
   idMineral: 0
   count: 0
 --- !u!114 &114755019672193980
@@ -10442,6 +10508,7 @@ MonoBehaviour:
   name: 
   mats: []
   OriginalEmissionsColors: []
+  particlePrefab: {fileID: 0}
   idMineral: 0
   count: 0
 --- !u!114 &114766961959291498
@@ -10460,6 +10527,7 @@ MonoBehaviour:
   name: 
   mats: []
   OriginalEmissionsColors: []
+  particlePrefab: {fileID: 0}
   idMineral: 0
   count: 0
 --- !u!114 &114769985719874502
@@ -10478,6 +10546,7 @@ MonoBehaviour:
   name: 
   mats: []
   OriginalEmissionsColors: []
+  particlePrefab: {fileID: 0}
   idMineral: 0
   count: 0
 --- !u!114 &114793346349283060
@@ -10496,6 +10565,7 @@ MonoBehaviour:
   name: 
   mats: []
   OriginalEmissionsColors: []
+  particlePrefab: {fileID: 0}
   idMineral: 0
   count: 0
 --- !u!114 &114819675634729776
@@ -10514,6 +10584,7 @@ MonoBehaviour:
   name: 
   mats: []
   OriginalEmissionsColors: []
+  particlePrefab: {fileID: 0}
   idMineral: 0
   count: 0
 --- !u!114 &114826439092799056
@@ -10532,6 +10603,7 @@ MonoBehaviour:
   name: 
   mats: []
   OriginalEmissionsColors: []
+  particlePrefab: {fileID: 0}
   idMineral: 0
   count: 0
 --- !u!114 &114828605766518824
@@ -10550,6 +10622,7 @@ MonoBehaviour:
   name: 
   mats: []
   OriginalEmissionsColors: []
+  particlePrefab: {fileID: 0}
   idMineral: 0
   count: 0
 --- !u!114 &114831198249683090
@@ -10568,6 +10641,7 @@ MonoBehaviour:
   name: 
   mats: []
   OriginalEmissionsColors: []
+  particlePrefab: {fileID: 0}
   idMineral: 0
   count: 0
 --- !u!114 &114847467503618078
@@ -10586,6 +10660,7 @@ MonoBehaviour:
   name: 
   mats: []
   OriginalEmissionsColors: []
+  particlePrefab: {fileID: 0}
   idMineral: 0
   count: 0
 --- !u!114 &114862117731095894
@@ -10604,6 +10679,7 @@ MonoBehaviour:
   name: 
   mats: []
   OriginalEmissionsColors: []
+  particlePrefab: {fileID: 0}
   idMineral: 0
   count: 0
 --- !u!114 &114868365599160292
@@ -10622,6 +10698,7 @@ MonoBehaviour:
   name: 
   mats: []
   OriginalEmissionsColors: []
+  particlePrefab: {fileID: 0}
   idMineral: 0
   count: 0
 --- !u!114 &114880081605557730
@@ -10640,6 +10717,7 @@ MonoBehaviour:
   name: 
   mats: []
   OriginalEmissionsColors: []
+  particlePrefab: {fileID: 0}
   idMineral: 0
   count: 0
 --- !u!114 &114890831134902540
@@ -10658,6 +10736,7 @@ MonoBehaviour:
   name: 
   mats: []
   OriginalEmissionsColors: []
+  particlePrefab: {fileID: 0}
   idMineral: 0
   count: 0
 --- !u!114 &114891824279052636
@@ -10676,6 +10755,7 @@ MonoBehaviour:
   name: 
   mats: []
   OriginalEmissionsColors: []
+  particlePrefab: {fileID: 0}
   idMineral: 0
   count: 0
 --- !u!114 &114896491234757854
@@ -10694,6 +10774,7 @@ MonoBehaviour:
   name: 
   mats: []
   OriginalEmissionsColors: []
+  particlePrefab: {fileID: 0}
   idMineral: 0
   count: 0
 --- !u!114 &114916460100083360
@@ -10712,6 +10793,7 @@ MonoBehaviour:
   name: 
   mats: []
   OriginalEmissionsColors: []
+  particlePrefab: {fileID: 0}
   idMineral: 0
   count: 0
 --- !u!114 &114923523867758006
@@ -10730,6 +10812,7 @@ MonoBehaviour:
   name: 
   mats: []
   OriginalEmissionsColors: []
+  particlePrefab: {fileID: 0}
   idMineral: 0
   count: 0
 --- !u!114 &114939863510981862
@@ -10748,6 +10831,7 @@ MonoBehaviour:
   name: 
   mats: []
   OriginalEmissionsColors: []
+  particlePrefab: {fileID: 0}
   idMineral: 0
   count: 0
 --- !u!114 &114962775045335184
@@ -10766,6 +10850,7 @@ MonoBehaviour:
   name: 
   mats: []
   OriginalEmissionsColors: []
+  particlePrefab: {fileID: 0}
   idMineral: 0
   count: 0
 --- !u!114 &114977470290252440
@@ -10784,5 +10869,6 @@ MonoBehaviour:
   name: 
   mats: []
   OriginalEmissionsColors: []
+  particlePrefab: {fileID: 0}
   idMineral: 0
   count: 0
