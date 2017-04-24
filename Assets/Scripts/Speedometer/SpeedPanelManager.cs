@@ -91,17 +91,21 @@ public class SpeedPanelManager : MonoBehaviour
     private void FixedUpdate()
     {
         //Project the ship velocity on his heading vector to get heading velocity.
-        float speed = Vector3.Project(shipRigibody.velocity, shipRigibody.gameObject.transform.forward).sqrMagnitude; 
+        if(shipRigibody != null)
+        {
+            float speed = Vector3.Project(shipRigibody.velocity, shipRigibody.gameObject.transform.forward).sqrMagnitude;
 
-        //Test if ship is moving forward or backward, ajust the sign of the speed.
-        float angle = Vector3.Angle(shipRigibody.velocity, shipRigibody.gameObject.transform.forward);
-        if (angle >= 90 || angle<=-90)
-        {
-            currentSpeed = -speed;
+            //Test if ship is moving forward or backward, ajust the sign of the speed.
+            float angle = Vector3.Angle(shipRigibody.velocity, shipRigibody.gameObject.transform.forward);
+            if (angle >= 90 || angle <= -90)
+            {
+                currentSpeed = -speed;
+            }
+            else
+            {
+                currentSpeed = speed;
+            }
         }
-        else
-        {
-            currentSpeed = speed;
-        }
+        
     }
 }

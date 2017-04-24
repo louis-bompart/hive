@@ -29,7 +29,11 @@ public class QuestProgress : MonoBehaviour {
     private IEnumerator TimerTick()
     {    
         questTimer--;
-        questTimeDisplay.GetComponent<Text>().text = Mathf.Floor(questTimer / 60).ToString("00") + ":" + (questTimer % 60).ToString("00");
+        if(questTimeDisplay != null)
+        {
+            questTimeDisplay.GetComponent<Text>().text = Mathf.Floor(questTimer / 60).ToString("00") + ":" + (questTimer % 60).ToString("00");
+        }
+        
         yield return new WaitForSeconds(1);
         if(questTimer <= 0 && questTimer != -1000)
         {

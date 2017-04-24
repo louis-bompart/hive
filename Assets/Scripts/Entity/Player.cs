@@ -22,7 +22,7 @@ public class Player : Entity {
 
     protected override void endOfLife()
     {
-        base.endOfLife();
+        //base.endOfLife();
         SceneManager.LoadSceneAsync("GameOver", LoadSceneMode.Single);
     }
 
