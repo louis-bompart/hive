@@ -39,7 +39,7 @@ public class UpgradeManagement : MonoBehaviour
     public GameObject mobilityCounter;
     private void Awake()
     {
-        inventoryController = new List<InventoryController>(GameObject.FindObjectsOfType<InventoryController>()).Find(x => x.inventoryType == InventoryController.Inventory.Ship);
+        inventoryController = new List<InventoryController>(Data.instance.GetComponentsInChildren<InventoryController>()).Find(x => x.inventoryType == InventoryController.Inventory.Both);
     }
     public void Start()
     {

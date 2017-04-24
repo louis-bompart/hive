@@ -8,6 +8,9 @@ public class BridgeButton : MonoBehaviour
 
     public void Click()
     {
-        SceneManager.LoadSceneAsync("Bridge", LoadSceneMode.Single);
+        if (OptionMenuClick.isPaused() == false)
+        {
+            SceneManager.LoadSceneAsync("Bridge", LoadSceneMode.Single);
+        }
     }
 }
