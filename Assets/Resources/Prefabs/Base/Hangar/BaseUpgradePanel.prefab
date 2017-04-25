@@ -2214,7 +2214,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Texture: {fileID: 2800000, guid: 3e65c661d81507346aa82f6d602de898, type: 3}
+  m_Texture: {fileID: 2800000, guid: 60db9bc34bee53749a988a2135df701d, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -3099,7 +3099,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Texture: {fileID: 2800000, guid: 9e77247cab07ef946a80b48c9a12358b, type: 3}
+  m_Texture: {fileID: 2800000, guid: 39a95506be15ec442b560ea2d683d915, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -3595,7 +3595,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Texture: {fileID: 2800000, guid: 328de896c7dd01a47baacb1aa9d56f8b, type: 3}
+  m_Texture: {fileID: 2800000, guid: 99a8947a8bfd1cd47b6fb1fdc88c7761, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -4097,9 +4097,9 @@ RectTransform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1223099355606178}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: -1, z: 1}
   m_Children: []
   m_Father: {fileID: 224997103553195550}
   m_RootOrder: 0
@@ -4230,7 +4230,7 @@ RectTransform:
   m_GameObject: {fileID: 1973830851091354}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: -1, z: 1}
   m_Children: []
   m_Father: {fileID: 224568759875394664}
   m_RootOrder: 0
@@ -5012,7 +5012,7 @@ RectTransform:
   m_GameObject: {fileID: 1148322379900964}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: -1, z: 1}
   m_Children: []
   m_Father: {fileID: 224239923392862114}
   m_RootOrder: 0
