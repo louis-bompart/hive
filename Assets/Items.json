@@ -54,7 +54,7 @@
 			"price": 2,
 			"description": "Item required to upgrade ship's defense.",
 			"stackSize": 10,
-			"slug": "WeaponUpgrade"
+			"slug": "Ship_Defense_Upgrade"
 			},
 		{
 			"id": 201,
@@ -62,7 +62,7 @@
 			"price": 2,
 			"description": "Item required to upgrade ship's weapon.",
 			"stackSize": 10,
-			"slug": "WeaponUpgrade"
+			"slug": "Ship_Weapon_Upgrade"
 			},
 		{
 			"id": 202,
@@ -70,23 +70,23 @@
 			"price": 2,
 			"description": "Item required to upgrade ship's mobility.",
 			"stackSize": 10,
-			"slug": "MobilityUpgrade"
+			"slug": "Ship_Movement_Upgrade"
 			},
 		{
 			"id": 210,
 			"title": "Shield hardener",
 			"price": 2,
-			"description": "Item required to upgrade base's defense.",
+			"description": "Item required to upgrade base's shield.",
 			"stackSize": 10,
-			"slug": "MobilityUpgrade"
+			"slug": "Base_Shield_Upgrade"
 			},
 		{
 			"id": 211,
 			"title": "Drone parts",
 			"price": 2,
-			"description": "Item required to upgrade base's weapon.",
+			"description": "Item required to upgrade base's drones.",
 			"stackSize": 10,
-			"slug": "MobilityUpgrade"
+			"slug": "Base_Drone_Upgrade"
 			},
 
 		{
@@ -95,7 +95,7 @@
 			"price": 2,
 			"description": "Item required to upgrade base's core.",
 			"stackSize": 10,
-			"slug": "MobilityUpgrade"
+			"slug": "Base_Station_Upgrade"
 			}
 	]
 }

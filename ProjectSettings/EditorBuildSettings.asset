@@ -30,4 +30,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Credits.unity
   - enabled: 1
+    path: Assets/Scenes/EndGameScenes/AIRVictory.unity
+  - enabled: 1
+    path: Assets/Scenes/EndGameScenes/SelfVictory.unity
+  - enabled: 1
     path: Assets/Scenes/EndGameScenes/GameOver.unity
