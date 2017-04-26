@@ -22,7 +22,7 @@ public class TutoState2 : State
         base.StateUpdate();
         //To let the scene the time to proprely load
         deltaTime += Time.deltaTime;
-        if(deltaTime > 1)
+        if(deltaTime > 0.1)
         {
             FSM.changeState(new TutoState3(FSM));
         }
