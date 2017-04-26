@@ -9,7 +9,7 @@ public class SpeedPanelManager : MonoBehaviour
     public GameObject ship;
     private Rigidbody shipRigibody;
 
-    public float maxSpeed;
+    public int maxSpeed;
     private float _currentSpeed = 0;
 
     /// <summary>
@@ -61,6 +61,14 @@ public class SpeedPanelManager : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        ShipStats temp = Data.instance.GetComponentInChildren<ShipStats>();
+        if (temp != null)
+        {
+            maxSpeed = 50 + (50 * temp.topSpeed);
+        }
+        
+
+
         mark100 = transform.Find(">100%Mark").gameObject;
         mark66 = transform.Find("66%Mark").gameObject;
         mark33 = transform.Find("33%Mark").gameObject;
