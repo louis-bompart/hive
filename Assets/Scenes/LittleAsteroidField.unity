@@ -189,12 +189,12 @@ Prefab:
       objectReference: {fileID: 1795080710}
     - target: {fileID: 114737167718623156, guid: 0a893021f5e363a45a0b33c6531da8f4,
         type: 2}
-      propertyPath: reticle
+      propertyPath: Reticle
       value: 
       objectReference: {fileID: 557732633}
     - target: {fileID: 114737167718623156, guid: 0a893021f5e363a45a0b33c6531da8f4,
         type: 2}
-      propertyPath: gauge
+      propertyPath: Gauge
       value: 
       objectReference: {fileID: 1795080710}
     - target: {fileID: 114504859211074120, guid: 0a893021f5e363a45a0b33c6531da8f4,
@@ -207,45 +207,6 @@ Prefab:
       propertyPath: healthGaugeText
       value: 
       objectReference: {fileID: 885809103}
-    - target: {fileID: 114766263404173586, guid: 0a893021f5e363a45a0b33c6531da8f4,
-        type: 2}
-      propertyPath: baseExitPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114766263404173586, guid: 0a893021f5e363a45a0b33c6531da8f4,
-        type: 2}
-      propertyPath: baseExitPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114766263404173586, guid: 0a893021f5e363a45a0b33c6531da8f4,
-        type: 2}
-      propertyPath: baseExitPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114766263404173586, guid: 0a893021f5e363a45a0b33c6531da8f4,
-        type: 2}
-      propertyPath: baseExitRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1443073370890012, guid: 0a893021f5e363a45a0b33c6531da8f4, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 82637422457365978, guid: 0a893021f5e363a45a0b33c6531da8f4,
-        type: 2}
-      propertyPath: spreadCustomCurve.m_RotationOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114737167718623156, guid: 0a893021f5e363a45a0b33c6531da8f4,
-        type: 2}
-      propertyPath: Reticle
-      value: 
-      objectReference: {fileID: 557732633}
-    - target: {fileID: 114737167718623156, guid: 0a893021f5e363a45a0b33c6531da8f4,
-        type: 2}
-      propertyPath: Gauge
-      value: 
-      objectReference: {fileID: 1795080710}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0a893021f5e363a45a0b33c6531da8f4, type: 2}
   m_IsPrefabParent: 0

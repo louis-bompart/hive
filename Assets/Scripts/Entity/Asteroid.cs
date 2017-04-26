@@ -21,11 +21,13 @@ public class Asteroid : Entity
         {
             shipInventoryController.AddItem(idMineral,1);
         }
-
-		GameObject Particle = Instantiate(particlePrefab, this.transform.position, Random.rotation);
-		Particle.transform.localScale = this.transform.localScale;
-		FindObjectOfType<Data>().GetComponentInChildren<OtherStats>().DestroyedAsteroids++;
-		Destroy(Particle, 2);
+        if(particlePrefab!= null)
+        {
+            GameObject Particle = Instantiate(particlePrefab, this.transform.position, Random.rotation);
+            Particle.transform.localScale = this.transform.localScale;
+            Destroy(Particle, 2);
+        }
+        FindObjectOfType<Data>().GetComponentInChildren<OtherStats>().DestroyedAsteroids++;
     }
 
 

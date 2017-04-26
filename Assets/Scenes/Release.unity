@@ -966,7 +966,7 @@ Prefab:
     - target: {fileID: 224106454872340040, guid: b6c6a453e9c231947b81ae48a4f19956,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: -212
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b6c6a453e9c231947b81ae48a4f19956, type: 2}
@@ -1341,26 +1341,6 @@ Prefab:
       propertyPath: warpGauge
       value: 
       objectReference: {fileID: 935577681}
-    - target: {fileID: 82637422457365978, guid: 0a893021f5e363a45a0b33c6531da8f4,
-        type: 2}
-      propertyPath: spreadCustomCurve.m_RotationOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 82637422457365978, guid: 0a893021f5e363a45a0b33c6531da8f4,
-        type: 2}
-      propertyPath: m_Volume
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 82637422457365978, guid: 0a893021f5e363a45a0b33c6531da8f4,
-        type: 2}
-      propertyPath: m_Pitch
-      value: 0.05
-      objectReference: {fileID: 0}
-    - target: {fileID: 82637422457365978, guid: 0a893021f5e363a45a0b33c6531da8f4,
-        type: 2}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: 0baf8895bd4244d19b15e970abe02c3b, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0a893021f5e363a45a0b33c6531da8f4, type: 2}
   m_IsPrefabParent: 0
