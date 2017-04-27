@@ -5,9 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class StorageBayButton : MonoBehaviour
 {
-
     public void Click()
     {
-        SceneManager.LoadScene("StorageBay", LoadSceneMode.Single);
+        if(OptionMenuClick.isPaused() == false)
+        {
+            SceneManager.LoadSceneAsync("StorageBay", LoadSceneMode.Single);
+        }
     }
 }

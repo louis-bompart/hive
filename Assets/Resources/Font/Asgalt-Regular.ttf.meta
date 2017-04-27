@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 97d344a9bfccde34fb89b9248f551cdb
+timeCreated: 1490647430
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Asgalt
+  fontNames:
+  - Asgalt
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

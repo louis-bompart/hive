@@ -3,10 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class BridgeButton : MonoBehaviour {
+public class BridgeButton : MonoBehaviour
+{
 
-	public void Click()
+    public void Click()
     {
-        SceneManager.LoadScene("Bridge", LoadSceneMode.Single);
+        if (OptionMenuClick.isPaused() == false)
+        {
+            SceneManager.LoadSceneAsync("Bridge", LoadSceneMode.Single);
+        }
     }
 }
