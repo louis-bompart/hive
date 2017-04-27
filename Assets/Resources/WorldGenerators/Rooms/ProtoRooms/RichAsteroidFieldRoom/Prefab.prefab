@@ -116,8 +116,8 @@ MonoBehaviour:
   maxmSpeed: 10
   texture:
   - {fileID: 2800000, guid: 72a5af05fb6f3f54098f3c8c74a83739, type: 3}
-  - {fileID: 2800000, guid: d211b38bda9bddb4fa92a8f53d2eb655, type: 3}
-  - {fileID: 2800000, guid: fe9bc22208c26a54b9bb21f7324e2cd4, type: 3}
+  - {fileID: 2800000, guid: 8a144c7f1dd4ce7489d77d38eb6456fc, type: 3}
+  - {fileID: 2800000, guid: 1b9728b9eca4a0b4e9dba437da9fe1f8, type: 3}
   - {fileID: 2800000, guid: 398fd545d0e3a854f8d5fe8363402799, type: 3}
-  - {fileID: 2800000, guid: da3dbca77e03c484d952535a06293408, type: 3}
-  - {fileID: 2800000, guid: c53a6c5a337562e438aaf7a904ba0c70, type: 3}
+  - {fileID: 2800000, guid: 33780d052b181e3449e0ed8fd2503168, type: 3}
+  - {fileID: 2800000, guid: fe9bc22208c26a54b9bb21f7324e2cd4, type: 3}

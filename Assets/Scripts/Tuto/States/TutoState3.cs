@@ -19,7 +19,7 @@ public class TutoState3 : State
     public override void StateUpdate()
     {
         base.StateUpdate();
-        if (shipInv.GetQuantity(100) >= 10 && shipInv.GetQuantity(102) >= 10 && shipInv.GetQuantity(103) >= 5)
+        if (shipInv.GetQuantity(100) >= 2 /*&& shipInv.GetQuantity(102) >= 10 && shipInv.GetQuantity(103) >= 5*/)
         {
             FSM.changeState(new TutoState4(FSM));
         }

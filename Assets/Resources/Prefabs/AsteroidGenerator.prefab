@@ -75,7 +75,20 @@ MonoBehaviour:
   - {fileID: 193304, guid: 197689c139fb671489c4faec41b5fb80, type: 2}
   minSize: 0.2
   maxSize: 1.5
-  minCount: 500
-  maxCount: 1200
+  minCount: 300
+  maxCount: 600
   minDistance: 30
   maxDistance: 150
+  mineralCountProbability: 0a000000280000003c00000050000000
+  mineralIdProbability: 32000000320000004b000000640000006400000064000000
+  minrSpeed: 1
+  maxrSpeed: 8
+  minmSpeed: 1
+  maxmSpeed: 2
+  texture:
+  - {fileID: 2800000, guid: d211b38bda9bddb4fa92a8f53d2eb655, type: 3}
+  - {fileID: 2800000, guid: 8a144c7f1dd4ce7489d77d38eb6456fc, type: 3}
+  - {fileID: 2800000, guid: 1b9728b9eca4a0b4e9dba437da9fe1f8, type: 3}
+  - {fileID: 2800000, guid: 398fd545d0e3a854f8d5fe8363402799, type: 3}
+  - {fileID: 2800000, guid: 33780d052b181e3449e0ed8fd2503168, type: 3}
+  - {fileID: 2800000, guid: fe9bc22208c26a54b9bb21f7324e2cd4, type: 3}
