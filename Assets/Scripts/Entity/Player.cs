@@ -19,6 +19,12 @@ public class Player : Entity {
     {
         base.Update();
     }
-    
+
+    protected override void endOfLife()
+    {
+        //base.endOfLife();
+        SceneManager.LoadSceneAsync("GameOver", LoadSceneMode.Single);
+    }
+
 
 }

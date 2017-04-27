@@ -17,6 +17,12 @@ namespace Inventory
         public Inventory inventoryType;
         private ItemDatabase database;
 
+        static public InventoryController getInventoryType(InventoryController.Inventory type = InventoryController.Inventory.Both)
+        {
+            return new List<InventoryController>(Data.instance.GetComponentsInChildren<InventoryController>()).Find(x => x.inventoryType == type);
+        }
+
+
         /// <summary>
         /// Add a certain amount of an item from the attached inventories if possible, does nothing otherwise.
         /// </summary>

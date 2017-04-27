@@ -102,18 +102,20 @@ public class CraftManager : MonoBehaviour
         int[] componentAmount = new int[numberOfComp];
 
         Item[] componentItem = new Item[numberOfComp];
+        int[] amount = new int[numberOfComp];
 
         for (int i = 0; i < numberOfComp; i++)
         {
             componentID[i] = craftToAdd.itemsID[i + 1];
             componentAmount[i] = craftToAdd.itemsAmount[i + 1];
             componentItem[i] = idatabase.FetchItemByID(componentID[i]);
+            amount[i] = craftToAdd.itemsAmount[i + 1];
         }
 
         for (int i = 0; i < numberOfComp; i++)
         {
             //recipeslt.transform.GetChild(1);
-            ItemView compObj = ItemView.CreateStandalone(componentItem[i], productAmount);
+            ItemView compObj = ItemView.CreateStandalone(componentItem[i], amount[i]);
             compObj.transform.SetParent(component, false);
             compObj.transform.localPosition = Vector2.zero; // sets the position of the item according to the slot
             compObj.transform.localScale = Vector3.one;
@@ -130,10 +132,10 @@ public class CraftManager : MonoBehaviour
         product.GetComponent<HorizontalFitter>().Refit();
         //component.GetComponent<HorizontalFitter>().Refit();
         LayoutRebuilder.ForceRebuildLayoutImmediate(component.GetComponent<RectTransform>());
-        float width = component.GetComponent<RectTransform>().rect.width;
-        float height = component.GetComponent<RectTransform>().rect.height - component.GetComponent<HorizontalLayoutGroup>().padding.vertical;
-        float size = Mathf.Min(width, height) / Mathf.Sqrt(component.transform.childCount);
-        //component.GetComponent<GridLayoutGroup>().cellSize = new Vector2(size - component.GetComponent<HorizontalLayoutGroup>().spacing, size - component.GetComponent<HorizontalLayoutGroup>().spacing);
+        //float width = component.GetComponent<RectTransform>().rect.width;
+        //float height = component.GetComponent<RectTransform>().rect.height - component.GetComponent<GridLayoutGroup>().padding.vertical;
+        //float size = Mathf.Min(width, height) / Mathf.Sqrt(component.transform.childCount);
+        //component.GetComponent<GridLayoutGroup>().cellSize = new Vector2(size - component.GetComponent<GridLayoutGroup>().spacing.x, size - component.GetComponent<GridLayoutGroup>().spacing.y);
         LayoutRebuilder.MarkLayoutForRebuild(product.GetComponent<RectTransform>());
         LayoutRebuilder.MarkLayoutForRebuild(recipeslt.GetComponent<RectTransform>());
         LayoutRebuilder.MarkLayoutForRebuild(GetComponent<RectTransform>());

@@ -16,11 +16,11 @@ public class BaseAccess : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (Input.GetAxis("Submit") > 0)
+        if (Input.GetAxis("Submit") > 0 && OptionMenuClick.isPaused() == false)
         {
             Cursor.visible = true;
             GameObject.Find("Data").GetComponentInChildren<QuestProgress>().StopTimer();
-            SceneManager.LoadScene(sceneToAccessName, LoadSceneMode.Single);
+            SceneManager.LoadSceneAsync(sceneToAccessName, LoadSceneMode.Single);
         }
     }
 

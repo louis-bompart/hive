@@ -5,6 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class TutoState4 : State
 {
+
+    private float deltaTime = 0;
+
     public TutoState4(StateManager fms) : base(fms)
     {
     }
@@ -19,9 +22,14 @@ public class TutoState4 : State
         base.StateUpdate();
         if(SceneManager.GetActiveScene().name == "Bridge" || SceneManager.GetActiveScene().name == "Factory" || SceneManager.GetActiveScene().name == "StorageBay")
         {
-            GameObject.Find("Stats").GetComponent<BaseStats>().printerStat = 1;
-            GameObject.Find("Stats").GetComponent<BaseStats>().scanRangeStat = 1;
-            FSM.changeState(new TutoState5(FSM));
+            deltaTime += Time.deltaTime;
+            if(deltaTime > 0.5 )
+            {
+                GameObject.Find("Stats").GetComponent<BaseStats>().printerStat = 1;
+                GameObject.Find("Stats").GetComponent<BaseStats>().scanRangeStat = 1;
+                FSM.changeState(new TutoState5(FSM));
+            }
+
         }
     }
 

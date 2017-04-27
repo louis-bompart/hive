@@ -13,7 +13,7 @@
 			,
 		{
 			"id": 1201,
-			"category": 0,
+			"category": 1,
 			"title": "Afterburner Recipe",
 			"price": 150,
 			"nbItems": 3,
@@ -24,7 +24,7 @@
 			,
 		{
 			"id": 1202,
-			"category": 2,
+			"category": 1,
 			"title": "Overheated fluid Recipe",
 			"price": 150,
 			"nbItems": 3,
@@ -35,7 +35,7 @@
 			,
 		{
 			"id": 1210,
-			"category": 1,
+			"category": 0,
 			"title": "Shield hardener Recipe",
 			"price": 150,
 			"nbItems": 3,
@@ -46,12 +46,12 @@
 			,
 		{
 			"id": 1211,
-			"category": 2,
+			"category": 0,
 			"title": "Drone parts Recipe",
 			"price": 150,
 			"nbItems": 4,
 			"itemsID": [211,100,101,103],
-			"itemsAmount": [1,6,10,5],
+			"itemsAmount": [1,5,10,5],
 			"slug": "MobilityUpgrade"
 			}
 			,
@@ -60,9 +60,9 @@
 			"category": 0,
 			"title": "Nexus Core Recipe",
 			"price": 150,
-			"nbItems": 5,
-			"itemsID": [212,102,103,104,105],
-			"itemsAmount": [1,5,5,5,15],
+			"nbItems": 4,
+			"itemsID": [212,103,102,100],
+			"itemsAmount": [1,5,5,5],
 			"slug": "MobilityUpgrade"
 			}
 			,
@@ -96,6 +96,38 @@
 			"nbItems": 3,
 			"itemsID": [101,105,100],
 			"itemsAmount": [1,1,1],
+			"slug": "MobilityUpgrade"
+			},
+		{
+			"id": 1220,
+			"category": 2,
+			"title": "Titanium Transmutation",
+			"price": 150,
+			"nbItems": 3,
+			"itemsID": [103,105,104],
+			"itemsAmount": [1,2,1],
+			"slug": "MobilityUpgrade"
+			}
+			,
+		{
+			"id": 1221,
+			"category": 2,
+			"title": "Carbonite Transmutation",
+			"price": 150,
+			"nbItems": 3,
+			"itemsID": [104,105,103],
+			"itemsAmount": [1,2,1],
+			"slug": "MobilityUpgrade"
+			}
+			,
+		{
+			"id": 1222,
+			"category": 2,
+			"title": "Sulfrite Transmutation",
+			"price": 150,
+			"nbItems": 3,
+			"itemsID": [105,100,101],
+			"itemsAmount": [1,2,1],
 			"slug": "MobilityUpgrade"
 			}
 	]

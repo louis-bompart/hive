@@ -9,7 +9,7 @@ Material:
   m_Name: ProjectileMaterial
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: _EMISSION _SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A
-  m_LightmapFlags: 0
+  m_LightmapFlags: 1
   m_CustomRenderQueue: -1
   stringTagMap: {}
   m_SavedProperties:
@@ -84,7 +84,7 @@ Material:
       second: 0
     - first:
         name: _GlossMapScale
-      second: 0
+      second: 0.632
     - first:
         name: _Glossiness
       second: 0
@@ -93,7 +93,7 @@ Material:
       second: 1
     - first:
         name: _Metallic
-      second: 0
+      second: 0.624
     - first:
         name: _Mode
       second: 0
@@ -121,7 +121,7 @@ Material:
     m_Colors:
     - first:
         name: _Color
-      second: {r: 0.19607845, g: 0.62352943, b: 0.5529412, a: 0.50980395}
+      second: {r: 0.5913793, g: 0.7205882, b: 0.184, a: 0.472}
     - first:
         name: _EmissionColor
-      second: {r: 0.35294116, g: 2, b: 1.7280087, a: 1}
+      second: {r: 0.070393614, g: 0.32827222, b: 0.45588237, a: 1}

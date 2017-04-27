@@ -50,13 +50,13 @@ namespace Inventory
                 case Inventory.Ship:
                     for (int i = 0; i < 6; i++)
                     {
-                        controller.AddItem(model.database.FetchItemByID(100 + i), 5);
+                        controller.AddItem(100+i, 5);
                     }
                     break;
                 case Inventory.Base:
                     for (int i = 0; i < 6; i++)
                     {
-                        controller.AddItem(model.database.FetchItemByID(100 + i), 5);
+                        controller.AddItem(100+i, 5);
                     }
                     break;
                 default:

@@ -52,9 +52,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   localMaxRadius: 2
-  localMinRadius: 1
-  roomSize: 8
+  localMinRadius: 2
+  roomSize: 15
   radius: 0
   partialCounter: 0
-  partialMax: 1
-  partialThreshold: 1
+  partialMax: 5
+  partialThreshold: 0.5
