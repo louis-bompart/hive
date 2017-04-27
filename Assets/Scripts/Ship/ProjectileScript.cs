@@ -7,8 +7,12 @@ public class ProjectileScript : MonoBehaviour
 
     public GameObject reticle;
     public GameObject gauge;
-    public GameObject weapon;
+    public Weapon weapon;
     public float damage;
+
+    public float lifeTime = 10;
+
+
 
     // Use this for initialization
     void Start()
@@ -19,13 +23,18 @@ public class ProjectileScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        lifeTime -= Time.deltaTime;
+        if(lifeTime<=0)
+        {
+            Destroy(gameObject);
+        }
+        
     }
 
     void OnTriggerEnter(Collider entity)
     {
         //entity.gameObject.GetComponent<AsteroidsDesintegration>().health -= 5;
-        Debug.Log(entity.gameObject.name);
+        //Debug.Log(entity.gameObject.name);
         //Debug.Log(entity.gameObject.GetComponent<AsteroidsDesintegration>().health);
         //Destroy(gameObject)
         Entity temp = entity.GetComponentInParent<Entity>();
@@ -40,14 +49,7 @@ public class ProjectileScript : MonoBehaviour
 
                     if ((temp.health <= 0) && (temp.tag == "Enemy"))
                     {
-                        if (weapon.name == "Dual Blasters")
-                        {
-                            weapon.GetComponent<DualBlastersScript>().DestroyEnemyAnimation(temp.transform);
-                        }
-                        if (weapon.name == "Bomb Launcher")
-                        {
-                            weapon.GetComponent<BombLauncherScript>().DestroyEnemyAnimation(temp.transform);
-                        }
+                            weapon.DestroyEnemyAnimation(temp.transform);
                     }
                 }
             }
@@ -56,11 +58,10 @@ public class ProjectileScript : MonoBehaviour
                 gauge.GetComponent<HealthGaugeDisplay>().DisplayHealthOnHit(temp.health, temp.maxHP, temp.name);
             }
         }
-
         Destroy(gameObject);
     }
 
-    public void SetParent(GameObject _reticle, GameObject _gauge, GameObject _weapon)
+    public void SetParent(GameObject _reticle, GameObject _gauge, Weapon _weapon)
     {
         reticle = _reticle;
         gauge = _gauge;

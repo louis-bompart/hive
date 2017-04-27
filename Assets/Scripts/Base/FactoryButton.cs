@@ -7,6 +7,9 @@ public class FactoryButton : MonoBehaviour
 {
     public void Click()
     {
-        SceneManager.LoadScene("Factory", LoadSceneMode.Single);
+        if (OptionMenuClick.isPaused() == false)
+        {
+            SceneManager.LoadSceneAsync("Factory", LoadSceneMode.Single);
+        }
     }
 }

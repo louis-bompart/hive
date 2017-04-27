@@ -2,40 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DualBlastersScript : MonoBehaviour {
 
-    public new string name = "DualBlasters";
-    public int range;
-    public int damage;
-    public float fireRate;
-    public int ammo;
-
-    public GameObject projectile;
-    public float shotSpeed;
-    public Transform spawnPoint;
-    public GameObject Reticle;
-    public GameObject Gauge;
+//Not good.
+public class DualBlastersScript : Weapon {
     
-    public GameObject Particleprefab;
 
-    private float lastShot;
+	void Awake(){
+		audioSource = GetComponent<AudioSource>();
+	}
 
-    // Use this for initialization
-    void Start () {
-    }
-	
-	// Update is called once per frame
-	void Update () {
-
-    }
-
-    public void OnFire()
+    override public void OnFire()
     {
         if (lastShot + fireRate < Time.time)
         {
+			audioSource.PlayOneShot (shotSound);
             GameObject clone;
             clone = Instantiate(projectile, spawnPoint.position, spawnPoint.rotation);
-            clone.GetComponent<ProjectileScript>().SetParent(Reticle,Gauge,this.gameObject);
+            clone.GetComponent<ProjectileScript>().SetParent(Reticle,Gauge,this);
             clone.GetComponent<ProjectileScript>().damage = damage;
 
             clone.GetComponent<Rigidbody>().velocity = spawnPoint.forward * shotSpeed;
@@ -45,7 +28,7 @@ public class DualBlastersScript : MonoBehaviour {
 
     }
 
-    public void DestroyEnemyAnimation(Transform DeathTransform)
+    public override void DestroyEnemyAnimation(Transform DeathTransform)
     {
         GameObject Particle = Instantiate(Particleprefab, DeathTransform.position, Random.rotation);
         Destroy(Particle, 2);

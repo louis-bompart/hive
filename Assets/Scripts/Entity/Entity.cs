@@ -68,9 +68,9 @@ public class Entity : MonoBehaviour
     public virtual bool takeDammage(int dammageIn)
     {
         StartCoroutine(hitColor());
-
+        gameObject.SendMessage("OnDammageTaken", SendMessageOptions.DontRequireReceiver);
         health -= dammageIn;
-        Debug.Log(health);
+        //Debug.Log(health);
         if (health <= 0)
         {
             return false;

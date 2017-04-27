@@ -16,7 +16,7 @@ public class MapManager : MonoBehaviour {
 	}
 
 
-    public void loadScene(string sceneToLoad)
+    public void LoadScene(string sceneToLoad)
     {
         Cursor.visible = false;
         SceneManager.LoadSceneAsync(sceneToLoad,LoadSceneMode.Single);

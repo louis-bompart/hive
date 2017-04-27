@@ -2,13 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Inventory;
+using ItemNS;
 
 public class CraftManager : MonoBehaviour
 {
 
-    
-    public InventoryModel inventoryModel;
-    public InventoryController inventoryController;
+
+    //public InventoryModel inventoryModel;
+    private static InventoryController inventoryController;
 
     public GameObject craftPanel;
     public GameObject[] recipePanel;
@@ -25,7 +27,6 @@ public class CraftManager : MonoBehaviour
     public int categoryAmount = 4;
 
     public TextAsset craftJSON;
-    public TextAsset itemJSON;
 
     /// <summary>
     /// The databases.
@@ -33,27 +34,38 @@ public class CraftManager : MonoBehaviour
     private CraftDatabase database;
     private ItemDatabase idatabase;
 
+    private void Awake()
+    {
+        inventoryController = new List<InventoryController>(GameObject.FindObjectsOfType<InventoryController>()).Find(x => x.inventoryType == InventoryController.Inventory.Both);
+    }
+
     /// <summary>
     /// instantiate item and slot list.
     /// </summary>
     void Start()
     {
         database = CraftDatabase.Instance(craftJSON);
-        idatabase = ItemDatabase.Instance(itemJSON);
+        ItemDatabase.GetInstance(out idatabase);
 
-
-
-
-        for(int i = 0; i<database.database.Count;i++)
+        for (int i = 0; i < database.database.Count; i++)
         {
             AddCraft(database.database[i].id);
+        }
+
+        int impS = Data.instance.GetComponentInChildren<BaseStats>().printerStat;
+        for (int t = 0; t < recipePanel.Length; t++)
+        {
+            recipePanel[t].SetActive(false);
+        }
+        for (int i = 0; i < impS && i < recipePanel.Length; i++)
+        {
+            recipePanel[i].SetActive(true);
         }
 
     }
 
     public void AddCraft(int id)
     {
-
         Craft craftToAdd = database.FetchCraftByID(id);
 
         if (craftToAdd == null) // if the id does not exist.
@@ -66,8 +78,11 @@ public class CraftManager : MonoBehaviour
         // Instantiate the recipeItem 
 
         int category = craftToAdd.category;
-        GameObject recipeslt = Instantiate(recipeSlot, recipePanel[category].transform.Find("Panel")); // Add a recipeSlot in the approppriate Panel
+        GameObject recipeslt = Instantiate(recipeSlot);
+        recipeslt.transform.SetParent(recipePanel[category].transform.Find("Panel"), false);// Add a recipeSlot in the approppriate Panel
         //recipeslt.transform.GetChild(3).gameObject.SetActive(true); // Lock the receipt
+        Transform product = recipeslt.transform.Find("Slot").Find("Product Panel");
+        Transform component = recipeslt.transform.Find("Slot").Find("Component Panel");
 
         // Instantiate the productItem 
 
@@ -75,76 +90,80 @@ public class CraftManager : MonoBehaviour
         int productAmount = craftToAdd.itemsAmount[0];
 
         Item productItem = idatabase.FetchItemByID(productID);
-
-        GameObject productObj = Instantiate(craftItem, recipeslt.transform.GetChild(0).GetChild(0)); // creates the productItem gameObject in the productSlot of the product panel of the recipeSlot
-
-        productObj.GetComponent<Image>().sprite = productItem.Sprite; // sets the sprite
-        productObj.GetComponent<ItemData>().item = productItem; // sets the item
-
+        ItemView productObj = ItemView.CreateStandalone(productItem, productAmount);
+        productObj.transform.SetParent(product, false);
         productObj.transform.localPosition = Vector2.zero; // sets the position of the item according to the slot
-        productObj.name = productItem.Title; // sets the name of the gameObject
-
-
+        //productObj.transform.localPosition = Vector2.zero; // sets the position of the item according to the slot
+        productObj.transform.localScale = Vector3.one;
         // Instantiate the componentItems 
 
-        int numberOfComp = craftToAdd.itemsID.Length -1;
+        int numberOfComp = craftToAdd.itemsID.Length - 1;
         int[] componentID = new int[numberOfComp];
         int[] componentAmount = new int[numberOfComp];
 
         Item[] componentItem = new Item[numberOfComp];
+        int[] amount = new int[numberOfComp];
 
         for (int i = 0; i < numberOfComp; i++)
         {
             componentID[i] = craftToAdd.itemsID[i + 1];
             componentAmount[i] = craftToAdd.itemsAmount[i + 1];
             componentItem[i] = idatabase.FetchItemByID(componentID[i]);
+            amount[i] = craftToAdd.itemsAmount[i + 1];
         }
 
         for (int i = 0; i < numberOfComp; i++)
-        { 
-            GameObject compSlot = Instantiate(craftSlot, recipeslt.transform.GetChild(1)); // creates the ComponentSlot of the Component panel of the recipeSlot
-            GameObject compObj = Instantiate(craftItem, compSlot.transform); // creates the craftItem gameObject in the ComponentSlot of the component panel of the recipeSlot
-            compObj.GetComponent<ItemData>().item = componentItem[i]; // sets the 
-            compObj.GetComponent<Image>().sprite = componentItem[i].Sprite; // sets the sprite
+        {
+            //recipeslt.transform.GetChild(1);
+            ItemView compObj = ItemView.CreateStandalone(componentItem[i], amount[i]);
+            compObj.transform.SetParent(component, false);
             compObj.transform.localPosition = Vector2.zero; // sets the position of the item according to the slot
-            compObj.name = componentItem[i].Title; // sets the name of the gameObject
-            compSlot.GetComponentInChildren<Text>().text = componentAmount[i].ToString();
-            compSlot.GetComponentInChildren<Text>().transform.SetAsLastSibling();
+            compObj.transform.localScale = Vector3.one;
 
         }
 
         // Instantiate the create Button Function 
 
-        Button button = recipeslt.transform.GetChild(2).GetComponent<Button>();
+        Button button = recipeslt.GetComponentInChildren<Button>();
         button.onClick.AddListener(() =>
         {
             createObject(productID, productAmount, componentID, componentAmount);
         });
+        product.GetComponent<HorizontalFitter>().Refit();
+        //component.GetComponent<HorizontalFitter>().Refit();
+        LayoutRebuilder.ForceRebuildLayoutImmediate(component.GetComponent<RectTransform>());
+        //float width = component.GetComponent<RectTransform>().rect.width;
+        //float height = component.GetComponent<RectTransform>().rect.height - component.GetComponent<GridLayoutGroup>().padding.vertical;
+        //float size = Mathf.Min(width, height) / Mathf.Sqrt(component.transform.childCount);
+        //component.GetComponent<GridLayoutGroup>().cellSize = new Vector2(size - component.GetComponent<GridLayoutGroup>().spacing.x, size - component.GetComponent<GridLayoutGroup>().spacing.y);
+        LayoutRebuilder.MarkLayoutForRebuild(product.GetComponent<RectTransform>());
+        LayoutRebuilder.MarkLayoutForRebuild(recipeslt.GetComponent<RectTransform>());
+        LayoutRebuilder.MarkLayoutForRebuild(GetComponent<RectTransform>());
     }
 
     public void createObject(int productID, int productAmount, int[] componentID, int[] componentAmount)
     {
 
-        Dictionary<Item, int> inventory = inventoryModel.inventory;
+        //Dictionary<Item, int> inventory = inventoryModel.inventory;
 
         // Does the inventory contains the components ? 
 
         bool isCreatable = true;
-       
+
         for (int k = 0; k < componentID.Length && isCreatable; k++)
         { // looping on the 
-        //ToDo use the controller with GetQuantity()
+          //ToDo use the controller with GetQuantity()
             if (countItemId(componentID[k]) < componentAmount[k])
             {
                 isCreatable = false;
             }
         }
 
-        if (isCreatable && inventoryController.canItFit(productID, productAmount))
+        if (isCreatable && inventoryController.CanItFit(productID, productAmount))
         { // Enough of every components
           // Adds the product a productAmount of times 
             inventoryController.AddItem(productID, productAmount);
-
+            GameObject.Find("Data").GetComponentInChildren<OtherStats>().CraftedItems++;
             // Remove the components 
 
             for (int k = 0; k < componentID.Length; k++)
@@ -152,7 +171,7 @@ public class CraftManager : MonoBehaviour
                 inventoryController.RemoveItem(componentID[k], componentAmount[k]);
             }
 
-            
+
         }
         else
         {
@@ -162,18 +181,6 @@ public class CraftManager : MonoBehaviour
 
     private int countItemId(int id)
     {
-        int ret = 0;
-        Dictionary<Item, int> inventory = inventoryModel.inventory;
-        foreach (Item key in inventory.Keys) // looking for the component in the inventory items List
-        {
-
-            if (key.id == id)
-            {
-                ret += inventory[key];
-            }
-        }
-
-        Debug.Log("Wait" +id + " : " + ret);
-        return ret;
+        return inventoryController.GetQuantity(id);
     }
 }

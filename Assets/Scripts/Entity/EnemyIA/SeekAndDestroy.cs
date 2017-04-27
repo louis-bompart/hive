@@ -64,7 +64,6 @@ public class SeekAndDestroy : MonoBehaviour
         }
         else
         {
-            Debug.Log("All target Lost");
             foreach (PursuitForce act in GetComponents<PursuitForce>())
             {
                 Destroy(act);

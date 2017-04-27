@@ -1,10 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class OptionMenuClick : MonoBehaviour
 {
     private static int nbPause = 0;
+    private static bool lockCursor;
+
+
+    public static bool isPaused()
+    {
+        return (nbPause > 0);
+    }
 
     // Use this for initialization
     void Start()
@@ -26,7 +34,8 @@ public class OptionMenuClick : MonoBehaviour
     /// </summary>
     public void OnReturnMainMenu()
     {
-        //TODO
+        StartCoroutine(PlaySoundAndLoadScene());
+        SceneManager.LoadSceneAsync("Main Menu", LoadSceneMode.Single);
     }
 
     /// <summary>
@@ -38,8 +47,8 @@ public class OptionMenuClick : MonoBehaviour
         if (gameObject.activeInHierarchy)
         {
             //The Menu is open, so we want to close it
-            gameObject.SetActive(false);
             OptionMenuClick.UnPauseGame();
+            gameObject.SetActive(false);
         }
         else
         {
@@ -57,9 +66,12 @@ public class OptionMenuClick : MonoBehaviour
     static public void PauseGame()
     {
         nbPause += 1;
-        Debug.Log("Pause" + nbPause);
         if (nbPause > 0)
         {
+            if(nbPause == 1)
+            {
+                lockCursor = Cursor.visible;
+            }
             Time.timeScale = 0;
             Cursor.visible = true;
         }
@@ -72,11 +84,10 @@ public class OptionMenuClick : MonoBehaviour
     static public void UnPauseGame()
     {
         nbPause -= 1;
-        Debug.Log("UnPause" + nbPause);
         if (nbPause <= 0)
         {
             Time.timeScale = 1;
-            Cursor.visible = false;
+            Cursor.visible = lockCursor;
             nbPause = 0;
         }
     }
@@ -85,7 +96,20 @@ public class OptionMenuClick : MonoBehaviour
     /// </summary>
     public void OnQuitGame()
     {
-
+        AudioSource audio = GetComponent<AudioSource>();
+        audio.Play();
         Application.Quit();
     }
+
+
+    IEnumerator PlaySoundAndLoadScene()
+    {
+        AudioSource audio = GetComponent<AudioSource>();
+        audio.Play();
+        yield return new WaitForSeconds(audio.clip.length);
+
+        SceneManager.LoadScene("Main Menu");
+
+    }
+    
 }

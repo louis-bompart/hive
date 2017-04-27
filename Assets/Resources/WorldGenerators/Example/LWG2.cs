@@ -12,7 +12,7 @@ public class LWG2 : LocalWorldGenerator
 
         rooms.Add(new EmptyRoom());
 
-        //rooms.Add(new BigRockRoom());
+        rooms.Add(new BigRockRoom());
         rooms.Add(new HeartRoom());
         rooms.Add(new RockFormationRoom());
         rooms.Add(new EnemiesRockRoom());
@@ -20,7 +20,7 @@ public class LWG2 : LocalWorldGenerator
         rooms.Add(new EasyAsteroidFieldRoom());
         rooms.Add(new HardAsteroidFieldRoom());
         rooms.Add(new MediumAsteroidFieldRoom());
-        //rooms.Add(new RichAsteroidFieldRoom());
+        rooms.Add(new RichAsteroidFieldRoom());
     }
 
     private void Start()

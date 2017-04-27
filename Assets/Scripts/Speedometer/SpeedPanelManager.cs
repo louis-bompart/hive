@@ -9,7 +9,7 @@ public class SpeedPanelManager : MonoBehaviour
     public GameObject ship;
     private Rigidbody shipRigibody;
 
-    public float maxSpeed;
+    public int maxSpeed;
     private float _currentSpeed = 0;
 
     /// <summary>
@@ -61,6 +61,14 @@ public class SpeedPanelManager : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        ShipStats temp = Data.instance.GetComponentInChildren<ShipStats>();
+        if (temp != null)
+        {
+            maxSpeed = 50 + (50 * temp.topSpeed);
+        }
+        
+
+
         mark100 = transform.Find(">100%Mark").gameObject;
         mark66 = transform.Find("66%Mark").gameObject;
         mark33 = transform.Find("33%Mark").gameObject;
@@ -91,17 +99,21 @@ public class SpeedPanelManager : MonoBehaviour
     private void FixedUpdate()
     {
         //Project the ship velocity on his heading vector to get heading velocity.
-        float speed = Vector3.Project(shipRigibody.velocity, shipRigibody.gameObject.transform.forward).sqrMagnitude; 
+        if(shipRigibody != null)
+        {
+            float speed = Vector3.Project(shipRigibody.velocity, shipRigibody.gameObject.transform.forward).sqrMagnitude;
 
-        //Test if ship is moving forward or backward, ajust the sign of the speed.
-        float angle = Vector3.Angle(shipRigibody.velocity, shipRigibody.gameObject.transform.forward);
-        if (angle >= 90 || angle<=-90)
-        {
-            currentSpeed = -speed;
+            //Test if ship is moving forward or backward, ajust the sign of the speed.
+            float angle = Vector3.Angle(shipRigibody.velocity, shipRigibody.gameObject.transform.forward);
+            if (angle >= 90 || angle <= -90)
+            {
+                currentSpeed = -speed;
+            }
+            else
+            {
+                currentSpeed = speed;
+            }
         }
-        else
-        {
-            currentSpeed = speed;
-        }
+        
     }
 }

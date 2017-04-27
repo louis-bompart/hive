@@ -8,7 +8,7 @@ public class WanderForce : AbstractForce
 
     private float circleRadius = 1;
     private float turnChance = 0.01f;
-    private float maxRadius = 4;
+    //private float maxRadius = 4;
 
 
     private Vector3 velocity;

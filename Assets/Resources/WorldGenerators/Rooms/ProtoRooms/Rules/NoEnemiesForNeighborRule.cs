@@ -20,7 +20,7 @@ public class NoEnemiesForNeighborRule : RoomRule
 
     public override RoomRule GetCopy(Room room)
     {
-        return new NoSameNeighborRule(this, room);
+        return new NoEnemiesForNeighborRule(this, room);
     }
 
     public override bool isAdmissible(Room other)

@@ -14,6 +14,14 @@ public class MiningLaserScript : MonoBehaviour
     public Slider healthGauge;
     public GameObject healthGaugeText;
 
+	public AudioClip laserSound;
+
+	private AudioSource source;
+
+	void Awake(){
+		source = GetComponent<AudioSource> ();
+	}
+
     void Start()
     {
         healthGaugeText.SetActive(false);
@@ -31,11 +39,14 @@ public class MiningLaserScript : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetButtonDown("Fire2"))
-        {
-            StopCoroutine("FireMiningLaser");
-            StartCoroutine("FireMiningLaser");
-        }
+		if (Input.GetButtonDown ("Fire2")) {
+			StopCoroutine ("FireMiningLaser");
+			StartCoroutine ("FireMiningLaser");
+		} else {
+			if (source.isPlaying) {
+				source.Stop ();
+			}
+		}
     }
 
     IEnumerator FireMiningLaser()
@@ -48,6 +59,8 @@ public class MiningLaserScript : MonoBehaviour
             RaycastHit hit;
             line.SetPosition(0, miningray.origin);
 
+			source.Play ();
+
             if (Physics.Raycast(miningray, out hit, range))
             {
                 line.SetPosition(1, hit.point);
@@ -56,15 +69,15 @@ public class MiningLaserScript : MonoBehaviour
                 {
                     healthGauge.gameObject.SetActive(true);
                     healthGaugeText.SetActive(true);
-                    asscript.health -= 1;
+                    asscript.health -= Time.deltaTime * 40;
                     healthGauge.value = asscript.health/(asscript.maxHP + 1);
-                    Debug.Log(asscript.health);
-                    if (asscript.health <= 0)
+                    /*if (asscript.health <= 0)
                     {
                         GameObject Particle = Instantiate(particlePrefab, hit.point, Random.rotation);
                         Particle.transform.localScale = asscript.transform.localScale;
+                        FindObjectOfType<Data>().GetComponentInChildren<OtherStats>().DestroyedAsteroids++;
                         Destroy(Particle, 2);
-                    }
+                    }*/
                 }
 
                 particleObject.transform.position = hit.point;

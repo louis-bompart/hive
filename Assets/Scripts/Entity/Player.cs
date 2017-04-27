@@ -1,10 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : Entity {
 
     private ShipStats stats;
+
     protected override void Start()
     {
         base.Start();
@@ -17,6 +19,12 @@ public class Player : Entity {
     {
         base.Update();
     }
-    
+
+    protected override void endOfLife()
+    {
+        //base.endOfLife();
+        SceneManager.LoadSceneAsync("GameOver", LoadSceneMode.Single);
+    }
+
 
 }

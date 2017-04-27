@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Enemy : Entity {
 
-
     protected override void Start()
     {
         base.Start();
@@ -20,6 +19,7 @@ public class Enemy : Entity {
 
     protected override void endOfLife()
     {
+        GameObject.Find("Data").GetComponentInChildren<OtherStats>().DestroyedEnemies++;
         base.endOfLife();
     }
 
