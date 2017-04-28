@@ -1,0 +1,5 @@
+- [Sprite de titanium](https://commons.wikimedia.org/wiki/File:Titan-crystal_bar.JPG) by Alchemist-hp is licensed under (BY NC ND 3.0)[http://creativecommons.org/licenses/by-nc-nd/3.0/]
+- [Sprite de sulfurite](https://en.wikipedia.org/wiki/Sulfur#/media/File:Sulfur-sample.jpg) by Benjah-bmm27 is released in the public domain
+- [Sprite de carbonite](https://en.wikipedia.org/wiki/File:Glassy_carbon_and_a_1cm3_graphite_cube_HP68-79.jpg) by Alchemist-hp is licensed under (BY NC ND 3.0)[http://creativecommons.org/licenses/by-nc-nd/3.0/]
+- [Sprite de mozanite](https://commons.wikimedia.org/wiki/File:Monazite_-_Rostadheia,_Iveland,_Norvegia_01.jpg) by Materialscientist is licensed under [CC BY SA 3.0 Unported](https://creativecommons.org/licenses/by-sa/3.0/legalcode)
+- [Sprite de peanutoide](https://commons.wikimedia.org/wiki/File:Epidote_Oisans.jpg) by Archaeodontosaurus is licensed under [CC BY 4.0](https://commons.wikimedia.org/wiki/File:Epidote_Oisans.jpg)
